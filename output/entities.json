@@ -1,149 +1,11 @@
 [
   {
     "label": "Component",
-    "name": "排气管"
-  },
-  {
-    "label": "Fault",
-    "name": "氧化"
-  },
-  {
-    "label": "Vehicle",
-    "name": "摩托车"
-  },
-  {
-    "label": "Parameter",
-    "name": "12V",
-    "value": "12",
-    "unit": "V"
-  },
-  {
-    "label": "Component",
-    "name": "曲轴位置传感器"
-  },
-  {
-    "label": "Component",
-    "name": "氧传感器"
-  },
-  {
-    "label": "Fault",
-    "name": "短路"
-  },
-  {
-    "label": "Component",
-    "name": "机油"
-  },
-  {
-    "label": "Component",
-    "name": "传感器"
-  },
-  {
-    "label": "RepairStep",
-    "name": "检查"
-  },
-  {
-    "label": "Component",
-    "name": "节气门位置传感器"
-  },
-  {
-    "label": "Component",
-    "name": "后轮"
-  },
-  {
-    "label": "Component",
-    "name": "前轮"
-  },
-  {
-    "label": "Parameter",
-    "name": "111 kg",
-    "value": "111",
-    "unit": "kg"
-  },
-  {
-    "label": "Parameter",
-    "name": "80 mm",
-    "value": "80",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "70 mm",
-    "value": "70",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "174 kg",
-    "value": "174",
-    "unit": "kg"
-  },
-  {
-    "label": "Parameter",
-    "name": "96 mm",
-    "value": "96",
-    "unit": "mm"
-  },
-  {
-    "label": "Component",
-    "name": "燃油箱"
+    "name": "发动机"
   },
   {
     "label": "Component",
     "name": "气缸"
-  },
-  {
-    "label": "Parameter",
-    "name": "57.9 mm",
-    "value": "57.9",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "124.9 cm",
-    "value": "124.9",
-    "unit": "cm"
-  },
-  {
-    "label": "Component",
-    "name": "气门"
-  },
-  {
-    "label": "Parameter",
-    "name": "1 mm",
-    "value": "1",
-    "unit": "mm"
-  },
-  {
-    "label": "System",
-    "name": "润滑系统"
-  },
-  {
-    "label": "Component",
-    "name": "机油泵"
-  },
-  {
-    "label": "Parameter",
-    "name": "22.7 kg",
-    "value": "22.7",
-    "unit": "kg"
-  },
-  {
-    "label": "Component",
-    "name": "曲轴箱"
-  },
-  {
-    "label": "System",
-    "name": "冷却系统"
-  },
-  {
-    "label": "System",
-    "name": "燃油系统"
-  },
-  {
-    "label": "Parameter",
-    "name": "22 mm",
-    "value": "22",
-    "unit": "mm"
   },
   {
     "label": "System",
@@ -154,12 +16,2280 @@
     "name": "离合器"
   },
   {
-    "label": "RepairStep",
-    "name": "排放"
+    "label": "Component",
+    "name": "节气门体识别代码"
   },
   {
     "label": "Component",
-    "name": "整流器"
+    "name": "节气门体"
+  },
+  {
+    "label": "Component",
+    "name": "燃油泵流量"
+  },
+  {
+    "label": "Component",
+    "name": "燃油泵"
+  },
+  {
+    "label": "Component",
+    "name": "发动机机油容量"
+  },
+  {
+    "label": "Component",
+    "name": "机油"
+  },
+  {
+    "label": "Component",
+    "name": "建议使用的发动机机油"
+  },
+  {
+    "label": "Vehicle",
+    "name": "摩托车"
+  },
+  {
+    "label": "Vehicle",
+    "name": "汽车"
+  },
+  {
+    "label": "Component",
+    "name": "机油泵转子"
+  },
+  {
+    "label": "Component",
+    "name": "机油泵"
+  },
+  {
+    "label": "Component",
+    "name": "气缸压缩气压"
+  },
+  {
+    "label": "Component",
+    "name": "气门间隙"
+  },
+  {
+    "label": "Component",
+    "name": "气门"
+  },
+  {
+    "label": "Component",
+    "name": "凸轮轴"
+  },
+  {
+    "label": "Component",
+    "name": "凸轮"
+  },
+  {
+    "label": "Component",
+    "name": "摇臂，\n摇臂轴"
+  },
+  {
+    "label": "Component",
+    "name": "摇臂"
+  },
+  {
+    "label": "Component",
+    "name": "气门，\n气门导管"
+  },
+  {
+    "label": "Component",
+    "name": "气门导管"
+  },
+  {
+    "label": "Component",
+    "name": "气门弹簧自由长度"
+  },
+  {
+    "label": "Component",
+    "name": "气门弹簧"
+  },
+  {
+    "label": "Component",
+    "name": "气缸头平面度"
+  },
+  {
+    "label": "Component",
+    "name": "活塞"
+  },
+  {
+    "label": "RepairStep",
+    "name": "测量"
+  },
+  {
+    "label": "Component",
+    "name": "活塞环"
+  },
+  {
+    "label": "Component",
+    "name": "传动皮带宽度"
+  },
+  {
+    "label": "Component",
+    "name": "传动皮带"
+  },
+  {
+    "label": "Component",
+    "name": "从动滑轮"
+  },
+  {
+    "label": "Component",
+    "name": "弹簧"
+  },
+  {
+    "label": "Component",
+    "name": "末级传动比\n机油容量"
+  },
+  {
+    "label": "Component",
+    "name": "建议使用的末级传动机油"
+  },
+  {
+    "label": "Component",
+    "name": "轮圈偏摆"
+  },
+  {
+    "label": "Component",
+    "name": "轮圈"
+  },
+  {
+    "label": "Component",
+    "name": "前叉"
+  },
+  {
+    "label": "Component",
+    "name": "IAT 传感器电阻（40°C）"
+  },
+  {
+    "label": "Component",
+    "name": "传感器"
+  },
+  {
+    "label": "Component",
+    "name": "EOT 传感器电阻（20°C）"
+  },
+  {
+    "label": "Component",
+    "name": "火花塞间隙"
+  },
+  {
+    "label": "Component",
+    "name": "火花塞"
+  },
+  {
+    "label": "Component",
+    "name": "点火线圈峰值电压"
+  },
+  {
+    "label": "Component",
+    "name": "点火线圈"
+  },
+  {
+    "label": "Component",
+    "name": "CKP 传感器峰值电压"
+  },
+  {
+    "label": "Fault",
+    "name": "漏电电流"
+  },
+  {
+    "label": "Fault",
+    "name": "漏电"
+  },
+  {
+    "label": "Component",
+    "name": "灯泡"
+  },
+  {
+    "label": "Component",
+    "name": "前照灯"
+  },
+  {
+    "label": "Component",
+    "name": "保险丝"
+  },
+  {
+    "label": "Component",
+    "name": "燃油油位传感器电阻"
+  },
+  {
+    "label": "Component",
+    "name": "燃油泵安装板螺母"
+  },
+  {
+    "label": "RepairStep",
+    "name": "安装"
+  },
+  {
+    "label": "Component",
+    "name": "空滤器壳盖螺钉"
+  },
+  {
+    "label": "Component",
+    "name": "空滤"
+  },
+  {
+    "label": "Component",
+    "name": "空滤器连接软管卡箍\n螺钉"
+  },
+  {
+    "label": "Component",
+    "name": "进气管双头螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "进气管"
+  },
+  {
+    "label": "Component",
+    "name": "油门拉线 A/B 锁紧螺母\n（节气门体侧）"
+  },
+  {
+    "label": "Component",
+    "name": "发动机机油泄油螺塞"
+  },
+  {
+    "label": "Component",
+    "name": "发动机机油滤网盖"
+  },
+  {
+    "label": "RepairStep",
+    "name": "油泵安装螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "气缸头盖专用螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "气门调节螺钉锁紧螺母"
+  },
+  {
+    "label": "Component",
+    "name": "气缸头螺母"
+  },
+  {
+    "label": "Component",
+    "name": "凸轮链轮螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "链轮"
+  },
+  {
+    "label": "Component",
+    "name": "凸轮止动器垫圈螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "凸轮链条张紧板推板螺钉"
+  },
+  {
+    "label": "Component",
+    "name": "链条"
+  },
+  {
+    "label": "RepairStep",
+    "name": "排气罩安装螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "气缸双头螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "驱动滑轮端面螺母"
+  },
+  {
+    "label": "Component",
+    "name": "离合器/ 从动滑轮螺母"
+  },
+  {
+    "label": "Component",
+    "name": "离合器主动盘螺母"
+  },
+  {
+    "label": "Component",
+    "name": "末级传动机油检查螺栓"
+  },
+  {
+    "label": "RepairStep",
+    "name": "检查"
+  },
+  {
+    "label": "Component",
+    "name": "末级传动机油泄油螺塞"
+  },
+  {
+    "label": "RepairStep",
+    "name": "定子安装螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "冷却风扇安装螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "风扇"
+  },
+  {
+    "label": "Component",
+    "name": "排气管接头螺母"
+  },
+  {
+    "label": "Component",
+    "name": "排气管"
+  },
+  {
+    "label": "Component",
+    "name": "消声器安装螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "消声器"
+  },
+  {
+    "label": "Component",
+    "name": "排气管双头螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "消声器保护装置盖罩螺钉"
+  },
+  {
+    "label": "Component",
+    "name": "冷却风扇盖罩螺钉"
+  },
+  {
+    "label": "Component",
+    "name": "冷却风扇盖罩螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "中心支架弹簧螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "前轮轴螺母"
+  },
+  {
+    "label": "Component",
+    "name": "前轮"
+  },
+  {
+    "label": "Component",
+    "name": "前制动碟内六角螺栓\n（前碟制动型）"
+  },
+  {
+    "label": "RepairStep",
+    "name": "更换"
+  },
+  {
+    "label": "Component",
+    "name": "前叉内六角螺栓"
+  },
+  {
+    "label": "RepairStep",
+    "name": "涂抹"
+  },
+  {
+    "label": "RepairStep",
+    "name": "紧固"
+  },
+  {
+    "label": "Component",
+    "name": "前叉平头螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "前叉夹紧螺栓"
+  },
+  {
+    "label": "Component",
+    "name": "后轮轴螺母"
+  },
+  {
+    "label": "Component",
+    "name": "后轮"
+  },
+  {
+    "label": "Component",
+    "name": "后鼓制动"
+  },
+  {
+    "label": "Component",
+    "name": "EOT 传感器"
+  },
+  {
+    "label": "Component",
+    "name": "O 传感器\n2"
+  },
+  {
+    "label": "Component",
+    "name": "前照灯安装螺钉"
+  },
+  {
+    "label": "RepairStep",
+    "name": "前转向信号灯安装螺钉"
+  },
+  {
+    "label": "Component",
+    "name": "尾灯/ 制动灯安装螺钉"
+  },
+  {
+    "label": "Component",
+    "name": "尾灯"
+  },
+  {
+    "label": "RepairStep",
+    "name": "速度表安装螺钉"
+  },
+  {
+    "label": "Component",
+    "name": "油门拉线 A 调节器锁紧螺母"
+  },
+  {
+    "label": "Component",
+    "name": "调节器"
+  },
+  {
+    "label": "RepairStep",
+    "name": "反射器安装螺母"
+  },
+  {
+    "label": "RepairStep",
+    "name": "侧反射器安装螺母"
+  },
+  {
+    "label": "Component",
+    "name": "制动拉线"
+  },
+  {
+    "label": "Component",
+    "name": "制动软管"
+  },
+  {
+    "label": "Component",
+    "name": "线束"
+  },
+  {
+    "label": "Component",
+    "name": "EO\n接"
+  },
+  {
+    "label": "Component",
+    "name": "曲轴箱"
+  },
+  {
+    "label": "Component",
+    "name": "VS\n接"
+  },
+  {
+    "label": "Component",
+    "name": "**"
+  },
+  {
+    "label": "Fault",
+    "name": "磨损"
+  },
+  {
+    "label": "Component",
+    "name": "轮胎"
+  },
+  {
+    "label": "Component",
+    "name": "轴承"
+  },
+  {
+    "label": "Component",
+    "name": "（轴承的滑动表面）"
+  },
+  {
+    "label": "Fault",
+    "name": "接触不良"
+  },
+  {
+    "label": "Fault",
+    "name": "松动"
+  },
+  {
+    "label": "Symptom",
+    "name": "怠速不稳"
+  },
+  {
+    "label": "Component",
+    "name": "大灯"
+  },
+  {
+    "label": "Component",
+    "name": "电瓶"
+  },
+  {
+    "label": "Component",
+    "name": "活塞离曲轴回转中心最远处，即活塞\n到达气缸顶部的位置为上止点，用英文缩\n写TDC 表示。"
+  },
+  {
+    "label": "Component",
+    "name": "曲轴"
+  },
+  {
+    "label": "Component",
+    "name": "活塞在上、下止点间运行的距离\n（mm）即为活塞行程，用S 表示。"
+  },
+  {
+    "label": "Component",
+    "name": "连杆"
+  },
+  {
+    "label": "Component",
+    "name": "5. 气缸工作容积"
+  },
+  {
+    "label": "Component",
+    "name": "活塞到达下止点时，活塞上方的容积\n即为气缸总容积V （L）。\na"
+  },
+  {
+    "label": "Component",
+    "name": "排气门关闭，进气门打开。 活塞向下\n运动使可燃混合气从打开的进气门吸入\n到气缸中。"
+  },
+  {
+    "label": "Component",
+    "name": "活塞完成压缩行程后，火花塞产生火\n花点燃气缸内可燃混合气，产生爆燃推动\n活塞向下运动，引起曲轴旋转。"
+  },
+  {
+    "label": "Component",
+    "name": "3.\n空\n气\n滤\n清\n器\n清\n洗"
+  },
+  {
+    "label": "Component",
+    "name": "空气滤清器"
+  },
+  {
+    "label": "Component",
+    "name": "4.\n清\n洁\n节\n气\n门\n体"
+  },
+  {
+    "label": "RepairStep",
+    "name": "拆卸"
+  },
+  {
+    "label": "Component",
+    "name": "5.\n润\n滑\n系\n统\n清\n洗\n保\n养"
+  },
+  {
+    "label": "System",
+    "name": "润滑系统"
+  },
+  {
+    "label": "RepairStep",
+    "name": "清洗"
+  },
+  {
+    "label": "Component",
+    "name": "6.\n燃\n油\n系\n统\n清\n洗\n保\n养"
+  },
+  {
+    "label": "System",
+    "name": "燃油系统"
+  },
+  {
+    "label": "Component",
+    "name": "节气门"
+  },
+  {
+    "label": "Component",
+    "name": "更换发动机机油"
+  },
+  {
+    "label": "Component",
+    "name": "更换发动机机油滤清器"
+  },
+  {
+    "label": "Component",
+    "name": "机油滤清器"
+  },
+  {
+    "label": "Component",
+    "name": "更换空气滤清器滤芯"
+  },
+  {
+    "label": "Component",
+    "name": "检查气门间隙"
+  },
+  {
+    "label": "Component",
+    "name": "更换燃油滤清器"
+  },
+  {
+    "label": "Component",
+    "name": "燃油滤清器"
+  },
+  {
+    "label": "Component",
+    "name": "更换火花塞"
+  },
+  {
+    "label": "RepairStep",
+    "name": "检查驱动带"
+  },
+  {
+    "label": "RepairStep",
+    "name": "检查怠速"
+  },
+  {
+    "label": "Component",
+    "name": "更换发动机冷却液"
+  },
+  {
+    "label": "Component",
+    "name": "冷却液"
+  },
+  {
+    "label": "Component",
+    "name": "检查发动机冷却液\n位与技术情况"
+  },
+  {
+    "label": "RepairStep",
+    "name": "检查自动变速器油\n（ATF）液位与技术情况"
+  },
+  {
+    "label": "System",
+    "name": "检查排气系统"
+  },
+  {
+    "label": "System",
+    "name": "排气系统"
+  },
+  {
+    "label": "Component",
+    "name": "检查油管"
+  },
+  {
+    "label": "Component",
+    "name": "油管"
+  },
+  {
+    "label": "RepairStep",
+    "name": "保养"
+  },
+  {
+    "label": "RepairStep",
+    "name": "检测"
+  },
+  {
+    "label": "Fault",
+    "name": "抱死"
+  },
+  {
+    "label": "Vehicle",
+    "name": "轿车"
+  },
+  {
+    "label": "Tool",
+    "name": "诊断仪"
+  },
+  {
+    "label": "RepairStep",
+    "name": "调整"
+  },
+  {
+    "label": "Tool",
+    "name": "压力表"
+  },
+  {
+    "label": "Component",
+    "name": "蓄电池"
+  },
+  {
+    "label": "RepairStep",
+    "name": "拧紧"
+  },
+  {
+    "label": "Fault",
+    "name": "漏油"
+  },
+  {
+    "label": "Fault",
+    "name": "熄火"
+  },
+  {
+    "label": "Component",
+    "name": "飞轮"
+  },
+  {
+    "label": "Component",
+    "name": "油箱"
+  },
+  {
+    "label": "Component",
+    "name": "13.\n活\n塞\n安\n装\n工\n具"
+  },
+  {
+    "label": "Component",
+    "name": "16.\n底\n盘\n拆\n卸\n专\n用\n工\n具"
+  },
+  {
+    "label": "Component",
+    "name": "球头"
+  },
+  {
+    "label": "Component",
+    "name": "减振器"
+  },
+  {
+    "label": "Component",
+    "name": "（3）拆下火花塞"
+  },
+  {
+    "label": "Component",
+    "name": "（5）拆卸气缸盖罩以及垫片"
+  },
+  {
+    "label": "Component",
+    "name": "气缸盖"
+  },
+  {
+    "label": "Component",
+    "name": "曲轴位置传感器"
+  },
+  {
+    "label": "Component",
+    "name": "（7）拆下凸轮轴位置传感器"
+  },
+  {
+    "label": "Component",
+    "name": "（11）拆下水泵带轮"
+  },
+  {
+    "label": "Component",
+    "name": "水泵"
+  },
+  {
+    "label": "Component",
+    "name": "（13）拆下油底壳放油螺塞、垫片以及油底壳"
+  },
+  {
+    "label": "Component",
+    "name": "油底壳"
+  },
+  {
+    "label": "Component",
+    "name": "（17）拆下正时链导向器"
+  },
+  {
+    "label": "Component",
+    "name": "张紧器"
+  },
+  {
+    "label": "Component",
+    "name": "（19）拆下正时链"
+  },
+  {
+    "label": "Component",
+    "name": "（21）拆下曲轴上的定位键"
+  },
+  {
+    "label": "Component",
+    "name": "（25）拆下气缸盖垫片"
+  },
+  {
+    "label": "Component",
+    "name": "气缸体"
+  },
+  {
+    "label": "Component",
+    "name": "（27）拆下机油控制阀滤清器"
+  },
+  {
+    "label": "Component",
+    "name": "（29）拆下机油泵"
+  },
+  {
+    "label": "Component",
+    "name": "（33）推出活塞连杆总成"
+  },
+  {
+    "label": "RepairStep",
+    "name": "分解"
+  },
+  {
+    "label": "Component",
+    "name": "（35）拆下曲轴"
+  },
+  {
+    "label": "Component",
+    "name": "（37）从气缸体上拆下主轴承轴瓦"
+  },
+  {
+    "label": "Component",
+    "name": "主轴承"
+  },
+  {
+    "label": "Component",
+    "name": "（3）组装活塞"
+  },
+  {
+    "label": "RepairStep",
+    "name": "组装"
+  },
+  {
+    "label": "RepairStep",
+    "name": "（5）安装止推片"
+  },
+  {
+    "label": "Component",
+    "name": "（9）安装机油泵总成"
+  },
+  {
+    "label": "Component",
+    "name": "油封"
+  },
+  {
+    "label": "RepairStep",
+    "name": "（11）安装冷却水套隔片"
+  },
+  {
+    "label": "Component",
+    "name": "（13）安装气缸盖总成"
+  },
+  {
+    "label": "Component",
+    "name": "（17）安装机油泵驱动链"
+  },
+  {
+    "label": "Component",
+    "name": "（19）用曲轴带轮螺栓将曲轴转动到曲轴键朝上，并对\n准正时标记"
+  },
+  {
+    "label": "RepairStep",
+    "name": "（21）安装链"
+  },
+  {
+    "label": "Component",
+    "name": "3）拆下凸轮链盖，检查正时链导板、正时链张紧器以\n及正时链是否磨损或错位，若有应进行更换。"
+  },
+  {
+    "label": "Component",
+    "name": "4）逆时针旋转曲轴，以压缩自动张紧器。"
+  },
+  {
+    "label": "Component",
+    "name": "6）拆下自动张紧器和曲轴带轮。"
+  },
+  {
+    "label": "Component",
+    "name": "7）拆下凸轮轴链张紧器臂螺栓（箭头处），然后取下\n张紧器臂。"
+  },
+  {
+    "label": "Component",
+    "name": "8）拆下凸轮轴链导板螺栓。"
+  },
+  {
+    "label": "Component",
+    "name": "12）将链安装到曲轴正时链轮上，使彩色链板与曲轴\n上的正时标记对准。"
+  },
+  {
+    "label": "RepairStep",
+    "name": "14）其他的安装步骤与拆卸顺序相反。"
+  },
+  {
+    "label": "Component",
+    "name": "2.\n双\n排\n不\n进\n调\n整\n法"
+  },
+  {
+    "label": "Component",
+    "name": "2）拔下机油尺并使用干净的抹布擦净，然后重新安装\n机油尺。"
+  },
+  {
+    "label": "RepairStep",
+    "name": "加注"
+  },
+  {
+    "label": "Fault",
+    "name": "2）目视检查驱动带是否过度磨损或有帘线磨损等，如\n果发现缺陷，则更换。"
+  },
+  {
+    "label": "Component",
+    "name": "4）安装驱动带与拆卸的顺序相反，同时注意检查驱动\n带是否正确地装配在曲轴带轮底部的槽中。"
+  },
+  {
+    "label": "Component",
+    "name": "2.\n检\n查"
+  },
+  {
+    "label": "Tool",
+    "name": "塞尺"
+  },
+  {
+    "label": "Fault",
+    "name": "卡滞"
+  },
+  {
+    "label": "Fault",
+    "name": "腐蚀"
+  },
+  {
+    "label": "Component",
+    "name": "活塞销"
+  },
+  {
+    "label": "Fault",
+    "name": "开裂"
+  },
+  {
+    "label": "Component",
+    "name": "2.\n安\n装"
+  },
+  {
+    "label": "Component",
+    "name": "2）检查发动机飞轮轮毂是否有裂纹。"
+  },
+  {
+    "label": "Component",
+    "name": "轮毂"
+  },
+  {
+    "label": "Component",
+    "name": "3）检查发动机飞轮轮毂至飞轮板的连接铆钉是否损\n坏或松动。"
+  },
+  {
+    "label": "Component",
+    "name": "4）检查发动机飞轮板是否有裂纹。"
+  },
+  {
+    "label": "Component",
+    "name": "5）检查发动机飞轮板铆钉是否损坏或松动。"
+  },
+  {
+    "label": "Component",
+    "name": "6）检查将齿圈固定到发动机飞轮上的发动机飞轮齿\n圈焊接点是否有裂纹。"
+  },
+  {
+    "label": "RepairStep",
+    "name": "焊接"
+  },
+  {
+    "label": "Component",
+    "name": "7）检查发动机飞轮齿圈轮齿是否损坏。"
+  },
+  {
+    "label": "Component",
+    "name": "（5）测量摇臂轴直径"
+  },
+  {
+    "label": "Component",
+    "name": "拆下摇臂，使用千分尺在第一个摇臂\n位置测量轴的直径。"
+  },
+  {
+    "label": "Tool",
+    "name": "千分尺"
+  },
+  {
+    "label": "Component",
+    "name": "进气歧管"
+  },
+  {
+    "label": "Component",
+    "name": "排气歧管"
+  },
+  {
+    "label": "Component",
+    "name": "发动机内部无噪\n声，发动机不能起动"
+  },
+  {
+    "label": "Component",
+    "name": "发动机下方有异\n响，发动机不能起动"
+  },
+  {
+    "label": "RepairStep",
+    "name": "修理"
+  },
+  {
+    "label": "Component",
+    "name": "发动机气门异响"
+  },
+  {
+    "label": "Symptom",
+    "name": "异响"
+  },
+  {
+    "label": "Component",
+    "name": "发动机气门室有\n噪声但与发动机转\n速无关"
+  },
+  {
+    "label": "Component",
+    "name": "发动机气门室有\n“ 嗒、嗒” 金属敲击\n声，并且随转速升高\n而节奏加快"
+  },
+  {
+    "label": "Component",
+    "name": "发动机下部有噪\n声，且与发动机转速\n无关"
+  },
+  {
+    "label": "Component",
+    "name": "发动机有噪声，并\n且发动机负荷增大"
+  },
+  {
+    "label": "Component",
+    "name": "发动机不起动，并\n且曲轴不转动"
+  },
+  {
+    "label": "Fault",
+    "name": "断裂"
+  },
+  {
+    "label": "Component",
+    "name": "3.\n机\n油\n压\n力\n传\n感\n器\n工\n作\n原\n理"
+  },
+  {
+    "label": "Component",
+    "name": "2.\n机\n油\n压\n力\n测\n试"
+  },
+  {
+    "label": "Component",
+    "name": "3.\n检\n查\n机\n油\n泵"
+  },
+  {
+    "label": "Component",
+    "name": "4.\n机\n油\n冷\n却\n器\n的\n检\n查"
+  },
+  {
+    "label": "Component",
+    "name": "2.\n机\n油\n泵\n拆\n卸"
+  },
+  {
+    "label": "Component",
+    "name": "1. 机油压力\n过低，发动机运\n转时，机油压力\n指示灯不熄灭"
+  },
+  {
+    "label": "Fault",
+    "name": "堵塞"
+  },
+  {
+    "label": "Component",
+    "name": "2. 机油压力\n过高"
+  },
+  {
+    "label": "Component",
+    "name": "3. 发动机机\n油消耗量过大"
+  },
+  {
+    "label": "RepairStep",
+    "name": "修复"
+  },
+  {
+    "label": "Component",
+    "name": "4. 机油品质\n变差"
+  },
+  {
+    "label": "Component",
+    "name": "散热器"
+  },
+  {
+    "label": "System",
+    "name": "冷却系统"
+  },
+  {
+    "label": "Component",
+    "name": "5. 节温器"
+  },
+  {
+    "label": "Component",
+    "name": "节温器"
+  },
+  {
+    "label": "RepairStep",
+    "name": "预热"
+  },
+  {
+    "label": "Component",
+    "name": "4.\n检\n查\n节\n温\n器"
+  },
+  {
+    "label": "Component",
+    "name": "6.\n冷\n却\n系\n统\n泄\n漏\n检\n查"
+  },
+  {
+    "label": "Component",
+    "name": "3.\n拆\n卸\n散\n热\n器"
+  },
+  {
+    "label": "Component",
+    "name": "4.\n分\n解\n散\n热\n器"
+  },
+  {
+    "label": "Fault",
+    "name": "发动机过热"
+  },
+  {
+    "label": "Fault",
+    "name": "过热"
+  },
+  {
+    "label": "Component",
+    "name": "发动机冷却\n液泄漏"
+  },
+  {
+    "label": "Component",
+    "name": "发动机散热\n器空气流通不\n畅，导致冷却液\n温度异常高"
+  },
+  {
+    "label": "Component",
+    "name": "（2）\n主\n要\n部\n件"
+  },
+  {
+    "label": "Component",
+    "name": "燃油箱"
+  },
+  {
+    "label": "Component",
+    "name": "（2）电子\n气门调\n节系统\n（VALVE\nTRONIC）"
+  },
+  {
+    "label": "Component",
+    "name": "推杆"
+  },
+  {
+    "label": "Component",
+    "name": "（2）\n测\n试\n燃\n油\n压\n力"
+  },
+  {
+    "label": "Component",
+    "name": "点火开关"
+  },
+  {
+    "label": "Symptom",
+    "name": "振动"
+  },
+  {
+    "label": "Tool",
+    "name": "万用表"
+  },
+  {
+    "label": "Component",
+    "name": "（4）\n燃\n油\n泵\n的\n检\n修"
+  },
+  {
+    "label": "Component",
+    "name": "（2）\n拆\n卸\n点\n火\n线\n圈"
+  },
+  {
+    "label": "Fault",
+    "name": "标准电阻（检查是否短路）"
+  },
+  {
+    "label": "Fault",
+    "name": "短路"
+  },
+  {
+    "label": "Component",
+    "name": "氧传感器"
+  },
+  {
+    "label": "Fault",
+    "name": "氧化"
+  },
+  {
+    "label": "Component",
+    "name": "（3）故障显示"
+  },
+  {
+    "label": "Fault",
+    "name": "失效"
+  },
+  {
+    "label": "Component",
+    "name": "ECU"
+  },
+  {
+    "label": "Component",
+    "name": "用故障检\n测仪检测\nECU"
+  },
+  {
+    "label": "RepairStep",
+    "name": "另外，还需要测量晶体管附近相连的\n其他晶体管和二极管。"
+  },
+  {
+    "label": "RepairStep",
+    "name": "3）EVAP\n清污阀\n检查"
+  },
+  {
+    "label": "Component",
+    "name": "（3）\n通\n风\n阀\n拆\n装"
+  },
+  {
+    "label": "Tool",
+    "name": "套筒扳手"
+  },
+  {
+    "label": "Component",
+    "name": "3. 节气门\n直动式怠\n速控制\n装置"
+  },
+  {
+    "label": "Component",
+    "name": "电子节气门控制执行器（节气门体）"
+  },
+  {
+    "label": "Component",
+    "name": "发动机控制单元（ECM）"
+  },
+  {
+    "label": "Component",
+    "name": "继电器"
+  },
+  {
+    "label": "Component",
+    "name": "正时控制电磁阀"
+  },
+  {
+    "label": "Component",
+    "name": "空调制冷剂压力传感器（A/ C 压力传感器）"
+  },
+  {
+    "label": "Component",
+    "name": "冷却风扇电动机"
+  },
+  {
+    "label": "Component",
+    "name": "制动灯开关"
+  },
+  {
+    "label": "Component",
+    "name": "燃油泵线束插头"
+  },
+  {
+    "label": "Component",
+    "name": "BATT [A24（20）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "+ B[A24（2）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "+ B2[A24（1）]-E1 [C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "+ BM[A24（3）]-E1 [C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "IGT1 [C24（85）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "IGT2[C24（84）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "IGT3[C24（83）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "IGT4[C24（82）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "IGF1[C24（81）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "NE + [C24（122）]-NE-[C24（121）]"
+  },
+  {
+    "label": "Component",
+    "name": "G2 + [C24（99）]-G2[C24（98）]"
+  },
+  {
+    "label": "Component",
+    "name": "#10[C24（108）]-E01[C24（45）]"
+  },
+  {
+    "label": "Component",
+    "name": "#20[C24（107）]-E01[C24（45）]"
+  },
+  {
+    "label": "Component",
+    "name": "#30[C24（106）]-E01[C24（45）]"
+  },
+  {
+    "label": "Component",
+    "name": "#40[C24（105）]-E01[C24（45）]"
+  },
+  {
+    "label": "Component",
+    "name": "HA1A[C24（109）]-E04[C2（-46）]"
+  },
+  {
+    "label": "Component",
+    "name": "A1A + [C24（112）]-E1[C24（104 ）]"
+  },
+  {
+    "label": "Component",
+    "name": "A1A-[C24（113）]-E1[C24-104）]"
+  },
+  {
+    "label": "Component",
+    "name": "HT1B[C24（47）]-E03[C24（86 ）]"
+  },
+  {
+    "label": "Component",
+    "name": "OX1B[C24-64）]-EX1B[C24（87）]"
+  },
+  {
+    "label": "Component",
+    "name": "KNK1 [ C24 （110 ）]-EKNK [ C24\n（111）]"
+  },
+  {
+    "label": "Component",
+    "name": "THW[C24（97）]-ETHW[C24（96）]"
+  },
+  {
+    "label": "Component",
+    "name": "THA[C24（65）]-ETHA[C24（88）]"
+  },
+  {
+    "label": "Component",
+    "name": "VG[C24（118）]-E2G[C24（116）]"
+  },
+  {
+    "label": "Component",
+    "name": "W[A24（24）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "STA[A24（48）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "起动机"
+  },
+  {
+    "label": "Component",
+    "name": "NSW[C24（52）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "ACCR[A24（13）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "STSW[A24（14）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "VTA1[C24（115）]-ETA[C24（91）]"
+  },
+  {
+    "label": "Component",
+    "name": "节气门位置传感器"
+  },
+  {
+    "label": "Component",
+    "name": "VTA2[C24（114）]-ETA[C24（91）]"
+  },
+  {
+    "label": "Component",
+    "name": "VCTA[C24（67）]-ETA[C24（91）]"
+  },
+  {
+    "label": "Component",
+    "name": "VPA[A2（-55）]-EPA[A24（59）]"
+  },
+  {
+    "label": "Component",
+    "name": "VPA2[A24（56）]-EPA2[A24（60）]"
+  },
+  {
+    "label": "Component",
+    "name": "M + [C24（42）]-ME01[C24（43）]"
+  },
+  {
+    "label": "Component",
+    "name": "M-[24（41）]-ME01[C24（43）]"
+  },
+  {
+    "label": "Component",
+    "name": "ST1-[A24（35）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "PRG[C24（49）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "FC[A24（7）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "OC1 + [ C24 （100 ）]-OC1-[ C24\n（123）]"
+  },
+  {
+    "label": "Component",
+    "name": "CANH[A24（41）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "CANL[A24（49）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "FANL[A24（21）]-E1 [C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "FANH[A24（22）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "ALT[C24（50）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "发电机"
+  },
+  {
+    "label": "Component",
+    "name": "IGSW[A24（28）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "MREL[A24（44）]-E1[C24（104）]"
+  },
+  {
+    "label": "Component",
+    "name": "VBSOL 1"
+  },
+  {
+    "label": "Component",
+    "name": "CANH 3"
+  },
+  {
+    "label": "Component",
+    "name": "CANL 4"
+  },
+  {
+    "label": "Component",
+    "name": "FANL 5"
+  },
+  {
+    "label": "Component",
+    "name": "FANH 6"
+  },
+  {
+    "label": "Component",
+    "name": "MRLY 7"
+  },
+  {
+    "label": "Component",
+    "name": "IGP 9"
+  },
+  {
+    "label": "Component",
+    "name": "SG6 10"
+  },
+  {
+    "label": "Component",
+    "name": "ACC 15"
+  },
+  {
+    "label": "Component",
+    "name": "IMOFPR 16"
+  },
+  {
+    "label": "Component",
+    "name": "ACPD 17"
+  },
+  {
+    "label": "Component",
+    "name": "APSA 18"
+  },
+  {
+    "label": "Component",
+    "name": "APSB 19"
+  },
+  {
+    "label": "Component",
+    "name": "VCC6 20"
+  },
+  {
+    "label": "Component",
+    "name": "ETCSRLY 21"
+  },
+  {
+    "label": "Component",
+    "name": "SUBRLY 22"
+  },
+  {
+    "label": "Component",
+    "name": "ELD 24"
+  },
+  {
+    "label": "Component",
+    "name": "VCC5 25"
+  },
+  {
+    "label": "Component",
+    "name": "VCC4 26"
+  },
+  {
+    "label": "Component",
+    "name": "SLS 28"
+  },
+  {
+    "label": "Component",
+    "name": "SCS 32"
+  },
+  {
+    "label": "Fault",
+    "name": "断路"
+  },
+  {
+    "label": "Component",
+    "name": "ECT2 34"
+  },
+  {
+    "label": "Component",
+    "name": "SG5 35"
+  },
+  {
+    "label": "Component",
+    "name": "SG4 36"
+  },
+  {
+    "label": "Component",
+    "name": "BKSWNC 41"
+  },
+  {
+    "label": "Component",
+    "name": "BKSW 42"
+  },
+  {
+    "label": "Component",
+    "name": "WEN 44"
+  },
+  {
+    "label": "Component",
+    "name": "S-NET5V 46"
+  },
+  {
+    "label": "Component",
+    "name": "SUPP 47"
+  },
+  {
+    "label": "Component",
+    "name": "SDNP 48"
+  },
+  {
+    "label": "Component",
+    "name": "PCS 3"
+  },
+  {
+    "label": "Component",
+    "name": "SO2SHTC 4"
+  },
+  {
+    "label": "Component",
+    "name": "OPSW 7"
+  },
+  {
+    "label": "Component",
+    "name": "OP2SW 8"
+  },
+  {
+    "label": "Component",
+    "name": "OP3SW 9"
+  },
+  {
+    "label": "Component",
+    "name": "ATPS 16"
+  },
+  {
+    "label": "Component",
+    "name": "NM 18"
+  },
+  {
+    "label": "Component",
+    "name": "VCC2 19"
+  },
+  {
+    "label": "Component",
+    "name": "ECT1 24"
+  },
+  {
+    "label": "Component",
+    "name": "SHE 25"
+  },
+  {
+    "label": "Component",
+    "name": "LSC 26"
+  },
+  {
+    "label": "Component",
+    "name": "ATFT 28"
+  },
+  {
+    "label": "Component",
+    "name": "VG + 31"
+  },
+  {
+    "label": "Component",
+    "name": "IAT 32"
+  },
+  {
+    "label": "Component",
+    "name": "VG - 33"
+  },
+  {
+    "label": "Component",
+    "name": "SG2 34"
+  },
+  {
+    "label": "Component",
+    "name": "VTS 35"
+  },
+  {
+    "label": "Component",
+    "name": "SHO2S 36"
+  },
+  {
+    "label": "Component",
+    "name": "NC 38"
+  },
+  {
+    "label": "Component",
+    "name": "LSB 40"
+  },
+  {
+    "label": "Component",
+    "name": "IMT + 41"
+  },
+  {
+    "label": "Component",
+    "name": "IMT - 42"
+  },
+  {
+    "label": "Component",
+    "name": "IMTM 43"
+  },
+  {
+    "label": "Component",
+    "name": "ALTC 45"
+  },
+  {
+    "label": "Component",
+    "name": "ALTL 46"
+  },
+  {
+    "label": "Component",
+    "name": "ALTF 47"
+  },
+  {
+    "label": "Component",
+    "name": "LSA 48"
+  },
+  {
+    "label": "Component",
+    "name": "IG1ETCS 1"
+  },
+  {
+    "label": "Component",
+    "name": "ETCSM - 3"
+  },
+  {
+    "label": "Component",
+    "name": "ETCSM + 4"
+  },
+  {
+    "label": "Component",
+    "name": "INJ1 5"
+  },
+  {
+    "label": "Component",
+    "name": "INJ2 6"
+  },
+  {
+    "label": "Component",
+    "name": "INJ3 7"
+  },
+  {
+    "label": "Component",
+    "name": "INJ4 8"
+  },
+  {
+    "label": "Component",
+    "name": "AFSHTC 9"
+  },
+  {
+    "label": "Component",
+    "name": "IG1 10"
+  },
+  {
+    "label": "Component",
+    "name": "MAP 11"
+  },
+  {
+    "label": "Component",
+    "name": "VCC3 12"
+  },
+  {
+    "label": "Component",
+    "name": "VCC1 13"
+  },
+  {
+    "label": "Component",
+    "name": "SG1 14"
+  },
+  {
+    "label": "Component",
+    "name": "IGPLS1 15"
+  },
+  {
+    "label": "Component",
+    "name": "IGPLS2 16"
+  },
+  {
+    "label": "Component",
+    "name": "IGPLS3 17"
+  },
+  {
+    "label": "Component",
+    "name": "IGPLS4 18"
+  },
+  {
+    "label": "Component",
+    "name": "TPSA 20"
+  },
+  {
+    "label": "Component",
+    "name": "TPSB 21"
+  },
+  {
+    "label": "Component",
+    "name": "AFS + 29"
+  },
+  {
+    "label": "Component",
+    "name": "AFS - 30"
+  },
+  {
+    "label": "Component",
+    "name": "CMPB 31"
+  },
+  {
+    "label": "Component",
+    "name": "CKP 32"
+  },
+  {
+    "label": "Component",
+    "name": "MCS 40"
+  },
+  {
+    "label": "Component",
+    "name": "SG3 43"
+  },
+  {
+    "label": "Component",
+    "name": "KS 46"
+  },
+  {
+    "label": "Component",
+    "name": "1A 与1B"
+  },
+  {
+    "label": "Component",
+    "name": "1C"
+  },
+  {
+    "label": "Component",
+    "name": "1I"
+  },
+  {
+    "label": "Component",
+    "name": "1K"
+  },
+  {
+    "label": "Component",
+    "name": "1P"
+  },
+  {
+    "label": "Component",
+    "name": "1Q"
+  },
+  {
+    "label": "Component",
+    "name": "1R"
+  },
+  {
+    "label": "Component",
+    "name": "1U"
+  },
+  {
+    "label": "Component",
+    "name": "1V"
+  },
+  {
+    "label": "Component",
+    "name": "1W"
+  },
+  {
+    "label": "Component",
+    "name": "1AB"
+  },
+  {
+    "label": "Component",
+    "name": "1AF"
+  },
+  {
+    "label": "Component",
+    "name": "1AK"
+  },
+  {
+    "label": "Component",
+    "name": "1AL"
+  },
+  {
+    "label": "Component",
+    "name": "1AO"
+  },
+  {
+    "label": "Component",
+    "name": "1AP"
+  },
+  {
+    "label": "Component",
+    "name": "1AQ"
+  },
+  {
+    "label": "Component",
+    "name": "1AR"
+  },
+  {
+    "label": "Component",
+    "name": "1AS"
+  },
+  {
+    "label": "Component",
+    "name": "1AT"
+  },
+  {
+    "label": "Component",
+    "name": "1AV"
+  },
+  {
+    "label": "Component",
+    "name": "1AY"
+  },
+  {
+    "label": "Component",
+    "name": "1BB"
+  },
+  {
+    "label": "Component",
+    "name": "1BD"
+  },
+  {
+    "label": "Component",
+    "name": "1BG"
+  },
+  {
+    "label": "Component",
+    "name": "2A"
+  },
+  {
+    "label": "Component",
+    "name": "2G"
+  },
+  {
+    "label": "Component",
+    "name": "2H"
+  },
+  {
+    "label": "Component",
+    "name": "2J"
+  },
+  {
+    "label": "Component",
+    "name": "2K"
+  },
+  {
+    "label": "Component",
+    "name": "2L"
+  },
+  {
+    "label": "Component",
+    "name": "2O"
+  },
+  {
+    "label": "Component",
+    "name": "2S"
+  },
+  {
+    "label": "Component",
+    "name": "2U"
+  },
+  {
+    "label": "Component",
+    "name": "2V"
+  },
+  {
+    "label": "Component",
+    "name": "2W"
+  },
+  {
+    "label": "Component",
+    "name": "2X"
+  },
+  {
+    "label": "Component",
+    "name": "2Z"
+  },
+  {
+    "label": "Component",
+    "name": "2AA"
+  },
+  {
+    "label": "Component",
+    "name": "2AC"
+  },
+  {
+    "label": "Component",
+    "name": "2AD"
+  },
+  {
+    "label": "Component",
+    "name": "2AF"
+  },
+  {
+    "label": "Component",
+    "name": "2AG"
+  },
+  {
+    "label": "Component",
+    "name": "2AH"
+  },
+  {
+    "label": "Component",
+    "name": "2AK"
+  },
+  {
+    "label": "Component",
+    "name": "2AL"
+  },
+  {
+    "label": "Component",
+    "name": "2AM"
+  },
+  {
+    "label": "Component",
+    "name": "2AO"
+  },
+  {
+    "label": "Component",
+    "name": "2AP"
+  },
+  {
+    "label": "Component",
+    "name": "2AQ"
+  },
+  {
+    "label": "Component",
+    "name": "2AT"
+  },
+  {
+    "label": "Component",
+    "name": "2AU"
+  },
+  {
+    "label": "Component",
+    "name": "2AY"
+  },
+  {
+    "label": "Component",
+    "name": "2BA"
+  },
+  {
+    "label": "Component",
+    "name": "2BE"
+  },
+  {
+    "label": "Component",
+    "name": "2BF"
+  },
+  {
+    "label": "Component",
+    "name": "发动机冷却液温度传感器"
+  },
+  {
+    "label": "Component",
+    "name": "蓄电池电压"
+  },
+  {
+    "label": "Component",
+    "name": "加速踏板位置传感器1"
+  },
+  {
+    "label": "Component",
+    "name": "加速踏板位置传感器2"
+  },
+  {
+    "label": "Component",
+    "name": "TP 传感器1\nTP 传感器2"
+  },
+  {
+    "label": "Component",
+    "name": "起动信号"
+  },
+  {
+    "label": "Component",
+    "name": "关闭节气门位置"
+  },
+  {
+    "label": "Component",
+    "name": "P/ N 位置开关"
+  },
+  {
+    "label": "Component",
+    "name": "加热器风扇开关"
+  },
+  {
+    "label": "Component",
+    "name": "制动开关"
+  },
+  {
+    "label": "Component",
+    "name": "空气质量流量传感器"
+  },
+  {
+    "label": "Component",
+    "name": "空调继电器"
+  },
+  {
+    "label": "Component",
+    "name": "燃油泵继电器"
+  },
+  {
+    "label": "Component",
+    "name": "节气门继电器"
+  },
+  {
+    "label": "Component",
+    "name": "冷却风扇"
+  },
+  {
+    "label": "Component",
+    "name": "A/ C 压力传感器"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n26"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n60"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n64"
+  },
+  {
+    "label": "Component",
+    "name": "Injector（喷油器）"
+  },
+  {
+    "label": "Component",
+    "name": "IGN Advance（点火提前）"
+  },
+  {
+    "label": "Component",
+    "name": "AF（空气流量）"
+  },
+  {
+    "label": "Component",
+    "name": "Coolant Temp（冷却液温度）"
+  },
+  {
+    "label": "Component",
+    "name": "Intake Air（进气）"
+  },
+  {
+    "label": "Component",
+    "name": "Accelerator Idle Position（加速踏\n板怠速位置）"
+  },
+  {
+    "label": "Fault",
+    "name": "Fail Safe Drive（失效驱动）"
+  },
+  {
+    "label": "Component",
+    "name": "Throttle Position（节气门位置）"
+  },
+  {
+    "label": "Component",
+    "name": "Throttle Idle Position（节气门怠\n速位置）"
+  },
+  {
+    "label": "Component",
+    "name": "Throttle Require Position（节气门\n要求位置）"
+  },
+  {
+    "label": "Component",
+    "name": "Throttle Positi on Command（节气\n门位置指令）"
+  },
+  {
+    "label": "Component",
+    "name": "Throttle Motor（节气门电动机）"
+  },
+  {
+    "label": "Component",
+    "name": "Throttle Motor Current（节气门电\n动机电流）"
+  },
+  {
+    "label": "Component",
+    "name": "Throttle Motor Duty（Open）（节气\n门电动机开启时的占空比）"
+  },
+  {
+    "label": "Component",
+    "name": "O2S B1 S2"
+  },
+  {
+    "label": "Component",
+    "name": "AFS B1 S1"
+  },
+  {
+    "label": "Component",
+    "name": "Initial Engine Coolant Temp （发\n动机冷却液初始温度）"
+  },
+  {
+    "label": "Component",
+    "name": "Injection Volume （Cylinder1 ）（1\n号气缸喷油量）"
+  },
+  {
+    "label": "Component",
+    "name": "Starter Signal（起动机信号）"
+  },
+  {
+    "label": "Component",
+    "name": "+ BM Voltage（+ BM 电压）"
+  },
+  {
+    "label": "Component",
+    "name": "Atmosphere Pressure（大气压力）"
+  },
+  {
+    "label": "Component",
+    "name": "Fuel Pump/ Speed Status （燃油\n泵/ 转速状态）"
+  },
+  {
+    "label": "Component",
+    "name": "Electric Fan Motor（电动风扇电\n动机）"
+  },
+  {
+    "label": "Component",
+    "name": "Ilde Fuel Cut（怠速燃油切断）"
+  },
+  {
+    "label": "Fault",
+    "name": "空转"
+  },
+  {
+    "label": "Component",
+    "name": "Cylinder#1 Misfire Rate（1 号气\n缸缺火率）"
+  },
+  {
+    "label": "Component",
+    "name": "Cylinder#2 Misfire Rate（2 号气\n缸缺火率）"
+  },
+  {
+    "label": "Component",
+    "name": "Cylinder#3 Misfire Rate（3 号气\n缸缺火率）"
+  },
+  {
+    "label": "Component",
+    "name": "Cylinder#4 Misfire Rate（4 号气\n缸缺火率）"
+  },
+  {
+    "label": "Component",
+    "name": "All Cylinders Misfire Rate（所有\n气缸缺火率）"
+  },
+  {
+    "label": "Component",
+    "name": "●\n●\n●\n●"
+  },
+  {
+    "label": "Component",
+    "name": "●\n●\n●\n●\n●\n●"
+  },
+  {
+    "label": "Component",
+    "name": "●\n●\n●\n●\n●"
+  },
+  {
+    "label": "Component",
+    "name": "●\n●\n●"
+  },
+  {
+    "label": "Component",
+    "name": "发动机不能起动"
+  },
+  {
+    "label": "Component",
+    "name": "发动机起动困难"
+  },
+  {
+    "label": "System",
+    "name": "进气系统"
+  },
+  {
+    "label": "Fault",
+    "name": "漏气"
+  },
+  {
+    "label": "Symptom",
+    "name": "发动机怠速不稳"
+  },
+  {
+    "label": "Symptom",
+    "name": "发动机怠速过高"
+  },
+  {
+    "label": "Symptom",
+    "name": "怠速过高"
+  },
+  {
+    "label": "Symptom",
+    "name": "发动机运转不稳\n定或严重抖动"
+  },
+  {
+    "label": "Symptom",
+    "name": "抖动"
+  },
+  {
+    "label": "Component",
+    "name": "Engine Speed Sensor\nNo Signal / sp"
+  },
+  {
+    "label": "Component",
+    "name": "变速箱"
+  },
+  {
+    "label": "Component",
+    "name": "< 车辆配置>\n空调：装备\n巡航：装备\n氧传感器加热器：装备\n动力方向系统：装备"
+  },
+  {
+    "label": "RepairStep",
+    "name": "打磨"
+  },
+  {
+    "label": "RepairStep",
+    "name": "润滑"
+  },
+  {
+    "label": "RepairStep",
+    "name": "拆解"
+  },
+  {
+    "label": "RepairStep",
+    "name": "排放"
   },
   {
     "label": "System",
@@ -175,1015 +2305,39 @@
   },
   {
     "label": "Component",
-    "name": "节气门体"
-  },
-  {
-    "label": "Parameter",
-    "name": "100 rpm",
-    "value": "100",
-    "unit": "rpm"
-  },
-  {
-    "label": "Parameter",
-    "name": "2 – 6 mm",
-    "value": "2 – 6",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "6 mm",
-    "value": "6",
-    "unit": "mm"
-  },
-  {
-    "label": "Component",
-    "name": "燃油泵"
-  },
-  {
-    "label": "Parameter",
-    "name": "82 cm",
-    "value": "82",
-    "unit": "cm"
-  },
-  {
-    "label": "Parameter",
-    "name": "263 – 316 kPa",
-    "value": "263 – 316",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "316 kPa",
-    "value": "316",
-    "unit": "kPa"
-  },
-  {
-    "label": "Vehicle",
-    "name": "汽车"
-  },
-  {
-    "label": "Parameter",
-    "name": "050 kPa",
-    "value": "050",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "10W",
-    "value": "10",
-    "unit": "W"
-  },
-  {
-    "label": "Component",
-    "name": "凸轮"
-  },
-  {
-    "label": "Component",
-    "name": "摇臂"
-  },
-  {
-    "label": "Component",
-    "name": "气门导管"
+    "name": "整流器"
   },
   {
     "label": "Component",
     "name": "气门座"
   },
   {
-    "label": "Component",
-    "name": "气门弹簧"
-  },
-  {
-    "label": "Component",
-    "name": "活塞"
-  },
-  {
-    "label": "Component",
-    "name": "曲轴"
-  },
-  {
-    "label": "Parameter",
-    "name": "8 mm",
-    "value": "8",
-    "unit": "mm"
-  },
-  {
-    "label": "Component",
-    "name": "活塞销"
-  },
-  {
-    "label": "Component",
-    "name": "活塞环"
-  },
-  {
-    "label": "Component",
-    "name": "传动皮带"
-  },
-  {
-    "label": "Component",
-    "name": "弹簧"
-  },
-  {
     "label": "System",
     "name": "制动系统"
-  },
-  {
-    "label": "Parameter",
-    "name": "175 kPa",
-    "value": "175",
-    "unit": "kPa"
-  },
-  {
-    "label": "Component",
-    "name": "轮圈"
-  },
-  {
-    "label": "Parameter",
-    "name": "2.5 cm",
-    "value": "2.5",
-    "unit": "cm"
   },
   {
     "label": "Component",
     "name": "制动鼓"
   },
   {
-    "label": "Parameter",
-    "name": "200 kPa",
-    "value": "200",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "225 kPa",
-    "value": "225",
-    "unit": "kPa"
-  },
-  {
     "label": "Component",
     "name": "制动钳"
   },
   {
-    "label": "Component",
-    "name": "蓄电池"
-  },
-  {
-    "label": "Parameter",
-    "name": "40°C",
-    "value": "40",
-    "unit": "°C"
-  },
-  {
-    "label": "Parameter",
-    "name": "20°C",
-    "value": "20",
-    "unit": "°C"
-  },
-  {
-    "label": "Parameter",
-    "name": "24°C",
-    "value": "24",
-    "unit": "°C"
-  },
-  {
-    "label": "Parameter",
-    "name": "24 °C",
-    "value": "24",
-    "unit": "°C"
-  },
-  {
-    "label": "Component",
-    "name": "火花塞"
-  },
-  {
-    "label": "Parameter",
-    "name": "0.8 – 0.9 mm",
-    "value": "0.8 – 0.9",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "0.9 mm",
-    "value": "0.9",
-    "unit": "mm"
-  },
-  {
-    "label": "Component",
-    "name": "点火线圈"
-  },
-  {
-    "label": "Parameter",
-    "name": "100 V",
-    "value": "100",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "0.7 V",
-    "value": "0.7",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "12 V",
-    "value": "12",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "6 A",
-    "value": "6",
-    "unit": "A"
-  },
-  {
-    "label": "Component",
-    "name": "前照灯"
-  },
-  {
-    "label": "Parameter",
-    "name": "3.0 A",
-    "value": "3.0",
-    "unit": "A"
-  },
-  {
-    "label": "Component",
-    "name": "尾灯"
-  },
-  {
-    "label": "Parameter",
-    "name": "5 W",
-    "value": "5",
-    "unit": "W"
-  },
-  {
-    "label": "Parameter",
-    "name": "10 W",
-    "value": "10",
-    "unit": "W"
-  },
-  {
-    "label": "Fault",
-    "name": "漏电"
-  },
-  {
-    "label": "Parameter",
-    "name": "0.25 m",
-    "value": "0.25",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "000 rpm",
-    "value": "000",
-    "unit": "rpm"
-  },
-  {
-    "label": "Component",
-    "name": "保险丝"
-  },
-  {
-    "label": "Parameter",
-    "name": "20 A",
-    "value": "20",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "10 A",
-    "value": "10",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "5 mm",
-    "value": "5",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "10 mm",
-    "value": "10",
-    "unit": "mm"
-  },
-  {
-    "label": "Component",
-    "name": "空滤"
-  },
-  {
-    "label": "Component",
-    "name": "进气管"
-  },
-  {
-    "label": "Parameter",
-    "name": "12 mm",
-    "value": "12",
-    "unit": "mm"
-  },
-  {
-    "label": "Component",
-    "name": "链轮"
-  },
-  {
-    "label": "Component",
-    "name": "链条"
+    "label": "RepairStep",
+    "name": "维护"
   },
   {
     "label": "System",
-    "name": "排气系统"
-  },
-  {
-    "label": "Component",
-    "name": "飞轮"
-  },
-  {
-    "label": "Component",
-    "name": "风扇"
-  },
-  {
-    "label": "Component",
-    "name": "消声器"
-  },
-  {
-    "label": "Component",
-    "name": "前叉"
-  },
-  {
-    "label": "Component",
-    "name": "制动软管"
-  },
-  {
-    "label": "Component",
-    "name": "调节器"
-  },
-  {
-    "label": "Component",
-    "name": "轴承"
-  },
-  {
-    "label": "Parameter",
-    "name": "07W",
-    "value": "07",
-    "unit": "W"
-  },
-  {
-    "label": "Parameter",
-    "name": "20 mm",
-    "value": "20",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "41.2 mm",
-    "value": "41.2",
-    "unit": "mm"
-  },
-  {
-    "label": "Component",
-    "name": "油封"
-  },
-  {
-    "label": "Parameter",
-    "name": "40 mm",
-    "value": "40",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "28 mm",
-    "value": "28",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "35 mm",
-    "value": "35",
-    "unit": "mm"
-  },
-  {
-    "label": "RepairStep",
-    "name": "拆卸"
-  },
-  {
-    "label": "Tool",
-    "name": "套筒扳手"
-  },
-  {
-    "label": "Parameter",
-    "name": "5.0 mm",
-    "value": "5.0",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "47 mm",
-    "value": "47",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "30 mm",
-    "value": "30",
-    "unit": "mm"
-  },
-  {
-    "label": "Component",
-    "name": "线束"
-  },
-  {
-    "label": "Component",
-    "name": "制动拉线"
-  },
-  {
-    "label": "Component",
-    "name": "继电器"
-  },
-  {
-    "label": "Parameter",
-    "name": "2 mm",
-    "value": "2",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "21 - 25mm",
-    "value": "21 - 25",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "25mm",
-    "value": "25",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "5mm",
-    "value": "5",
-    "unit": "mm"
-  },
-  {
-    "label": "Component",
-    "name": "油箱"
-  },
-  {
-    "label": "Component",
-    "name": "燃油滤清器"
-  },
-  {
-    "label": "Fault",
-    "name": "堵塞"
-  },
-  {
-    "label": "RepairStep",
-    "name": "更换"
-  },
-  {
-    "label": "RepairStep",
-    "name": "检测"
-  },
-  {
-    "label": "RepairStep",
-    "name": "保养"
-  },
-  {
-    "label": "Component",
-    "name": "油管"
-  },
-  {
-    "label": "Fault",
-    "name": "磨损"
-  },
-  {
-    "label": "Component",
-    "name": "轮胎"
-  },
-  {
-    "label": "RepairStep",
-    "name": "紧固"
-  },
-  {
-    "label": "Fault",
-    "name": "熄火"
-  },
-  {
-    "label": "Parameter",
-    "name": "12 N·m",
-    "value": "12",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "2.1 N·m",
-    "value": "2.1",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "1.1 N·m",
-    "value": "1.1",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "35.9 – 37.9 mm",
-    "value": "35.9 – 37.9",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "37.9 mm",
-    "value": "37.9",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "6.0 N·m",
-    "value": "6.0",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "8.5 N·m",
-    "value": "8.5",
-    "unit": "N·m"
-  },
-  {
-    "label": "Component",
-    "name": "点火开关"
-  },
-  {
-    "label": "Parameter",
-    "name": "20 N·m",
-    "value": "20",
-    "unit": "N·m"
-  },
-  {
-    "label": "RepairStep",
-    "name": "拆解"
-  },
-  {
-    "label": "Parameter",
-    "name": "3.0 N·m",
-    "value": "3.0",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "10 N·m",
-    "value": "10",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "35°C",
-    "value": "35",
-    "unit": "°C"
-  },
-  {
-    "label": "Fault",
-    "name": "松动"
-  },
-  {
-    "label": "Fault",
-    "name": "卡滞"
-  },
-  {
-    "label": "Parameter",
-    "name": "7.0 N·m",
-    "value": "7.0",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "0.8 N·m",
-    "value": "0.8",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "4.0 N·m",
-    "value": "4.0",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "18 N·m",
-    "value": "18",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "9.0 N·m",
-    "value": "9.0",
-    "unit": "N·m"
-  },
-  {
-    "label": "Component",
-    "name": "凸轮轴"
-  },
-  {
-    "label": "Parameter",
-    "name": "8.9 – 9.1 mm",
-    "value": "8.9 – 9.1",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "9.1 mm",
-    "value": "9.1",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "181.0 – 182.0 mm",
-    "value": "181.0 – 182.0",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "182.0 mm",
-    "value": "182.0",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "6.5 N·m",
-    "value": "6.5",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "49 N·m",
-    "value": "49",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "116 N·m",
-    "value": "116",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "54 N·m",
-    "value": "54",
-    "unit": "N·m"
-  },
-  {
-    "label": "RepairStep",
-    "name": "润滑"
-  },
-  {
-    "label": "Parameter",
-    "name": "41 mm",
-    "value": "41",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "13 N·m",
-    "value": "13",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "0 – 0.5 mm",
-    "value": "0 – 0.5",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "0.5 mm",
-    "value": "0.5",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "2 cm",
-    "value": "2",
-    "unit": "cm"
-  },
-  {
-    "label": "Parameter",
-    "name": "3 cm",
-    "value": "3",
-    "unit": "cm"
-  },
-  {
-    "label": "Parameter",
-    "name": "0 - 1 mm",
-    "value": "0 - 1",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "0 - 0.5 mm",
-    "value": "0 - 0.5",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "75 mm",
-    "value": "75",
-    "unit": "mm"
-  },
-  {
-    "label": "Component",
-    "name": "连杆"
-  },
-  {
-    "label": "Parameter",
-    "name": "26 mm",
-    "value": "26",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "69 N·m",
-    "value": "69",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "2.0 mm",
-    "value": "2.0",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "29 N·m",
-    "value": "29",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "59 N·m",
-    "value": "59",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "9.5 N·m",
-    "value": "9.5",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "7.5 N·m",
-    "value": "7.5",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "15.0 – 16.0mm",
-    "value": "15.0 – 16.0",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "16.0mm",
-    "value": "16.0",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "22 N·m",
-    "value": "22",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "42 N·m",
-    "value": "42",
-    "unit": "N·m"
-  },
-  {
-    "label": "Component",
-    "name": "轮毂"
-  },
-  {
-    "label": "Parameter",
-    "name": "30 N·m",
-    "value": "30",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "60 mm",
-    "value": "60",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "8.1 N·m",
-    "value": "8.1",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "68 N·m",
-    "value": "68",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "1.0 N·m",
-    "value": "1.0",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "4.5 N·m",
-    "value": "4.5",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "4.2 N·m",
-    "value": "4.2",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "118 N·m",
-    "value": "118",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "0 – 0.1 mm",
-    "value": "0 – 0.1",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "0.1 mm",
-    "value": "0.1",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "1.5 N·m",
-    "value": "1.5",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "34 N·m",
-    "value": "34",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "2.5 N·m",
-    "value": "2.5",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "8.0 N·m",
-    "value": "8.0",
-    "unit": "N·m"
-  },
-  {
-    "label": "Fault",
-    "name": "失效"
-  },
-  {
-    "label": "Fault",
-    "name": "接触不良"
-  },
-  {
-    "label": "Symptom",
-    "name": "怠速不稳"
-  },
-  {
-    "label": "Parameter",
-    "name": "4.75 – 5.25 V",
-    "value": "4.75 – 5.25",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "5.25 V",
-    "value": "5.25",
-    "unit": "V"
-  },
-  {
-    "label": "Fault",
-    "name": "断路"
-  },
-  {
-    "label": "Parameter",
-    "name": "14.5 N·m",
-    "value": "14.5",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "25 N·m",
-    "value": "25",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "16 N·m",
-    "value": "16",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "2.0 N·m",
-    "value": "2.0",
-    "unit": "N·m"
-  },
-  {
-    "label": "Parameter",
-    "name": "4-27 V",
-    "value": "4-27",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "27 V",
-    "value": "27",
-    "unit": "V"
-  },
-  {
-    "label": "Component",
-    "name": "大灯"
-  },
-  {
-    "label": "Parameter",
-    "name": "6A",
-    "value": "6",
-    "unit": "A"
+    "name": "供油系统"
   },
   {
     "label": "Component",
     "name": "转向灯"
   },
   {
-    "label": "Parameter",
-    "name": "5W",
-    "value": "5",
-    "unit": "W"
-  },
-  {
-    "label": "Parameter",
-    "name": "21W",
-    "value": "21",
-    "unit": "W"
-  },
-  {
-    "label": "Parameter",
-    "name": "80A",
-    "value": "80",
-    "unit": "A"
-  },
-  {
-    "label": "Component",
-    "name": "冷却液"
-  },
-  {
-    "label": "Component",
-    "name": "气缸体"
-  },
-  {
-    "label": "Component",
-    "name": "气缸盖"
-  },
-  {
-    "label": "Tool",
-    "name": "举升机"
-  },
-  {
-    "label": "Component",
-    "name": "油底壳"
-  },
-  {
-    "label": "Component",
-    "name": "机油滤清器"
-  },
-  {
-    "label": "Fault",
-    "name": "漏油"
-  },
-  {
-    "label": "RepairStep",
-    "name": "安装"
-  },
-  {
-    "label": "Component",
-    "name": "散热器"
-  },
-  {
     "label": "Component",
     "name": "密封圈"
-  },
-  {
-    "label": "Component",
-    "name": "空气滤清器"
   },
   {
     "label": "Component",
@@ -1194,36 +2348,8 @@
     "name": "化油器"
   },
   {
-    "label": "Component",
-    "name": "节气门"
-  },
-  {
-    "label": "RepairStep",
-    "name": "加注"
-  },
-  {
-    "label": "RepairStep",
-    "name": "清洗"
-  },
-  {
-    "label": "Tool",
-    "name": "万用表"
-  },
-  {
-    "label": "RepairStep",
-    "name": "测量"
-  },
-  {
     "label": "Tool",
     "name": "示波器"
-  },
-  {
-    "label": "Tool",
-    "name": "诊断仪"
-  },
-  {
-    "label": "Fault",
-    "name": "抱死"
   },
   {
     "label": "Tool",
@@ -1231,63 +2357,15 @@
   },
   {
     "label": "Tool",
-    "name": "压力表"
-  },
-  {
-    "label": "Tool",
     "name": "气缸压力表"
-  },
-  {
-    "label": "Parameter",
-    "name": "50kPa",
-    "value": "50",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "200kPa",
-    "value": "200",
-    "unit": "kPa"
-  },
-  {
-    "label": "RepairStep",
-    "name": "拧紧"
-  },
-  {
-    "label": "Parameter",
-    "name": "150 ~200 kPa",
-    "value": "150 ~200",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "6V",
-    "value": "6",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "24V",
-    "value": "24",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "5m",
-    "value": "5",
-    "unit": "m"
-  },
-  {
-    "label": "Component",
-    "name": "进气歧管"
   },
   {
     "label": "Tool",
     "name": "呆扳手"
   },
   {
-    "label": "Tool",
-    "name": "塞尺"
+    "label": "Fault",
+    "name": "打滑"
   },
   {
     "label": "Fault",
@@ -1302,216 +2380,32 @@
     "name": "脱落"
   },
   {
-    "label": "Component",
-    "name": "球头"
-  },
-  {
-    "label": "Component",
-    "name": "减振器"
-  },
-  {
-    "label": "Parameter",
-    "name": "2A",
-    "value": "2",
-    "unit": "A"
-  },
-  {
-    "label": "Component",
-    "name": "张紧器"
-  },
-  {
-    "label": "Component",
-    "name": "水泵"
+    "label": "RepairStep",
+    "name": "研磨"
   },
   {
     "label": "Tool",
     "name": "尖嘴钳"
   },
   {
-    "label": "Component",
-    "name": "主轴承"
-  },
-  {
-    "label": "Parameter",
-    "name": "0mm",
-    "value": "0",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "20A",
-    "value": "20",
-    "unit": "A"
-  },
-  {
-    "label": "RepairStep",
-    "name": "调整"
-  },
-  {
-    "label": "Parameter",
-    "name": "35mm",
-    "value": "35",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "10 ~15mm",
-    "value": "10 ~15",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "15mm",
-    "value": "15",
-    "unit": "mm"
-  },
-  {
-    "label": "Fault",
-    "name": "腐蚀"
-  },
-  {
-    "label": "Parameter",
-    "name": "05mm",
-    "value": "05",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "80 ~90℃",
-    "value": "80 ~90",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "90℃",
-    "value": "90",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "14mm",
-    "value": "14",
-    "unit": "mm"
-  },
-  {
-    "label": "Tool",
-    "name": "千分尺"
-  },
-  {
-    "label": "Fault",
-    "name": "漏气"
-  },
-  {
-    "label": "Parameter",
-    "name": "003mm",
-    "value": "003",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "006mm",
-    "value": "006",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "80℃",
-    "value": "80",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "015mm",
-    "value": "015",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "02mm",
-    "value": "02",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "03mm",
-    "value": "03",
-    "unit": "mm"
-  },
-  {
     "label": "Tool",
     "name": "游标卡尺"
-  },
-  {
-    "label": "Parameter",
-    "name": "10mm",
-    "value": "10",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "08mm",
-    "value": "08",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "11mm",
-    "value": "11",
-    "unit": "mm"
-  },
-  {
-    "label": "RepairStep",
-    "name": "研磨"
   },
   {
     "label": "Tool",
     "name": "气门研磨工具"
   },
   {
-    "label": "Parameter",
-    "name": "04mm",
-    "value": "04",
-    "unit": "mm"
-  },
-  {
-    "label": "System",
-    "name": "进气系统"
-  },
-  {
-    "label": "Fault",
-    "name": "开裂"
-  },
-  {
     "label": "Fault",
     "name": "老化"
-  },
-  {
-    "label": "Component",
-    "name": "排气歧管"
   },
   {
     "label": "Fault",
     "name": "变形"
   },
   {
-    "label": "RepairStep",
-    "name": "修理"
-  },
-  {
-    "label": "Symptom",
-    "name": "异响"
-  },
-  {
-    "label": "Fault",
-    "name": "断裂"
-  },
-  {
     "label": "Component",
     "name": "连杆轴承"
-  },
-  {
-    "label": "RepairStep",
-    "name": "组装"
   },
   {
     "label": "Fault",
@@ -1530,140 +2424,44 @@
     "name": "真空表"
   },
   {
-    "label": "Vehicle",
-    "name": "轿车"
+    "label": "RepairStep",
+    "name": "试车"
   },
   {
-    "label": "Parameter",
-    "name": "800kPa",
-    "value": "800",
-    "unit": "kPa"
-  },
-  {
-    "label": "Fault",
-    "name": "P1607",
-    "fault_code": "P1607"
-  },
-  {
-    "label": "Fault",
-    "name": "P0341",
-    "fault_code": "P0341"
+    "label": "RepairStep",
+    "name": "试验"
   },
   {
     "label": "Component",
     "name": "驱动轮"
   },
   {
-    "label": "Parameter",
-    "name": "07mm",
-    "value": "07",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "250kPa",
-    "value": "250",
-    "unit": "kPa"
-  },
-  {
     "label": "Component",
     "name": "挺柱"
   },
   {
-    "label": "Component",
-    "name": "发电机"
-  },
-  {
-    "label": "Parameter",
-    "name": "56V",
-    "value": "56",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "0V",
-    "value": "0",
-    "unit": "V"
-  },
-  {
-    "label": "RepairStep",
-    "name": "试车"
-  },
-  {
-    "label": "Parameter",
-    "name": "350kPa",
-    "value": "350",
-    "unit": "kPa"
+    "label": "System",
+    "name": "发动机系统"
   },
   {
     "label": "Fault",
     "name": "机油压力不足"
   },
   {
-    "label": "Parameter",
-    "name": "125kPa",
-    "value": "125",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "150kPa",
-    "value": "150",
-    "unit": "kPa"
-  },
-  {
     "label": "Component",
     "name": "润滑油"
-  },
-  {
-    "label": "Parameter",
-    "name": "29kPa",
-    "value": "29",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "300kPa",
-    "value": "300",
-    "unit": "kPa"
-  },
-  {
-    "label": "RepairStep",
-    "name": "分解"
-  },
-  {
-    "label": "RepairStep",
-    "name": "涂抹"
-  },
-  {
-    "label": "Parameter",
-    "name": "3 m",
-    "value": "3",
-    "unit": "m"
-  },
-  {
-    "label": "RepairStep",
-    "name": "修复"
   },
   {
     "label": "Fault",
     "name": "油封损坏"
   },
   {
-    "label": "Parameter",
-    "name": "8mm",
-    "value": "8",
-    "unit": "mm"
-  },
-  {
     "label": "Fault",
     "name": "烧机油"
   },
   {
-    "label": "Parameter",
-    "name": "1100kPa",
-    "value": "1100",
-    "unit": "kPa"
+    "label": "Symptom",
+    "name": "冒蓝烟"
   },
   {
     "label": "Fault",
@@ -1678,136 +2476,8 @@
     "name": "烧蚀"
   },
   {
-    "label": "Parameter",
-    "name": "80 ~90 ℃",
-    "value": "80 ~90",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "90 ℃",
-    "value": "90",
-    "unit": "℃"
-  },
-  {
-    "label": "Component",
-    "name": "节温器"
-  },
-  {
-    "label": "Parameter",
-    "name": "100 ℃",
-    "value": "100",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "93 ~123kPa",
-    "value": "93 ~123",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "123kPa",
-    "value": "123",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "160kPa",
-    "value": "160",
-    "unit": "kPa"
-  },
-  {
     "label": "Fault",
     "name": "漏水"
-  },
-  {
-    "label": "Parameter",
-    "name": "80 ~84℃",
-    "value": "80 ~84",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "84℃",
-    "value": "84",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "120kPa",
-    "value": "120",
-    "unit": "kPa"
-  },
-  {
-    "label": "Fault",
-    "name": "过热"
-  },
-  {
-    "label": "Parameter",
-    "name": "10m",
-    "value": "10",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "107 ~108℃",
-    "value": "107 ~108",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "108℃",
-    "value": "108",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "7V",
-    "value": "7",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "8V",
-    "value": "8",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "15m",
-    "value": "15",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "95℃",
-    "value": "95",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "90 ~105℃",
-    "value": "90 ~105",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "105℃",
-    "value": "105",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "99 ~102℃",
-    "value": "99 ~102",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "102℃",
-    "value": "102",
-    "unit": "℃"
   },
   {
     "label": "System",
@@ -1818,34 +2488,6 @@
     "name": "ABS"
   },
   {
-    "label": "Parameter",
-    "name": "96℃",
-    "value": "96",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "106℃",
-    "value": "106",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "120℃",
-    "value": "120",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "100℃",
-    "value": "100",
-    "unit": "℃"
-  },
-  {
-    "label": "Component",
-    "name": "ECU"
-  },
-  {
     "label": "Fault",
     "name": "接地不良"
   },
@@ -1854,898 +2496,52 @@
     "name": "渗漏"
   },
   {
-    "label": "Parameter",
-    "name": "87℃",
-    "value": "87",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "10℃",
-    "value": "10",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "3V",
-    "value": "3",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "5V",
-    "value": "5",
-    "unit": "V"
-  },
-  {
     "label": "Component",
     "name": "转速表"
   },
   {
-    "label": "Parameter",
-    "name": "92℃",
-    "value": "92",
-    "unit": "℃"
+    "label": "RepairStep",
+    "name": "校正"
   },
   {
-    "label": "Parameter",
-    "name": "117℃",
-    "value": "117",
-    "unit": "℃"
+    "label": "RepairStep",
+    "name": "充气"
   },
   {
-    "label": "Component",
-    "name": "推杆"
-  },
-  {
-    "label": "Parameter",
-    "name": "1mm",
-    "value": "1",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "16mm",
-    "value": "16",
-    "unit": "mm"
-  },
-  {
-    "label": "Parameter",
-    "name": "9V",
-    "value": "9",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "2 ~4V",
-    "value": "2 ~4",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "4V",
-    "value": "4",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "0 ~5V",
-    "value": "0 ~5",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "1V",
-    "value": "1",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "45V",
-    "value": "45",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "20℃",
-    "value": "20",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "9 ~14V",
-    "value": "9 ~14",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "14V",
-    "value": "14",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "18V",
-    "value": "18",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "21V",
-    "value": "21",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "71V",
-    "value": "71",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "84V",
-    "value": "84",
-    "unit": "V"
+    "label": "Symptom",
+    "name": "发热"
   },
   {
     "label": "Component",
     "name": "点火器"
   },
   {
-    "label": "Parameter",
-    "name": "11V",
-    "value": "11",
-    "unit": "V"
-  },
-  {
-    "label": "RepairStep",
-    "name": "焊接"
-  },
-  {
-    "label": "Parameter",
-    "name": "9 ~ 14V",
-    "value": "9 ~ 14",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "1A",
-    "value": "1",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "2 m",
-    "value": "2",
-    "unit": "m"
-  },
-  {
-    "label": "Component",
-    "name": "起动机"
-  },
-  {
-    "label": "Parameter",
-    "name": "2V",
-    "value": "2",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "60℃",
-    "value": "60",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "26 A",
-    "value": "26",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "28 A",
-    "value": "28",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "40 A",
-    "value": "40",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "48 A",
-    "value": "48",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "9 A",
-    "value": "9",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "29 A",
-    "value": "29",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "30 A",
-    "value": "30",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "38V",
-    "value": "38",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "89V",
-    "value": "89",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "1550kPa",
-    "value": "1550",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "1250kPa",
-    "value": "1250",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "63℃",
-    "value": "63",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "0m",
-    "value": "0",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "83V",
-    "value": "83",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "11 ~14V",
-    "value": "11 ~14",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "10V",
-    "value": "10",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "3-5V",
-    "value": "3-5",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "36V",
-    "value": "36",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "75V",
-    "value": "75",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "1m",
-    "value": "1",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "7 ~10V",
-    "value": "7 ~10",
-    "unit": "V"
-  },
-  {
-    "label": "System",
-    "name": "发动机系统"
-  },
-  {
-    "label": "Parameter",
-    "name": "70℃",
-    "value": "70",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "94℃",
-    "value": "94",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "9m",
-    "value": "9",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "95 ~99℃",
-    "value": "95 ~99",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "99℃",
-    "value": "99",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "350℃",
-    "value": "350",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "40kPa",
-    "value": "40",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "5℃",
-    "value": "5",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "38 ~80℃",
-    "value": "38 ~80",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "15V",
-    "value": "15",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "81V",
-    "value": "81",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "761V",
-    "value": "761",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "367V",
-    "value": "367",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "785V",
-    "value": "785",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "32m",
-    "value": "32",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "37m",
-    "value": "37",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "40 ~140℃",
-    "value": "40 ~140",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "140℃",
-    "value": "140",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "80 ~100℃",
-    "value": "80 ~100",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "40℃",
-    "value": "40",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "999V",
-    "value": "999",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "0°C",
-    "value": "0",
-    "unit": "°C"
-  },
-  {
-    "label": "Parameter",
-    "name": "0 ~80 A",
-    "value": "0 ~80",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "80 A",
-    "value": "80",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "0A",
-    "value": "0",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "275V",
-    "value": "275",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "40 ~120℃",
-    "value": "40 ~120",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "40 ~ 120℃",
-    "value": "40 ~ 120",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "048m",
-    "value": "048",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "0 ~255kPa",
-    "value": "0 ~255",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "100kPa",
-    "value": "100",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "255kPa",
-    "value": "255",
-    "unit": "kPa"
-  },
-  {
-    "label": "Fault",
-    "name": "空转"
-  },
-  {
-    "label": "Parameter",
-    "name": "0 ~255 A",
-    "value": "0 ~255",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "255 A",
-    "value": "255",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "69 A",
-    "value": "69",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "3℃",
-    "value": "3",
-    "unit": "℃"
-  },
-  {
-    "label": "Parameter",
-    "name": "66 A",
-    "value": "66",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "17 A",
-    "value": "17",
-    "unit": "A"
-  },
-  {
     "label": "Symptom",
-    "name": "抖动"
-  },
-  {
-    "label": "Parameter",
-    "name": "24A",
-    "value": "24",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "320kPa",
-    "value": "320",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "350 ~360kPa",
-    "value": "350 ~360",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "360kPa",
-    "value": "360",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "330kPa",
-    "value": "330",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "0MPa",
-    "value": "0",
-    "unit": "MPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "400m",
-    "value": "400",
-    "unit": "m"
+    "name": "冒黑烟"
   },
   {
     "label": "Symptom",
     "name": "怠速过低"
   },
   {
-    "label": "Parameter",
-    "name": "20kPa",
-    "value": "20",
-    "unit": "kPa"
+    "label": "Tool",
+    "name": "举升机"
   },
   {
-    "label": "RepairStep",
-    "name": "试验"
-  },
-  {
-    "label": "Symptom",
-    "name": "振动"
-  },
-  {
-    "label": "Parameter",
-    "name": "0 ~6kPa",
-    "value": "0 ~6",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "6kPa",
-    "value": "6",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "50 ~75kPa",
-    "value": "50 ~75",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "75kPa",
-    "value": "75",
-    "unit": "kPa"
+    "label": "Fault",
+    "name": "油压不足"
   },
   {
     "label": "Symptom",
     "name": "油耗增加"
   },
   {
-    "label": "Parameter",
-    "name": "100m",
-    "value": "100",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "328kPa",
-    "value": "328",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "20m",
-    "value": "20",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "220kPa",
-    "value": "220",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "38kPa",
-    "value": "38",
-    "unit": "kPa"
-  },
-  {
-    "label": "Parameter",
-    "name": "800m",
-    "value": "800",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "08V",
-    "value": "08",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "74V",
-    "value": "74",
-    "unit": "V"
-  },
-  {
     "label": "Vehicle",
     "name": "面包车"
   },
   {
-    "label": "Parameter",
-    "name": "785m",
-    "value": "785",
-    "unit": "m"
-  },
-  {
     "label": "Vehicle",
     "name": "客车"
-  },
-  {
-    "label": "Parameter",
-    "name": "2m",
-    "value": "2",
-    "unit": "m"
-  },
-  {
-    "label": "Parameter",
-    "name": "120V",
-    "value": "120",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "800V",
-    "value": "800",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "36℃",
-    "value": "36",
-    "unit": "℃"
-  },
-  {
-    "label": "Component",
-    "name": "变速箱"
-  },
-  {
-    "label": "Parameter",
-    "name": "16V",
-    "value": "16",
-    "unit": "V"
-  },
-  {
-    "label": "Parameter",
-    "name": "4A",
-    "value": "4",
-    "unit": "A"
-  },
-  {
-    "label": "Parameter",
-    "name": "27A",
-    "value": "27",
-    "unit": "A"
-  },
-  {
-    "label": "Fault",
-    "name": "P0262",
-    "fault_code": "P0262"
-  },
-  {
-    "label": "Fault",
-    "name": "P0101",
-    "fault_code": "P0101"
-  },
-  {
-    "label": "Fault",
-    "name": "P0112",
-    "fault_code": "P0112"
-  },
-  {
-    "label": "Fault",
-    "name": "P0113",
-    "fault_code": "P0113"
-  },
-  {
-    "label": "Fault",
-    "name": "P0116",
-    "fault_code": "P0116"
-  },
-  {
-    "label": "Fault",
-    "name": "P0117",
-    "fault_code": "P0117"
-  },
-  {
-    "label": "Fault",
-    "name": "P0118",
-    "fault_code": "P0118"
-  },
-  {
-    "label": "Fault",
-    "name": "P0123",
-    "fault_code": "P0123"
-  },
-  {
-    "label": "Fault",
-    "name": "P0125",
-    "fault_code": "P0125"
-  },
-  {
-    "label": "Fault",
-    "name": "P0131",
-    "fault_code": "P0131"
-  },
-  {
-    "label": "Fault",
-    "name": "P0132",
-    "fault_code": "P0132"
-  },
-  {
-    "label": "Fault",
-    "name": "P0133",
-    "fault_code": "P0133"
-  },
-  {
-    "label": "Fault",
-    "name": "P0134",
-    "fault_code": "P0134"
-  },
-  {
-    "label": "Fault",
-    "name": "P0135",
-    "fault_code": "P0135"
-  },
-  {
-    "label": "Fault",
-    "name": "P0137",
-    "fault_code": "P0137"
-  },
-  {
-    "label": "Fault",
-    "name": "P0138",
-    "fault_code": "P0138"
-  },
-  {
-    "label": "Fault",
-    "name": "P0140",
-    "fault_code": "P0140"
-  },
-  {
-    "label": "Fault",
-    "name": "P0151",
-    "fault_code": "P0151"
-  },
-  {
-    "label": "Fault",
-    "name": "P0152",
-    "fault_code": "P0152"
-  },
-  {
-    "label": "Fault",
-    "name": "P0153",
-    "fault_code": "P0153"
-  },
-  {
-    "label": "Fault",
-    "name": "P0154",
-    "fault_code": "P0154"
-  },
-  {
-    "label": "Fault",
-    "name": "P0155",
-    "fault_code": "P0155"
-  },
-  {
-    "label": "Fault",
-    "name": "P0158",
-    "fault_code": "P0158"
-  },
-  {
-    "label": "Fault",
-    "name": "P0160",
-    "fault_code": "P0160"
-  },
-  {
-    "label": "Fault",
-    "name": "P0161",
-    "fault_code": "P0161"
-  },
-  {
-    "label": "Fault",
-    "name": "P0171",
-    "fault_code": "P0171"
-  },
-  {
-    "label": "Fault",
-    "name": "P0172",
-    "fault_code": "P0172"
-  },
-  {
-    "label": "Fault",
-    "name": "P0174",
-    "fault_code": "P0174"
-  },
-  {
-    "label": "Fault",
-    "name": "P0175",
-    "fault_code": "P0175"
-  },
-  {
-    "label": "Fault",
-    "name": "P0300",
-    "fault_code": "P0300"
   },
   {
     "label": "Fault",
@@ -2753,234 +2549,2516 @@
   },
   {
     "label": "Fault",
-    "name": "P0321",
-    "fault_code": "P0321"
+    "name": "空气流量传感器电路不良",
+    "fault_code": "P0101",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0101：空气流量传感器电路不良"
   },
   {
     "label": "Fault",
-    "name": "P0325",
-    "fault_code": "P0325"
+    "name": "进气温度传感器电压信号太高",
+    "fault_code": "P0112",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0112：进气温度传感器电压信号太高"
   },
   {
     "label": "Fault",
-    "name": "P0342",
-    "fault_code": "P0342"
+    "name": "进气温度传感器电压信号太低",
+    "fault_code": "P0113",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0113：进气温度传感器电压信号太低"
   },
   {
     "label": "Fault",
-    "name": "P0401",
-    "fault_code": "P0401"
+    "name": "发动机冷却液温度电压信号不良",
+    "fault_code": "P0116",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0116：发动机冷却液温度电压信号不良"
   },
   {
     "label": "Fault",
-    "name": "P0420",
-    "fault_code": "P0420"
+    "name": "发动机冷却液温度电压信号太高",
+    "fault_code": "P0117",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0117：发动机冷却液温度电压信号太高"
   },
   {
     "label": "Fault",
-    "name": "P0501",
-    "fault_code": "P0501"
+    "name": "发动机冷却液温度电压信号太低",
+    "fault_code": "P0118",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0118：发动机冷却液温度电压信号太低"
   },
   {
     "label": "Fault",
-    "name": "P0502",
-    "fault_code": "P0502"
+    "name": "节气门位置传感器电压太高",
+    "fault_code": "P0123",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0123：节气门位置传感器电压太高"
   },
   {
     "label": "Fault",
-    "name": "P0705",
-    "fault_code": "P0705"
+    "name": "发动机无法进入闭环",
+    "fault_code": "P0125",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0125：发动机无法进入闭环"
   },
   {
     "label": "Fault",
-    "name": "P0712",
-    "fault_code": "P0712"
+    "name": "氧传感器信号太低，混合比太稀",
+    "fault_code": "P0131",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0131：氧传感器信号太低，混合比太稀"
   },
   {
     "label": "Fault",
-    "name": "P0713",
-    "fault_code": "P0713"
+    "name": "氧传感器信号太高，混合比太浓",
+    "fault_code": "P0132",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0132：氧传感器信号太高，混合比太浓"
   },
   {
     "label": "Fault",
-    "name": "P0740",
-    "fault_code": "P0740"
+    "name": "前侧氧传感器变动率慢",
+    "fault_code": "P0133",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0133：前侧氧传感器变动率慢"
   },
   {
     "label": "Fault",
-    "name": "P0755",
-    "fault_code": "P0755"
+    "name": "氧传感器断路或不变动",
+    "fault_code": "P0134",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0134：氧传感器断路或不变动"
   },
   {
     "label": "Fault",
-    "name": "P1114",
-    "fault_code": "P1114"
+    "name": "前侧氧传感器信号干扰",
+    "fault_code": "P0135",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0135：前侧氧传感器信号干扰"
   },
   {
     "label": "Fault",
-    "name": "P1115",
-    "fault_code": "P1115"
+    "name": "后侧氧传感器信号太低",
+    "fault_code": "P0137",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0137：后侧氧传感器信号太低"
   },
   {
     "label": "Fault",
-    "name": "P1133",
-    "fault_code": "P1133"
+    "name": "后侧氧传感器信号太高",
+    "fault_code": "P0138",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0138：后侧氧传感器信号太高"
   },
   {
     "label": "Fault",
-    "name": "P1153",
-    "fault_code": "P1153"
+    "name": "后侧氧传感器电路断路",
+    "fault_code": "P0140",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0140：后侧氧传感器电路断路"
   },
   {
     "label": "Fault",
-    "name": "P1158",
-    "fault_code": "P1158"
+    "name": "前侧辅助氧传感器电压太低，混合比太稀",
+    "fault_code": "P0151",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0151：前侧辅助氧传感器电压太低，混合比太稀"
   },
   {
     "label": "Fault",
-    "name": "P1257",
-    "fault_code": "P1257"
+    "name": "前侧辅助氧传感器电压太高，混合比太浓",
+    "fault_code": "P0152",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0152：前侧辅助氧传感器电压太高，混合比太浓"
   },
   {
     "label": "Fault",
-    "name": "P1350",
-    "fault_code": "P1350"
+    "name": "前侧辅助氧传感器信号变动率太慢",
+    "fault_code": "P0153",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0153：前侧辅助氧传感器信号变动率太慢"
   },
   {
     "label": "Fault",
-    "name": "P1361",
-    "fault_code": "P1361"
+    "name": "前侧辅助氧传感器断路",
+    "fault_code": "P0154",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0154：前侧辅助氧传感器断路"
   },
   {
     "label": "Fault",
-    "name": "P1403",
-    "fault_code": "P1403"
+    "name": "前侧辅助氧传感器干扰",
+    "fault_code": "P0155",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0155：前侧辅助氧传感器干扰"
   },
   {
     "label": "Fault",
-    "name": "P1404",
-    "fault_code": "P1404"
+    "name": "后侧辅助氧传感器电压太高，混合比太浓",
+    "fault_code": "P0158",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0158：后侧辅助氧传感器电压太高，混合比太浓"
   },
   {
     "label": "Fault",
-    "name": "P1405",
-    "fault_code": "P1405"
+    "name": "后侧辅助氧传感器电压信号不良",
+    "fault_code": "P0160",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0160：后侧辅助氧传感器电压信号不良"
   },
   {
     "label": "Fault",
-    "name": "P1406",
-    "fault_code": "P1406"
+    "name": "后侧辅助氧传感器电压信号电路干扰",
+    "fault_code": "P0161",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0161：后侧辅助氧传感器电压信号电路干扰"
   },
   {
     "label": "Fault",
-    "name": "P1530",
-    "fault_code": "P1530"
+    "name": "供油修正一直太稀",
+    "fault_code": "P0171",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0171：供油修正一直太稀"
   },
   {
     "label": "Fault",
-    "name": "P1531",
-    "fault_code": "P1531"
+    "name": "前氧传感器供油修正太浓或太稀",
+    "fault_code": "P0172",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0172：前氧传感器供油修正太浓或太稀"
   },
   {
     "label": "Fault",
-    "name": "P1550",
-    "fault_code": "P1550"
+    "name": "前辅助氧传感器供油修正太稀",
+    "fault_code": "P0174",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0174：前辅助氧传感器供油修正太稀"
   },
   {
     "label": "Fault",
-    "name": "P1558",
-    "fault_code": "P1558"
+    "name": "前辅助氧传感器供油修正太浓",
+    "fault_code": "P0175",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0175：前辅助氧传感器供油修正太浓"
   },
   {
     "label": "Fault",
-    "name": "P1561",
-    "fault_code": "P1561"
+    "name": "点火系统间歇性不点火",
+    "fault_code": "P0300",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0300：点火系统间歇性不点火"
   },
   {
     "label": "Fault",
-    "name": "P1562",
-    "fault_code": "P1562"
+    "name": "曲轴传感器或参考信号（REF）不良",
+    "fault_code": "P0321",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0321：曲轴传感器或参考信号（REF）不良"
   },
   {
     "label": "Fault",
-    "name": "P1565",
-    "fault_code": "P1565"
+    "name": "爆燃传感器信号不良",
+    "fault_code": "P0325",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0325：爆燃传感器信号不良"
   },
   {
     "label": "Fault",
-    "name": "P1567",
-    "fault_code": "P1567"
+    "name": "凸轮或曲轴传感器信号不良",
+    "fault_code": "P0341",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0341：凸轮或曲轴传感器信号不良"
   },
   {
     "label": "Fault",
-    "name": "P1568",
-    "fault_code": "P1568"
+    "name": "凸轮轴传感器信号不良",
+    "fault_code": "P0342",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0342：凸轮轴传感器信号不良"
   },
   {
     "label": "Fault",
-    "name": "P1571",
-    "fault_code": "P1571"
-  },
-  {
-    "label": "Parameter",
-    "name": "1571 A",
-    "value": "1571",
-    "unit": "A"
+    "name": "废气再循环电磁阀电路不良",
+    "fault_code": "P0401",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0401：废气再循环电磁阀电路不良"
   },
   {
     "label": "Fault",
-    "name": "P1573",
-    "fault_code": "P1573"
-  },
-  {
-    "label": "Parameter",
-    "name": "1573 A",
-    "value": "1573",
-    "unit": "A"
+    "name": "后氧传感器不良或催化转化器不良",
+    "fault_code": "P0420",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0420：后氧传感器不良或催化转化器不良"
   },
   {
     "label": "Fault",
-    "name": "P1599",
-    "fault_code": "P1599"
+    "name": "实际车速在30km/ h 以上，无车速信号",
+    "fault_code": "P0501",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0501：实际车速在30km/ h 以上，无车速信号"
   },
   {
     "label": "Fault",
-    "name": "P1619",
-    "fault_code": "P1619"
+    "name": "发动机转速在3000r/ min 以上，无车速信号",
+    "fault_code": "P0502",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0502：发动机转速在3000r/ min 以上，无车速信号"
   },
   {
     "label": "Fault",
-    "name": "P1623",
-    "fault_code": "P1623"
+    "name": "变速器档位开关电路不良",
+    "fault_code": "P0705",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0705：变速器档位开关电路不良"
   },
   {
     "label": "Fault",
-    "name": "P1626",
-    "fault_code": "P1626"
+    "name": "变速器温度传感器电压太高",
+    "fault_code": "P0712",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0712：变速器温度传感器电压太高"
   },
   {
     "label": "Fault",
-    "name": "P1629",
-    "fault_code": "P1629"
+    "name": "变速器温度传感器电压太低",
+    "fault_code": "P0713",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0713：变速器温度传感器电压太低"
   },
   {
     "label": "Fault",
-    "name": "P1630",
-    "fault_code": "P1630"
+    "name": "液力变矩器电磁阀不良",
+    "fault_code": "P0740",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0740：液力变矩器电磁阀不良"
   },
   {
     "label": "Fault",
-    "name": "P1640",
-    "fault_code": "P1640"
+    "name": "换档电磁阀B 电路不良",
+    "fault_code": "P0755",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P0755：换档电磁阀B 电路不良"
   },
   {
     "label": "Fault",
-    "name": "P1650",
-    "fault_code": "P1650"
+    "name": "发动机冷却液温度传感器间歇性短路",
+    "fault_code": "P1114",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1114：发动机冷却液温度传感器间歇性短路"
   },
   {
     "label": "Fault",
-    "name": "P1670",
-    "fault_code": "P1670"
+    "name": "发动机冷却液温度传感器间歇性断路",
+    "fault_code": "P1115",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1115：发动机冷却液温度传感器间歇性断路"
+  },
+  {
+    "label": "Fault",
+    "name": "前氧传感器电压没有变动",
+    "fault_code": "P1133",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1133：前氧传感器电压没有变动"
+  },
+  {
+    "label": "Fault",
+    "name": "前辅助氧传感器电压一直没变动",
+    "fault_code": "P1153",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1153：前辅助氧传感器电压一直没变动"
+  },
+  {
+    "label": "Fault",
+    "name": "后辅助氧传感器电压高，混合比过浓",
+    "fault_code": "P1158",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1158：后辅助氧传感器电压高，混合比过浓"
+  },
+  {
+    "label": "Fault",
+    "name": "涡轮增压电磁阀不良",
+    "fault_code": "P1257",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1257：涡轮增压电磁阀不良"
+  },
+  {
+    "label": "Fault",
+    "name": "EST 电路不良",
+    "fault_code": "P1350",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1350：EST 电路不良"
+  },
+  {
+    "label": "Fault",
+    "name": "旁路电路不良",
+    "fault_code": "P1361",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1361：旁路电路不良"
+  },
+  {
+    "label": "Fault",
+    "name": "EGR 第1 组电磁阀不良",
+    "fault_code": "P1403",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1403：EGR 第1 组电磁阀不良"
+  },
+  {
+    "label": "Fault",
+    "name": "EGR 第2 组电磁阀不良",
+    "fault_code": "P1404",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1404：EGR 第2 组电磁阀不良"
+  },
+  {
+    "label": "Fault",
+    "name": "EGR 第3 组电磁阀不良",
+    "fault_code": "P1405",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1405：EGR 第3 组电磁阀不良"
+  },
+  {
+    "label": "Fault",
+    "name": "EGR 位置传感器不良",
+    "fault_code": "P1406",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1406：EGR 位置传感器不良"
+  },
+  {
+    "label": "Fault",
+    "name": "制冷剂压力开关信号不良",
+    "fault_code": "P1530",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1530：制冷剂压力开关信号不良"
+  },
+  {
+    "label": "Fault",
+    "name": "制冷剂压力太低或开关不良",
+    "fault_code": "P1531",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1531：制冷剂压力太低或开关不良"
+  },
+  {
+    "label": "Fault",
+    "name": "恒速控制电动机不良",
+    "fault_code": "P1550",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1550：恒速控制电动机不良"
+  },
+  {
+    "label": "Fault",
+    "name": "恒速控制位置传感器不良",
+    "fault_code": "P1558",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1558：恒速控制位置传感器不良"
+  },
+  {
+    "label": "Fault",
+    "name": "恒速大气电磁阀不良",
+    "fault_code": "P1561",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1561：恒速大气电磁阀不良"
+  },
+  {
+    "label": "Fault",
+    "name": "恒速真空电磁阀不良",
+    "fault_code": "P1562",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1562：恒速真空电磁阀不良"
+  },
+  {
+    "label": "Fault",
+    "name": "恒速控制开关不良",
+    "fault_code": "P1567",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1567：恒速控制开关不良"
+  },
+  {
+    "label": "Fault",
+    "name": "恒速位置电压信号不良",
+    "fault_code": "P1568",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1568：恒速位置电压信号不良"
+  },
+  {
+    "label": "Fault",
+    "name": "ABS 负荷信号不良",
+    "fault_code": "P1571",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1571：ABS 负荷信号不良"
+  },
+  {
+    "label": "Fault",
+    "name": "ABS 负荷电路不良",
+    "fault_code": "P1573",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1573：ABS 负荷电路不良"
+  },
+  {
+    "label": "Fault",
+    "name": "恒速控制电源不良",
+    "fault_code": "P1599",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1599：恒速控制电源不良"
+  },
+  {
+    "label": "Fault",
+    "name": "机油指示灯归零电路不良",
+    "fault_code": "P1619",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1619：机油指示灯归零电路不良"
+  },
+  {
+    "label": "Fault",
+    "name": "电脑EPROM 不良",
+    "fault_code": "P1623",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1623：电脑EPROM 不良"
+  },
+  {
+    "label": "Fault",
+    "name": "防盗控制在发动机起动后汽油泵电路断路",
+    "fault_code": "P1626",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1626：防盗控制在发动机起动后汽油泵电路断路"
+  },
+  {
+    "label": "Fault",
+    "name": "防盗控制在起动时汽油泵电路断路",
+    "fault_code": "P1629",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1629：防盗控制在起动时汽油泵电路断路"
+  },
+  {
+    "label": "Fault",
+    "name": "电源电压低于9V 或高于17. 3V",
+    "fault_code": "P1630",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1630：电源电压低于9V 或高于17. 3V"
+  },
+  {
+    "label": "Fault",
+    "name": "炭罐阀、风扇继电器、液力变矩器（TCC）阀电路不良",
+    "fault_code": "P1640",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1640：炭罐阀、风扇继电器、液力变矩器（TCC）阀电路不良"
+  },
+  {
+    "label": "Fault",
+    "name": "换档电磁阀A 和B、液力变矩器（TCC）的主油压阀、EGR 阀电路不良",
+    "fault_code": "P1650",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1650：换档电磁阀A 和B、液力变矩器（TCC）的主油压阀、EGR 阀电路不良"
+  },
+  {
+    "label": "Fault",
+    "name": "空调继电器、风扇继电器、故障灯电路不良",
+    "fault_code": "P1670",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "description": "故障码 P1670：空调继电器、风扇继电器、故障灯电路不良"
+  },
+  {
+    "label": "Component",
+    "name": "未能正确遵照下列说明和注意事项可能导致您重伤\n或死亡。\n请仔细遵照本手册内的步骤和注意事项。",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "SDH125T-31",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "前鼓制动": "–",
+    "CBS": "–",
+    "后脚踏制动": "–",
+    "description": "前鼓制动: –; CBS: –; 后脚踏制动: –"
+  },
+  {
+    "label": "Component",
+    "name": "(B1)SDH125T-31",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "前碟制动": "–",
+    "CBS": "–",
+    "后脚踏制动": "–",
+    "description": "前碟制动: –; CBS: –; 后脚踏制动: –"
+  },
+  {
+    "label": "Component",
+    "name": "(B2)SDH125T-31",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "前鼓制动": "–",
+    "CBS": "–",
+    "后手柄制动": "–",
+    "description": "前鼓制动: –; CBS: –; 后手柄制动: –"
+  },
+  {
+    "label": "Component",
+    "name": "(B3)SDH125T-31",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "前碟制动": "–",
+    "CBS": "–",
+    "后手柄制动": "–",
+    "description": "前碟制动: –; CBS: –; 后手柄制动: –"
+  },
+  {
+    "label": "Component",
+    "name": "(B4)SDH125T-31\n(B5)SDH125T-31",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "前鼓制动": "–",
+    "后脚踏制动": "–",
+    "description": "前鼓制动: –; 后脚踏制动: –"
+  },
+  {
+    "label": "Component",
+    "name": "尺寸",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "总长",
+    "技术参数": "1,737 mm",
+    "description": "col1: 总长; 技术参数: 1,737 mm"
+  },
+  {
+    "label": "Component",
+    "name": "车架",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "车架类型",
+    "技术参数": "弯梁式",
+    "description": "col1: 车架类型; 技术参数: 弯梁式"
+  },
+  {
+    "label": "Component",
+    "name": "怠速速度",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "技术参数": "1,700 ± 100 rpm",
+    "description": "技术参数: 1,700 ± 100 rpm"
+  },
+  {
+    "label": "Component",
+    "name": "油门转把自由行程",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "技术参数": "2 – 6 mm",
+    "description": "技术参数: 2 – 6 mm"
+  },
+  {
+    "label": "Component",
+    "name": "怠速空气螺钉初始开度",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "技术参数": "拧到底后回转 1-7/8 圈",
+    "description": "技术参数: 拧到底后回转 1-7/8 圈"
+  },
+  {
+    "label": "Component",
+    "name": "怠速时的燃油压力",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "技术参数": "263 – 316 kPa",
+    "description": "技术参数: 263 – 316 kPa"
+  },
+  {
+    "label": "Component",
+    "name": "活动主动面",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "轴衬内径",
+    "标准值": "22.035 – 22.085",
+    "维修界限值": "–",
+    "description": "col1: 轴衬内径; 标准值: 22.035 – 22.085; 维修界限值: –"
+  },
+  {
+    "label": "Component",
+    "name": "冷态胎压",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "仅驾驶员一人",
+    "标准值": "175 kPa",
+    "维修界限值": "–",
+    "description": "col1: 仅驾驶员一人; 标准值: 175 kPa; 维修界限值: –"
+  },
+  {
+    "label": "Component",
+    "name": "车轴偏摆",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "标准值": "–",
+    "维修界限值": "0.2",
+    "description": "标准值: –; 维修界限值: 0.2"
+  },
+  {
+    "label": "Component",
+    "name": "前鼓制动",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "制动杆自由行程",
+    "标准值": "10 – 20",
+    "维修界限值": "–",
+    "description": "col1: 制动杆自由行程; 标准值: 10 – 20; 维修界限值: –"
+  },
+  {
+    "label": "Component",
+    "name": "前碟制动\n（CBS 型除外）",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "指定的制动液",
+    "标准值": "DOT 3 或 DOT 4",
+    "维修界限值": "–",
+    "description": "col1: 指定的制动液; 标准值: DOT 3 或 DOT 4; 维修界限值: –"
+  },
+  {
+    "label": "Component",
+    "name": "前碟制动\n（CBS 型）",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "指定的制动液",
+    "标准值": "DOT 3 或 DOT 4",
+    "维修界限值": "–",
+    "description": "col1: 指定的制动液; 标准值: DOT 3 或 DOT 4; 维修界限值: –"
+  },
+  {
+    "label": "Component",
+    "name": "后制动\n（手柄制动型）",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "制动杆自由行程",
+    "标准值": "10 – 20",
+    "维修界限值": "–",
+    "description": "col1: 制动杆自由行程; 标准值: 10 – 20; 维修界限值: –"
+  },
+  {
+    "label": "Component",
+    "name": "后制动\n（脚踏制动型）",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "踏板自由行程",
+    "标准值": "20 – 30",
+    "维修界限值": "–",
+    "description": "col1: 踏板自由行程; 标准值: 20 – 30; 维修界限值: –"
+  },
+  {
+    "label": "Component",
+    "name": "喷油器电阻（24°C）",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "技术参数": "11 – 13 Ω",
+    "description": "技术参数: 11 – 13 Ω"
+  },
+  {
+    "label": "Component",
+    "name": "快速怠速电磁阀电阻（24 °C）",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "技术参数": "24 – 27 Ω",
+    "description": "技术参数: 24 – 27 Ω"
+  },
+  {
+    "label": "Component",
+    "name": "点火正时（“F” 标记）",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "技术参数": "转速为 1,700 时压力为 10°BTDC",
+    "description": "技术参数: 转速为 1,700 时压力为 10°BTDC"
+  },
+  {
+    "label": "Component",
+    "name": "磁电机",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "功率",
+    "技术参数": "0.17 kW/5,000 rpm",
+    "description": "col1: 功率; 技术参数: 0.17 kW/5,000 rpm"
+  },
+  {
+    "label": "Component",
+    "name": "5 mm 六角螺栓和螺母",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "紧固扭矩（N·m）": "4.2",
+    "紧固件类型": "5 mm 螺钉",
+    "description": "紧固扭矩（N·m）: 5.2; 紧固件类型: 5 mm 螺钉; 紧固扭矩（N·m）: 4.2"
+  },
+  {
+    "label": "Component",
+    "name": "6 mm 六角螺栓和螺母",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "紧固扭矩（N·m）": "9.0",
+    "紧固件类型": "6 mm 螺钉",
+    "description": "紧固扭矩（N·m）: 10; 紧固件类型: 6 mm 螺钉; 紧固扭矩（N·m）: 9.0"
+  },
+  {
+    "label": "Component",
+    "name": "8 mm 六角螺栓和螺母",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "紧固扭矩（N·m）": "12",
+    "紧固件类型": "6 mm 凸缘螺栓",
+    "description": "紧固扭矩（N·m）: 22; 紧固件类型: 6 mm 凸缘螺栓; 紧固扭矩（N·m）: 12"
+  },
+  {
+    "label": "Component",
+    "name": "10 mm 六角螺栓和螺母",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "紧固扭矩（N·m）": "27",
+    "紧固件类型": "8 mm 凸缘螺栓和螺母",
+    "description": "紧固扭矩（N·m）: 34; 紧固件类型: 8 mm 凸缘螺栓和螺母; 紧固扭矩（N·m）: 27"
+  },
+  {
+    "label": "Component",
+    "name": "12 mm 六角螺栓和螺母",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "紧固扭矩（N·m）": "39",
+    "紧固件类型": "10 mm 凸缘螺栓和螺母",
+    "description": "紧固扭矩（N·m）: 54; 紧固件类型: 10 mm 凸缘螺栓和螺母; 紧固扭矩（N·m）: 39"
+  },
+  {
+    "label": "Component",
+    "name": "快速怠速电磁阀固定内梅花头螺钉",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "数量": "2",
+    "直径（mm）": "5",
+    "紧固扭矩（N·m）": "3.4",
+    "description": "数量: 2; 直径（mm）: 5; 紧固扭矩（N·m）: 3.4"
+  },
+  {
+    "label": "Component",
+    "name": "油门拉线支架螺钉",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "数量": "1",
+    "直径（mm）": "5",
+    "紧固扭矩（N·m）": "3.4",
+    "description": "数量: 1; 直径（mm）: 5; 紧固扭矩（N·m）: 3.4"
+  },
+  {
+    "label": "Component",
+    "name": "油泵板螺钉",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "数量": "1",
+    "直径（mm）": "4",
+    "紧固扭矩（N·m）": "3.0",
+    "description": "数量: 1; 直径（mm）: 4; 紧固扭矩（N·m）: 3.0"
+  },
+  {
+    "label": "Component",
+    "name": "进气罩螺钉",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "数量": "3",
+    "直径（mm）": "5",
+    "紧固扭矩（N·m）": "0.8",
+    "description": "数量: 3; 直径（mm）: 5; 紧固扭矩（N·m）: 0.8"
+  },
+  {
+    "label": "Component",
+    "name": "飞轮螺母",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "数量": "1",
+    "直径（mm）": "10",
+    "紧固扭矩（N·m）": "39",
+    "description": "数量: 1; 直径（mm）: 10; 紧固扭矩（N·m）: 39"
+  },
+  {
+    "label": "Component",
+    "name": "发动机吊架连接枢轴螺母\n（车架侧）",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "数量": "1",
+    "直径（mm）": "10",
+    "紧固扭矩（N·m）": "69",
+    "description": "数量: 1; 直径（mm）: 10; 紧固扭矩（N·m）: 69"
+  },
+  {
+    "label": "Component",
+    "name": "发动机吊架连接枢轴螺母\n（发动机侧）",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "数量": "1",
+    "直径（mm）": "10",
+    "紧固扭矩（N·m）": "49",
+    "description": "数量: 1; 直径（mm）: 10; 紧固扭矩（N·m）: 49"
+  },
+  {
+    "label": "Component",
+    "name": "侧支架枢轴螺栓",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "数量": "1",
+    "直径（mm）": "10",
+    "紧固扭矩（N·m）": "10",
+    "description": "数量: 1; 直径（mm）: 10; 紧固扭矩（N·m）: 10"
+  },
+  {
+    "label": "Component",
+    "name": "侧支架枢轴螺母",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "数量": "1",
+    "直径（mm）": "10",
+    "紧固扭矩（N·m）": "29",
+    "description": "数量: 1; 直径（mm）: 10; 紧固扭矩（N·m）: 29"
+  },
+  {
+    "label": "Component",
+    "name": "车把柱螺母",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "数量": "1",
+    "直径（mm）": "10",
+    "紧固扭矩（N·m）": "39",
+    "description": "数量: 1; 直径（mm）: 10; 紧固扭矩（N·m）: 39"
+  },
+  {
+    "label": "Component",
+    "name": "方向柱锁紧螺母",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "数量": "1",
+    "直径（mm）": "BC1",
+    "紧固扭矩（N·m）": "–",
+    "备注": "3-20",
+    "description": "数量: 1; 直径（mm）: BC1; 紧固扭矩（N·m）: –; 备注: 3-20"
+  },
+  {
+    "label": "Component",
+    "name": "前碟制动",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "补偿器连接\n线缆锁紧螺母\n（仅限 CBS 型）",
+    "数量": "1",
+    "直径（mm）": "8",
+    "紧固扭矩（N·m）": "6.5",
+    "description": "col1: 补偿器连接\n线缆锁紧螺母\n（仅限 CBS 型）; 数量: 1; 直径（mm）: 8; 紧固扭矩（N·m）: 6.5"
+  },
+  {
+    "label": "Component",
+    "name": "起动电机端子螺钉",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "数量": "1",
+    "直径（mm）": "4",
+    "紧固扭矩（N·m）": "2.0",
+    "description": "数量: 1; 直径（mm）: 4; 紧固扭矩（N·m）: 2.0"
+  },
+  {
+    "label": "Component",
+    "name": "油门拉线 A 锁紧螺母\n（车把侧）",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "碟型",
+    "数量": "1",
+    "直径（mm）": "10",
+    "紧固扭矩（N·m）": "3.0",
+    "description": "col1: 碟型; 数量: 1; 直径（mm）: 10; 紧固扭矩（N·m）: 3.0"
+  },
+  {
+    "label": "Component",
+    "name": "油门拉线 B 锁紧螺母\n（车把侧）",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "碟型",
+    "数量": "1",
+    "直径（mm）": "10",
+    "紧固扭矩（N·m）": "3.0",
+    "description": "col1: 碟型; 数量: 1; 直径（mm）: 10; 紧固扭矩（N·m）: 3.0"
+  },
+  {
+    "label": "Component",
+    "name": "燃油 & 发动机",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "工具编号": "07746-0010700",
+    "工具名称": "附件，24 x 26 mm",
+    "description": "工具编号: 07746-0010700; 工具名称: 附件，24 x 26 mm"
+  },
+  {
+    "label": "Component",
+    "name": "车架 & 底盘",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "工具编号": "07746-0010100",
+    "工具名称": "附件，32 x 35 mm",
+    "description": "工具编号: 07746-0010100; 工具名称: 附件，32 x 35 mm"
+  },
+  {
+    "label": "Component",
+    "name": "鞍座锁拉线",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "主线束",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "燃油",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "泵 5 芯接头",
+    "description": "col1: 泵 5 芯接头"
+  },
+  {
+    "label": "Component",
+    "name": "鞍\n拉",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "空气管\n车架\n后制动拉线\n21 - 25": "座锁\n线",
+    "description": "空气管\n车架\n后制动拉线\n21 - 25: 座锁\n线"
+  },
+  {
+    "label": "Component",
+    "name": "快\n2",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "需要对接",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "至喷",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "油器",
+    "description": "col1: 油器"
+  },
+  {
+    "label": "Component",
+    "name": "当前的故障",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "现有的 PGM-FI": "闪烁",
+    "col2": "常亮",
+    "col3": "闪烁",
+    "该 PGM-FI": "常亮",
+    "col5": "常亮",
+    "col6": "闪烁",
+    "description": "现有的 PGM-FI: 闪烁; col2: 常亮; col3: 闪烁; 该 PGM-FI: 常亮; col5: 常亮; col6: 闪烁"
+  },
+  {
+    "label": "Component",
+    "name": "以前的故障",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "现有的 PGM-FI": "不亮",
+    "col2": "不亮",
+    "col3": "闪烁",
+    "该 PGM-FI": "* 常亮",
+    "col5": "* 常亮",
+    "col6": "* 闪烁",
+    "description": "现有的 PGM-FI: 不亮; col2: 不亮; col3: 闪烁; 该 PGM-FI: * 常亮; col5: * 常亮; col6: * 闪烁"
+  },
+  {
+    "label": "Component",
+    "name": "181.0 – 182.0 mm",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "最小 3 cm3\n[I],\n最小 2 cm3",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "[A], [B], [C]",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "[I],",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "0 - 1 mm": "[J]",
+    "description": "0 - 1 mm: [J]"
+  },
+  {
+    "label": "Component",
+    "name": "[1",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "[1]\n[2]\n[10] [15] [3": "6]",
+    "description": "[1]\n[2]\n[10] [15] [3: 6]"
+  },
+  {
+    "label": "Component",
+    "name": "7.5 N·m\n15.0 – 16.0mm",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "15.0 – 16.0mm",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "[C]",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col2": "[E]",
+    "col3": "[G]",
+    "description": "col2: [E]; col3: [G]"
+  },
+  {
+    "label": "Component",
+    "name": "[D]",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "O/W",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "Br\nG",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "30 K-LINE": "15 SCS\n2 LG",
+    "description": "30 K-LINE: 15 SCS\n2 LG"
+  },
+  {
+    "label": "Component",
+    "name": "起动电机",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "R/W",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "灯开关 Bl/Br Bl/Br\nBAT\nG\n喇叭\nLg\nBu/W\n3P\nHL\nLO",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "(N)",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "TL\n(N)",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "HL",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "颜色",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "HL": "蓝/白",
+    "C1": "黑/棕",
+    "TL": "棕色",
+    "C2": "黑/棕",
+    "description": "HL: 蓝/白; C1: 黑/棕; TL: 棕色; C2: 黑/棕"
+  },
+  {
+    "label": "Component",
+    "name": "B\n开",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col1": "AT1 BAT2\n/白 红/黑",
+    "col2": "(N)",
+    "description": "col1: AT1 BAT2\n/白 红/黑; col2: (N)"
+  },
+  {
+    "label": "Component",
+    "name": "颜色 红",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "col2": "颜色",
+    "R W L": "浅蓝色 灰色 橙色",
+    "description": "col2: 颜色; R W L: 浅蓝色 灰色 橙色"
+  },
+  {
+    "label": "Component",
+    "name": "蓝色",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "HL": "蓝/白",
+    "col3": "颜色",
+    "col4": "黑/棕",
+    "description": "HL: 蓝/白; col3: 颜色; col4: 黑/棕"
+  },
+  {
+    "label": "Component",
+    "name": "按下",
+    "source_doc": "SDH125T-31本田裂行维修手册"
+  },
+  {
+    "label": "Component",
+    "name": "颜色 绿/",
+    "source_doc": "SDH125T-31本田裂行维修手册",
+    "T ST": "黄 黄/绿",
+    "description": "T ST: 黄 黄/绿"
+  },
+  {
+    "label": "Component",
+    "name": "3.\n按\n冷\n却\n方\n式\n分\n类",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "（1） 四冲程发动机": "（1） 水冷发动机",
+    "（2） 二冲程发动机": "（2） 风冷发动机",
+    "description": "（1） 四冲程发动机: （1） 水冷发动机; （2） 二冲程发动机: （2） 风冷发动机"
+  },
+  {
+    "label": "Component",
+    "name": "5.\n按\n气\n缸\n排\n列\n方\n式\n分\n类",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "（1） 单缸发动机": "（1） 直列式发动机",
+    "（2） 多缸发动机": "（2） 双列式发动机",
+    "description": "（1） 单缸发动机: （1） 直列式发动机; （2） 多缸发动机: （2） 双列式发动机"
+  },
+  {
+    "label": "Component",
+    "name": "（3） 车博仕V30",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "（2） 元征X431": "（4） 红盒子MT2500",
+    "description": "（2） 元征X431: （4） 红盒子MT2500"
+  },
+  {
+    "label": "Component",
+    "name": "2.\n套\n筒\n的\n配\n套\n手\n柄",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "（3） 十二角花形套筒": "（1） 指针式扭力扳手",
+    "（4） 六角花形套筒": "（2） 预置力式扭力扳手",
+    "description": "（3） 十二角花形套筒: （1） 指针式扭力扳手; （4） 六角花形套筒: （2） 预置力式扭力扳手"
+  },
+  {
+    "label": "Component",
+    "name": "3.\n螺\n钉\n旋\n具",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "（9） 万向接头": "（1） 一字形螺钉旋具",
+    "col2": "（2） 十字形螺钉旋具",
+    "description": "（9） 万向接头: （1） 一字形螺钉旋具; col2: （2） 十字形螺钉旋具"
+  },
+  {
+    "label": "Component",
+    "name": "5.\n钳\n子",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "（5） 内六角扳手": "（1） 鲤鱼钳",
+    "（6） 花型扳手": "（2） 钢丝钳",
+    "description": "（5） 内六角扳手: （1） 鲤鱼钳; （6） 花型扳手: （2） 钢丝钳"
+  },
+  {
+    "label": "Component",
+    "name": "6.\n锤\n子",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "（5） 外卡簧钳": "（1） 铁锤",
+    "（6） 剥线钳": "（2） 橡胶锤",
+    "description": "（5） 外卡簧钳: （1） 铁锤; （6） 剥线钳: （2） 橡胶锤"
+  },
+  {
+    "label": "Component",
+    "name": "7.\n锉\n刀",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "（5） 外卡簧钳": "（1） 锉刀的分类",
+    "（6） 剥线钳": "（2） 粗锉的使用",
+    "description": "（5） 外卡簧钳: （1） 锉刀的分类; （6） 剥线钳: （2） 粗锉的使用"
+  },
+  {
+    "label": "Component",
+    "name": "8.\n錾\n子",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "（3） 中型锉的使用": "（1） 分类",
+    "（4） 小型锉的使用": "（2） 正握使用法",
+    "description": "（3） 中型锉的使用: （1） 分类; （4） 小型锉的使用: （2） 正握使用法"
+  },
+  {
+    "label": "Component",
+    "name": "9.\n测\n量\n工\n具",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "（3） 反握使用法": "（1） 钢直尺",
+    "（4） 立握使用法": "（2） 钢卷尺",
+    "description": "（3） 反握使用法: （1） 钢直尺; （4） 立握使用法: （2） 钢卷尺"
+  },
+  {
+    "label": "Component",
+    "name": "11.\n游\n标\n卡\n尺",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "（1） 分类": "（1） 分类",
+    "（2） 千分尺的读数": "（2） 游标卡尺读数",
+    "description": "（1） 分类: （1） 分类; （2） 千分尺的读数: （2） 游标卡尺读数"
+  },
+  {
+    "label": "Component",
+    "name": "（2）\n正\n时\n灯\n检\n查",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "1）起动发动机，将变速杆置\n于P 位或N": "1）起动发动机，将变速杆置\n于P 位或N 位，将发动机转速\n保持为3000 r/ min，使发动机\n快速暖机，然后使其恢复到怠\n速状态",
+    "以丰田 2AZ⁃FE 发动机为例说明使用": "以本田 K24Z5 发动\n机为例说明使用正时灯\n检测的方法。\n1—机体正时标记 2—曲轴正时标记",
+    "description": "1）起动发动机，将变速杆置\n于P 位或N: 1）起动发动机，将变速杆置\n于P 位或N 位，将发动机转速\n保持为3000 r/ min，使发动机\n快速暖机，然后使其恢复到怠\n速状态; 以丰田 2AZ⁃FE 发动机为例说明使用: 以本田 K24Z5 发动\n机为例说明使用正时灯\n检测的方法。\n1—机体正时标记 2—曲轴正时标记"
+  },
+  {
+    "label": "Component",
+    "name": "2.\n检\n查\n散\n热\n器",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "1） 拉出负压阀将其打开，检查是否压力释": "（1）加压测试",
+    "2） 拆下散热器盖，用发动机冷却液润湿密": "（2）浸水测试",
+    "description": "1） 拉出负压阀将其打开，检查是否压力释: （1）加压测试; 2） 拆下散热器盖，用发动机冷却液润湿密: （2）浸水测试"
+  },
+  {
+    "label": "Component",
+    "name": "（2）\ni-VTEC\n系统",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "1）功用。 VTEC 可提高在任何发动机": "1）i-VTEC 系统的工作原理。 i-VTEC 系统是在VTEC 基础上增加了可变气门正时控制（VTC）装置。 VTC 通\n过油压改变进气凸轮轴相位，并且还可持续改变进气门正时。",
+    "description": "1）功用。 VTEC 可提高在任何发动机: 1）i-VTEC 系统的工作原理。 i-VTEC 系统是在VTEC 基础上增加了可变气门正时控制（VTC）装置。 VTC 通\n过油压改变进气凸轮轴相位，并且还可"
+  },
+  {
+    "label": "Component",
+    "name": "（3）\n喷\n油\n器\n的\n检\n修",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "3）将发动机加速到3000r/ min ": "1）起动发动机，使发动机处于怠速状态，用手触摸或\n使用听诊器检查喷油器是否振动或发出“ 嗒、嗒、嗒” 的\n声音。\n如果感觉无振动或听不到声响，对\n喷油器或控制电路进行检查，必要时更\n换喷油器。",
+    "4）关闭点火开关，检查并确保发动机停止5": "2）拆开喷油器线束插头，使用万用表测量喷油器2 针\n端子之间的电阻。\n低阻值喷油器电阻为2 ～3Ω，高阻值\n喷油器电阻为13 ～16Ω。 如果与规定不\n符，必要时将其更换。",
+    "description": "3）将发动机加速到3000r/ min : 1）起动发动机，使发动机处于怠速状态，用手触摸或\n使用听诊器检查喷油器是否振动或发出“ 嗒、嗒、嗒” 的\n声音。\n如果感觉无振动或听不到声响，对\n喷油器或控制电; 4）关闭点火开关，检查并确保发动机停止5: 2）拆开喷油器线束插头，使用万用表测量喷油器2 针\n端子之间的电阻。\n低阻值喷油器电阻为2 ～3Ω，高阻值\n喷油器电阻为13 ～16Ω。 如果与规定不\n符，必要"
+  },
+  {
+    "label": "Component",
+    "name": "（5）\n燃\n油\n表\n传\n感\n器\n的\n测\n试",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "5）观察喷油器的喷孔是否堵塞或变形。\n若": "将浮子从L（低）位慢慢 在浮子缓慢移\n向F（满）位移动，测量燃油 动的过程中，电阻值\n表插头1 号和2 号端子之 应均匀变化。 如果\n间的电阻变化情况。\n不符合规定，更换燃\n油表传感器。",
+    "description": "5）观察喷油器的喷孔是否堵塞或变形。\n若: 将浮子从L（低）位慢慢 在浮子缓慢移\n向F（满）位移动，测量燃油 动的过程中，电阻值\n表插头1 号和2 号端子之 应均匀变化。 如果\n间的电阻变化情况。\n不符合"
+  },
+  {
+    "label": "Component",
+    "name": "测试仪连接",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "规定条件",
+    "description": "col1: 规定条件"
+  },
+  {
+    "label": "Component",
+    "name": "VC（C5-5）—VCTA（B-67）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "低于1Ω",
+    "description": "col1: 低于1Ω"
+  },
+  {
+    "label": "Component",
+    "name": "VTA（C5-6）—VTA1（B-115）",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "VTA2（C5-4）—VTA2（B-114）",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "E2（C5-3）—ETA（B-91）",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "VC（C2-5）或VCTA（B-67）—车身接地",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "10kΩ 或更高",
+    "description": "col1: 10kΩ 或更高"
+  },
+  {
+    "label": "Component",
+    "name": "VTA（C5-6）或VTA1（B-115）—车身接地",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "VTA2（C5-4）或VTA2（B-114）—车身接地",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "正常工作状态",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "输出电压": "0. 1 ～0. 9V 之间变化",
+    "修正值": "± 25% 变化",
+    "description": "输出电压: 0. 1 ～0. 9V 之间变化; 修正值: ± 25% 变化"
+  },
+  {
+    "label": "Component",
+    "name": "3）\nPCV\n阀\n通\n风\n软\n管",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "①正向检查。\n将一根清洁软管装到阀上，将": "断开所有软管并使用压缩空气进行\n清洁，如果不能清除软管中的阻塞物，则\n进行更换。",
+    "description": "①正向检查。\n将一根清洁软管装到阀上，将: 断开所有软管并使用压缩空气进行\n清洁，如果不能清除软管中的阻塞物，则\n进行更换。"
+  },
+  {
+    "label": "Component",
+    "name": "2. 旋转滑\n阀式怠速\n控制阀\n测试",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "（2）万用\n表检修": "（1）怠速控\n制电磁阀\n电阻测试",
+    "3）步进电动机的工作情况测试。 拆下怠速": "以丰田发动机为例说明检测方法。\n检查怠速控制阀插头2 号端子与1 号、3 号端子之间的电阻，应为19. 3 ～22. 3Ω，如果不符合规\n定应更换怠速控制阀。",
+    "description": "（2）万用\n表检修: （1）怠速控\n制电磁阀\n电阻测试; 3）步进电动机的工作情况测试。 拆下怠速: 以丰田发动机为例说明检测方法。\n检查怠速控制阀插头2 号端子与1 号、3 号端子之间的电阻，应为19. 3 ～22. 3Ω，如果不符合规\n定应更换怠速控制阀。"
+  },
+  {
+    "label": "Component",
+    "name": "ECM 端子信息",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "符号（端子编号）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col2": "元件信号",
+    "col3": "导线颜色",
+    "col4": "标准参数",
+    "description": "col2: 元件信号; col3: 导线颜色; col4: 标准参数"
+  },
+  {
+    "label": "Component",
+    "name": "SPD[A24（8）]-E1 [C24（104）]",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "组合仪表的速度\n信号",
+    "导线颜色": "V-（W-B）",
+    "标准参数": "当以20km/ h 的速度行驶时有\n脉冲信号",
+    "description": "元件信号: 组合仪表的速度\n信号; 导线颜色: V-（W-B）; 标准参数: 当以20km/ h 的速度行驶时有\n脉冲信号"
+  },
+  {
+    "label": "Component",
+    "name": "VCPA[A24（57）]-EPA[A24（59）]",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "加速踏板位置传感\n器电源（用于VPA1）",
+    "导线颜色": "B-Y",
+    "标准参数": "当点火开关 ON （IG ） 时为\n4. 5 ～5. 5V",
+    "description": "元件信号: 加速踏板位置传感\n器电源（用于VPA1）; 导线颜色: B-Y; 标准参数: 当点火开关 ON （IG ） 时为\n4. 5 ～5. 5V"
+  },
+  {
+    "label": "Component",
+    "name": "VCP2[A24（58）]-EPA2[A24（60）]",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "加速踏板位置传\n感器 电 源 （用 于\nVPA2）",
+    "导线颜色": "L-O",
+    "标准参数": "当点火开关 ON（IG）时为4. 5 ～\n5. 0V",
+    "description": "元件信号: 加速踏板位置传\n感器 电 源 （用 于\nVPA2）; 导线颜色: L-O; 标准参数: 当点火开关 ON（IG）时为4. 5 ～\n5. 0V"
+  },
+  {
+    "label": "Component",
+    "name": "STP[A24（36）]-E1[C24（104）]",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "制动灯开关",
+    "导线颜色": "W-（W-B）",
+    "标准参数": "当踩下制动踏板时为9 ～14V；\n松开制动踏板时低于1. 5V",
+    "description": "元件信号: 制动灯开关; 导线颜色: W-（W-B）; 标准参数: 当踩下制动踏板时为9 ～14V；\n松开制动踏板时低于1. 5V"
+  },
+  {
+    "label": "Component",
+    "name": "TACH[A24（15）]-E1[C24（104）]",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "发动机转速",
+    "导线颜色": "B-（W-B）",
+    "标准参数": "当怠速时有脉冲信号",
+    "description": "元件信号: 发动机转速; 导线颜色: B-（W-B）; 标准参数: 当怠速时有脉冲信号"
+  },
+  {
+    "label": "Component",
+    "name": "TC[A24（27）]-E1[C24（104）]",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "DLC3 的TC 端子",
+    "导线颜色": "P-（W-B）",
+    "标准参数": "当点火开关 ON（IG）时为 9 ～\n14V",
+    "description": "元件信号: DLC3 的TC 端子; 导线颜色: P-（W-B）; 标准参数: 当点火开关 ON（IG）时为 9 ～\n14V"
+  },
+  {
+    "label": "Component",
+    "name": "PCM 插头A",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "NEP 29",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "发动机速度脉冲",
+    "col2": "黑",
+    "col3": "当发动机运转为脉冲信号",
+    "description": "col1: 发动机速度脉冲; col2: 黑; col3: 当发动机运转为脉冲信号"
+  },
+  {
+    "label": "Component",
+    "name": "PCM 插头B",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "PG2 1",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "电源地线",
+    "col2": "黑",
+    "col3": "任何时间均低于0. 2V",
+    "description": "col1: 电源地线; col2: 黑; col3: 任何时间均低于0. 2V"
+  },
+  {
+    "label": "Component",
+    "name": "EGR 2",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "废气再循环（EGR）阀",
+    "col2": "蓝/ 红",
+    "col3": "当EGR 运转时为负荷控制；当EGR 未运转时约\n为0V",
+    "description": "col1: 废气再循环（EGR）阀; col2: 蓝/ 红; col3: 当EGR 运转时为负荷控制；当EGR 未运转时约\n为0V"
+  },
+  {
+    "label": "Component",
+    "name": "PG1 10",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "电源接线",
+    "col2": "黑",
+    "col3": "任何时间均低于0. 2V",
+    "description": "col1: 电源接线; col2: 黑; col3: 任何时间均低于0. 2V"
+  },
+  {
+    "label": "Component",
+    "name": "SHA 11",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "换档电磁阀A",
+    "col2": "蓝",
+    "col3": "当发动机在R、D 和S 位（1、4、5 档）运转时为蓄电\n池电压；当发动机在P、N 、D 和S 位（位于2、3 档）运\n转时约为0V",
+    "description": "col1: 换档电磁阀A; col2: 蓝; col3: 当发动机在R、D 和S 位（1、4、5 档）运转时为蓄电\n池电压；当发动机在P、N 、D 和S 位（位于2、3 档）运\n转时约为0V"
+  },
+  {
+    "label": "Component",
+    "name": "SHB 12",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "换档电磁阀B",
+    "col2": "绿/ 白",
+    "col3": "当发动机在P、R、N、D 位和S 位（位于1、2 档）运\n转时为蓄电池电压；当发动机在D 和S 位（位于3、4、\n5 档）运转时约为0V",
+    "description": "col1: 换档电磁阀B; col2: 绿/ 白; col3: 当发动机在P、R、N、D 位和S 位（位于1、2 档）运\n转时为蓄电池电压；当发动机在D 和S 位（位于3、4、\n5 档）运转时约为0V"
+  },
+  {
+    "label": "Component",
+    "name": "APTN 13",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "变速器档位开关N",
+    "col2": "红/ 黑",
+    "col3": "位于N 位时约为0V；位于其他档位时约为5. 0V",
+    "description": "col1: 变速器档位开关N; col2: 红/ 黑; col3: 位于N 位时约为0V；位于其他档位时约为5. 0V"
+  },
+  {
+    "label": "Component",
+    "name": "ATPP 14",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "变速器档位开关P",
+    "col2": "蓝/ 黑",
+    "col3": "位于P 位时约为0V；位于其他档位时约为5. 0V",
+    "description": "col1: 变速器档位开关P; col2: 蓝/ 黑; col3: 位于P 位时约为0V；位于其他档位时约为5. 0V"
+  },
+  {
+    "label": "Component",
+    "name": "ATPR 15",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "变速器档位开关R",
+    "col2": "白/ 绿",
+    "col3": "位于R 位时约为0V；位于其他档位时约为5. 0V",
+    "description": "col1: 变速器档位开关R; col2: 白/ 绿; col3: 位于R 位时约为0V；位于其他档位时约为5. 0V"
+  },
+  {
+    "label": "Component",
+    "name": "SHC 21",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "换档电磁阀C",
+    "col2": "绿",
+    "col3": "当发动机在D 和S 位（2、3、4 和5 档）运转时为蓄\n电池电压；当发动机在P、R、N、D 和S 位（1 档）运转\n时约为0V",
+    "description": "col1: 换档电磁阀C; col2: 绿; col3: 当发动机在D 和S 位（2、3、4 和5 档）运转时为蓄\n电池电压；当发动机在P、R、N、D 和S 位（1 档）运转\n时约为0V"
+  },
+  {
+    "label": "Component",
+    "name": "ATPD 22",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "变速器档位开关D",
+    "col2": "黄/ 绿",
+    "col3": "当位于D 位时约为0V；当位于其他档位时为蓄电\n池电压",
+    "description": "col1: 变速器档位开关D; col2: 黄/ 绿; col3: 当位于D 位时约为0V；当位于其他档位时为蓄电\n池电压"
+  },
+  {
+    "label": "Component",
+    "name": "ATPRVS 23",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "变速器开关RVS",
+    "col2": "黄",
+    "col3": "当位于R 位时约为0V；当位于其他档位时为蓄电\n池电压",
+    "description": "col1: 变速器开关RVS; col2: 黄; col3: 当位于R 位时约为0V；当位于其他档位时为蓄电\n池电压"
+  },
+  {
+    "label": "Component",
+    "name": "SHD 27",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "换档电磁阀D",
+    "col2": "绿/ 红",
+    "col3": "当发动机在P、R、N 位和S 位（1、3 和4 档）运转时\n为蓄电池电压；当发动机在D 和S 位运转时约为0V",
+    "description": "col1: 换档电磁阀D; col2: 绿/ 红; col3: 当发动机在P、R、N 位和S 位（1、3 和4 档）运转时\n为蓄电池电压；当发动机在D 和S 位运转时约为0V"
+  },
+  {
+    "label": "Component",
+    "name": "ATPFWD 29",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "变速器档位开关FWD 位置",
+    "col2": "蓝/ 黄",
+    "col3": "位于D 和S 位时约为0V；位于其他档位时为蓄电\n池电压",
+    "description": "col1: 变速器档位开关FWD 位置; col2: 蓝/ 黄; col3: 位于D 和S 位时约为0V；位于其他档位时为蓄电\n池电压"
+  },
+  {
+    "label": "Component",
+    "name": "EGRP 30",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "废气再循环（EGR）阀位置传\n感器",
+    "col2": "白/ 黑",
+    "col3": "当发动机运转时为1. 2 ～3. 0V",
+    "description": "col1: 废气再循环（EGR）阀位置传\n感器; col2: 白/ 黑; col3: 当发动机运转时为1. 2 ～3. 0V"
+  },
+  {
+    "label": "Component",
+    "name": "PCM 插头C",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "PGMETCS 2",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "电源地线ETCS",
+    "col2": "黑",
+    "col3": "任何时间均低于0. 2V",
+    "description": "col1: 电源地线ETCS; col2: 黑; col3: 任何时间均低于0. 2V"
+  },
+  {
+    "label": "Component",
+    "name": "LG1 44",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "逻辑地线",
+    "col2": "棕/ 黄",
+    "col3": "任何时间均低于0. 2V",
+    "description": "col1: 逻辑地线; col2: 棕/ 黄; col3: 任何时间均低于0. 2V"
+  },
+  {
+    "label": "Component",
+    "name": "LG2 48",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "逻辑地线",
+    "col2": "棕/ 黄",
+    "col3": "任何时间均低于0. 2V",
+    "description": "col1: 逻辑地线; col2: 棕/ 黄; col3: 任何时间均低于0. 2V"
+  },
+  {
+    "label": "Component",
+    "name": "端子编号",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col2": "元件信号",
+    "col3": "元件名称",
+    "col4": "标准参数",
+    "description": "col2: 元件信号; col3: 元件名称; col4: 标准参数"
+  },
+  {
+    "label": "Component",
+    "name": "1E、1F 与1G",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col2": "GND",
+    "col3": "接地",
+    "col4": "在任何条件下均低于1. 0V",
+    "description": "col2: GND; col3: 接地; col4: 在任何条件下均低于1. 0V"
+  },
+  {
+    "label": "Component",
+    "name": "1AI",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col2": "CAN （- ）",
+    "col3": "仪表组",
+    "col4": "该接线端用于CAN 系统",
+    "description": "col2: CAN （- ）; col3: 仪表组; col4: 该接线端用于CAN 系统"
+  },
+  {
+    "label": "Component",
+    "name": "1AM",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col2": "CAN （+ ）",
+    "col3": "仪表",
+    "col4": "该接线端用于CAN 系统",
+    "description": "col2: CAN （+ ）; col3: 仪表; col4: 该接线端用于CAN 系统"
+  },
+  {
+    "label": "Component",
+    "name": "1AN",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col2": "巡航控制开关接地",
+    "col3": "巡航车速控制开关",
+    "col4": "在任何条件下均低于1. 0V",
+    "description": "col2: 巡航控制开关接地; col3: 巡航车速控制开关; col4: 在任何条件下均低于1. 0V"
+  },
+  {
+    "label": "Component",
+    "name": "1AW",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "A/ C",
+    "元件名称": "制冷剂压力开关 （低、\n高）、A/ C 开关",
+    "标准参数": "当怠速，并且A/ C 运行时应低于1. 0V；当怠速，\n并且A/ C 不运行时应为蓄电池电压",
+    "description": "元件信号: A/ C; 元件名称: 制冷剂压力开关 （低、\n高）、A/ C 开关; 标准参数: 当怠速，并且A/ C 运行时应低于1. 0V；当怠速，\n并且A/ C 不运行时应为蓄电池电压"
+  },
+  {
+    "label": "Component",
+    "name": "1AX",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "A/ C 压缩机负载",
+    "元件名称": "制冷剂压力开关（中）",
+    "标准参数": "当A/ C 开启，制冷剂压力超过1550kPa 时应低\n于1. 0V；当A/ C 开启，制冷剂压力低于1250kPa\n时应为蓄电池电压",
+    "description": "元件信号: A/ C 压缩机负载; 元件名称: 制冷剂压力开关（中）; 标准参数: 当A/ C 开启，制冷剂压力超过1550kPa 时应低\n于1. 0V；当A/ C 开启，制冷剂压力低于1250kPa\n时应为蓄电池电压"
+  },
+  {
+    "label": "Component",
+    "name": "1BC",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "空档位置",
+    "元件名称": "空档开关",
+    "标准参数": "当变速杆位于空档位置时应低于1. 0V；当变速\n杆不在空档位置时应为蓄电池电压",
+    "description": "元件信号: 空档位置; 元件名称: 空档开关; 标准参数: 当变速杆位于空档位置时应低于1. 0V；当变速\n杆不在空档位置时应为蓄电池电压"
+  },
+  {
+    "label": "Component",
+    "name": "1BE",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "接地信号",
+    "元件名称": "接地",
+    "标准参数": "在任何条件下均低于1. 0V",
+    "description": "元件信号: 接地信号; 元件名称: 接地; 标准参数: 在任何条件下均低于1. 0V"
+  },
+  {
+    "label": "Component",
+    "name": "2B",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "HO2S 加热器控制信号",
+    "元件名称": "HO2S 加热器",
+    "标准参数": "当发动机工作时有脉冲信号变化",
+    "description": "元件信号: HO2S 加热器控制信号; 元件名称: HO2S 加热器; 标准参数: 当发动机工作时有脉冲信号变化"
+  },
+  {
+    "label": "Component",
+    "name": "2C",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "清污电磁阀控制信号",
+    "元件名称": "清污电磁阀",
+    "标准参数": "当发动机工作时有脉冲信号变化",
+    "description": "元件信号: 清污电磁阀控制信号; 元件名称: 清污电磁阀; 标准参数: 当发动机工作时有脉冲信号变化"
+  },
+  {
+    "label": "Component",
+    "name": "2E",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "OCV 控制",
+    "元件名称": "OCV",
+    "标准参数": "当发动机工作时有脉冲信号变化",
+    "description": "元件信号: OCV 控制; 元件名称: OCV; 标准参数: 当发动机工作时有脉冲信号变化"
+  },
+  {
+    "label": "Component",
+    "name": "2I",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "可变涡流控制信号",
+    "元件名称": "可变涡流电磁阀",
+    "标准参数": "当怠速运转，并且ECT 温度高于63℃时应为蓄\n电池电压；当怠速运转，ECT 温度低于63℃，并且\n发动转速低于3500r/ min 时应低于1. 0V",
+    "description": "元件信号: 可变涡流控制信号; 元件名称: 可变涡流电磁阀; 标准参数: 当怠速运转，并且ECT 温度高于63℃时应为蓄\n电池电压；当怠速运转，ECT 温度低于63℃，并且\n发动转速低于3500r/ min 时应低于1. 0V"
+  },
+  {
+    "label": "Component",
+    "name": "2Q",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "HO2S 信号",
+    "元件名称": "HO2S",
+    "标准参数": "当怠速时应在0 ～1. 0V 变化",
+    "description": "元件信号: HO2S 信号; 元件名称: HO2S; 标准参数: 当怠速时应在0 ～1. 0V 变化"
+  },
+  {
+    "label": "Component",
+    "name": "2AW",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "EGR 阀#4 线圈控制\n信号",
+    "元件名称": "EGR 阀接线端F",
+    "标准参数": "当怠速时应低于1. 0V",
+    "description": "元件信号: EGR 阀#4 线圈控制\n信号; 元件名称: EGR 阀接线端F; 标准参数: 当怠速时应低于1. 0V"
+  },
+  {
+    "label": "Component",
+    "name": "2AX",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "EGR 阀#1 线圈控制\n信号",
+    "元件名称": "EGR 阀接线端E",
+    "标准参数": "当怠速时应低于1. 0V",
+    "description": "元件信号: EGR 阀#1 线圈控制\n信号; 元件名称: EGR 阀接线端E; 标准参数: 当怠速时应低于1. 0V"
+  },
+  {
+    "label": "Component",
+    "name": "2AZ",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "4 缸喷油器控制信号",
+    "元件名称": "4 缸喷油器",
+    "标准参数": "当发动机工作时有脉冲信号变化",
+    "description": "元件信号: 4 缸喷油器控制信号; 元件名称: 4 缸喷油器; 标准参数: 当发动机工作时有脉冲信号变化"
+  },
+  {
+    "label": "Component",
+    "name": "2BB",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "1 缸喷油器控制信号",
+    "元件名称": "1 缸喷油器",
+    "标准参数": "当发动机工作时有脉冲信号变化",
+    "description": "元件信号: 1 缸喷油器控制信号; 元件名称: 1 缸喷油器; 标准参数: 当发动机工作时有脉冲信号变化"
+  },
+  {
+    "label": "Component",
+    "name": "2BC",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "2 缸喷油器控制信号",
+    "元件名称": "2 缸喷油器",
+    "标准参数": "当发动机工作时有脉冲信号变化",
+    "description": "元件信号: 2 缸喷油器控制信号; 元件名称: 2 缸喷油器; 标准参数: 当发动机工作时有脉冲信号变化"
+  },
+  {
+    "label": "Component",
+    "name": "2BD",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "元件信号": "3 缸喷油器控制信号",
+    "元件名称": "3 缸喷油器",
+    "标准参数": "当发动机工作时有脉冲信号变化",
+    "description": "元件信号: 3 缸喷油器控制信号; 元件名称: 3 缸喷油器; 标准参数: 当发动机工作时有脉冲信号变化"
+  },
+  {
+    "label": "Component",
+    "name": "PCM 端子C1 信息",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "2 ～3",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col2": "—",
+    "col3": "—",
+    "col4": "未使用",
+    "description": "col2: —; col3: —; col4: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "11 ～12",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "14 ～15",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "21 ～28",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "34 ～37",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "39 ～42",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "49 ～52",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "62 ～63",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "66 ～67",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "70 ～72",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "74 ～75",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "77 ～78",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "PCM 端子C2 信息",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "1 ～2",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "8 ～9",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "11 ～15",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "20 ～21",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "31 ～32",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "36 ～38",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "40 ～41",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "45 ～48",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "51 ～55",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "59 ～60",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "62 ～65",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "—",
+    "col2": "—",
+    "col3": "未使用",
+    "description": "col1: —; col2: —; col3: 未使用"
+  },
+  {
+    "label": "Component",
+    "name": "端子\n编号",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "导线\n颜色",
+    "col2": "元件名称",
+    "col3": "状 态",
+    "col4": "标准参数（直流电压）",
+    "description": "col1: 导线\n颜色; col2: 元件名称; col3: 状 态; col4: 标准参数（直流电压）"
+  },
+  {
+    "label": "Component",
+    "name": "3 与5",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "G",
+    "col2": "加热型氧传\n感器1 与2",
+    "col3": "发动机运转中，并且发动机转\n速低于3600r/ min",
+    "col4": "约10V①",
+    "description": "col1: G; col2: 加热型氧传\n感器1 与2; col3: 发动机运转中，并且发动机转\n速低于3600r/ min; col4: 约10V①"
+  },
+  {
+    "label": "Component",
+    "name": "10 与11",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "导线\n颜色": "B",
+    "元件名称": "ECM 接地",
+    "状 态": "发动机怠速运转",
+    "标准参数（直流电压）": "车身接地",
+    "description": "导线\n颜色: B; 元件名称: ECM 接地; 状 态: 发动机怠速运转; 标准参数（直流电压）: 车身接地"
+  },
+  {
+    "label": "Component",
+    "name": "HO2S1 监视器（B1）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "状 态": "发动机暖机",
+    "col2": "将发动机转速保持在\n2000r/ min",
+    "参 数": "“稀←→ 浓” 之间变化，并\n且10s 内变化5 次以上",
+    "description": "状 态: 发动机暖机; col2: 将发动机转速保持在\n2000r/ min; 参 数: “稀←→ 浓” 之间变化，并\n且10s 内变化5 次以上"
+  },
+  {
+    "label": "Component",
+    "name": "HO2S2 监视器（B1）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "状 态": "发动机暖机",
+    "col2": "发动机转速迅速提高到\n3000r/ min",
+    "参 数": "“稀←→浓”之间变化",
+    "description": "状 态: 发动机暖机; col2: 发动机转速迅速提高到\n3000r/ min; 参 数: “稀←→浓”之间变化"
+  },
+  {
+    "label": "Component",
+    "name": "空调信号",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "状 态": "发动机怠速",
+    "col2": "空调开关：OFF",
+    "参 数": "OFF",
+    "description": "状 态: 发动机怠速; col2: 空调开关：OFF; 参 数: OFF"
+  },
+  {
+    "label": "Component",
+    "name": "PW/ ST 信号",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "状 态": "发动机怠速",
+    "col2": "方向盘：不转动",
+    "参 数": "OFF",
+    "description": "状 态: 发动机怠速; col2: 方向盘：不转动; 参 数: OFF"
+  },
+  {
+    "label": "Component",
+    "name": "喷油器脉冲B1",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "状 态": "发动机暖机后",
+    "col2": "怠速",
+    "参 数": "2. 0 ～3. 0ms",
+    "description": "状 态: 发动机暖机后; col2: 怠速; 参 数: 2. 0 ～3. 0ms"
+  },
+  {
+    "label": "Component",
+    "name": "点火正时",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "状 态": "发动机暖机后",
+    "col2": "怠速",
+    "参 数": "1° ～11° BTDC",
+    "description": "状 态: 发动机暖机后; col2: 怠速; 参 数: 1° ～11° BTDC"
+  },
+  {
+    "label": "Component",
+    "name": "清污控制阀",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "状 态": "发动机暖机后并且空调\n开关OFF",
+    "col2": "怠速",
+    "参 数": "0%",
+    "description": "状 态: 发动机暖机后并且空调\n开关OFF; col2: 怠速; 参 数: 0%"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n2",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：怠速运转": "发动机状态：怠速运转",
+    "description": "发动机状态：怠速运转: 发动机状态：怠速运转"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n3",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：怠速运转": "发动机状态：怠速运转",
+    "description": "发动机状态：怠速运转: 发动机状态：怠速运转"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n4",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：怠速运转": "发动机状态：怠速运转",
+    "description": "发动机状态：怠速运转: 发动机状态：怠速运转"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n6",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：怠速运转": "发动机状态：怠速运转",
+    "description": "发动机状态：怠速运转: 发动机状态：怠速运转"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n10",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：怠速运转": "发动机状态：怠速运转",
+    "description": "发动机状态：怠速运转: 发动机状态：怠速运转"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n1",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：怠速运转": "发动机状态：怠速运转",
+    "description": "发动机状态：怠速运转: 发动机状态：怠速运转"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n12",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：怠速运转": "发动机状态：怠速运转",
+    "description": "发动机状态：怠速运转: 发动机状态：怠速运转"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n14",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：怠速运转": "发动机状态：车在行驶中",
+    "description": "发动机状态：怠速运转: 发动机状态：车在行驶中"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n1\u0000\u0000",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：怠速运转": "发动机状态：车在行驶中",
+    "description": "发动机状态：怠速运转: 发动机状态：车在行驶中"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n2\n与\n23",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：车在行驶中（点火角反馈值）": "发动机状态：车在行驶中（爆燃控制）",
+    "description": "发动机状态：车在行驶中（点火角反馈值）: 发动机状态：车在行驶中（爆燃控制）"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n50",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：车在行驶中（点火角反馈值）": "发动机状态：发动机怠速运转",
+    "description": "发动机状态：车在行驶中（点火角反馈值）: 发动机状态：发动机怠速运转"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n53",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：车在行驶中（点火角反馈值）": "发动机状态：发动机怠速运转",
+    "description": "发动机状态：车在行驶中（点火角反馈值）: 发动机状态：发动机怠速运转"
+  },
+  {
+    "label": "Component",
+    "name": "显\n示\n组\n54",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "发动机状态：车在行驶中（点火角反馈值）": "发动机状态：车在行驶中",
+    "description": "发动机状态：车在行驶中（点火角反馈值）: 发动机状态：车在行驶中"
+  },
+  {
+    "label": "Component",
+    "name": "Calculate Load（计算出的负荷）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "ECM 计算的负载0% ～100%",
+    "显示标准值": "当怠速时为3. 3% ～26. 7% ；\n当2500r/ min 的转速运转时为12% ～\n14. 7%",
+    "description": "测量范围: ECM 计算的负载0% ～100%; 显示标准值: 当怠速时为3. 3% ～26. 7% ；\n当2500r/ min 的转速运转时为12% ～\n14. 7%"
+  },
+  {
+    "label": "Component",
+    "name": "Vehicle Load（车辆负荷）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "车辆负荷：0% ～25700%",
+    "显示标准值": "实际车辆负荷（负荷百分比）",
+    "description": "测量范围: 车辆负荷：0% ～25700%; 显示标准值: 实际车辆负荷（负荷百分比）"
+  },
+  {
+    "label": "Component",
+    "name": "Engine Speed（发动机转速）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "发动机转速：0 ～8000r/ min",
+    "显示标准值": "当怠速时为610 ～710r/ min",
+    "description": "测量范围: 发动机转速：0 ～8000r/ min; 显示标准值: 当怠速时为610 ～710r/ min"
+  },
+  {
+    "label": "Component",
+    "name": "Vehicle Speed（车速）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "车速：0 ～255 km/ h",
+    "显示标准值": "实际车速",
+    "description": "测量范围: 车速：0 ～255 km/ h; 显示标准值: 实际车速"
+  },
+  {
+    "label": "Component",
+    "name": "Air-Fuel Ratio（空燃比）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "和理论值相比的空燃比：0 ～1. 999V",
+    "显示标准值": "当怠速时为0. 8 ～1. 2V\n小于1 为过稀；大于1 为过浓",
+    "description": "测量范围: 和理论值相比的空燃比：0 ～1. 999V; 显示标准值: 当怠速时为0. 8 ～1. 2V\n小于1 为过稀；大于1 为过浓"
+  },
+  {
+    "label": "Component",
+    "name": "Purge Density LearnValue （净化\n密度学习值）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "净化密度学习值：- 50 ～350",
+    "显示标准值": "当怠速时为- 40 ～10",
+    "description": "测量范围: 净化密度学习值：- 50 ～350; 显示标准值: 当怠速时为- 40 ～10"
+  },
+  {
+    "label": "Component",
+    "name": "Purge Flow（净化流）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "蒸发净化流和进气量的比率：0% ～\n102. 4%",
+    "显示标准值": "当怠速时为0 ～10%",
+    "description": "测量范围: 蒸发净化流和进气量的比率：0% ～\n102. 4%; 显示标准值: 当怠速时为0 ～10%"
+  },
+  {
+    "label": "Component",
+    "name": "EVAP（Purge）VSV（EVAP 清污\n电磁阀）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "控制占空比：0% ～100%",
+    "显示标准值": "当怠速时为10% ～50%",
+    "description": "测量范围: 控制占空比：0% ～100%; 显示标准值: 当怠速时为10% ～50%"
+  },
+  {
+    "label": "Component",
+    "name": "Knock FeedbackValue（爆燃反馈\n值）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "爆燃反馈值：- 64 ～1984 CA",
+    "显示标准值": "当行驶速度70km/ h 时为- 20° ～0°CA",
+    "description": "测量范围: 爆燃反馈值：- 64 ～1984 CA; 显示标准值: 当行驶速度70km/ h 时为- 20° ～0°CA"
+  },
+  {
+    "label": "Component",
+    "name": "ST1（制动踏板信号）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "制动踏板信号：ON 或OFF",
+    "显示标准值": "ON：踩下制动踏板",
+    "description": "测量范围: 制动踏板信号：ON 或OFF; 显示标准值: ON：踩下制动踏板"
+  },
+  {
+    "label": "Component",
+    "name": "Initial Intake AirTemp（进气初始\n温度）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "发动机起动时的进气温度：- 40 ～\n120℃",
+    "显示标准值": "接近环境空气温度",
+    "description": "测量范围: 发动机起动时的进气温度：- 40 ～\n120℃; 显示标准值: 接近环境空气温度"
+  },
+  {
+    "label": "Component",
+    "name": "Power Steering Switch（动力转向\n机构开关）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "动力转向机构信号：ON 或OFF",
+    "显示标准值": "动力转向机构操作：ON",
+    "description": "测量范围: 动力转向机构信号：ON 或OFF; 显示标准值: 动力转向机构操作：ON"
+  },
+  {
+    "label": "Component",
+    "name": "A/ C Signal（空调信号）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "空调信号：ON 或OFF",
+    "显示标准值": "空调ON：ON",
+    "description": "测量范围: 空调信号：ON 或OFF; 显示标准值: 空调ON：ON"
+  },
+  {
+    "label": "Component",
+    "name": "Neutral Positon SW Signal（空档\n位置SW 信号）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "PNP 开关状态：ON 或OFF",
+    "显示标准值": "P 或N 位：ON",
+    "description": "测量范围: PNP 开关状态：ON 或OFF; 显示标准值: P 或N 位：ON"
+  },
+  {
+    "label": "Component",
+    "name": "Stop Light Switch（制动灯开关）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "制动灯开关：ON 或OFF",
+    "显示标准值": "踩下制动踏板：ON",
+    "description": "测量范围: 制动灯开关：ON 或OFF; 显示标准值: 踩下制动踏板：ON"
+  },
+  {
+    "label": "Component",
+    "name": "ETCS ActuatorPower（ETCS 执行\n器电源）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "ETCS 电源：ON 或OFF",
+    "显示标准值": "ON：点火开关ON（IG），系统正常",
+    "description": "测量范围: ETCS 电源：ON 或OFF; 显示标准值: ON：点火开关ON（IG），系统正常"
+  },
+  {
+    "label": "Component",
+    "name": "ActuatorPower Supply（执行器电\n源）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "执行器电源供给：ON 或OFF",
+    "显示标准值": "怠速：ON",
+    "description": "测量范围: 执行器电源供给：ON 或OFF; 显示标准值: 怠速：ON"
+  },
+  {
+    "label": "Component",
+    "name": "EVAP Purge VSV（EVAP 清污电\n磁阀）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "清污电磁阀状态：ON 或OFF",
+    "显示标准值": "加速：ON",
+    "description": "测量范围: 清污电磁阀状态：ON 或OFF; 显示标准值: 加速：ON"
+  },
+  {
+    "label": "Component",
+    "name": "VVT Control Status（Bank 1）（1\n列VVT 控制状态）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "VVT 控制状态（1 列）：ON 或OFF",
+    "description": "测量范围: VVT 控制状态（1 列）：ON 或OFF"
+  },
+  {
+    "label": "Component",
+    "name": "Ignition（点火）",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "测量范围": "点火计数器：0 ～400",
+    "显示标准值": "0 ～400",
+    "description": "测量范围: 点火计数器：0 ～400; 显示标准值: 0 ～400"
+  },
+  {
+    "label": "Component",
+    "name": "°\n°\n°",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "̿̽ēသԮۋఖ۽ቔ͏̾̾͠ḤḤḤḤḤḤḤḤḤḤḤḤḤḤḤ͛͜\n̿̾ēသԮۋఖ۽ቔ͏̿̿͠Ḥ ͛͜\ń̀ēသԮۋఖ̺ ͏̾̾͠ḤḤḤ ̻̽ ̈́̽ͣ\ń́ēသԮۋఖ̺ ͏̿̿͠ḤḤ ̻̽ ̈́̈́ͣ\ń͂ēଢѓւ෎ሇ෎\ń̓ē͖ ͐͠ᆳྛఖᅝॢб\ń̈́ēؿ׮ࠏሇ෎ਅݺ\ńͅēႲ໑",
+    "col2": "·\nµ\n⛽",
+    "description": "col1: ̿̽ēသԮۋఖ۽ቔ͏̾̾͠ḤḤḤḤḤḤḤḤḤḤḤḤḤḤḤ͛͜\n̿̾ēသԮۋఖ۽ቔ͏̿̿͠Ḥ ͛͜\ń̀ēသԮۋఖ̺ ͏̾̾͠ḤḤḤ ̻̽ ̈́̽ͣ\ń́ēသԮۋఖ; col2: ·\nµ\n⛽"
+  },
+  {
+    "label": "Component",
+    "name": "ܥק ٳष ປᆜ Ϻᇹ GRPH RCRD",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "固定 分开 完整 帮助 GRPH RCRD",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "固定",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col2": "分开",
+    "col3": "完整",
+    "col4": "帮助",
+    "col5": "GRPH",
+    "col6": "RCRD",
+    "description": "col2: 分开; col3: 完整; col4: 帮助; col5: GRPH; col6: RCRD"
+  },
+  {
+    "label": "Component",
+    "name": "°\n°\n°\n°",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "৏ಏ၁໑؇Ԯۋఖ Ḥ̈́ͅ¥",
+    "col7": "·\nµ\n⛽",
+    "description": "col1: ৏ಏ၁໑؇Ԯۋఖ Ḥ̈́ͅ¥; col7: ·\nµ\n⛽"
+  },
+  {
+    "label": "Component",
+    "name": "ܥק",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col2": "ٳष",
+    "col3": "ປᆜ",
+    "col4": "Ϻᇹ",
+    "col5": "GRPH",
+    "col6": "RCRD",
+    "description": "col2: ٳष; col3: ປᆜ; col4: Ϻᇹ; col5: GRPH; col6: RCRD"
+  },
+  {
+    "label": "Component",
+    "name": "°\n°\n°\n°\n°\n°",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "͚͎͝ Ԯۋఖ׈࿢ Ḥ̻̽ ͆ͣ\n͚͎͝ Ԯۋఖ ̻ͅ ̿͸ʹ⛀͵",
+    "col7": "·\nµ\n⛽",
+    "description": "col1: ͚͎͝ Ԯۋఖ׈࿢ Ḥ̻̽ ͆ͣ\n͚͎͝ Ԯۋఖ ̻ͅ ̿͸ʹ⛀͵; col7: ·\nµ\n⛽"
+  },
+  {
+    "label": "Component",
+    "name": "●\n●\n●\n●\n●\n●\n●\n●",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "col1": "燃油切断状态 OFF",
+    "col7": "▲\n■\n▼",
+    "description": "col1: 燃油切断状态 OFF; col7: ▲\n■\n▼"
+  },
+  {
+    "label": "Component",
+    "name": "开始 停止",
+    "source_doc": "看图自学汽车维修_发动机分册"
+  },
+  {
+    "label": "Component",
+    "name": "空气流量信号",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "参数": "0. 72V",
+    "description": "参数: 15kg/ h; 参数: 0. 72V"
+  },
+  {
+    "label": "Component",
+    "name": "油轨压力",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "参数": "0. 36V",
+    "description": "参数: 3. 0MPa; 参数: 0. 36V"
+  },
+  {
+    "label": "Component",
+    "name": "燃油喷射时间",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "参数": "1. 89ms",
+    "description": "参数: 1. 89ms"
+  },
+  {
+    "label": "Component",
+    "name": "Rapid data transmission Help\nEnter address Word XX",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "中 文": "快速数据传输 帮助\n输入地址码XX",
+    "description": "中 文: 快速数据传输 帮助\n输入地址码XX"
+  },
+  {
+    "label": "Component",
+    "name": "Rapid data transmission Q\n01-Engine electronics",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "中 文": "快速数据传递按“Q”键确认\n01-发动机电控系统",
+    "description": "中 文: 快速数据传递按“Q”键确认\n01-发动机电控系统"
+  },
+  {
+    "label": "Component",
+    "name": "No fault →",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "中 文": "无错误 →",
+    "description": "中 文: 无错误 →"
+  },
+  {
+    "label": "Component",
+    "name": "1 Fault Recognized →",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "中 文": "发现一个故障 →",
+    "description": "中 文: 发现一个故障 →"
+  },
+  {
+    "label": "Component",
+    "name": "Fault number：00513 →",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "中 文": "故障代码：00513 →",
+    "description": "中 文: 故障代码：00513 →"
+  },
+  {
+    "label": "Component",
+    "name": "Rapid data transmission →\nFault memory erased",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "中 文": "快速数据传输 →\n故障码已清除",
+    "description": "中 文: 快速数据传输 →\n故障码已清除"
+  },
+  {
+    "label": "Component",
+    "name": "< 主菜单>",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "< MAIN MENU >",
+    "description": "英文含义: < MAIN MENU >"
+  },
+  {
+    "label": "Component",
+    "name": "1. DRB Ⅲ独立操作",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "1. DBR ⅢStand Alone",
+    "description": "英文含义: 1. DBR ⅢStand Alone"
+  },
+  {
+    "label": "Component",
+    "name": "< 独立操作主菜单>",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "< STAND ALONE MAIN MENU >",
+    "description": "英文含义: < STAND ALONE MAIN MENU >"
+  },
+  {
+    "label": "Component",
+    "name": "1. 1998 ～2005 年度型车辆诊断",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "1. 1998 ～2005 Diagnostics",
+    "description": "英文含义: 1. 1998 ～2005 Diagnostics"
+  },
+  {
+    "label": "Component",
+    "name": "< 1998 ～2005 年度型车辆诊断>",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "< 1998 ～2005 DIAGNOSTICS >",
+    "description": "英文含义: < 1998 ～2005 DIAGNOSTICS >"
+  },
+  {
+    "label": "Component",
+    "name": "1. 除以下车型外所有的车型ENTER",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "1. ALL （Except Below）",
+    "description": "英文含义: 1. ALL （Except Below）"
+  },
+  {
+    "label": "Component",
+    "name": "< 系统选择>",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "< SELECT SYSTEM >",
+    "description": "英文含义: < SELECT SYSTEM >"
+  },
+  {
+    "label": "Component",
+    "name": "1. 发动机",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "1. Engine",
+    "description": "英文含义: 1. Engine"
+  },
+  {
+    "label": "Component",
+    "name": "< 功能选择>\n1. 系统测试",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "< SELECT FUNCTION >\n1. System Test",
+    "description": "英文含义: < SELECT FUNCTION >\n1. System Test"
+  },
+  {
+    "label": "Component",
+    "name": "2. 读与功能相关的故障码",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "2. Read DTCS Related Functions",
+    "description": "英文含义: 2. Read DTCS Related Functions"
+  },
+  {
+    "label": "Component",
+    "name": "< 与功能相关的故障码>",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "< DTCS RELATDE FUNCTIONS >",
+    "description": "英文含义: < DTCS RELATDE FUNCTIONS >"
+  },
+  {
+    "label": "Component",
+    "name": "1. 读取故障码",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "1. Read DTCS",
+    "description": "英文含义: 1. Read DTCS"
+  },
+  {
+    "label": "Component",
+    "name": "< 其他功能选项>",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "< MISCELLANEOUS FUNCTIONS >",
+    "description": "英文含义: < MISCELLANEOUS FUNCTIONS >"
+  },
+  {
+    "label": "Component",
+    "name": "1. 清除故障码",
+    "source_doc": "看图自学汽车维修_发动机分册",
+    "英文含义": "1. Clear DTCS",
+    "description": "英文含义: 1. Clear DTCS"
   }
 ]

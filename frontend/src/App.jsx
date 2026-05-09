@@ -4,10 +4,11 @@
  */
 import React, { useState, useEffect, useRef, useCallback } from 'react'
 import GraphCanvas, { NODE_COLORS, NODE_LABELS } from './components/GraphCanvas/GraphCanvas'
-import { graphApi, searchApi, statsApi } from './services/api'
+import { graphApi, searchApi, statsApi, pathApi } from './services/api'
 import s from './App.module.css'
 
-const ALL_TYPES = ['Vehicle', 'Component', 'Fault', 'Symptom', 'RepairStep', 'Tool', 'System', 'Parameter']
+// 去掉 Parameter（已折叠为实体属性，不再是独立节点）
+const ALL_TYPES = ['Vehicle', 'Component', 'Fault', 'Symptom', 'RepairStep', 'Tool', 'System']
 const TYPE_ICONS = {
   Vehicle: '🚗', Component: '🔧', Fault: '⚠️', Symptom: '🩺',
   RepairStep: '🛠️', Tool: '🔩', System: '🏭', Parameter: '📐',
@@ -24,12 +25,17 @@ export default function App() {
 
   const [searchQ,       setSearchQ]       = useState('')
   const [searchType,    setSearchType]     = useState('all')
-  const [searchResults, setSearchResults]  = useState(null)   // null=未搜索, []=[]=无结果
+  const [searchResults, setSearchResults]  = useState(null)
   const [detail,        setDetail]         = useState(null)
   const [relations,     setRelations]      = useState([])
   const [statsData,     setStatsData]      = useState({})
   const [graphStats,    setGraphStats]     = useState('加载中...')
   const [loading,       setLoading]        = useState(false)
+  // 新增：统计模态 + 最短路径
+  const [showStats,     setShowStats]      = useState(false)
+  const [pathFrom,      setPathFrom]       = useState('')
+  const [pathTo,        setPathTo]         = useState('')
+  const [pathResult,    setPathResult]     = useState(null)
 
   // ── 初始化：加载全景图 + 统计 ─────────────────────────────────────
   useEffect(() => {
@@ -40,7 +46,7 @@ export default function App() {
   const loadOverview = async () => {
     setLoading(true)
     try {
-      const data = await graphApi.getOverview(400)
+      const data = await graphApi.getOverview(5000)
       graphRef.current?.loadData(data, true)
       setGraphStats(`节点: ${data.nodes?.length ?? 0} | 关系: ${data.edges?.length ?? 0}`)
     } catch (e) {
@@ -112,6 +118,30 @@ export default function App() {
     focusNode(name)
   }, [focusNode])
 
+  // ── 最短路径查询 ────────────────────────────────────────────────
+  const handlePathSearch = useCallback(async () => {
+    const from = pathFrom.trim()
+    const to   = pathTo.trim()
+    if (!from || !to) return
+    setLoading(true)
+    setPathResult(null)
+    try {
+      const data = await pathApi.shortestPath(from, to)
+      setPathResult(data)
+      // 把路径子图渲染到画布
+      const pNodes = (data.path || []).filter(p => p.type === 'node')
+      const pEdges = (data.path || []).filter(p => p.type === 'relation')
+      graphRef.current?.loadData({
+        nodes: pNodes.map(n => ({ id: n.id, name: n.name, label: n.label, props: n.props })),
+        edges: pEdges.map(e => ({ id: e.id, source: e.source, target: e.target, type: e.rel })),
+      }, true)
+      setGraphStats(`路径：${from} → ${to} | 步数：${data.length}`)
+    } catch (e) {
+      setPathResult({ error: true })
+    }
+    setLoading(false)
+  }, [pathFrom, pathTo])
+
   // ── 渲染 ──────────────────────────────────────────────────────────
   return (
     <div className={s.app}>
@@ -123,10 +153,8 @@ export default function App() {
         </div>
         <div className={s.navLinks}>
           <span onClick={loadOverview}>图谱视图</span>
-          <span onClick={fetchStats}>统计信息</span>
+          <span onClick={() => { fetchStats(); setShowStats(true) }}>统计信息</span>
           <span onClick={() => graphRef.current?.exportPng()}>导出图像</span>
-          <span className={s.divider}>|</span>
-          <span onClick={() => graphRef.current?.resetView()}>重置视图</span>
         </div>
       </nav>
 
@@ -176,7 +204,7 @@ export default function App() {
                 <div className={s.empty}>🔍 未找到相关实体</div>
               )}
               {searchResults?.map(r => (
-                <div key={r.id} className={s.resultItem} onClick={() => focusNode(r.name)}>
+                <div key={r.neo4j_id ?? r.id ?? r.name} className={s.resultItem} onClick={() => focusNode(r.name)}>
                   <div className={s.resultName}>{r.name}</div>
                   <div className={s.resultType} style={{ color: NODE_COLORS[r.label] }}>
                     {TYPE_ICONS[r.label]} {NODE_LABELS[r.label] || r.label}
@@ -184,6 +212,47 @@ export default function App() {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* 最短路径查询 */}
+          <div className={s.section}>
+            <h3>🔗 最短路径</h3>
+            <div className={s.pathBox}>
+              <input
+                value={pathFrom}
+                onChange={e => setPathFrom(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handlePathSearch()}
+                placeholder="起始节点…"
+              />
+              <span className={s.pathArrow}>→</span>
+              <input
+                value={pathTo}
+                onChange={e => setPathTo(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handlePathSearch()}
+                placeholder="目标节点…"
+              />
+              <button onClick={handlePathSearch}>查询</button>
+            </div>
+            {pathResult && !pathResult.error && (
+              <div className={s.pathResult}>
+                <div className={s.pathLen}>路径长度：{pathResult.length} 步</div>
+                <div className={s.pathNodes}>
+                  {(pathResult.path || [])
+                    .filter(p => p.type === 'node')
+                    .map((p, i, arr) => (
+                      <span
+                        key={i}
+                        className={s.pathNode}
+                        style={{ color: NODE_COLORS[p.label] ?? '#aaa' }}
+                        onClick={() => focusNode(p.name)}
+                      >
+                        {p.name}{i < arr.length - 1 ? ' →' : ''}
+                      </span>
+                    ))}
+                </div>
+              </div>
+            )}
+            {pathResult?.error && <div className={s.empty}>⚠️ 未找到两节点间的路径</div>}
           </div>
 
           {/* 实体详情 */}
@@ -272,6 +341,69 @@ export default function App() {
           <div className={s.infoTip}>🖱️ 拖拽节点查看连接 | 双击节点聚焦展开</div>
         </main>
       </div>
+
+      {/* ── 统计信息模态弹窗 ─────────────────────────────────────── */}
+      {showStats && (
+        <div className={s.modalOverlay} onClick={() => setShowStats(false)}>
+          <div className={s.statsModal} onClick={e => e.stopPropagation()}>
+            <div className={s.modalHeader}>
+              <h3>📊 图谱统计信息</h3>
+              <button className={s.modalClose} onClick={() => setShowStats(false)}>✕</button>
+            </div>
+            <div className={s.modalBody}>
+              {/* 总计卡片 */}
+              <div className={s.modalSummary}>
+                <div className={s.modalCard}>
+                  <span className={s.modalCardNum}>{statsData.node_count ?? 0}</span>
+                  <span className={s.modalCardLbl}>节点总数</span>
+                </div>
+                <div className={s.modalCard}>
+                  <span className={s.modalCardNum}>{statsData.total_edges ?? 0}</span>
+                  <span className={s.modalCardLbl}>关系总数</span>
+                </div>
+              </div>
+              {/* 实体类型分布 */}
+              <div className={s.modalSection}>
+                <h4>实体类型分布</h4>
+                <div className={s.barChart}>
+                  {Object.entries(statsData.node_counts ?? {}).map(([type, count]) => {
+                    const maxV = Math.max(...Object.values(statsData.node_counts ?? { _: 1 }), 1)
+                    return (
+                      <div key={type} className={s.barRow}>
+                        <span className={s.barLabel} style={{ color: NODE_COLORS[type] }}>
+                          {NODE_LABELS[type] || type}
+                        </span>
+                        <div className={s.barTrack}>
+                          <div className={s.barFill} style={{ width: `${(count / maxV) * 100}%`, background: NODE_COLORS[type] ?? '#666' }} />
+                        </div>
+                        <span className={s.barCount}>{count}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+              {/* 关系类型分布 */}
+              <div className={s.modalSection}>
+                <h4>关系类型分布</h4>
+                <div className={s.barChart}>
+                  {(statsData.rel_types ?? []).map(({ rel, cnt }) => {
+                    const maxV = Math.max(...(statsData.rel_types ?? [{ cnt: 1 }]).map(r => r.cnt), 1)
+                    return (
+                      <div key={rel} className={s.barRow}>
+                        <span className={s.barLabel}>{REL_LABELS[rel] || rel}</span>
+                        <div className={s.barTrack}>
+                          <div className={s.barFill} style={{ width: `${(cnt / maxV) * 100}%`, background: '#00d2ff' }} />
+                        </div>
+                        <span className={s.barCount}>{cnt}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* 加载遮罩 */}
       {loading && (

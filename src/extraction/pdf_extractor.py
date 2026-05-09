@@ -30,6 +30,16 @@ class TextChunk:
     source_file: str
 
 
+@dataclass
+class TableRecord:
+    """从 PDF 表格中抽取的一行数据"""
+    row_id: str
+    headers: List[str]   # 表头行（可能为空）
+    cells: List[str]     # 数据行各格内容
+    page_no: int
+    source_file: str
+
+
 # 噪声过滤正则（页码、版权、空行等）
 _NOISE_PATTERNS = [
     re.compile(r"^\s*\d+\s*$"),                    # 纯数字行（页码）
@@ -76,6 +86,57 @@ class PDFExtractor:
         for p in pdf_paths:
             all_chunks.extend(self.extract_file(p))
         return all_chunks
+
+    def extract_file_tables(self, pdf_path: str) -> List[TableRecord]:
+        """抽取单个 PDF 中的所有表格行，返回 TableRecord 列表。"""
+        path = Path(pdf_path)
+        if not path.exists():
+            return []
+        source_name = Path(pdf_path).stem
+        records: List[TableRecord] = []
+        row_idx = 0
+        try:
+            doc = fitz.open(str(path))
+            total = len(doc)
+            limit = total if self._max_pages < 0 else min(self._max_pages, total)
+            for page_no in range(limit):
+                page = doc[page_no]
+                try:
+                    finder = page.find_tables()
+                except Exception:
+                    continue
+                for tab in finder:
+                    try:
+                        data = tab.extract()  # list of list of str
+                    except Exception:
+                        continue
+                    if not data or len(data) < 2:
+                        continue
+                    headers = [str(c or "").strip() for c in data[0]]
+                    for row in data[1:]:
+                        cells = [str(c or "").strip() for c in row]
+                        if not any(cells):  # 跳过空行
+                            continue
+                        records.append(TableRecord(
+                            row_id=f"{source_name}_r{row_idx:05d}",
+                            headers=headers,
+                            cells=cells,
+                            page_no=page_no + 1,
+                            source_file=source_name,
+                        ))
+                        row_idx += 1
+            doc.close()
+        except Exception as e:
+            logger.warning("表格抽取失败 [%s]: %s", pdf_path, e)
+        logger.info("表格抽取完成：%s → %d 行", Path(pdf_path).name, len(records))
+        return records
+
+    def extract_files_tables(self, pdf_paths: List[str]) -> List[TableRecord]:
+        """抽取多个 PDF 的所有表格行。"""
+        all_records: List[TableRecord] = []
+        for p in pdf_paths:
+            all_records.extend(self.extract_file_tables(p))
+        return all_records
 
     # ── 内部方法 ──────────────────────────────────────────────────
     def _iter_pages(self, pdf_path: str) -> Iterator[PageText]:

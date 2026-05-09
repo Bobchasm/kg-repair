@@ -40,7 +40,7 @@ def _save_output(result, output_dir: str):
     """\u5c06\u629a\u53d6\u7ed3\u679c\u4fdd\u5b58\u5230 output/ \u76ee\u5f55\u4e0b\uff08entities.json / triples.json / summary.json\uff09\u3002"""
     os.makedirs(output_dir, exist_ok=True)
 
-    # \u4ece\u4e09\u5143\u7ec4\u62c6\u89e3\u53bb\u91cd\u5b9e\u4f53
+    # 从三元组拆解去重实体
     entity_map: dict = {}
     for t in result.triples:
         sk = (t.subj_label.value, t.subj_name)
@@ -49,6 +49,12 @@ def _save_output(result, output_dir: str):
             entity_map[sk] = {"label": t.subj_label.value, "name": t.subj_name, **t.subj_props}
         if ok not in entity_map:
             entity_map[ok] = {"label": t.obj_label.value,  "name": t.obj_name,  **t.obj_props}
+    # 包含表格直写节点（故障码表行、规格参数等）
+    for label, nodes in getattr(result, "extra_nodes", {}).items():
+        for node in nodes:
+            ek = (label, node.get("name", ""))
+            if ek[1] and ek not in entity_map:
+                entity_map[ek] = {"label": label, **node}
 
     entities_list = list(entity_map.values())
     triples_list  = [t.to_dict() for t in result.triples]
@@ -121,8 +127,8 @@ def main():
         _save_output(result, output_dir)
         return
 
-    if result.triple_count == 0:
-        logger.warning("未抽取到任何三元组，检查 PDF 路径或分词配置")
+    if result.triple_count == 0 and not result.extra_nodes:
+        logger.warning("未抽取到任何三元组或节点，检查 PDF 路径或分词配置")
         return
 
     # ── Step 2: 输出文件 ────────────────────────────────────────────
@@ -133,7 +139,14 @@ def main():
     logger.info(">>> Step 3: 写入 Neo4j")
     connector = Neo4jConnector.from_config(config_path)
     builder   = GraphBuilder(connector)
-    builder.ingest_all(result.triples)
+
+    # 将所有 NER 识别到的实体也加入 extra_nodes，确保无三元组的独立实体也写入 Neo4j
+    for ent in result.entities:
+        name = ent.text.strip()
+        if name and len(name) >= 2:
+            result.extra_nodes.setdefault(ent.label, []).append({"name": name})
+
+    builder.ingest_all(result.triples, extra_nodes=result.extra_nodes)
 
     # ── Step 4: 统计汇报 ───────────────────────────────────────────
     stats = connector.get_stats()

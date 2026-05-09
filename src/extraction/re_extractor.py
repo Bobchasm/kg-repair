@@ -68,7 +68,7 @@ _TRIGGER_DICT: Dict[str, List[str]] = {
     ],
     RelationType.HAS_PARAMETER.value: [
         "规格为", "参数为", "标准值", "规定值", "技术要求",
-        "应为", "值为", "间隙为", "扭矩为", "力矩为",
+        "应为", "值为", "间隙为", "捆矩为", "力矩为",
         "转速为", "压力为", "温度为", "电压为",
     ],
 }
@@ -79,15 +79,14 @@ _TYPE_CONSTRAINTS: List[Tuple] = [
     ({"Vehicle", "System"}, RelationType.HAS_COMPONENT, {"Component"}),
     ({"Component"}, RelationType.PART_OF, {"System", "Vehicle"}),
     ({"Component"}, RelationType.BELONGS_TO_SYSTEM, {"System"}),
-    ({"Component", "Fault", "Vehicle"}, RelationType.CAUSES_FAULT, {"Fault"}),
-    ({"Fault"}, RelationType.HAS_SYMPTOM, {"Symptom"}),
+    ({"Component", "Fault", "Vehicle", "System"}, RelationType.CAUSES_FAULT, {"Fault"}),
+    ({"Fault", "Component", "Vehicle", "System"}, RelationType.HAS_SYMPTOM, {"Symptom"}),
     ({"Symptom"}, RelationType.INDICATES, {"Fault"}),
     ({"Fault"}, RelationType.DIAGNOSED_BY, {"RepairStep"}),
-    ({"Fault"}, RelationType.REPAIRED_BY, {"RepairStep"}),
+    ({"Fault", "Component", "Symptom"}, RelationType.REPAIRED_BY, {"RepairStep"}),
     ({"RepairStep"}, RelationType.REQUIRES_TOOL, {"Tool"}),
-    ({"Component"}, RelationType.AFFECTS, {"Component"}),
+    ({"Component", "RepairStep"}, RelationType.AFFECTS, {"Component"}),
     ({"RepairStep"}, RelationType.PRECEDES, {"RepairStep"}),
-    ({"Component", "Vehicle", "System"}, RelationType.HAS_PARAMETER, {"Parameter"}),
 ]
 
 
@@ -188,14 +187,24 @@ class CooccurrenceRE:
         ("Fault",      "RepairStep"): RelationType.REPAIRED_BY,
         ("RepairStep", "Tool"):       RelationType.REQUIRES_TOOL,
         ("Component",  "Component"):  RelationType.AFFECTS,
-        ("Component",  "Parameter"):  RelationType.HAS_PARAMETER,
-        ("Vehicle",    "Parameter"):  RelationType.HAS_PARAMETER,
-        ("System",     "Parameter"):  RelationType.HAS_PARAMETER,
         ("Vehicle",    "Fault"):      RelationType.CAUSES_FAULT,
         ("Fault",      "Fault"):      RelationType.CAUSES_FAULT,
         ("Vehicle",    "System"):     RelationType.HAS_COMPONENT,
+        # 新增：更多节点对廻建关系
+        ("Vehicle",    "Symptom"):    RelationType.HAS_SYMPTOM,
+        ("System",     "Fault"):      RelationType.CAUSES_FAULT,
+        ("System",     "Symptom"):    RelationType.HAS_SYMPTOM,
+        ("Component",  "RepairStep"): RelationType.REPAIRED_BY,
+        ("Symptom",    "RepairStep"): RelationType.REPAIRED_BY,
+        ("System",     "RepairStep"): RelationType.REPAIRED_BY,
+        ("Vehicle",    "RepairStep"): RelationType.REPAIRED_BY,
+        ("Fault",      "Component"):  RelationType.AFFECTS,
+        ("RepairStep", "Component"):  RelationType.AFFECTS,
+        ("Component",  "Symptom"):    RelationType.HAS_SYMPTOM,
+        ("Fault",      "Tool"):       RelationType.DIAGNOSED_BY,
+        ("RepairStep", "RepairStep"): RelationType.PRECEDES,
     }
-    _MAX_DIST = 80  # 字符距离阈值（扩大至80字符，提升覆盖率）
+    _MAX_DIST = 45  # 字符距离阈值（45字符内共现即产生关系）
 
     def extract(
         self,

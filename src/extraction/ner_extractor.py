@@ -56,12 +56,6 @@ def _range_param_props(m: re.Match) -> Dict:
     return {}
 
 _RULE_PATTERNS: List[Tuple] = [
-    # 故障码（OBD）：大写字母+4位数字
-    (re.compile(r"\b[A-Z][0-9]{4}\b"), "Fault", 0.95, _fault_code_props),
-    # 范围规格参数（如 0.05~0.15 mm）
-    (re.compile(r"\d+(?:\.\d+)?\s*[~\u2013\-]\s*\d+(?:\.\d+)?\s*(?:mm|cm|\u03bcm|N\.?m|kgf\.?m|MPa|kPa|rpm|V|A|\u2103|°C|cc|ml)"), "Parameter", 0.93, _range_param_props),
-    # 具体规格参数（如 1.8mm，12V，8N·m）
-    (re.compile(r"\d+(?:\.\d+)?\s*(?:cc|ml|mm|cm|m|kg|N\.?m|N·m|rpm|kPa|MPa|bar|V|A|W|Hz|\u2103|°C)"), "Parameter", 0.90, _param_props),
     # 零件编号（如 12100-KGH-900）
     (re.compile(r"\b\d{4,6}-[A-Z]{2,4}-\d{3,5}\b"), "Component", 0.92, _part_no_props),
 ]
@@ -405,14 +399,20 @@ class NERExtractor:
         # 噪音过滤：去掉无意义短实体和低质量实体
         def _is_noise(e: Entity) -> bool:
             txt = e.text.strip()
+            # Parameter 类型全部过滤
+            if e.label == "Parameter":
+                return True
             # 长度小于2个字符
             if len(txt) < 2:
                 return True
-            # Fault 类型：全小写或包含小写字母（如 p032、b0001 这类假故障码）
+            # Fault 类型：全小写假故障码（如 p032）
             if e.label == "Fault" and re.search(r"^[a-z][0-9]+$", txt):
                 return True
-            # 单纯数字且非 Parameter 类型
-            if e.label != "Parameter" and txt.isdigit():
+            # Fault 类型：原始故障码格式（如 P0231），由表格处理负责
+            if e.label == "Fault" and re.match(r"^[A-Z]\d{3,5}$", txt):
+                return True
+            # 单纯数字
+            if txt.isdigit():
                 return True
             # 单个汉字且非预设词汇
             if len(txt) == 1 and e.method == "crf":

@@ -104,11 +104,9 @@ const mergeRaw = (old, incoming) => {
   return { nodes: [...nodeMap.values()], edges: [...old.edges, ...newEdges] }
 }
 
-// ── API 格式 → ECharts 格式，过滤孤立节点 ────────────────────────────
+// ── API 格式 → ECharts 格式（显示全部节点，包括孤立节点） ─────────────
 const toEcharts = ({ nodes = [], edges = [] }) => {
-  const connectedIds = new Set([...edges.map(e => e.source), ...edges.map(e => e.target)])
   const eNodes = nodes
-    .filter(n => connectedIds.has(n.id))
     .map(n => ({
       id:         n.id,
       name:       n.name,

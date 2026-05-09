@@ -15,7 +15,7 @@ def _get_db(request: Request):
 @router.get("/overview")
 async def get_overview(
     request: Request,
-    limit: int = Query(300, ge=10, le=600, description="返回最大节点数"),
+    limit: int = Query(5000, ge=10, le=10000, description="返回最大节点数"),
 ):
     """获取图谱概览（随机采样，用于首屏展示）。"""
     db = _get_db(request)

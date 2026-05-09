@@ -332,11 +332,10 @@ class Neo4jConnector:
         with self.session() as s:
             return s.run(cypher, skip=skip, lim=limit).data()
 
-    def get_overview_graph(self, limit: int = 300) -> Dict[str, List]:
-        """获取图谱概览（随机采样节点及其关系）。"""
+    def get_overview_graph(self, limit: int = 5000) -> Dict[str, List]:
+        """获取图谱概览（返回全部有关联节点和关系）。"""
         cypher = (
             "MATCH (n)-[r]->(m) "
-            "WITH n, r, m ORDER BY rand() "
             "RETURN n, r, m LIMIT $lim"
         )
         nodes_map, edges = {}, []
