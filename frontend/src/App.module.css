@@ -1,0 +1,169 @@
+.app {
+  height: 100vh;
+  background: #f0f4f8;
+}
+
+/* ── 顶部工具栏（浅色） ──────────────────────────────────────────── */
+.header {
+  height: 46px !important;
+  line-height: 46px !important;
+  background: #ffffff !important;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0 12px !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 0 #e2e8f0, 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.siderToggle {
+  color: #3a7bd5 !important;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  padding-right: 12px;
+  border-right: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.logoGlow {
+  font-size: 17px;
+  color: #3a7bd5;
+  filter: drop-shadow(0 0 4px #3a7bd544);
+}
+
+.logoText {
+  color: #1a2740 !important;
+  font-size: 13px !important;
+  letter-spacing: 0.3px;
+}
+
+.searchArea {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.clearPathBtn {
+  background: rgba(21, 101, 192, 0.08) !important;
+  border-color: rgba(21, 101, 192, 0.3) !important;
+  color: #1565c0 !important;
+  flex-shrink: 0;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.toolBtn {
+  color: #90a4ae !important;
+  transition: color 0.2s !important;
+}
+.toolBtn:hover {
+  color: #3a7bd5 !important;
+}
+
+/* ── 主体布局 ──────────────────────────────────────────────────────── */
+.body {
+  height: calc(100vh - 46px);
+  overflow: hidden;
+}
+
+/* ── 左侧面板（浅色） ─────────────────────────────────────────────── */
+.sider {
+  background: #ffffff !important;
+  border-right: 1px solid #e2e8f0 !important;
+  overflow: hidden;
+  transition: all 0.25s ease !important;
+  flex-shrink: 0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+}
+
+.siderTabs :global(.ant-tabs-nav) {
+  background: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+  margin: 0;
+  width: 36px !important;
+}
+
+.siderTabs :global(.ant-tabs-tab) {
+  color: #90a4ae !important;
+  padding: 10px 8px !important;
+  justify-content: center;
+}
+
+.siderTabs :global(.ant-tabs-tab-active) {
+  color: #3a7bd5 !important;
+  background: rgba(58, 123, 213, 0.06) !important;
+}
+
+.siderTabs :global(.ant-tabs-content-holder) {
+  background: #ffffff;
+  overflow-y: auto;
+}
+
+/* ── 主画布 ────────────────────────────────────────────────────────── */
+.canvas {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* ── 左下角图例（浅色悬浮卡片） ──────────────────────────────────── */
+.legend {
+  position: absolute;
+  bottom: 18px;
+  left: 16px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(100, 130, 165, 0.18);
+  border-radius: 10px;
+  padding: 10px 14px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+  z-index: 50;
+}
+
+.legendTitle {
+  font-size: 10px;
+  font-weight: 600;
+  color: #90a4ae;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 8px;
+}
+
+.legendGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 16px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  font-size: 11px;
+  color: #546e7a;
+}

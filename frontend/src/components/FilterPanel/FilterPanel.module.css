@@ -1,0 +1,51 @@
+.panel {
+  padding: 8px 0;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
+}
+
+.section {
+  padding: 0 12px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: #8b9199;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #30363d;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.item:hover {
+  background: #21262d;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.label {
+  flex: 1;
+  font-size: 12px;
+  color: #e6edf3;
+  user-select: none;
+}

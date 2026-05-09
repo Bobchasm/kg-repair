@@ -1,0 +1,75 @@
+.panel {
+  padding: 12px;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.totals {
+  margin-bottom: 12px !important;
+}
+
+.statCard {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.chartTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: #8b9199;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 8px 0 4px;
+}
+
+.relList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.relItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  position: relative;
+}
+
+.relBar {
+  height: 16px;
+  border-radius: 3px;
+  min-width: 4px;
+  opacity: 0.7;
+  transition: width 0.3s ease;
+}
+
+.relName {
+  color: #8b9199;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+}
+
+.relCount {
+  color: #e6edf3;
+  font-weight: 600;
+  font-size: 11px;
+  min-width: 28px;
+  text-align: right;
+}
