@@ -1,0 +1,34 @@
+neo4j:
+  uri: "bolt://bobchasm.cn:7687"
+  username: "neo4j"
+  password: "Chasm142857!"
+  database: "neo4j"
+
+extraction:
+  # PDF 文件列表（相对于项目根目录）
+  pdf_files:
+    - "data/SDH125T-31本田裂行维修手册.pdf"
+    - "data/看图自学汽车维修_发动机分册.pdf"
+    - "data/装甲车辆故障诊断技术 -- 郑长松,冯辅周,张丽霞,江鹏程编著.pdf"
+    - "data/装甲车辆构造与原理.pdf"
+  # 每次处理的最大页数（调试用，-1 表示全部）
+  max_pages: -1
+  # 分句最小长度
+  min_sentence_len: 10
+  # CRF 模型保存路径
+  crf_model_path: "models/crf_ner.pkl"
+  # 领域词典路径
+  domain_dict_path: "dicts/auto_repair_dict.txt"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  cors_origins:
+    - "http://localhost:5173"
+    - "http://127.0.0.1:5173"
+
+graph:
+  # 子图查询默认跳数
+  default_hop: 2
+  # 每次返回最大节点数
+  max_nodes: 300
