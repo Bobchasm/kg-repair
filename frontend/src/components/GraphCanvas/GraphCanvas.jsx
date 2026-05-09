@@ -1,284 +1,189 @@
-import React, {
-  useEffect, useRef, useCallback, forwardRef, useImperativeHandle,
-} from 'react'
-import cytoscape from 'cytoscape'
-import fcose     from 'cytoscape-fcose'
-import cola      from 'cytoscape-cola'
-import { getCytoscapeStyles } from './graphStyles'
-import { graphApi } from '../../services/api'
-import { message }  from 'antd'
-import styles from './GraphCanvas.module.css'
+/**
+ * GraphCanvas.jsx — ECharts graph 可视化组件
+ * 仿 docs/index.html 风格：force 布局 / 可拖拽 / 曲线边 / adjacency 高亮
+ */
+import React, { useEffect, useRef, useImperativeHandle, forwardRef } from 'react'
+import * as echarts from 'echarts'
+import s from './GraphCanvas.module.css'
 
-cytoscape.use(fcose)
-cytoscape.use(cola)
-
-// ── Cola 布局（真实物理碰撞 + 拖拽响应） ─────────────────────────────
-const COLA_LAYOUT = {
-  name: 'cola',
-  animate: true,
-  animationDuration: 1200,
-  fit: true,
-  padding: 60,
-  nodeSpacing: 12,          // 节点最小间距（碰撞检测）
-  edgeLength: 130,          // 理想边长
-  maxSimulationTime: 5000,  // 物理模拟运行时长
-  ungrabifyWhileSimulating: false,
-  handleDisconnected: true,
-  randomize: true,
-  convergenceThreshold: 0.005,
-  avoidOverlap: true,
+export const NODE_COLORS = {
+  Vehicle:    '#5470c6',
+  Component:  '#73c0de',
+  Fault:      '#fac858',
+  Symptom:    '#ee6666',
+  RepairStep: '#3ba272',
+  Tool:       '#fc8452',
+  System:     '#9a60b4',
+  Parameter:  '#ea7ccc',
+  Unknown:    '#666677',
+}
+const NODE_SIZES = {
+  Vehicle: 42, System: 40, Fault: 36, Symptom: 32,
+  Component: 30, RepairStep: 28, Tool: 26, Parameter: 24,
+}
+export const NODE_LABELS = {
+  Vehicle: '车辆', Component: '零部件', Fault: '故障', Symptom: '症状',
+  RepairStep: '维修步骤', Tool: '工具', System: '系统', Parameter: '参数',
+}
+const REL_LABELS_MAP = {
+  HAS_COMPONENT: '包含', PART_OF: '属于', BELONGS_TO_SYSTEM: '属于系统',
+  CAUSES_FAULT: '导致故障', HAS_SYMPTOM: '表现为', DIAGNOSED_BY: '诊断方式',
+  REPAIRED_BY: '修复通过', REQUIRES_TOOL: '需要工具', AFFECTS: '影响',
+  PRECEDES: '前置步骤', HAS_PARAMETER: '具有参数', INDICATES: '指示',
 }
 
-// 增量布局（展开子图时不打乱已有节点）
-const COLA_INCREMENTAL = {
-  ...COLA_LAYOUT,
-  randomize: false,
-  maxSimulationTime: 2500,
-  animationDuration: 700,
+// ── 基础 ECharts 配置（仿 docs/index.html） ───────────────────────────
+const BASE_OPTIONS = {
+  backgroundColor: 'transparent',
+  tooltip: {
+    trigger: 'item',
+    formatter: (p) => {
+      if (p.dataType === 'node') {
+        const color = NODE_COLORS[p.data.nodeType] || '#aaa'
+        return `<strong style="font-size:13px">${p.name}</strong><br/>
+          <span style="color:${color}">${NODE_LABELS[p.data.nodeType] || p.data.nodeType || ''}</span>`
+      }
+      if (p.dataType === 'edge') {
+        return `<span style="color:#00d2ff">${REL_LABELS_MAP[p.data.value] || p.data.value || '关系'}</span>`
+      }
+      return p.name
+    },
+    backgroundColor: 'rgba(20,20,35,0.97)',
+    borderColor: '#00d2ff',
+    borderWidth: 1,
+    textStyle: { color: '#fff', fontSize: 12 },
+    extraCssText: 'box-shadow: 0 0 12px rgba(0,210,255,0.25); border-radius:8px;',
+  },
+  series: [{
+    type: 'graph',
+    layout: 'force',
+    force: {
+      repulsion:       700,
+      edgeLength:      [80, 200],
+      gravity:         0.08,
+      friction:        0.12,
+      layoutAnimation: true,
+    },
+    roam:      true,
+    draggable: true,
+    data:  [],
+    links: [],
+    categories: Object.keys(NODE_COLORS).map(k => ({
+      name: k, itemStyle: { color: NODE_COLORS[k] }
+    })),
+    label: {
+      show:     true,
+      position: 'right',
+      fontSize: 11,
+      color:    '#c0ccd8',
+      formatter: (p) => p.name.length > 14 ? p.name.slice(0, 13) + '…' : p.name,
+    },
+    emphasis: {
+      focus: 'adjacency',
+      label: { show: true, fontSize: 12, fontWeight: 'bold', color: '#fff' },
+      lineStyle: { width: 3 },
+    },
+    lineStyle: {
+      color:     '#4a4a6a',
+      curveness: 0.2,
+      width:     1.5,
+      opacity:   0.75,
+    },
+    edgeSymbol:     ['none', 'arrow'],
+    edgeSymbolSize: [0, 10],
+    edgeLabel:      { show: false },
+  }],
 }
 
-const GraphCanvas = forwardRef(function GraphCanvas(
-  { onNodeSelect, onLoadingChange, pathHighlight, filterState },
-  ref
-) {
-  const containerRef = useRef(null)
-  const cyRef        = useRef(null)
-  const tooltipRef   = useRef(null)
+// ── 原始数据合并（不去重 id 冲突）────────────────────────────────────
+const mergeRaw = (old, incoming) => {
+  const nodeMap = new Map(old.nodes.map(n => [n.id, n]))
+  const edgeSet = new Set(old.edges.map(e => e.id))
+  incoming.nodes.forEach(n => { if (!nodeMap.has(n.id)) nodeMap.set(n.id, n) })
+  const newEdges = incoming.edges.filter(e => !edgeSet.has(e.id))
+  return { nodes: [...nodeMap.values()], edges: [...old.edges, ...newEdges] }
+}
 
+// ── API 格式 → ECharts 格式，过滤孤立节点 ────────────────────────────
+const toEcharts = ({ nodes = [], edges = [] }) => {
+  const connectedIds = new Set([...edges.map(e => e.source), ...edges.map(e => e.target)])
+  const eNodes = nodes
+    .filter(n => connectedIds.has(n.id))
+    .map(n => ({
+      id:         n.id,
+      name:       n.name,
+      nodeType:   n.label,   // 重命名避免与 ECharts label 属性冲突
+      props:      n.props || {},
+      symbolSize: NODE_SIZES[n.label] || 28,
+      category:   n.label || 'Unknown',
+      itemStyle:  { color: NODE_COLORS[n.label] || NODE_COLORS.Unknown },
+    }))
+  const eEdges = edges.map(e => ({
+    source: e.source,
+    target: e.target,
+    value:  e.type,
+    lineStyle: { color: (NODE_COLORS[e.type] ? NODE_COLORS[e.type] : '#4a4a6a') + '88' },
+  }))
+  return { eNodes, eEdges }
+}
+
+const GraphCanvas = forwardRef(({ onNodeClick, onNodeDblClick }, ref) => {
+  const containerRef  = useRef(null)
+  const chartRef      = useRef(null)
+  const rawDataRef    = useRef({ nodes: [], edges: [] })
+  const callbacksRef  = useRef({ onNodeClick, onNodeDblClick })
+
+  // 始终保持最新回调引用
+  useEffect(() => { callbacksRef.current = { onNodeClick, onNodeDblClick } }, [onNodeClick, onNodeDblClick])
+
+  // ── 初始化 ECharts ─────────────────────────────────────────────────
+  useEffect(() => {
+    if (!containerRef.current) return
+    const chart = echarts.init(containerRef.current)
+    chartRef.current = chart
+    chart.setOption(BASE_OPTIONS)
+
+    chart.on('click', (p) => {
+      if (p.dataType === 'node') callbacksRef.current.onNodeClick?.(p.name, p.data)
+    })
+    chart.on('dblclick', (p) => {
+      if (p.dataType === 'node') callbacksRef.current.onNodeDblClick?.(p.name)
+    })
+
+    const resize = () => chart.resize()
+    window.addEventListener('resize', resize)
+    return () => { chart.dispose(); window.removeEventListener('resize', resize) }
+  }, [])
+
+  // ── 暴露方法给父组件 ───────────────────────────────────────────────
   useImperativeHandle(ref, () => ({
-    loadOverview,
-    expandNode,
-    highlightPath,
-    clearPath,
-    fit:       () => cyRef.current?.fit(undefined, 50),
-    resetZoom: () => cyRef.current?.reset(),
+    /** 加载新数据（replace=false 则合并到现有图谱） */
+    loadData: (apiData, replace = true) => {
+      const chart = chartRef.current
+      if (!chart) return
+      let raw
+      if (replace) {
+        raw = apiData
+        rawDataRef.current = raw
+      } else {
+        raw = mergeRaw(rawDataRef.current, apiData)
+        rawDataRef.current = raw
+      }
+      const { eNodes, eEdges } = toEcharts(raw)
+      chart.setOption({ series: [{ data: eNodes, links: eEdges }] })
+    },
+    resetView: () => {
+      chartRef.current?.dispatchAction({ type: 'restore' })
+    },
     exportPng: () => {
-      const cy = cyRef.current
-      if (!cy) return
-      const png = cy.png({ full: true, scale: 2, bg: '#f5f7fa' })
+      const url = chartRef.current?.getDataURL({ type: 'png', backgroundColor: '#0a0a12' })
+      if (!url) return
       const a = document.createElement('a')
-      a.href = png
-      a.download = 'knowledge-graph.png'
-      a.click()
+      a.href = url; a.download = 'knowledge-graph.png'; a.click()
     },
   }))
 
-  // ── 初始化 ─────────────────────────────────────────────────────────
-  useEffect(() => {
-    if (!containerRef.current) return
-
-    const cy = cytoscape({
-      container:        containerRef.current,
-      elements:         [],
-      style:            getCytoscapeStyles(),
-      minZoom:          0.04,
-      maxZoom:          5,
-      wheelSensitivity: 0.3,
-    })
-    cyRef.current = cy
-
-    // tooltip 容器
-    const tooltip = document.createElement('div')
-    tooltip.className = styles.tooltip
-    tooltip.style.display = 'none'
-    containerRef.current.appendChild(tooltip)
-    tooltipRef.current = tooltip
-
-    // 悬浮 → 邻居高亮
-    cy.on('mouseover', 'node', (e) => {
-      const node = e.target
-      const neighbors = node.neighborhood()
-      cy.elements().addClass('faded')
-      node.removeClass('faded').addClass('highlighted')
-      neighbors.nodes().removeClass('faded').addClass('highlighted')
-      neighbors.edges().removeClass('faded').addClass('highlighted-edge show-label')
-
-      const { x, y } = e.renderedPosition
-      tooltip.innerHTML = _buildTooltipHtml(node.data())
-      tooltip.style.display = 'block'
-      tooltip.style.left = `${x + 16}px`
-      tooltip.style.top  = `${y - 12}px`
-    })
-
-    cy.on('mouseout', 'node', () => {
-      cy.elements().removeClass('faded highlighted highlighted-edge show-label')
-      tooltip.style.display = 'none'
-    })
-
-    cy.on('mousemove', 'node', (e) => {
-      const { x, y } = e.renderedPosition
-      tooltip.style.left = `${x + 16}px`
-      tooltip.style.top  = `${y - 12}px`
-    })
-
-    // 单击 → 详情面板
-    cy.on('tap', 'node', (e) => {
-      onNodeSelect?.({ type: 'node', data: e.target.data() })
-    })
-    cy.on('tap', 'edge', (e) => {
-      onNodeSelect?.({ type: 'edge', data: e.target.data() })
-    })
-
-    // 双击 → 展开子图
-    cy.on('dbltap', 'node', (e) => {
-      expandNode(e.target.data('name'))
-    })
-
-    // 点击空白 → 取消选中
-    cy.on('tap', (e) => {
-      if (e.target === cy) {
-        onNodeSelect?.(null)
-        cy.elements().removeClass('path-node path-edge')
-      }
-    })
-
-    loadOverview()
-    return () => cy.destroy()
-  }, []) // eslint-disable-line
-
-  // ── 加载全景图 ────────────────────────────────────────────────────
-  const loadOverview = useCallback(async () => {
-    onLoadingChange?.(true)
-    try {
-      const data = await graphApi.getOverview(400)
-      _updateGraph(data)
-    } catch (err) {
-      message.error('加载图谱失败：' + err.message)
-    } finally {
-      onLoadingChange?.(false)
-    }
-  }, [onLoadingChange])
-
-  // ── 展开节点子图 ──────────────────────────────────────────────────
-  const expandNode = useCallback(async (nodeName) => {
-    onLoadingChange?.(true)
-    try {
-      const data = await graphApi.getSubgraph(nodeName, 2, 80)
-      _mergeGraph(data)
-    } catch (err) {
-      message.error('展开子图失败：' + err.message)
-    } finally {
-      onLoadingChange?.(false)
-    }
-  }, [onLoadingChange])
-
-  // ── 路径高亮 ──────────────────────────────────────────────────────
-  const highlightPath = useCallback((pathItems) => {
-    const cy = cyRef.current
-    if (!cy) return
-    cy.elements().removeClass('path-node path-edge')
-    const nodeIds = new Set(pathItems.filter(i => i.type === 'node').map(i => i.id))
-    const edgeIds = new Set(pathItems.filter(i => i.type === 'relation').map(i => i.id))
-    cy.nodes().filter(n => nodeIds.has(n.id())).addClass('path-node')
-    cy.edges().filter(e => edgeIds.has(e.id())).addClass('path-edge')
-    const pathEles = cy.collection([
-      ...cy.nodes().filter(n => nodeIds.has(n.id())),
-      ...cy.edges().filter(e => edgeIds.has(e.id())),
-    ])
-    if (pathEles.length > 0) cy.fit(pathEles, 80)
-  }, [])
-
-  const clearPath = useCallback(() => {
-    cyRef.current?.elements().removeClass('path-node path-edge')
-  }, [])
-
-  // ── 数据更新 ──────────────────────────────────────────────────────
-  const _updateGraph = (data) => {
-    const cy = cyRef.current
-    if (!cy) return
-    cy.elements().remove()
-    _addElements(data)
-    cy.layout(COLA_LAYOUT).run()
-  }
-
-  const _mergeGraph = (data) => {
-    const cy = cyRef.current
-    if (!cy) return
-    _addElements(data)
-    cy.layout(COLA_INCREMENTAL).run()
-  }
-
-  const _addElements = ({ nodes = [], edges = [] }) => {
-    const cy = cyRef.current
-    if (!cy) return
-
-    // 先统计所有将添加的节点 id（含已有节点）
-    const existingIds = new Set(cy.nodes().map(n => n.id()))
-    const newNodeIds  = new Set(nodes.map(n => n.id))
-    const allIds      = new Set([...existingIds, ...newNodeIds])
-
-    // 只保留两端节点都在图中的边
-    const validEdges = edges.filter(e =>
-      allIds.has(e.source) && allIds.has(e.target)
-    )
-    // 只有"至少有一条有效边"的新节点才加入
-    const connectedNodeIds = new Set([
-      ...validEdges.map(e => e.source),
-      ...validEdges.map(e => e.target),
-    ])
-
-    const newNodes = nodes
-      .filter(n => !existingIds.has(n.id) && connectedNodeIds.has(n.id))
-      .map(n  => ({ group: 'nodes', data: { id: n.id, ...n } }))
-
-    const newEdges = validEdges
-      .filter(e => !cy.getElementById(e.id).length)
-      .map(e  => ({ group: 'edges', data: { id: e.id, source: e.source, target: e.target, ...e } }))
-
-    cy.add([...newNodes, ...newEdges])
-
-    // 再次清理：已有节点若现在变成孤立节点，也移除
-    cy.nodes().forEach(n => { if (n.degree() === 0) n.remove() })
-  }
-
-  // ── 过滤器联动 ────────────────────────────────────────────────────
-  useEffect(() => {
-    const cy = cyRef.current
-    if (!cy || !filterState) return
-
-    const { visibleNodes, visibleRels } = filterState
-
-    // 显示/隐藏节点和边
-    cy.nodes().forEach(n => {
-      const label = n.data('label')
-      if (!visibleNodes.includes(label)) n.hide(); else n.show()
-    })
-    cy.edges().forEach(e => {
-      const type = e.data('type')
-      if (!visibleRels.includes(type)) e.hide(); else e.show()
-    })
-
-    // 隐藏因边被隐藏而变为孤立的节点
-    cy.nodes().filter(n => n.visible() && n.connectedEdges(':visible').length === 0).hide()
-  }, [filterState])
-
-  // ── Tooltip HTML ──────────────────────────────────────────────────
-  const _buildTooltipHtml = (data) => {
-    const props = data.props || {}
-    const entries = Object.entries(props)
-      .filter(([k, v]) => v && !['id', 'name', 'source_sent'].includes(k))
-      .slice(0, 5)
-    const rows = entries.map(([k, v]) =>
-      `<div class="${styles.tooltipRow}">
-        <span class="${styles.tooltipKey}">${k}</span>
-        <span class="${styles.tooltipVal}">${String(v).slice(0, 30)}</span>
-      </div>`
-    ).join('')
-    return `
-      <div class="${styles.tooltipHeader}">
-        <span class="${styles.tooltipLabel}">${data.label || ''}</span>
-        <strong class="${styles.tooltipName}">${data.name || ''}</strong>
-      </div>
-      ${rows || '<div style="color:#78909c;font-size:10px">暂无附加属性</div>'}
-    `
-  }
-
-  useEffect(() => {
-    if (pathHighlight) highlightPath(pathHighlight)
-    else clearPath()
-  }, [pathHighlight, highlightPath, clearPath])
-
-  return <div ref={containerRef} className={styles.canvas} />
+  return <div ref={containerRef} className={s.canvas} />
 })
 
 export default GraphCanvas

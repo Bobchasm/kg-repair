@@ -1,169 +1,419 @@
+/* ── App 根容器 ────────────────────────────────────────────────────── */
 .app {
   height: 100vh;
-  background: #f0f4f8;
+  background: #0f0f1a;
+  overflow: hidden;
 }
 
-/* ── 顶部工具栏（浅色） ──────────────────────────────────────────── */
-.header {
-  height: 46px !important;
-  line-height: 46px !important;
-  background: #ffffff !important;
-  border-bottom: 1px solid #e2e8f0;
-  padding: 0 12px !important;
+/* ── 顶部导航栏 ────────────────────────────────────────────────────── */
+.navbar {
+  height: 56px;
+  background: rgba(20, 20, 35, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(100, 100, 150, 0.2);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  position: sticky;
+  padding: 0 24px;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
-  box-shadow: 0 1px 0 #e2e8f0, 0 2px 12px rgba(0, 0, 0, 0.06);
-}
-
-.siderToggle {
-  color: #3a7bd5 !important;
-  flex-shrink: 0;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 7px;
-  white-space: nowrap;
-  padding-right: 12px;
-  border-right: 1px solid #e2e8f0;
-  flex-shrink: 0;
+  gap: 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
-.logoGlow {
-  font-size: 17px;
-  color: #3a7bd5;
-  filter: drop-shadow(0 0 4px #3a7bd544);
+.logoIcon {
+  font-size: 1.8rem;
 }
 
 .logoText {
-  color: #1a2740 !important;
-  font-size: 13px !important;
-  letter-spacing: 0.3px;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.searchArea {
+.navLinks {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.navLinks span {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.navLinks span:hover {
+  color: #00d2ff;
+}
+
+.divider {
+  color: rgba(100, 100, 150, 0.4) !important;
+  cursor: default !important;
+}
+
+/* ── 主容器 ────────────────────────────────────────────────────────── */
+.container {
+  display: flex;
+  height: 100vh;
+  padding-top: 56px;
+}
+
+/* ── 左侧边栏 ───────────────────────────────────────────────────────── */
+.sidebar {
+  width: 380px;
+  background: rgba(25, 25, 40, 0.95);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid rgba(100, 100, 150, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.section {
+  padding: 20px;
+  border-bottom: 1px solid rgba(100, 100, 150, 0.1);
+}
+
+.section h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #00d2ff;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+/* ── 搜索框 ─────────────────────────────────────────────────────────── */
+.searchBox {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.searchBox input {
   flex: 1;
+  padding: 10px 14px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(100, 100, 150, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.searchBox input:focus {
+  border-color: #00d2ff;
+}
+
+.searchBox input::placeholder {
+  color: #666;
+}
+
+.searchBox button {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: transform 0.2s, opacity 0.2s;
+  white-space: nowrap;
+}
+
+.searchBox button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+/* ── 类型过滤按钮 ────────────────────────────────────────────────────── */
+.typeFilters {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
-  min-width: 0;
+  margin-bottom: 16px;
 }
 
-.clearPathBtn {
-  background: rgba(21, 101, 192, 0.08) !important;
-  border-color: rgba(21, 101, 192, 0.3) !important;
-  color: #1565c0 !important;
-  flex-shrink: 0;
+.typeBtn {
+  padding: 6px 14px;
+  border: 1px solid rgba(100, 100, 150, 0.4);
+  border-radius: 20px;
+  background: transparent;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.2s;
 }
 
-.tools {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
+.typeBtn:hover {
+  border-color: #00d2ff;
+  color: #00d2ff;
 }
 
-.toolBtn {
-  color: #90a4ae !important;
-  transition: color 0.2s !important;
-}
-.toolBtn:hover {
-  color: #3a7bd5 !important;
-}
-
-/* ── 主体布局 ──────────────────────────────────────────────────────── */
-.body {
-  height: calc(100vh - 46px);
-  overflow: hidden;
+.typeActive {
+  padding: 6px 14px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  color: white;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.2s;
 }
 
-/* ── 左侧面板（浅色） ─────────────────────────────────────────────── */
-.sider {
-  background: #ffffff !important;
-  border-right: 1px solid #e2e8f0 !important;
-  overflow: hidden;
-  transition: all 0.25s ease !important;
-  flex-shrink: 0;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+/* ── 搜索结果列表 ────────────────────────────────────────────────────── */
+.resultList {
+  max-height: 280px;
+  overflow-y: auto;
+  margin-top: 8px;
 }
 
-.siderTabs :global(.ant-tabs-nav) {
-  background: #f8fafc;
-  border-right: 1px solid #e2e8f0;
-  margin: 0;
-  width: 36px !important;
+.empty {
+  padding: 16px 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #555;
 }
 
-.siderTabs :global(.ant-tabs-tab) {
-  color: #90a4ae !important;
-  padding: 10px 8px !important;
-  justify-content: center;
+.resultItem {
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-left: 3px solid transparent;
 }
 
-.siderTabs :global(.ant-tabs-tab-active) {
-  color: #3a7bd5 !important;
-  background: rgba(58, 123, 213, 0.06) !important;
+.resultItem:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-left-color: #00d2ff;
 }
 
-.siderTabs :global(.ant-tabs-content-holder) {
-  background: #ffffff;
+.resultName {
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  word-break: break-all;
+  color: #e0e0e0;
+}
+
+.resultType {
+  font-size: 0.7rem;
+  color: #00d2ff;
+}
+
+/* ── 实体详情 ────────────────────────────────────────────────────────── */
+.detailBox {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 4px;
+  max-height: 350px;
   overflow-y: auto;
 }
 
-/* ── 主画布 ────────────────────────────────────────────────────────── */
-.canvas {
-  position: relative;
-  overflow: hidden;
-  flex: 1;
+.detailName {
+  font-size: 1rem;
+  color: #00d2ff;
+  margin-bottom: 12px;
+  word-break: break-all;
 }
 
-/* ── 左下角图例（浅色悬浮卡片） ──────────────────────────────────── */
-.legend {
-  position: absolute;
-  bottom: 18px;
-  left: 16px;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(100, 130, 165, 0.18);
-  border-radius: 10px;
-  padding: 10px 14px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
-  z-index: 50;
+.detailBadge {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  margin-bottom: 12px;
 }
 
-.legendTitle {
-  font-size: 10px;
-  font-weight: 600;
-  color: #90a4ae;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
+.detailRow {
   margin-bottom: 8px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  display: flex;
+  gap: 8px;
 }
 
-.legendGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px 16px;
+.detailKey {
+  color: #888;
+  width: 80px;
+  flex-shrink: 0;
+  word-break: break-all;
 }
 
-.legendItem {
+.detailVal {
+  color: #ddd;
+  word-break: break-word;
+}
+
+.focusBtn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: rgba(0, 210, 255, 0.15);
+  border: 1px solid rgba(0, 210, 255, 0.4);
+  border-radius: 6px;
+  color: #00d2ff;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.focusBtn:hover {
+  background: rgba(0, 210, 255, 0.25);
+}
+
+.relSection {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(100, 100, 150, 0.2);
+}
+
+.relTitle {
+  font-size: 0.78rem;
+  color: #888;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.relItem {
+  font-size: 0.75rem;
+  padding: 6px 0;
+  color: #aaa;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.relType {
+  color: #ffa500;
+  flex-shrink: 0;
+}
+
+.relArrow {
+  color: #555;
+  flex-shrink: 0;
+}
+
+.relTarget {
+  color: #ccc;
+  word-break: break-all;
+}
+
+/* ── 统计区域 ────────────────────────────────────────────────────────── */
+.statsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.statRow {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
+  font-size: 0.82rem;
 }
 
-.legendDot {
-  width: 9px;
-  height: 9px;
+.statDot {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
-.legendLabel {
-  font-size: 11px;
-  color: #546e7a;
+.statLabel {
+  flex: 1;
+  color: #aaa;
+}
+
+.statCount {
+  color: #e0e0e0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── 右侧主图谱区域 ──────────────────────────────────────────────────── */
+.main {
+  flex: 1;
+  position: relative;
+  background: #0a0a12;
+  overflow: hidden;
+}
+
+/* 底部统计栏 */
+.statsBar {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-family: monospace;
+  z-index: 20;
+  border: 1px solid rgba(100, 100, 150, 0.2);
+  pointer-events: none;
+  color: #e0e0e0;
+}
+
+/* 右下提示 */
+.infoTip {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  color: #666;
+  z-index: 20;
+  pointer-events: none;
+}
+
+/* ── 加载遮罩 ────────────────────────────────────────────────────────── */
+.loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 210, 255, 0.3);
+  border-top-color: #00d2ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }

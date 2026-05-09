@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>液压故障诊断知识图谱系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0f0f1a;
+            color: #e0e0e0;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* ========== 顶部导航栏 ========== */
+        .navbar {
+            height: 56px;
+            background: rgba(20, 20, 35, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(100, 100, 150, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+        }
+
+        .logo-text {
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            cursor: pointer;
+            padding: 8px 0;
+        }
+
+        .nav-links a:hover {
+            color: #00d2ff;
+        }
+
+        /* ========== 主容器 ========== */
+        .app-container {
+            display: flex;
+            height: 100vh;
+            padding-top: 56px;
+        }
+
+        /* ========== 左侧边栏 ========== */
+        .sidebar {
+            width: 380px;
+            background: rgba(25, 25, 40, 0.95);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid rgba(100, 100, 150, 0.15);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            flex-shrink: 0;
+        }
+
+        .sidebar-section {
+            padding: 20px;
+            border-bottom: 1px solid rgba(100, 100, 150, 0.1);
+        }
+
+        .sidebar-section h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #00d2ff;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+
+        /* 搜索区域 */
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 10px 14px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(100, 100, 150, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 0.85rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-box input:focus {
+            border-color: #00d2ff;
+        }
+
+        .search-box input::placeholder {
+            color: #666;
+        }
+
+        .search-box button {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .search-box button:hover {
+            transform: translateY(-1px);
+            opacity: 0.9;
+        }
+
+        /* 实体类型过滤器 */
+        .type-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .type-btn {
+            padding: 6px 14px;
+            border: 1px solid rgba(100, 100, 150, 0.4);
+            border-radius: 20px;
+            background: transparent;
+            color: #aaa;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all 0.2s;
+        }
+
+        .type-btn:hover {
+            border-color: #00d2ff;
+            color: #00d2ff;
+        }
+
+        .type-btn.active {
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+            border-color: transparent;
+            color: white;
+        }
+
+        /* 搜索结果列表 */
+        .search-results {
+            max-height: 280px;
+            overflow-y: auto;
+            margin-top: 8px;
+        }
+
+        .result-item {
+            padding: 12px 14px;
+            margin-bottom: 8px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+            border-left: 3px solid transparent;
+        }
+
+        .result-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-left-color: #00d2ff;
+        }
+
+        .result-name {
+            font-weight: 500;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+            word-break: break-all;
+        }
+
+        .result-type {
+            font-size: 0.7rem;
+            color: #00d2ff;
+        }
+
+        /* 实体详情区域 */
+        .entity-detail {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            padding: 14px;
+            margin-top: 12px;
+            max-height: 350px;
+            overflow-y: auto;
+        }
+
+        .entity-detail h4 {
+            font-size: 1rem;
+            color: #00d2ff;
+            margin-bottom: 12px;
+            word-break: break-all;
+        }
+
+        .detail-row {
+            margin-bottom: 8px;
+            font-size: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .detail-label {
+            color: #888;
+            width: 80px;
+            display: inline-block;
+        }
+
+        .detail-value {
+            color: #ddd;
+            word-break: break-word;
+        }
+
+        .focus-btn {
+            margin-top: 12px;
+            padding: 8px 16px;
+            background: rgba(0, 210, 255, 0.15);
+            border: 1px solid rgba(0, 210, 255, 0.4);
+            border-radius: 6px;
+            color: #00d2ff;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all 0.2s;
+            width: 100%;
+        }
+
+        .focus-btn:hover {
+            background: rgba(0, 210, 255, 0.25);
+        }
+
+        /* 关系列表 */
+        .relation-list {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(100, 100, 150, 0.2);
+        }
+
+        .relation-item {
+            font-size: 0.75rem;
+            padding: 6px 0;
+            color: #aaa;
+        }
+
+        .relation-type {
+            color: #ffa500;
+        }
+
+        /* 问答区域 */
+        .qa-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .qa-box input {
+            flex: 1;
+            padding: 10px 14px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(100, 100, 150, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 0.85rem;
+            outline: none;
+        }
+
+        .qa-box input:focus {
+            border-color: #00d2ff;
+        }
+
+        .qa-box button {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+
+        .qa-box button:hover {
+            transform: translateY(-1px);
+        }
+
+        .qa-answer {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 0.8rem;
+            line-height: 1.6;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .qa-question {
+            color: #38ef7d;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .qa-response {
+            color: #ccc;
+        }
+
+        /* ========== 右侧主内容区 ========== */
+        .main-content {
+            flex: 1;
+            position: relative;
+            background: #0a0a12;
+        }
+
+        #graph-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 统计栏 */
+        .stats-bar {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-family: monospace;
+            z-index: 20;
+            border: 1px solid rgba(100, 100, 150, 0.2);
+            pointer-events: none;
+        }
+
+        /* 提示信息 */
+        .info-tip {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            color: #666;
+            z-index: 20;
+            pointer-events: none;
+        }
+
+        /* 加载动画 */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            visibility: hidden;
+        }
+
+        .loading-overlay.show {
+            visibility: visible;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(0, 210, 255, 0.3);
+            border-top-color: #00d2ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* 滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #00d2ff;
+            border-radius: 3px;
+        }
+
+        /* 响应式 - 小屏幕时侧边栏可折叠 */
+        @media (max-width: 900px) {
+            .sidebar {
+                position: fixed;
+                left: -380px;
+                top: 56px;
+                height: calc(100vh - 56px);
+                z-index: 200;
+                transition: left 0.3s ease;
+            }
+
+            .sidebar.open {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+                position: fixed;
+                left: 20px;
+                top: 70px;
+                z-index: 201;
+                background: rgba(0, 0, 0, 0.7);
+                padding: 8px 12px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🛠️</span>
+            <span class="logo-text">液压故障诊断知识图谱</span>
+        </div>
+        <div class="nav-links">
+            <a onclick="refreshGraph()">图谱视图</a>
+            <a onclick="loadStatistics()">统计信息</a>
+            <a onclick="exportGraph()">导出图像</a>
+            <a href="#" style="color:#666;">|</a>
+            <a onclick="resetView()">重置视图</a>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- 侧边栏 -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-section">
+                <h3>🔍 实体搜索</h3>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="输入实体名称，如：液压泵、压力不足..." onkeypress="handleSearchKeyPress(event)">
+                    <button onclick="searchEntity()">搜索</button>
+                </div>
+                <div class="type-filters">
+                    <button class="type-btn active" data-type="all" onclick="setEntityType('all')">全部</button>
+                    <button class="type-btn" data-type="Component" onclick="setEntityType('Component')">🔧 元件</button>
+                    <button class="type-btn" data-type="Failure" onclick="setEntityType('Failure')">⚠️ 故障</button>
+                    <button class="type-btn" data-type="Cause" onclick="setEntityType('Cause')">🔍 原因</button>
+                    <button class="type-btn" data-type="Solution" onclick="setEntityType('Solution')">🛠️ 解决</button>
+                    <button class="type-btn" data-type="System" onclick="setEntityType('System')">🏭 系统</button>
+                </div>
+                <div id="search-results" class="search-results">
+                    <div style="color: #666; text-align: center; padding: 20px;">💡 输入关键词开始搜索</div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>📋 实体详情</h3>
+                <div id="entity-detail" class="entity-detail">
+                    <div style="color: #666; text-align: center; padding: 20px;">✨ 点击搜索结果查看详情</div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>🤖 AI 智能问答</h3>
+                <div class="qa-box">
+                    <input type="text" id="qa-input" placeholder="例如：液压泵的常见故障有哪些？" onkeypress="handleQAKeyPress(event)">
+                    <button onclick="askQuestion()">提问</button>
+                </div>
+                <div id="qa-answer" class="qa-answer">
+                    <div style="color: #666; text-align: center;">💬 输入问题，AI将为您解答</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 主内容区 -->
+        <div class="main-content">
+            <div id="graph-container"></div>
+            <div class="stats-bar" id="stats-bar">
+                📊 加载中...
+            </div>
+            <div class="info-tip">
+                🖱️ 拖拽节点查看连接 | 双击节点聚焦
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-overlay" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <script>
+        let myChart = null;
+        let currentEntityType = 'all';
+        let graphData = { nodes: [], links: [] };
+        let chartOptions = null;
+
+        // 初始化图表
+        function initChart() {
+            const container = document.getElementById('graph-container');
+            myChart = echarts.init(container);
+
+            const baseOptions = {
+                title: { show: false },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: function(params) {
+                        if (params.dataType === 'node') {
+                            return `<strong>${params.name}</strong><br/>类型: ${params.data.category || '未知'}`;
+                        } else if (params.dataType === 'edge') {
+                            return `关系: ${params.data.label || params.value}`;
+                        }
+                        return params.name;
+                    },
+                    backgroundColor: 'rgba(20, 20, 35, 0.95)',
+                    borderColor: '#00d2ff',
+                    borderWidth: 1,
+                    textStyle: { color: '#fff', fontSize: 12 }
+                },
+                series: [{
+                    type: 'graph',
+                    layout: 'force',
+                    force: {
+                        repulsion: 800,
+                        edgeLength: [80, 200],
+                        gravity: 0.08,
+                        friction: 0.1,
+                        layoutAnimation: true
+                    },
+                    roam: true,
+                    draggable: true,
+                    data: [],
+                    links: [],
+                    categories: [],
+                    label: {
+                        show: true,
+                        position: 'right',
+                        fontSize: 11,
+                        offset: [5, 0],
+                        formatter: function(params) {
+                            if (params.name.length > 20) {
+                                return params.name.substring(0, 18) + '...';
+                            }
+                            return params.name;
+                        }
+                    },
+                    emphasis: {
+                        focus: 'adjacency',
+                        label: { show: true, fontSize: 12, fontWeight: 'bold' }
+                    },
+                    lineStyle: {
+                        color: '#5a5a7a',
+                        curveness: 0.2,
+                        width: 1.5,
+                        opacity: 0.7,
+                        arrow: {
+                            show: true,
+                            size: 8
+                        }
+                    },
+                    edgeSymbol: ['none', 'arrow'],
+                    edgeSymbolSize: [0, 10],
+                    roamZoom: true,
+                    roamPan: true
+                }]
+            };
+
+            myChart.setOption(baseOptions);
+            chartOptions = baseOptions;
+
+            // 双击节点聚焦
+            myChart.on('dblclick', { seriesIndex: 0 }, function(params) {
+                if (params.dataType === 'node') {
+                    focusOnNode(params.name);
+                }
+            });
+
+            // 单击节点显示详情
+            myChart.on('click', { seriesIndex: 0 }, function(params) {
+                if (params.dataType === 'node') {
+                    loadEntityDetail(params.name);
+                }
+            });
+
+            window.addEventListener('resize', () => {
+                if (myChart) myChart.resize();
+            });
+        }
+
+        // 加载图谱数据
+        async function loadGraph(center = '') {
+            showLoading(true);
+            try {
+                const response = await fetch('/api/graph', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ center: center, depth: 2, limit: 150 })
+                });
+                const data = await response.json();
+
+                if (data.success && data.nodes && data.nodes.length > 0) {
+                    graphData = data;
+
+                    // 定义节点颜色
+                    const typeColors = {
+                        'Component': '#5470c6',
+                        'Failure': '#fac858',
+                        'Cause': '#ee6666',
+                        'Solution': '#73c0de',
+                        'System': '#3ba272',
+                        'Unknown': '#9a60b4'
+                    };
+
+                    const categories = [
+                        { name: 'Component', itemStyle: { color: '#5470c6' } },
+                        { name: 'Failure', itemStyle: { color: '#fac858' } },
+                        { name: 'Cause', itemStyle: { color: '#ee6666' } },
+                        { name: 'Solution', itemStyle: { color: '#73c0de' } },
+                        { name: 'System', itemStyle: { color: '#3ba272' } }
+                    ];
+
+                    const nodes = data.nodes.map(node => ({
+                        id: node.id,
+                        name: node.name,
+                        label: node.label || node.name,
+                        symbolSize: 35,
+                        category: node.type || 'Unknown',
+                        itemStyle: { color: typeColors[node.type] || '#9a60b4' }
+                    }));
+
+                    const links = data.links.map(link => ({
+                        source: link.source,
+                        target: link.target,
+                        label: link.type,
+                        value: link.type
+                    }));
+
+                    myChart.setOption({
+                        series: [{
+                            data: nodes,
+                            links: links,
+                            categories: categories
+                        }]
+                    });
+
+                    document.getElementById('stats-bar').innerHTML =
+                        `📊 节点: ${data.count.nodes} | 🔗 关系: ${data.count.links} | 🏷️ 类型: ${categories.length}`;
+                } else {
+                    document.getElementById('stats-bar').innerHTML = '⚠️ 暂无数据，请先构建知识图谱';
+                }
+            } catch (error) {
+                console.error('加载图谱失败:', error);
+                document.getElementById('stats-bar').innerHTML = '❌ 连接失败，请确保Neo4j服务已启动';
+            }
+            showLoading(false);
+        }
+
+        // 搜索实体
+        async function searchEntity() {
+            const keyword = document.getElementById('search-input').value.trim();
+            if (!keyword) {
+                document.getElementById('search-results').innerHTML = '<div style="color: #666; text-align: center; padding: 20px;">⚠️ 请输入搜索关键词</div>';
+                return;
+            }
+
+            showLoading(true);
+            try {
+                const response = await fetch('/api/search', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ keyword: keyword, type: currentEntityType })
+                });
+                const data = await response.json();
+
+                const resultsDiv = document.getElementById('search-results');
+                if (data.success && data.results && data.results.length > 0) {
+                    resultsDiv.innerHTML = data.results.map(r => `
+                        <div class="result-item" onclick="loadEntityDetail('${escapeHtml(r.name)}')">
+                            <div class="result-name">${escapeHtml(r.name)}</div>
+                            <div class="result-type">${r.type}</div>
+                        </div>
+                    `).join('');
+                } else {
+                    resultsDiv.innerHTML = '<div style="color: #666; text-align: center; padding: 20px;">🔍 未找到相关实体</div>';
+                }
+            } catch (error) {
+                console.error('搜索失败:', error);
+                document.getElementById('search-results').innerHTML = '<div style="color: #ff6b6b; text-align: center; padding: 20px;">❌ 搜索失败</div>';
+            }
+            showLoading(false);
+        }
+
+        // 加载实体详情
+        async function loadEntityDetail(name) {
+            showLoading(true);
+            try {
+                const response = await fetch(`/api/entity/${encodeURIComponent(name)}`);
+                const data = await response.json();
+
+                const detailDiv = document.getElementById('entity-detail');
+                if (data.success && data.entity) {
+                    const e = data.entity;
+                    const props = e.properties || {};
+
+                    let html = `<h4>📌 ${escapeHtml(e.name)}</h4>`;
+                    html += `<div class="detail-row"><span class="detail-label">类型:</span><span class="detail-value">${props.type || '未知'}</span></div>`;
+                    html += `<div class="detail-row"><span class="detail-label">来源:</span><span class="detail-value">${props.source || '自动抽取'}</span></div>`;
+
+                    if (props.description) {
+                        html += `<div class="detail-row"><span class="detail-label">描述:</span><span class="detail-value">${escapeHtml(props.description.substring(0, 300))}${props.description.length > 300 ? '...' : ''}</span></div>`;
+                    }
+
+                    if (props.common_causes && props.common_causes.length > 0) {
+                        html += `<div class="detail-row"><span class="detail-label">常见原因:</span><span class="detail-value">${props.common_causes.join('、')}</span></div>`;
+                    }
+
+                    if (props.common_solutions && props.common_solutions.length > 0) {
+                        html += `<div class="detail-row"><span class="detail-label">解决方法:</span><span class="detail-value">${props.common_solutions.join('；')}</span></div>`;
+                    }
+
+                    if (props.pressure) {
+                        html += `<div class="detail-row"><span class="detail-label">压力:</span><span class="detail-value">${props.pressure} ${props.pressure_unit || 'MPa'}</span></div>`;
+                    }
+
+                    if (props.flow_rate) {
+                        html += `<div class="detail-row"><span class="detail-label">流量:</span><span class="detail-value">${props.flow_rate} ${props.flow_unit || 'L/min'}</span></div>`;
+                    }
+
+                    html += `<button class="focus-btn" onclick="focusOnNode('${escapeHtml(e.name)}')">🎯 在图谱中聚焦</button>`;
+
+                    // 关系列表
+                    if (e.relations && e.relations.length > 0) {
+                        html += `<div class="relation-list"><strong>🔗 关联关系 (${e.relations.length})</strong>`;
+                        for (const rel of e.relations.slice(0, 8)) {
+                            html += `<div class="relation-item"><span class="relation-type">${rel.rel_type}</span> → ${escapeHtml(rel.target)} <span style="color:#666;">(${rel.target_type})</span></div>`;
+                        }
+                        if (e.relations.length > 8) {
+                            html += `<div class="relation-item" style="color:#666;">... 还有 ${e.relations.length - 8} 条关系</div>`;
+                        }
+                        html += `</div>`;
+                    }
+
+                    detailDiv.innerHTML = html;
+                } else {
+                    detailDiv.innerHTML = '<div style="color: #666; text-align: center; padding: 20px;">❌ 未找到实体详情</div>';
+                }
+            } catch (error) {
+                console.error('加载详情失败:', error);
+                document.getElementById('entity-detail').innerHTML = '<div style="color: #ff6b6b; text-align: center; padding: 20px;">❌ 加载失败</div>';
+            }
+            showLoading(false);
+        }
+
+        // 聚焦节点
+        async function focusOnNode(name) {
+            showLoading(true);
+            try {
+                const response = await fetch('/api/graph', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ center: name, depth: 2, limit: 100 })
+                });
+                const data = await response.json();
+
+                if (data.success && data.nodes) {
+                    const typeColors = {
+                        'Component': '#5470c6', 'Failure': '#fac858',
+                        'Cause': '#ee6666', 'Solution': '#73c0de', 'System': '#3ba272'
+                    };
+
+                    const nodes = data.nodes.map(node => ({
+                        id: node.id,
+                        name: node.name,
+                        symbolSize: 35,
+                        category: node.type || 'Unknown',
+                        itemStyle: { color: typeColors[node.type] || '#9a60b4' }
+                    }));
+
+                    myChart.setOption({
+                        series: [{
+                            data: nodes,
+                            links: data.links.map(link => ({ source: link.source, target: link.target, label: link.type }))
+                        }]
+                    });
+
+                    document.getElementById('stats-bar').innerHTML =
+                        `🎯 聚焦: ${name} | 节点: ${data.count.nodes} | 关系: ${data.count.links}`;
+                }
+            } catch (error) {
+                console.error('聚焦失败:', error);
+            }
+            showLoading(false);
+        }
+
+        // 重置视图
+        function resetView() {
+            loadGraph();
+            if (myChart) {
+                myChart.dispatchAction({ type: 'restore' });
+            }
+        }
+
+        // 刷新图谱
+        function refreshGraph() {
+            loadGraph();
+        }
+
+        // 导出图像
+        function exportGraph() {
+            if (myChart) {
+                const url = myChart.getDataURL({ type: 'png' });
+                const link = document.createElement('a');
+                link.download = 'hydraulic_kg.png';
+                link.href = url;
+                link.click();
+            }
+        }
+
+        // 加载统计信息
+        async function loadStatistics() {
+            try {
+                const response = await fetch('/api/statistics');
+                const data = await response.json();
+                if (data.success && data.statistics) {
+                    const stats = data.statistics;
+                    document.getElementById('stats-bar').innerHTML =
+                        `📊 实体总数: ${stats.entity_count} | 🔗 关系总数: ${stats.relation_count} | ` +
+                        `🏷️ 类型数: ${Object.keys(stats.entity_types || {}).length}`;
+                }
+            } catch (error) {
+                console.error('加载统计失败:', error);
+            }
+        }
+
+        // 智能问答
+        async function askQuestion() {
+            const question = document.getElementById('qa-input').value.trim();
+            if (!question) {
+                document.getElementById('qa-answer').innerHTML = '<div style="color: #ff6b6b;">⚠️ 请输入问题</div>';
+                return;
+            }
+
+            showLoading(true);
+            try {
+                const response = await fetch('/api/qa', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question: question })
+                });
+                const data = await response.json();
+
+                const answerDiv = document.getElementById('qa-answer');
+                if (data.answer) {
+                    answerDiv.innerHTML = `
+                        <div class="qa-question">❓ ${escapeHtml(question)}</div>
+                        <div class="qa-response">${escapeHtml(data.answer).replace(/\n/g, '<br>')}</div>
+                        ${data.cypher ? `<div style="margin-top: 10px; font-size: 0.7rem; color: #666; font-family: monospace;">🔍 查询: ${escapeHtml(data.cypher.substring(0, 100))}${data.cypher.length > 100 ? '...' : ''}</div>` : ''}
+                    `;
+                } else {
+                    answerDiv.innerHTML = `<div style="color: #ff6b6b;">❌ ${data.error || '无法获取答案'}</div>`;
+                }
+            } catch (error) {
+                console.error('问答失败:', error);
+                document.getElementById('qa-answer').innerHTML = '<div style="color: #ff6b6b;">❌ 问答服务异常</div>';
+            }
+            showLoading(false);
+        }
+
+        // 辅助函数
+        function setEntityType(type) {
+            currentEntityType = type;
+            document.querySelectorAll('.type-btn').forEach(btn => {
+                if (btn.dataset.type === type || (type === 'all' && btn.dataset.type === 'all')) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        function handleSearchKeyPress(event) {
+            if (event.key === 'Enter') searchEntity();
+        }
+
+        function handleQAKeyPress(event) {
+            if (event.key === 'Enter') askQuestion();
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
+        }
+
+        function showLoading(show) {
+            document.getElementById('loading').classList.toggle('show', show);
+        }
+
+        // 页面初始化
+        initChart();
+        loadGraph();
+        loadStatistics();
+    </script>
+</body>
+</html>
