@@ -1,0 +1,2986 @@
+[
+  {
+    "label": "Component",
+    "name": "排气管"
+  },
+  {
+    "label": "Fault",
+    "name": "氧化"
+  },
+  {
+    "label": "Vehicle",
+    "name": "摩托车"
+  },
+  {
+    "label": "Parameter",
+    "name": "12V",
+    "value": "12",
+    "unit": "V"
+  },
+  {
+    "label": "Component",
+    "name": "曲轴位置传感器"
+  },
+  {
+    "label": "Component",
+    "name": "氧传感器"
+  },
+  {
+    "label": "Fault",
+    "name": "短路"
+  },
+  {
+    "label": "Component",
+    "name": "机油"
+  },
+  {
+    "label": "Component",
+    "name": "传感器"
+  },
+  {
+    "label": "RepairStep",
+    "name": "检查"
+  },
+  {
+    "label": "Component",
+    "name": "节气门位置传感器"
+  },
+  {
+    "label": "Component",
+    "name": "后轮"
+  },
+  {
+    "label": "Component",
+    "name": "前轮"
+  },
+  {
+    "label": "Parameter",
+    "name": "111 kg",
+    "value": "111",
+    "unit": "kg"
+  },
+  {
+    "label": "Parameter",
+    "name": "80 mm",
+    "value": "80",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "70 mm",
+    "value": "70",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "174 kg",
+    "value": "174",
+    "unit": "kg"
+  },
+  {
+    "label": "Parameter",
+    "name": "96 mm",
+    "value": "96",
+    "unit": "mm"
+  },
+  {
+    "label": "Component",
+    "name": "燃油箱"
+  },
+  {
+    "label": "Component",
+    "name": "气缸"
+  },
+  {
+    "label": "Parameter",
+    "name": "57.9 mm",
+    "value": "57.9",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "124.9 cm",
+    "value": "124.9",
+    "unit": "cm"
+  },
+  {
+    "label": "Component",
+    "name": "气门"
+  },
+  {
+    "label": "Parameter",
+    "name": "1 mm",
+    "value": "1",
+    "unit": "mm"
+  },
+  {
+    "label": "System",
+    "name": "润滑系统"
+  },
+  {
+    "label": "Component",
+    "name": "机油泵"
+  },
+  {
+    "label": "Parameter",
+    "name": "22.7 kg",
+    "value": "22.7",
+    "unit": "kg"
+  },
+  {
+    "label": "Component",
+    "name": "曲轴箱"
+  },
+  {
+    "label": "System",
+    "name": "冷却系统"
+  },
+  {
+    "label": "System",
+    "name": "燃油系统"
+  },
+  {
+    "label": "Parameter",
+    "name": "22 mm",
+    "value": "22",
+    "unit": "mm"
+  },
+  {
+    "label": "System",
+    "name": "传动系统"
+  },
+  {
+    "label": "Component",
+    "name": "离合器"
+  },
+  {
+    "label": "RepairStep",
+    "name": "排放"
+  },
+  {
+    "label": "Component",
+    "name": "整流器"
+  },
+  {
+    "label": "System",
+    "name": "电气系统"
+  },
+  {
+    "label": "System",
+    "name": "点火系统"
+  },
+  {
+    "label": "System",
+    "name": "充电系统"
+  },
+  {
+    "label": "Component",
+    "name": "节气门体"
+  },
+  {
+    "label": "Parameter",
+    "name": "100 rpm",
+    "value": "100",
+    "unit": "rpm"
+  },
+  {
+    "label": "Parameter",
+    "name": "2 – 6 mm",
+    "value": "2 – 6",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "6 mm",
+    "value": "6",
+    "unit": "mm"
+  },
+  {
+    "label": "Component",
+    "name": "燃油泵"
+  },
+  {
+    "label": "Parameter",
+    "name": "82 cm",
+    "value": "82",
+    "unit": "cm"
+  },
+  {
+    "label": "Parameter",
+    "name": "263 – 316 kPa",
+    "value": "263 – 316",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "316 kPa",
+    "value": "316",
+    "unit": "kPa"
+  },
+  {
+    "label": "Vehicle",
+    "name": "汽车"
+  },
+  {
+    "label": "Parameter",
+    "name": "050 kPa",
+    "value": "050",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "10W",
+    "value": "10",
+    "unit": "W"
+  },
+  {
+    "label": "Component",
+    "name": "凸轮"
+  },
+  {
+    "label": "Component",
+    "name": "摇臂"
+  },
+  {
+    "label": "Component",
+    "name": "气门导管"
+  },
+  {
+    "label": "Component",
+    "name": "气门座"
+  },
+  {
+    "label": "Component",
+    "name": "气门弹簧"
+  },
+  {
+    "label": "Component",
+    "name": "活塞"
+  },
+  {
+    "label": "Component",
+    "name": "曲轴"
+  },
+  {
+    "label": "Parameter",
+    "name": "8 mm",
+    "value": "8",
+    "unit": "mm"
+  },
+  {
+    "label": "Component",
+    "name": "活塞销"
+  },
+  {
+    "label": "Component",
+    "name": "活塞环"
+  },
+  {
+    "label": "Component",
+    "name": "传动皮带"
+  },
+  {
+    "label": "Component",
+    "name": "弹簧"
+  },
+  {
+    "label": "System",
+    "name": "制动系统"
+  },
+  {
+    "label": "Parameter",
+    "name": "175 kPa",
+    "value": "175",
+    "unit": "kPa"
+  },
+  {
+    "label": "Component",
+    "name": "轮圈"
+  },
+  {
+    "label": "Parameter",
+    "name": "2.5 cm",
+    "value": "2.5",
+    "unit": "cm"
+  },
+  {
+    "label": "Component",
+    "name": "制动鼓"
+  },
+  {
+    "label": "Parameter",
+    "name": "200 kPa",
+    "value": "200",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "225 kPa",
+    "value": "225",
+    "unit": "kPa"
+  },
+  {
+    "label": "Component",
+    "name": "制动钳"
+  },
+  {
+    "label": "Component",
+    "name": "蓄电池"
+  },
+  {
+    "label": "Parameter",
+    "name": "40°C",
+    "value": "40",
+    "unit": "°C"
+  },
+  {
+    "label": "Parameter",
+    "name": "20°C",
+    "value": "20",
+    "unit": "°C"
+  },
+  {
+    "label": "Parameter",
+    "name": "24°C",
+    "value": "24",
+    "unit": "°C"
+  },
+  {
+    "label": "Parameter",
+    "name": "24 °C",
+    "value": "24",
+    "unit": "°C"
+  },
+  {
+    "label": "Component",
+    "name": "火花塞"
+  },
+  {
+    "label": "Parameter",
+    "name": "0.8 – 0.9 mm",
+    "value": "0.8 – 0.9",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "0.9 mm",
+    "value": "0.9",
+    "unit": "mm"
+  },
+  {
+    "label": "Component",
+    "name": "点火线圈"
+  },
+  {
+    "label": "Parameter",
+    "name": "100 V",
+    "value": "100",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "0.7 V",
+    "value": "0.7",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "12 V",
+    "value": "12",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "6 A",
+    "value": "6",
+    "unit": "A"
+  },
+  {
+    "label": "Component",
+    "name": "前照灯"
+  },
+  {
+    "label": "Parameter",
+    "name": "3.0 A",
+    "value": "3.0",
+    "unit": "A"
+  },
+  {
+    "label": "Component",
+    "name": "尾灯"
+  },
+  {
+    "label": "Parameter",
+    "name": "5 W",
+    "value": "5",
+    "unit": "W"
+  },
+  {
+    "label": "Parameter",
+    "name": "10 W",
+    "value": "10",
+    "unit": "W"
+  },
+  {
+    "label": "Fault",
+    "name": "漏电"
+  },
+  {
+    "label": "Parameter",
+    "name": "0.25 m",
+    "value": "0.25",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "000 rpm",
+    "value": "000",
+    "unit": "rpm"
+  },
+  {
+    "label": "Component",
+    "name": "保险丝"
+  },
+  {
+    "label": "Parameter",
+    "name": "20 A",
+    "value": "20",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "10 A",
+    "value": "10",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "5 mm",
+    "value": "5",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "10 mm",
+    "value": "10",
+    "unit": "mm"
+  },
+  {
+    "label": "Component",
+    "name": "空滤"
+  },
+  {
+    "label": "Component",
+    "name": "进气管"
+  },
+  {
+    "label": "Parameter",
+    "name": "12 mm",
+    "value": "12",
+    "unit": "mm"
+  },
+  {
+    "label": "Component",
+    "name": "链轮"
+  },
+  {
+    "label": "Component",
+    "name": "链条"
+  },
+  {
+    "label": "System",
+    "name": "排气系统"
+  },
+  {
+    "label": "Component",
+    "name": "飞轮"
+  },
+  {
+    "label": "Component",
+    "name": "风扇"
+  },
+  {
+    "label": "Component",
+    "name": "消声器"
+  },
+  {
+    "label": "Component",
+    "name": "前叉"
+  },
+  {
+    "label": "Component",
+    "name": "制动软管"
+  },
+  {
+    "label": "Component",
+    "name": "调节器"
+  },
+  {
+    "label": "Component",
+    "name": "轴承"
+  },
+  {
+    "label": "Parameter",
+    "name": "07W",
+    "value": "07",
+    "unit": "W"
+  },
+  {
+    "label": "Parameter",
+    "name": "20 mm",
+    "value": "20",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "41.2 mm",
+    "value": "41.2",
+    "unit": "mm"
+  },
+  {
+    "label": "Component",
+    "name": "油封"
+  },
+  {
+    "label": "Parameter",
+    "name": "40 mm",
+    "value": "40",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "28 mm",
+    "value": "28",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "35 mm",
+    "value": "35",
+    "unit": "mm"
+  },
+  {
+    "label": "RepairStep",
+    "name": "拆卸"
+  },
+  {
+    "label": "Tool",
+    "name": "套筒扳手"
+  },
+  {
+    "label": "Parameter",
+    "name": "5.0 mm",
+    "value": "5.0",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "47 mm",
+    "value": "47",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "30 mm",
+    "value": "30",
+    "unit": "mm"
+  },
+  {
+    "label": "Component",
+    "name": "线束"
+  },
+  {
+    "label": "Component",
+    "name": "制动拉线"
+  },
+  {
+    "label": "Component",
+    "name": "继电器"
+  },
+  {
+    "label": "Parameter",
+    "name": "2 mm",
+    "value": "2",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "21 - 25mm",
+    "value": "21 - 25",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "25mm",
+    "value": "25",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "5mm",
+    "value": "5",
+    "unit": "mm"
+  },
+  {
+    "label": "Component",
+    "name": "油箱"
+  },
+  {
+    "label": "Component",
+    "name": "燃油滤清器"
+  },
+  {
+    "label": "Fault",
+    "name": "堵塞"
+  },
+  {
+    "label": "RepairStep",
+    "name": "更换"
+  },
+  {
+    "label": "RepairStep",
+    "name": "检测"
+  },
+  {
+    "label": "RepairStep",
+    "name": "保养"
+  },
+  {
+    "label": "Component",
+    "name": "油管"
+  },
+  {
+    "label": "Fault",
+    "name": "磨损"
+  },
+  {
+    "label": "Component",
+    "name": "轮胎"
+  },
+  {
+    "label": "RepairStep",
+    "name": "紧固"
+  },
+  {
+    "label": "Fault",
+    "name": "熄火"
+  },
+  {
+    "label": "Parameter",
+    "name": "12 N·m",
+    "value": "12",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "2.1 N·m",
+    "value": "2.1",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "1.1 N·m",
+    "value": "1.1",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "35.9 – 37.9 mm",
+    "value": "35.9 – 37.9",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "37.9 mm",
+    "value": "37.9",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "6.0 N·m",
+    "value": "6.0",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "8.5 N·m",
+    "value": "8.5",
+    "unit": "N·m"
+  },
+  {
+    "label": "Component",
+    "name": "点火开关"
+  },
+  {
+    "label": "Parameter",
+    "name": "20 N·m",
+    "value": "20",
+    "unit": "N·m"
+  },
+  {
+    "label": "RepairStep",
+    "name": "拆解"
+  },
+  {
+    "label": "Parameter",
+    "name": "3.0 N·m",
+    "value": "3.0",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "10 N·m",
+    "value": "10",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "35°C",
+    "value": "35",
+    "unit": "°C"
+  },
+  {
+    "label": "Fault",
+    "name": "松动"
+  },
+  {
+    "label": "Fault",
+    "name": "卡滞"
+  },
+  {
+    "label": "Parameter",
+    "name": "7.0 N·m",
+    "value": "7.0",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "0.8 N·m",
+    "value": "0.8",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "4.0 N·m",
+    "value": "4.0",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "18 N·m",
+    "value": "18",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "9.0 N·m",
+    "value": "9.0",
+    "unit": "N·m"
+  },
+  {
+    "label": "Component",
+    "name": "凸轮轴"
+  },
+  {
+    "label": "Parameter",
+    "name": "8.9 – 9.1 mm",
+    "value": "8.9 – 9.1",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "9.1 mm",
+    "value": "9.1",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "181.0 – 182.0 mm",
+    "value": "181.0 – 182.0",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "182.0 mm",
+    "value": "182.0",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "6.5 N·m",
+    "value": "6.5",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "49 N·m",
+    "value": "49",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "116 N·m",
+    "value": "116",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "54 N·m",
+    "value": "54",
+    "unit": "N·m"
+  },
+  {
+    "label": "RepairStep",
+    "name": "润滑"
+  },
+  {
+    "label": "Parameter",
+    "name": "41 mm",
+    "value": "41",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "13 N·m",
+    "value": "13",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "0 – 0.5 mm",
+    "value": "0 – 0.5",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "0.5 mm",
+    "value": "0.5",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "2 cm",
+    "value": "2",
+    "unit": "cm"
+  },
+  {
+    "label": "Parameter",
+    "name": "3 cm",
+    "value": "3",
+    "unit": "cm"
+  },
+  {
+    "label": "Parameter",
+    "name": "0 - 1 mm",
+    "value": "0 - 1",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "0 - 0.5 mm",
+    "value": "0 - 0.5",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "75 mm",
+    "value": "75",
+    "unit": "mm"
+  },
+  {
+    "label": "Component",
+    "name": "连杆"
+  },
+  {
+    "label": "Parameter",
+    "name": "26 mm",
+    "value": "26",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "69 N·m",
+    "value": "69",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "2.0 mm",
+    "value": "2.0",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "29 N·m",
+    "value": "29",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "59 N·m",
+    "value": "59",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "9.5 N·m",
+    "value": "9.5",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "7.5 N·m",
+    "value": "7.5",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "15.0 – 16.0mm",
+    "value": "15.0 – 16.0",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "16.0mm",
+    "value": "16.0",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "22 N·m",
+    "value": "22",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "42 N·m",
+    "value": "42",
+    "unit": "N·m"
+  },
+  {
+    "label": "Component",
+    "name": "轮毂"
+  },
+  {
+    "label": "Parameter",
+    "name": "30 N·m",
+    "value": "30",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "60 mm",
+    "value": "60",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "8.1 N·m",
+    "value": "8.1",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "68 N·m",
+    "value": "68",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "1.0 N·m",
+    "value": "1.0",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "4.5 N·m",
+    "value": "4.5",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "4.2 N·m",
+    "value": "4.2",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "118 N·m",
+    "value": "118",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "0 – 0.1 mm",
+    "value": "0 – 0.1",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "0.1 mm",
+    "value": "0.1",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "1.5 N·m",
+    "value": "1.5",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "34 N·m",
+    "value": "34",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "2.5 N·m",
+    "value": "2.5",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "8.0 N·m",
+    "value": "8.0",
+    "unit": "N·m"
+  },
+  {
+    "label": "Fault",
+    "name": "失效"
+  },
+  {
+    "label": "Fault",
+    "name": "接触不良"
+  },
+  {
+    "label": "Symptom",
+    "name": "怠速不稳"
+  },
+  {
+    "label": "Parameter",
+    "name": "4.75 – 5.25 V",
+    "value": "4.75 – 5.25",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "5.25 V",
+    "value": "5.25",
+    "unit": "V"
+  },
+  {
+    "label": "Fault",
+    "name": "断路"
+  },
+  {
+    "label": "Parameter",
+    "name": "14.5 N·m",
+    "value": "14.5",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "25 N·m",
+    "value": "25",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "16 N·m",
+    "value": "16",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "2.0 N·m",
+    "value": "2.0",
+    "unit": "N·m"
+  },
+  {
+    "label": "Parameter",
+    "name": "4-27 V",
+    "value": "4-27",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "27 V",
+    "value": "27",
+    "unit": "V"
+  },
+  {
+    "label": "Component",
+    "name": "大灯"
+  },
+  {
+    "label": "Parameter",
+    "name": "6A",
+    "value": "6",
+    "unit": "A"
+  },
+  {
+    "label": "Component",
+    "name": "转向灯"
+  },
+  {
+    "label": "Parameter",
+    "name": "5W",
+    "value": "5",
+    "unit": "W"
+  },
+  {
+    "label": "Parameter",
+    "name": "21W",
+    "value": "21",
+    "unit": "W"
+  },
+  {
+    "label": "Parameter",
+    "name": "80A",
+    "value": "80",
+    "unit": "A"
+  },
+  {
+    "label": "Component",
+    "name": "冷却液"
+  },
+  {
+    "label": "Component",
+    "name": "气缸体"
+  },
+  {
+    "label": "Component",
+    "name": "气缸盖"
+  },
+  {
+    "label": "Tool",
+    "name": "举升机"
+  },
+  {
+    "label": "Component",
+    "name": "油底壳"
+  },
+  {
+    "label": "Component",
+    "name": "机油滤清器"
+  },
+  {
+    "label": "Fault",
+    "name": "漏油"
+  },
+  {
+    "label": "RepairStep",
+    "name": "安装"
+  },
+  {
+    "label": "Component",
+    "name": "散热器"
+  },
+  {
+    "label": "Component",
+    "name": "密封圈"
+  },
+  {
+    "label": "Component",
+    "name": "空气滤清器"
+  },
+  {
+    "label": "Component",
+    "name": "气门盖"
+  },
+  {
+    "label": "Component",
+    "name": "化油器"
+  },
+  {
+    "label": "Component",
+    "name": "节气门"
+  },
+  {
+    "label": "RepairStep",
+    "name": "加注"
+  },
+  {
+    "label": "RepairStep",
+    "name": "清洗"
+  },
+  {
+    "label": "Tool",
+    "name": "万用表"
+  },
+  {
+    "label": "RepairStep",
+    "name": "测量"
+  },
+  {
+    "label": "Tool",
+    "name": "示波器"
+  },
+  {
+    "label": "Tool",
+    "name": "诊断仪"
+  },
+  {
+    "label": "Fault",
+    "name": "抱死"
+  },
+  {
+    "label": "Tool",
+    "name": "燃油压力表"
+  },
+  {
+    "label": "Tool",
+    "name": "压力表"
+  },
+  {
+    "label": "Tool",
+    "name": "气缸压力表"
+  },
+  {
+    "label": "Parameter",
+    "name": "50kPa",
+    "value": "50",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "200kPa",
+    "value": "200",
+    "unit": "kPa"
+  },
+  {
+    "label": "RepairStep",
+    "name": "拧紧"
+  },
+  {
+    "label": "Parameter",
+    "name": "150 ~200 kPa",
+    "value": "150 ~200",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "6V",
+    "value": "6",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "24V",
+    "value": "24",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "5m",
+    "value": "5",
+    "unit": "m"
+  },
+  {
+    "label": "Component",
+    "name": "进气歧管"
+  },
+  {
+    "label": "Tool",
+    "name": "呆扳手"
+  },
+  {
+    "label": "Tool",
+    "name": "塞尺"
+  },
+  {
+    "label": "Fault",
+    "name": "卡住"
+  },
+  {
+    "label": "Tool",
+    "name": "活塞环压缩工具"
+  },
+  {
+    "label": "Fault",
+    "name": "脱落"
+  },
+  {
+    "label": "Component",
+    "name": "球头"
+  },
+  {
+    "label": "Component",
+    "name": "减振器"
+  },
+  {
+    "label": "Parameter",
+    "name": "2A",
+    "value": "2",
+    "unit": "A"
+  },
+  {
+    "label": "Component",
+    "name": "张紧器"
+  },
+  {
+    "label": "Component",
+    "name": "水泵"
+  },
+  {
+    "label": "Tool",
+    "name": "尖嘴钳"
+  },
+  {
+    "label": "Component",
+    "name": "主轴承"
+  },
+  {
+    "label": "Parameter",
+    "name": "0mm",
+    "value": "0",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "20A",
+    "value": "20",
+    "unit": "A"
+  },
+  {
+    "label": "RepairStep",
+    "name": "调整"
+  },
+  {
+    "label": "Parameter",
+    "name": "35mm",
+    "value": "35",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "10 ~15mm",
+    "value": "10 ~15",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "15mm",
+    "value": "15",
+    "unit": "mm"
+  },
+  {
+    "label": "Fault",
+    "name": "腐蚀"
+  },
+  {
+    "label": "Parameter",
+    "name": "05mm",
+    "value": "05",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "80 ~90℃",
+    "value": "80 ~90",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "90℃",
+    "value": "90",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "14mm",
+    "value": "14",
+    "unit": "mm"
+  },
+  {
+    "label": "Tool",
+    "name": "千分尺"
+  },
+  {
+    "label": "Fault",
+    "name": "漏气"
+  },
+  {
+    "label": "Parameter",
+    "name": "003mm",
+    "value": "003",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "006mm",
+    "value": "006",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "80℃",
+    "value": "80",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "015mm",
+    "value": "015",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "02mm",
+    "value": "02",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "03mm",
+    "value": "03",
+    "unit": "mm"
+  },
+  {
+    "label": "Tool",
+    "name": "游标卡尺"
+  },
+  {
+    "label": "Parameter",
+    "name": "10mm",
+    "value": "10",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "08mm",
+    "value": "08",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "11mm",
+    "value": "11",
+    "unit": "mm"
+  },
+  {
+    "label": "RepairStep",
+    "name": "研磨"
+  },
+  {
+    "label": "Tool",
+    "name": "气门研磨工具"
+  },
+  {
+    "label": "Parameter",
+    "name": "04mm",
+    "value": "04",
+    "unit": "mm"
+  },
+  {
+    "label": "System",
+    "name": "进气系统"
+  },
+  {
+    "label": "Fault",
+    "name": "开裂"
+  },
+  {
+    "label": "Fault",
+    "name": "老化"
+  },
+  {
+    "label": "Component",
+    "name": "排气歧管"
+  },
+  {
+    "label": "Fault",
+    "name": "变形"
+  },
+  {
+    "label": "RepairStep",
+    "name": "修理"
+  },
+  {
+    "label": "Symptom",
+    "name": "异响"
+  },
+  {
+    "label": "Fault",
+    "name": "断裂"
+  },
+  {
+    "label": "Component",
+    "name": "连杆轴承"
+  },
+  {
+    "label": "RepairStep",
+    "name": "组装"
+  },
+  {
+    "label": "Fault",
+    "name": "曲轴断裂"
+  },
+  {
+    "label": "Symptom",
+    "name": "发动机异响"
+  },
+  {
+    "label": "Symptom",
+    "name": "加速无力"
+  },
+  {
+    "label": "Tool",
+    "name": "真空表"
+  },
+  {
+    "label": "Vehicle",
+    "name": "轿车"
+  },
+  {
+    "label": "Parameter",
+    "name": "800kPa",
+    "value": "800",
+    "unit": "kPa"
+  },
+  {
+    "label": "Fault",
+    "name": "P1607",
+    "fault_code": "P1607"
+  },
+  {
+    "label": "Fault",
+    "name": "P0341",
+    "fault_code": "P0341"
+  },
+  {
+    "label": "Component",
+    "name": "驱动轮"
+  },
+  {
+    "label": "Parameter",
+    "name": "07mm",
+    "value": "07",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "250kPa",
+    "value": "250",
+    "unit": "kPa"
+  },
+  {
+    "label": "Component",
+    "name": "挺柱"
+  },
+  {
+    "label": "Component",
+    "name": "发电机"
+  },
+  {
+    "label": "Parameter",
+    "name": "56V",
+    "value": "56",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "0V",
+    "value": "0",
+    "unit": "V"
+  },
+  {
+    "label": "RepairStep",
+    "name": "试车"
+  },
+  {
+    "label": "Parameter",
+    "name": "350kPa",
+    "value": "350",
+    "unit": "kPa"
+  },
+  {
+    "label": "Fault",
+    "name": "机油压力不足"
+  },
+  {
+    "label": "Parameter",
+    "name": "125kPa",
+    "value": "125",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "150kPa",
+    "value": "150",
+    "unit": "kPa"
+  },
+  {
+    "label": "Component",
+    "name": "润滑油"
+  },
+  {
+    "label": "Parameter",
+    "name": "29kPa",
+    "value": "29",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "300kPa",
+    "value": "300",
+    "unit": "kPa"
+  },
+  {
+    "label": "RepairStep",
+    "name": "分解"
+  },
+  {
+    "label": "RepairStep",
+    "name": "涂抹"
+  },
+  {
+    "label": "Parameter",
+    "name": "3 m",
+    "value": "3",
+    "unit": "m"
+  },
+  {
+    "label": "RepairStep",
+    "name": "修复"
+  },
+  {
+    "label": "Fault",
+    "name": "油封损坏"
+  },
+  {
+    "label": "Parameter",
+    "name": "8mm",
+    "value": "8",
+    "unit": "mm"
+  },
+  {
+    "label": "Fault",
+    "name": "烧机油"
+  },
+  {
+    "label": "Parameter",
+    "name": "1100kPa",
+    "value": "1100",
+    "unit": "kPa"
+  },
+  {
+    "label": "Fault",
+    "name": "卡死"
+  },
+  {
+    "label": "Vehicle",
+    "name": "SUV"
+  },
+  {
+    "label": "Fault",
+    "name": "烧蚀"
+  },
+  {
+    "label": "Parameter",
+    "name": "80 ~90 ℃",
+    "value": "80 ~90",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "90 ℃",
+    "value": "90",
+    "unit": "℃"
+  },
+  {
+    "label": "Component",
+    "name": "节温器"
+  },
+  {
+    "label": "Parameter",
+    "name": "100 ℃",
+    "value": "100",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "93 ~123kPa",
+    "value": "93 ~123",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "123kPa",
+    "value": "123",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "160kPa",
+    "value": "160",
+    "unit": "kPa"
+  },
+  {
+    "label": "Fault",
+    "name": "漏水"
+  },
+  {
+    "label": "Parameter",
+    "name": "80 ~84℃",
+    "value": "80 ~84",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "84℃",
+    "value": "84",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "120kPa",
+    "value": "120",
+    "unit": "kPa"
+  },
+  {
+    "label": "Fault",
+    "name": "过热"
+  },
+  {
+    "label": "Parameter",
+    "name": "10m",
+    "value": "10",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "107 ~108℃",
+    "value": "107 ~108",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "108℃",
+    "value": "108",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "7V",
+    "value": "7",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "8V",
+    "value": "8",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "15m",
+    "value": "15",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "95℃",
+    "value": "95",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "90 ~105℃",
+    "value": "90 ~105",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "105℃",
+    "value": "105",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "99 ~102℃",
+    "value": "99 ~102",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "102℃",
+    "value": "102",
+    "unit": "℃"
+  },
+  {
+    "label": "System",
+    "name": "空调系统"
+  },
+  {
+    "label": "Component",
+    "name": "ABS"
+  },
+  {
+    "label": "Parameter",
+    "name": "96℃",
+    "value": "96",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "106℃",
+    "value": "106",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "120℃",
+    "value": "120",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "100℃",
+    "value": "100",
+    "unit": "℃"
+  },
+  {
+    "label": "Component",
+    "name": "ECU"
+  },
+  {
+    "label": "Fault",
+    "name": "接地不良"
+  },
+  {
+    "label": "Fault",
+    "name": "渗漏"
+  },
+  {
+    "label": "Parameter",
+    "name": "87℃",
+    "value": "87",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "10℃",
+    "value": "10",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "3V",
+    "value": "3",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "5V",
+    "value": "5",
+    "unit": "V"
+  },
+  {
+    "label": "Component",
+    "name": "转速表"
+  },
+  {
+    "label": "Parameter",
+    "name": "92℃",
+    "value": "92",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "117℃",
+    "value": "117",
+    "unit": "℃"
+  },
+  {
+    "label": "Component",
+    "name": "推杆"
+  },
+  {
+    "label": "Parameter",
+    "name": "1mm",
+    "value": "1",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "16mm",
+    "value": "16",
+    "unit": "mm"
+  },
+  {
+    "label": "Parameter",
+    "name": "9V",
+    "value": "9",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "2 ~4V",
+    "value": "2 ~4",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "4V",
+    "value": "4",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "0 ~5V",
+    "value": "0 ~5",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "1V",
+    "value": "1",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "45V",
+    "value": "45",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "20℃",
+    "value": "20",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "9 ~14V",
+    "value": "9 ~14",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "14V",
+    "value": "14",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "18V",
+    "value": "18",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "21V",
+    "value": "21",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "71V",
+    "value": "71",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "84V",
+    "value": "84",
+    "unit": "V"
+  },
+  {
+    "label": "Component",
+    "name": "点火器"
+  },
+  {
+    "label": "Parameter",
+    "name": "11V",
+    "value": "11",
+    "unit": "V"
+  },
+  {
+    "label": "RepairStep",
+    "name": "焊接"
+  },
+  {
+    "label": "Parameter",
+    "name": "9 ~ 14V",
+    "value": "9 ~ 14",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "1A",
+    "value": "1",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "2 m",
+    "value": "2",
+    "unit": "m"
+  },
+  {
+    "label": "Component",
+    "name": "起动机"
+  },
+  {
+    "label": "Parameter",
+    "name": "2V",
+    "value": "2",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "60℃",
+    "value": "60",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "26 A",
+    "value": "26",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "28 A",
+    "value": "28",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "40 A",
+    "value": "40",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "48 A",
+    "value": "48",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "9 A",
+    "value": "9",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "29 A",
+    "value": "29",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "30 A",
+    "value": "30",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "38V",
+    "value": "38",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "89V",
+    "value": "89",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "1550kPa",
+    "value": "1550",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "1250kPa",
+    "value": "1250",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "63℃",
+    "value": "63",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "0m",
+    "value": "0",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "83V",
+    "value": "83",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "11 ~14V",
+    "value": "11 ~14",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "10V",
+    "value": "10",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "3-5V",
+    "value": "3-5",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "36V",
+    "value": "36",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "75V",
+    "value": "75",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "1m",
+    "value": "1",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "7 ~10V",
+    "value": "7 ~10",
+    "unit": "V"
+  },
+  {
+    "label": "System",
+    "name": "发动机系统"
+  },
+  {
+    "label": "Parameter",
+    "name": "70℃",
+    "value": "70",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "94℃",
+    "value": "94",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "9m",
+    "value": "9",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "95 ~99℃",
+    "value": "95 ~99",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "99℃",
+    "value": "99",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "350℃",
+    "value": "350",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "40kPa",
+    "value": "40",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "5℃",
+    "value": "5",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "38 ~80℃",
+    "value": "38 ~80",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "15V",
+    "value": "15",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "81V",
+    "value": "81",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "761V",
+    "value": "761",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "367V",
+    "value": "367",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "785V",
+    "value": "785",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "32m",
+    "value": "32",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "37m",
+    "value": "37",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "40 ~140℃",
+    "value": "40 ~140",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "140℃",
+    "value": "140",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "80 ~100℃",
+    "value": "80 ~100",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "40℃",
+    "value": "40",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "999V",
+    "value": "999",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "0°C",
+    "value": "0",
+    "unit": "°C"
+  },
+  {
+    "label": "Parameter",
+    "name": "0 ~80 A",
+    "value": "0 ~80",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "80 A",
+    "value": "80",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "0A",
+    "value": "0",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "275V",
+    "value": "275",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "40 ~120℃",
+    "value": "40 ~120",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "40 ~ 120℃",
+    "value": "40 ~ 120",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "048m",
+    "value": "048",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "0 ~255kPa",
+    "value": "0 ~255",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "100kPa",
+    "value": "100",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "255kPa",
+    "value": "255",
+    "unit": "kPa"
+  },
+  {
+    "label": "Fault",
+    "name": "空转"
+  },
+  {
+    "label": "Parameter",
+    "name": "0 ~255 A",
+    "value": "0 ~255",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "255 A",
+    "value": "255",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "69 A",
+    "value": "69",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "3℃",
+    "value": "3",
+    "unit": "℃"
+  },
+  {
+    "label": "Parameter",
+    "name": "66 A",
+    "value": "66",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "17 A",
+    "value": "17",
+    "unit": "A"
+  },
+  {
+    "label": "Symptom",
+    "name": "抖动"
+  },
+  {
+    "label": "Parameter",
+    "name": "24A",
+    "value": "24",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "320kPa",
+    "value": "320",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "350 ~360kPa",
+    "value": "350 ~360",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "360kPa",
+    "value": "360",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "330kPa",
+    "value": "330",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "0MPa",
+    "value": "0",
+    "unit": "MPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "400m",
+    "value": "400",
+    "unit": "m"
+  },
+  {
+    "label": "Symptom",
+    "name": "怠速过低"
+  },
+  {
+    "label": "Parameter",
+    "name": "20kPa",
+    "value": "20",
+    "unit": "kPa"
+  },
+  {
+    "label": "RepairStep",
+    "name": "试验"
+  },
+  {
+    "label": "Symptom",
+    "name": "振动"
+  },
+  {
+    "label": "Parameter",
+    "name": "0 ~6kPa",
+    "value": "0 ~6",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "6kPa",
+    "value": "6",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "50 ~75kPa",
+    "value": "50 ~75",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "75kPa",
+    "value": "75",
+    "unit": "kPa"
+  },
+  {
+    "label": "Symptom",
+    "name": "油耗增加"
+  },
+  {
+    "label": "Parameter",
+    "name": "100m",
+    "value": "100",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "328kPa",
+    "value": "328",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "20m",
+    "value": "20",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "220kPa",
+    "value": "220",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "38kPa",
+    "value": "38",
+    "unit": "kPa"
+  },
+  {
+    "label": "Parameter",
+    "name": "800m",
+    "value": "800",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "08V",
+    "value": "08",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "74V",
+    "value": "74",
+    "unit": "V"
+  },
+  {
+    "label": "Vehicle",
+    "name": "面包车"
+  },
+  {
+    "label": "Parameter",
+    "name": "785m",
+    "value": "785",
+    "unit": "m"
+  },
+  {
+    "label": "Vehicle",
+    "name": "客车"
+  },
+  {
+    "label": "Parameter",
+    "name": "2m",
+    "value": "2",
+    "unit": "m"
+  },
+  {
+    "label": "Parameter",
+    "name": "120V",
+    "value": "120",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "800V",
+    "value": "800",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "36℃",
+    "value": "36",
+    "unit": "℃"
+  },
+  {
+    "label": "Component",
+    "name": "变速箱"
+  },
+  {
+    "label": "Parameter",
+    "name": "16V",
+    "value": "16",
+    "unit": "V"
+  },
+  {
+    "label": "Parameter",
+    "name": "4A",
+    "value": "4",
+    "unit": "A"
+  },
+  {
+    "label": "Parameter",
+    "name": "27A",
+    "value": "27",
+    "unit": "A"
+  },
+  {
+    "label": "Fault",
+    "name": "P0262",
+    "fault_code": "P0262"
+  },
+  {
+    "label": "Fault",
+    "name": "P0101",
+    "fault_code": "P0101"
+  },
+  {
+    "label": "Fault",
+    "name": "P0112",
+    "fault_code": "P0112"
+  },
+  {
+    "label": "Fault",
+    "name": "P0113",
+    "fault_code": "P0113"
+  },
+  {
+    "label": "Fault",
+    "name": "P0116",
+    "fault_code": "P0116"
+  },
+  {
+    "label": "Fault",
+    "name": "P0117",
+    "fault_code": "P0117"
+  },
+  {
+    "label": "Fault",
+    "name": "P0118",
+    "fault_code": "P0118"
+  },
+  {
+    "label": "Fault",
+    "name": "P0123",
+    "fault_code": "P0123"
+  },
+  {
+    "label": "Fault",
+    "name": "P0125",
+    "fault_code": "P0125"
+  },
+  {
+    "label": "Fault",
+    "name": "P0131",
+    "fault_code": "P0131"
+  },
+  {
+    "label": "Fault",
+    "name": "P0132",
+    "fault_code": "P0132"
+  },
+  {
+    "label": "Fault",
+    "name": "P0133",
+    "fault_code": "P0133"
+  },
+  {
+    "label": "Fault",
+    "name": "P0134",
+    "fault_code": "P0134"
+  },
+  {
+    "label": "Fault",
+    "name": "P0135",
+    "fault_code": "P0135"
+  },
+  {
+    "label": "Fault",
+    "name": "P0137",
+    "fault_code": "P0137"
+  },
+  {
+    "label": "Fault",
+    "name": "P0138",
+    "fault_code": "P0138"
+  },
+  {
+    "label": "Fault",
+    "name": "P0140",
+    "fault_code": "P0140"
+  },
+  {
+    "label": "Fault",
+    "name": "P0151",
+    "fault_code": "P0151"
+  },
+  {
+    "label": "Fault",
+    "name": "P0152",
+    "fault_code": "P0152"
+  },
+  {
+    "label": "Fault",
+    "name": "P0153",
+    "fault_code": "P0153"
+  },
+  {
+    "label": "Fault",
+    "name": "P0154",
+    "fault_code": "P0154"
+  },
+  {
+    "label": "Fault",
+    "name": "P0155",
+    "fault_code": "P0155"
+  },
+  {
+    "label": "Fault",
+    "name": "P0158",
+    "fault_code": "P0158"
+  },
+  {
+    "label": "Fault",
+    "name": "P0160",
+    "fault_code": "P0160"
+  },
+  {
+    "label": "Fault",
+    "name": "P0161",
+    "fault_code": "P0161"
+  },
+  {
+    "label": "Fault",
+    "name": "P0171",
+    "fault_code": "P0171"
+  },
+  {
+    "label": "Fault",
+    "name": "P0172",
+    "fault_code": "P0172"
+  },
+  {
+    "label": "Fault",
+    "name": "P0174",
+    "fault_code": "P0174"
+  },
+  {
+    "label": "Fault",
+    "name": "P0175",
+    "fault_code": "P0175"
+  },
+  {
+    "label": "Fault",
+    "name": "P0300",
+    "fault_code": "P0300"
+  },
+  {
+    "label": "Fault",
+    "name": "不点火"
+  },
+  {
+    "label": "Fault",
+    "name": "P0321",
+    "fault_code": "P0321"
+  },
+  {
+    "label": "Fault",
+    "name": "P0325",
+    "fault_code": "P0325"
+  },
+  {
+    "label": "Fault",
+    "name": "P0342",
+    "fault_code": "P0342"
+  },
+  {
+    "label": "Fault",
+    "name": "P0401",
+    "fault_code": "P0401"
+  },
+  {
+    "label": "Fault",
+    "name": "P0420",
+    "fault_code": "P0420"
+  },
+  {
+    "label": "Fault",
+    "name": "P0501",
+    "fault_code": "P0501"
+  },
+  {
+    "label": "Fault",
+    "name": "P0502",
+    "fault_code": "P0502"
+  },
+  {
+    "label": "Fault",
+    "name": "P0705",
+    "fault_code": "P0705"
+  },
+  {
+    "label": "Fault",
+    "name": "P0712",
+    "fault_code": "P0712"
+  },
+  {
+    "label": "Fault",
+    "name": "P0713",
+    "fault_code": "P0713"
+  },
+  {
+    "label": "Fault",
+    "name": "P0740",
+    "fault_code": "P0740"
+  },
+  {
+    "label": "Fault",
+    "name": "P0755",
+    "fault_code": "P0755"
+  },
+  {
+    "label": "Fault",
+    "name": "P1114",
+    "fault_code": "P1114"
+  },
+  {
+    "label": "Fault",
+    "name": "P1115",
+    "fault_code": "P1115"
+  },
+  {
+    "label": "Fault",
+    "name": "P1133",
+    "fault_code": "P1133"
+  },
+  {
+    "label": "Fault",
+    "name": "P1153",
+    "fault_code": "P1153"
+  },
+  {
+    "label": "Fault",
+    "name": "P1158",
+    "fault_code": "P1158"
+  },
+  {
+    "label": "Fault",
+    "name": "P1257",
+    "fault_code": "P1257"
+  },
+  {
+    "label": "Fault",
+    "name": "P1350",
+    "fault_code": "P1350"
+  },
+  {
+    "label": "Fault",
+    "name": "P1361",
+    "fault_code": "P1361"
+  },
+  {
+    "label": "Fault",
+    "name": "P1403",
+    "fault_code": "P1403"
+  },
+  {
+    "label": "Fault",
+    "name": "P1404",
+    "fault_code": "P1404"
+  },
+  {
+    "label": "Fault",
+    "name": "P1405",
+    "fault_code": "P1405"
+  },
+  {
+    "label": "Fault",
+    "name": "P1406",
+    "fault_code": "P1406"
+  },
+  {
+    "label": "Fault",
+    "name": "P1530",
+    "fault_code": "P1530"
+  },
+  {
+    "label": "Fault",
+    "name": "P1531",
+    "fault_code": "P1531"
+  },
+  {
+    "label": "Fault",
+    "name": "P1550",
+    "fault_code": "P1550"
+  },
+  {
+    "label": "Fault",
+    "name": "P1558",
+    "fault_code": "P1558"
+  },
+  {
+    "label": "Fault",
+    "name": "P1561",
+    "fault_code": "P1561"
+  },
+  {
+    "label": "Fault",
+    "name": "P1562",
+    "fault_code": "P1562"
+  },
+  {
+    "label": "Fault",
+    "name": "P1565",
+    "fault_code": "P1565"
+  },
+  {
+    "label": "Fault",
+    "name": "P1567",
+    "fault_code": "P1567"
+  },
+  {
+    "label": "Fault",
+    "name": "P1568",
+    "fault_code": "P1568"
+  },
+  {
+    "label": "Fault",
+    "name": "P1571",
+    "fault_code": "P1571"
+  },
+  {
+    "label": "Parameter",
+    "name": "1571 A",
+    "value": "1571",
+    "unit": "A"
+  },
+  {
+    "label": "Fault",
+    "name": "P1573",
+    "fault_code": "P1573"
+  },
+  {
+    "label": "Parameter",
+    "name": "1573 A",
+    "value": "1573",
+    "unit": "A"
+  },
+  {
+    "label": "Fault",
+    "name": "P1599",
+    "fault_code": "P1599"
+  },
+  {
+    "label": "Fault",
+    "name": "P1619",
+    "fault_code": "P1619"
+  },
+  {
+    "label": "Fault",
+    "name": "P1623",
+    "fault_code": "P1623"
+  },
+  {
+    "label": "Fault",
+    "name": "P1626",
+    "fault_code": "P1626"
+  },
+  {
+    "label": "Fault",
+    "name": "P1629",
+    "fault_code": "P1629"
+  },
+  {
+    "label": "Fault",
+    "name": "P1630",
+    "fault_code": "P1630"
+  },
+  {
+    "label": "Fault",
+    "name": "P1640",
+    "fault_code": "P1640"
+  },
+  {
+    "label": "Fault",
+    "name": "P1650",
+    "fault_code": "P1650"
+  },
+  {
+    "label": "Fault",
+    "name": "P1670",
+    "fault_code": "P1670"
+  }
+]

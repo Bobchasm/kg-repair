@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-05-09T18:35:11.409558",
+  "chunks_total": 1867,
+  "sentences_total": 2361,
+  "entity_count": 574,
+  "triple_count": 6486,
+  "entity_type_distribution": {
+    "Component": 93,
+    "Fault": 109,
+    "Vehicle": 6,
+    "Parameter": 306,
+    "RepairStep": 24,
+    "System": 12,
+    "Tool": 16,
+    "Symptom": 8
+  },
+  "relation_type_distribution": {
+    "CAUSES_FAULT": 817,
+    "HAS_PARAMETER": 1262,
+    "HAS_COMPONENT": 257,
+    "AFFECTS": 3560,
+    "REPAIRED_BY": 271,
+    "BELONGS_TO_SYSTEM": 113,
+    "REQUIRES_TOOL": 163,
+    "INDICATES": 15,
+    "HAS_SYMPTOM": 5,
+    "PRECEDES": 22,
+    "PART_OF": 1
+  },
+  "errors": []
+}

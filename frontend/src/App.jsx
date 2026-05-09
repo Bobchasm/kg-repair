@@ -53,7 +53,10 @@ export default function App() {
   const fetchStats = async () => {
     try {
       const data = await statsApi.getStats()
-      setStatsData(data)
+      // Transform node_labels [{label,cnt}] → node_counts {label:cnt}
+      const node_counts = {}
+      ;(data.node_labels || []).forEach(item => { node_counts[item.label] = item.cnt })
+      setStatsData({ ...data, node_counts, total_edges: data.rel_count })
     } catch {}
   }
 

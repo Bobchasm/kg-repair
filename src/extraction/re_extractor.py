@@ -22,36 +22,54 @@ from src.graph.schema import NodeLabel, RelationType, Triple
 _TRIGGER_DICT: Dict[str, List[str]] = {
     RelationType.HAS_COMPONENT.value: [
         "由", "包含", "包括", "含有", "组成", "构成", "主要部件",
-        "零件有", "部件包括", "主要由",
+        "零件有", "部件包括", "主要由", "装有", "配有", "安装有",
+        "由.*组成", "由.*构成", "包含.*零件",
     ],
     RelationType.PART_OF.value: [
         "属于", "是.*的一部分", "隶属于", "安装在", "位于",
+        "集成在", "装配在", "固定在", "安装于",
     ],
     RelationType.BELONGS_TO_SYSTEM.value: [
         "属于.*系统", "是.*系统的", "纳入.*系统",
+        "纳入", "归属于",
     ],
     RelationType.CAUSES_FAULT.value: [
         "导致", "引起", "造成", "引发", "产生故障", "发生故障",
-        "出现故障", "引起故障",
+        "出现故障", "引起故障", "引起.*问题", "造成.*损坏",
+        "导致.*失效", "引起.*异常", "发生.*故障", "引发.*故障",
+        "造成.*故障", "引起.*损坏",
     ],
     RelationType.HAS_SYMPTOM.value: [
         "表现为", "症状为", "出现", "产生", "伴随", "引起.*症状",
+        "会.*出现", "导致.*症状", "伴有", "表现出",
+        "可能出现", "会发生",
     ],
     RelationType.DIAGNOSED_BY.value: [
         "通过.*检查", "检测方法", "诊断方法", "使用.*诊断",
+        "用.*检测", "检验", "判断方法", "排查",
     ],
     RelationType.REPAIRED_BY.value: [
         "维修方法", "修复方法", "通过.*修复", "处理方法", "更换.*修复",
-        "进行.*维修", "采用.*方法",
+        "进行.*维修", "采用.*方法", "应.*更换", "需.*更换",
+        "维修措施", "修理方法", "处理措施", "需要.*维修",
+        "应进行", "须.*更换", "应.*清洗", "应.*调整",
     ],
     RelationType.REQUIRES_TOOL.value: [
         "使用", "需要", "借助", "利用", "配合.*工具", "用.*工具",
+        "用.*扳手", "用.*测量", "配合.*仪", "使用.*仪",
     ],
     RelationType.AFFECTS.value: [
         "影响", "损坏.*会导致", "损伤.*影响",
+        "对.*有影响", "会影响", "影响.*性能",
     ],
     RelationType.PRECEDES.value: [
         "之前", "先", "然后", "接着", "再", "首先.*然后",
+        "步骤", "第.*步", "先.*再", "先.*后",
+    ],
+    RelationType.HAS_PARAMETER.value: [
+        "规格为", "参数为", "标准值", "规定值", "技术要求",
+        "应为", "值为", "间隙为", "扭矩为", "力矩为",
+        "转速为", "压力为", "温度为", "电压为",
     ],
 }
 
@@ -61,7 +79,7 @@ _TYPE_CONSTRAINTS: List[Tuple] = [
     ({"Vehicle", "System"}, RelationType.HAS_COMPONENT, {"Component"}),
     ({"Component"}, RelationType.PART_OF, {"System", "Vehicle"}),
     ({"Component"}, RelationType.BELONGS_TO_SYSTEM, {"System"}),
-    ({"Component", "Fault"}, RelationType.CAUSES_FAULT, {"Fault"}),
+    ({"Component", "Fault", "Vehicle"}, RelationType.CAUSES_FAULT, {"Fault"}),
     ({"Fault"}, RelationType.HAS_SYMPTOM, {"Symptom"}),
     ({"Symptom"}, RelationType.INDICATES, {"Fault"}),
     ({"Fault"}, RelationType.DIAGNOSED_BY, {"RepairStep"}),
@@ -69,6 +87,7 @@ _TYPE_CONSTRAINTS: List[Tuple] = [
     ({"RepairStep"}, RelationType.REQUIRES_TOOL, {"Tool"}),
     ({"Component"}, RelationType.AFFECTS, {"Component"}),
     ({"RepairStep"}, RelationType.PRECEDES, {"RepairStep"}),
+    ({"Component", "Vehicle", "System"}, RelationType.HAS_PARAMETER, {"Parameter"}),
 ]
 
 
@@ -142,6 +161,8 @@ class TriggerRE:
                         confidence=min(subj.confidence, obj.confidence) * 0.9,
                         source_doc=source_doc,
                         source_sent=sentence[:200],
+                        subj_props=subj.props,
+                        obj_props=obj.props,
                     ))
         return triples
 
@@ -158,17 +179,23 @@ class CooccurrenceRE:
 
     # (subj_type, obj_type) → 推断关系
     _CO_RULES: Dict[Tuple[str, str], RelationType] = {
-        ("Vehicle",   "Component"):  RelationType.HAS_COMPONENT,
-        ("Component", "System"):     RelationType.BELONGS_TO_SYSTEM,
-        ("System",    "Component"):  RelationType.HAS_COMPONENT,
-        ("Component", "Fault"):      RelationType.CAUSES_FAULT,
-        ("Fault",     "Symptom"):    RelationType.HAS_SYMPTOM,
-        ("Symptom",   "Fault"):      RelationType.INDICATES,
-        ("Fault",     "RepairStep"): RelationType.REPAIRED_BY,
-        ("RepairStep","Tool"):       RelationType.REQUIRES_TOOL,
-        ("Component", "Component"):  RelationType.AFFECTS,
+        ("Vehicle",    "Component"):  RelationType.HAS_COMPONENT,
+        ("Component",  "System"):     RelationType.BELONGS_TO_SYSTEM,
+        ("System",     "Component"):  RelationType.HAS_COMPONENT,
+        ("Component",  "Fault"):      RelationType.CAUSES_FAULT,
+        ("Fault",      "Symptom"):    RelationType.HAS_SYMPTOM,
+        ("Symptom",    "Fault"):      RelationType.INDICATES,
+        ("Fault",      "RepairStep"): RelationType.REPAIRED_BY,
+        ("RepairStep", "Tool"):       RelationType.REQUIRES_TOOL,
+        ("Component",  "Component"):  RelationType.AFFECTS,
+        ("Component",  "Parameter"):  RelationType.HAS_PARAMETER,
+        ("Vehicle",    "Parameter"):  RelationType.HAS_PARAMETER,
+        ("System",     "Parameter"):  RelationType.HAS_PARAMETER,
+        ("Vehicle",    "Fault"):      RelationType.CAUSES_FAULT,
+        ("Fault",      "Fault"):      RelationType.CAUSES_FAULT,
+        ("Vehicle",    "System"):     RelationType.HAS_COMPONENT,
     }
-    _MAX_DIST = 50  # 字符距离阈值
+    _MAX_DIST = 80  # 字符距离阈值（扩大至80字符，提升覆盖率）
 
     def extract(
         self,
@@ -200,6 +227,8 @@ class CooccurrenceRE:
                     confidence=conf,
                     source_doc=source_doc,
                     source_sent=sentence[:200],
+                    subj_props=e1.props,
+                    obj_props=e2.props,
                 ))
         return triples
 

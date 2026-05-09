@@ -5,7 +5,7 @@ schema.py — 知识图谱本体定义
 """
 from dataclasses import dataclass, field, asdict
 from enum import Enum
-from typing import Optional
+from typing import Optional, Dict
 
 
 # ──────────────────────────────────────────────────────────────────
@@ -155,6 +155,8 @@ class Triple:
     confidence: float = 1.0          # 抽取置信度
     source_doc: str = ""
     source_sent: str = ""            # 来源句子（可溯源）
+    subj_props: Dict = field(default_factory=dict)  # 主语实体属性
+    obj_props: Dict = field(default_factory=dict)   # 宾语实体属性
 
     def to_dict(self):
         return {

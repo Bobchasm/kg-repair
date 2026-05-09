@@ -56,15 +56,29 @@ class GraphBuilder:
             logger.info("[%s] 写入节点 %d/%d", label, min(i + BATCH_SIZE, len(unique_nodes)), len(unique_nodes))
 
     def ingest_nodes_from_triples(self, triples: List[Triple]):
-        """从三元组列表中自动提取并写入所有节点。"""
+        """从三元组列表中自动提取并写入所有节点（携带实体属性）。"""
         node_buckets: Dict[str, Dict[str, Dict]] = defaultdict(dict)
         for t in triples:
             sl, sn = t.subj_label.value, t.subj_name.strip()
             ol, on = t.obj_label.value,  t.obj_name.strip()
             if sn:
-                node_buckets[sl].setdefault(sn, {"name": sn, "source_doc": t.source_doc})
+                base = {"name": sn, "source_doc": t.source_doc}
+                if t.source_sent:
+                    base["description"] = t.source_sent[:200]
+                # 合并实体属性（如 value/unit/fault_code/component_no）
+                base.update({k: v for k, v in t.subj_props.items() if v})
+                existing = node_buckets[sl].get(sn, {})
+                # 保留属性最多的版本；新版本属性更多则覆盖
+                if len(base) >= len(existing):
+                    node_buckets[sl][sn] = base
             if on:
-                node_buckets[ol].setdefault(on, {"name": on, "source_doc": t.source_doc})
+                base = {"name": on, "source_doc": t.source_doc}
+                if t.source_sent:
+                    base["description"] = t.source_sent[:200]
+                base.update({k: v for k, v in t.obj_props.items() if v})
+                existing = node_buckets[ol].get(on, {})
+                if len(base) >= len(existing):
+                    node_buckets[ol][on] = base
 
         for label, nodes_map in node_buckets.items():
             self.ingest_nodes(label, list(nodes_map.values()))
