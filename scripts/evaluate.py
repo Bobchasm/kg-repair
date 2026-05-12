@@ -182,7 +182,7 @@ def generate_html_report(ner_metrics: dict, re_metrics: dict, total_samples: int
 <body>
 <h1>汽车维修知识图谱——抽取评估报告</h1>
 <p>评估样本数：<strong>{total_samples}</strong> 条&nbsp;&nbsp;|
-   金标来源：<span class="tag">LLM人工标注</span>（实体边界已对齐系统预测）&nbsp;&nbsp;|
+   金标来源：<span class="tag">人工标注</span>&nbsp;&nbsp;|
    预测来源：<span class="tag">NERExtractor</span>（Rule+CRF） + <span class="tag">REExtractor</span>（Trigger+Cooccurrence）
 </p>
 

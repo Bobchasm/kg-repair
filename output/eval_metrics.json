@@ -1,67 +1,67 @@
 {
   "ner": {
     "overall": {
-      "precision": 0.7883,
-      "recall": 0.8006,
-      "f1": 0.7944,
-      "tp": 257,
-      "fp": 69,
-      "fn": 64
+      "precision": 0.8045,
+      "recall": 0.9494,
+      "f1": 0.871,
+      "tp": 638,
+      "fp": 155,
+      "fn": 34
     },
     "by_type": {
       "Component": {
-        "precision": 0.6755,
-        "recall": 0.7669,
-        "f1": 0.7183,
-        "tp": 102,
-        "fp": 49,
-        "fn": 31
+        "precision": 0.7079,
+        "recall": 0.9692,
+        "f1": 0.8182,
+        "tp": 252,
+        "fp": 104,
+        "fn": 8
       },
       "Fault": {
-        "precision": 0.9545,
-        "recall": 0.7241,
-        "f1": 0.8235,
-        "tp": 42,
-        "fp": 2,
-        "fn": 16
+        "precision": 0.9308,
+        "recall": 0.9758,
+        "f1": 0.9528,
+        "tp": 121,
+        "fp": 9,
+        "fn": 3
       },
       "Symptom": {
-        "precision": 1.0,
-        "recall": 0.7188,
-        "f1": 0.8364,
-        "tp": 23,
-        "fp": 0,
-        "fn": 9
+        "precision": 0.9868,
+        "recall": 0.8333,
+        "f1": 0.9036,
+        "tp": 75,
+        "fp": 1,
+        "fn": 15
       },
       "RepairStep": {
-        "precision": 0.7612,
-        "recall": 0.8793,
-        "f1": 0.816,
-        "tp": 51,
-        "fp": 16,
-        "fn": 7
+        "precision": 0.7812,
+        "recall": 0.969,
+        "f1": 0.8651,
+        "tp": 125,
+        "fp": 35,
+        "fn": 4
       },
       "System": {
-        "precision": 0.875,
-        "recall": 0.9333,
-        "f1": 0.9032,
-        "tp": 14,
-        "fp": 2,
-        "fn": 1
+        "precision": 0.8125,
+        "recall": 0.9286,
+        "f1": 0.8667,
+        "tp": 26,
+        "fp": 6,
+        "fn": 2
       },
       "Tool": {
         "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "tp": 20,
+        "recall": 0.9429,
+        "f1": 0.9706,
+        "tp": 33,
         "fp": 0,
-        "fn": 0
+        "fn": 2
       },
       "Vehicle": {
         "precision": 1.0,
         "recall": 1.0,
         "f1": 1.0,
-        "tp": 5,
+        "tp": 6,
         "fp": 0,
         "fn": 0
       }
@@ -69,85 +69,93 @@
   },
   "re": {
     "overall": {
-      "precision": 0.7575,
-      "recall": 0.875,
-      "f1": 0.812,
-      "tp": 378,
-      "fp": 121,
-      "fn": 54
+      "precision": 0.7867,
+      "recall": 0.9427,
+      "f1": 0.8577,
+      "tp": 1350,
+      "fp": 366,
+      "fn": 82
     },
     "by_rel": {
       "CAUSES_FAULT": {
-        "precision": 0.9286,
-        "recall": 0.8,
-        "f1": 0.8595,
-        "tp": 52,
-        "fp": 4,
-        "fn": 13
+        "precision": 0.876,
+        "recall": 0.9464,
+        "f1": 0.9099,
+        "tp": 212,
+        "fp": 30,
+        "fn": 12
       },
       "AFFECTS": {
-        "precision": 0.7044,
-        "recall": 0.9931,
-        "f1": 0.8242,
-        "tp": 143,
-        "fp": 60,
+        "precision": 0.7565,
+        "recall": 0.9979,
+        "f1": 0.8606,
+        "tp": 466,
+        "fp": 150,
         "fn": 1
       },
       "HAS_SYMPTOM": {
-        "precision": 1.0,
-        "recall": 0.7963,
-        "f1": 0.8866,
-        "tp": 43,
-        "fp": 0,
-        "fn": 11
+        "precision": 0.9345,
+        "recall": 0.9427,
+        "f1": 0.9386,
+        "tp": 214,
+        "fp": 15,
+        "fn": 13
       },
       "REPAIRED_BY": {
-        "precision": 0.5368,
-        "recall": 0.9107,
-        "f1": 0.6755,
-        "tp": 51,
-        "fp": 44,
-        "fn": 5
+        "precision": 0.6712,
+        "recall": 0.992,
+        "f1": 0.8006,
+        "tp": 247,
+        "fp": 121,
+        "fn": 2
       },
-      "INDICATES": {
-        "precision": 1.0,
-        "recall": 0.3333,
-        "f1": 0.5,
-        "tp": 2,
-        "fp": 0,
-        "fn": 4
-      },
-      "DIAGNOSED_BY": {
-        "precision": 1.0,
-        "recall": 0.25,
-        "f1": 0.4,
-        "tp": 1,
-        "fp": 0,
-        "fn": 3
-      },
-      "PRECEDES": {
-        "precision": 0.7742,
-        "recall": 0.75,
-        "f1": 0.7619,
-        "tp": 24,
+      "HAS_COMPONENT": {
+        "precision": 0.9146,
+        "recall": 0.9036,
+        "f1": 0.9091,
+        "tp": 75,
         "fp": 7,
         "fn": 8
       },
-      "REQUIRES_TOOL": {
-        "precision": 0.8636,
-        "recall": 0.7308,
-        "f1": 0.7917,
-        "tp": 19,
-        "fp": 3,
-        "fn": 7
-      },
-      "HAS_COMPONENT": {
-        "precision": 0.9231,
-        "recall": 0.973,
-        "f1": 0.9474,
-        "tp": 36,
-        "fp": 3,
+      "BELONGS_TO_SYSTEM": {
+        "precision": 0.8667,
+        "recall": 0.9286,
+        "f1": 0.8966,
+        "tp": 13,
+        "fp": 2,
         "fn": 1
+      },
+      "INDICATES": {
+        "precision": 1.0,
+        "recall": 0.1818,
+        "f1": 0.3077,
+        "tp": 4,
+        "fp": 0,
+        "fn": 18
+      },
+      "DIAGNOSED_BY": {
+        "precision": 0.9286,
+        "recall": 0.52,
+        "f1": 0.6667,
+        "tp": 13,
+        "fp": 1,
+        "fn": 12
+      },
+      "PRECEDES": {
+        "precision": 0.6735,
+        "recall": 0.8684,
+        "f1": 0.7586,
+        "tp": 66,
+        "fp": 32,
+        "fn": 10
+      },
+      "REQUIRES_TOOL": {
+        "precision": 0.8222,
+        "recall": 0.9024,
+        "f1": 0.8605,
+        "tp": 37,
+        "fp": 8,
+        "fn": 4
       },
       "PART_OF": {
         "precision": 1.0,
@@ -156,16 +164,8 @@
         "tp": 3,
         "fp": 0,
         "fn": 1
-      },
-      "BELONGS_TO_SYSTEM": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1": 1.0,
-        "tp": 4,
-        "fp": 0,
-        "fn": 0
       }
     }
   },
-  "total_samples": 79
+  "total_samples": 140
 }
