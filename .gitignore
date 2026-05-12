@@ -222,3 +222,5 @@ data/
 # Node.js
 node_modules/
 frontend/dist/
+
+output/kg_export.cypher
