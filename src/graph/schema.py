@@ -1,16 +1,12 @@
 """
-schema.py — 知识图谱本体定义
-定义所有节点类型、关系类型及其属性规范。
-遵循开闭原则：新增实体/关系只需在此文件扩展。
+知识图谱本体定义
 """
 from dataclasses import dataclass, field, asdict
 from enum import Enum
 from typing import Optional, Dict
 
 
-# ──────────────────────────────────────────────────────────────────
 # 节点标签枚举
-# ──────────────────────────────────────────────────────────────────
 class NodeLabel(str, Enum):
     VEHICLE      = "Vehicle"       # 车辆/车型
     COMPONENT    = "Component"     # 零部件
@@ -22,9 +18,7 @@ class NodeLabel(str, Enum):
     PARAMETER    = "Parameter"     # 技术参数
 
 
-# ──────────────────────────────────────────────────────────────────
 # 关系类型枚举
-# ──────────────────────────────────────────────────────────────────
 class RelationType(str, Enum):
     HAS_COMPONENT      = "HAS_COMPONENT"      # 车辆/系统 -[含有]-> 零部件
     PART_OF            = "PART_OF"            # 零部件 -[属于]-> 系统/车辆
@@ -40,9 +34,7 @@ class RelationType(str, Enum):
     INDICATES          = "INDICATES"          # 症状 -[指示]-> 故障
 
 
-# ──────────────────────────────────────────────────────────────────
 # 节点数据类（属性规范）
-# ──────────────────────────────────────────────────────────────────
 @dataclass
 class VehicleNode:
     name: str
@@ -141,9 +133,7 @@ class ParameterNode:
         return {k: v for k, v in asdict(self).items() if v}
 
 
-# ──────────────────────────────────────────────────────────────────
 # 关系数据类
-# ──────────────────────────────────────────────────────────────────
 @dataclass
 class Triple:
     """一条知识三元组"""
@@ -152,9 +142,9 @@ class Triple:
     relation: RelationType
     obj_label: NodeLabel
     obj_name: str
-    confidence: float = 1.0          # 抽取置信度
+    confidence: float = 1.0
     source_doc: str = ""
-    source_sent: str = ""            # 来源句子（可溯源）
+    source_sent: str = ""
     subj_props: Dict = field(default_factory=dict)  # 主语实体属性
     obj_props: Dict = field(default_factory=dict)   # 宾语实体属性
 
@@ -171,9 +161,7 @@ class Triple:
         }
 
 
-# ──────────────────────────────────────────────────────────────────
 # 节点标签 → 默认数据类的映射
-# ──────────────────────────────────────────────────────────────────
 LABEL_TO_DATACLASS = {
     NodeLabel.VEHICLE:     VehicleNode,
     NodeLabel.COMPONENT:   ComponentNode,
@@ -185,7 +173,6 @@ LABEL_TO_DATACLASS = {
     NodeLabel.PARAMETER:   ParameterNode,
 }
 
-# 各标签的颜色（供前端使用）
 LABEL_COLORS = {
     NodeLabel.VEHICLE.value:      "#4A90D9",
     NodeLabel.COMPONENT.value:    "#7EC8A4",

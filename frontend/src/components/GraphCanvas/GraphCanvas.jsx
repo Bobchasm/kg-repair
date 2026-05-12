@@ -1,6 +1,5 @@
 /**
- * GraphCanvas.jsx — ECharts graph 可视化组件
- * 仿 docs/index.html 风格：force 布局 / 可拖拽 / 曲线边 / adjacency 高亮
+ * ECharts graph 可视化组件
  */
 import React, { useEffect, useRef, useImperativeHandle, forwardRef } from 'react'
 import * as echarts from 'echarts'
@@ -32,7 +31,6 @@ const REL_LABELS_MAP = {
   PRECEDES: '前置步骤', HAS_PARAMETER: '具有参数', INDICATES: '指示',
 }
 
-// ── 基础 ECharts 配置（仿 docs/index.html） ───────────────────────────
 const BASE_OPTIONS = {
   backgroundColor: 'transparent',
   tooltip: {
@@ -95,7 +93,6 @@ const BASE_OPTIONS = {
   }],
 }
 
-// ── 原始数据合并（不去重 id 冲突）────────────────────────────────────
 const mergeRaw = (old, incoming) => {
   const nodeMap = new Map(old.nodes.map(n => [n.id, n]))
   const edgeSet = new Set(old.edges.map(e => e.id))
@@ -104,13 +101,12 @@ const mergeRaw = (old, incoming) => {
   return { nodes: [...nodeMap.values()], edges: [...old.edges, ...newEdges] }
 }
 
-// ── API 格式 → ECharts 格式（显示全部节点，包括孤立节点） ─────────────
 const toEcharts = ({ nodes = [], edges = [] }) => {
   const eNodes = nodes
     .map(n => ({
       id:         n.id,
       name:       n.name,
-      nodeType:   n.label,   // 重命名避免与 ECharts label 属性冲突
+      nodeType:   n.label,
       props:      n.props || {},
       symbolSize: NODE_SIZES[n.label] || 28,
       category:   n.label || 'Unknown',
@@ -131,10 +127,8 @@ const GraphCanvas = forwardRef(({ onNodeClick, onNodeDblClick }, ref) => {
   const rawDataRef    = useRef({ nodes: [], edges: [] })
   const callbacksRef  = useRef({ onNodeClick, onNodeDblClick })
 
-  // 始终保持最新回调引用
   useEffect(() => { callbacksRef.current = { onNodeClick, onNodeDblClick } }, [onNodeClick, onNodeDblClick])
 
-  // ── 初始化 ECharts ─────────────────────────────────────────────────
   useEffect(() => {
     if (!containerRef.current) return
     const chart = echarts.init(containerRef.current)
@@ -153,9 +147,7 @@ const GraphCanvas = forwardRef(({ onNodeClick, onNodeDblClick }, ref) => {
     return () => { chart.dispose(); window.removeEventListener('resize', resize) }
   }, [])
 
-  // ── 暴露方法给父组件 ───────────────────────────────────────────────
   useImperativeHandle(ref, () => ({
-    /** 加载新数据（replace=false 则合并到现有图谱） */
     loadData: (apiData, replace = true) => {
       const chart = chartRef.current
       if (!chart) return

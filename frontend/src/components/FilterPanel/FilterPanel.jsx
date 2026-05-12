@@ -1,5 +1,5 @@
 /**
- * FilterPanel.jsx — 实体类型/关系类型过滤面板
+ * 实体类型/关系类型过滤面板
  */
 import React from 'react'
 import { Checkbox, Divider } from 'antd'

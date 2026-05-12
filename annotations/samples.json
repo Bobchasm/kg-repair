@@ -1,0 +1,8456 @@
+[
+  {
+    "doc_id": "sample_00000",
+    "source": "llm_annotation",
+    "text": "活塞环磨损后，气缸密封性下降，导致发动机漏气故障。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "活塞环",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 9,
+        "text": "气缸",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 17,
+        "end": 20,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 20,
+        "end": 22,
+        "text": "漏气",
+        "type": "Fault"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "CAUSES_FAULT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00001",
+    "source": "llm_annotation",
+    "text": "火花塞积碳会导致点火失败，引起发动机启动困难。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "火花塞",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "积碳",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 8,
+        "end": 12,
+        "text": "点火失败",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 18,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 18,
+        "end": 22,
+        "text": "启动困难",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00002",
+    "source": "llm_annotation",
+    "text": "冷却液不足会导致发动机过热，严重时造成气缸盖变形。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "冷却液",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 8,
+        "end": 11,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 11,
+        "end": 13,
+        "text": "过热",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 19,
+        "end": 22,
+        "text": "气缸盖",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 22,
+        "end": 24,
+        "text": "变形",
+        "type": "Fault"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "CAUSES_FAULT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00003",
+    "source": "llm_annotation",
+    "text": "机油泵磨损引起油压不足，导致发动机润滑失效。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "机油泵",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 11,
+        "text": "油压不足",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 14,
+        "end": 17,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 17,
+        "end": 21,
+        "text": "润滑失效",
+        "type": "Fault"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "CAUSES_FAULT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00004",
+    "source": "llm_annotation",
+    "text": "正时链条松弛会造成正时系统跳齿，进而导致气门与活塞碰撞。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "正时链条",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "松弛",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 13,
+        "text": "正时系统",
+        "type": "System"
+      },
+      {
+        "id": "E3",
+        "start": 13,
+        "end": 15,
+        "text": "跳齿",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 20,
+        "end": 22,
+        "text": "气门",
+        "type": "Component"
+      },
+      {
+        "id": "E5",
+        "start": 23,
+        "end": 25,
+        "text": "活塞",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00005",
+    "source": "llm_annotation",
+    "text": "连杆轴承磨损会导致发动机出现异响。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "连杆轴承",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 12,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 14,
+        "end": 16,
+        "text": "异响",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00006",
+    "source": "llm_annotation",
+    "text": "燃油滤清器堵塞导致燃油泵供油不足，引起发动机加速无力。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "燃油滤清器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 7,
+        "text": "堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 12,
+        "text": "燃油泵",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 12,
+        "end": 16,
+        "text": "供油不足",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 19,
+        "end": 22,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E5",
+        "start": 22,
+        "end": 26,
+        "text": "加速无力",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00007",
+    "source": "llm_annotation",
+    "text": "离合器片磨损过度会造成离合器打滑，导致车辆动力传递中断。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "离合器片",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 11,
+        "end": 14,
+        "text": "离合器",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 14,
+        "end": 16,
+        "text": "打滑",
+        "type": "Fault"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00008",
+    "source": "llm_annotation",
+    "text": "气门弹簧疲劳断裂后气门无法正常关闭，造成气缸漏气。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "气门弹簧",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 6,
+        "end": 8,
+        "text": "断裂",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 11,
+        "text": "气门",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 20,
+        "end": 22,
+        "text": "气缸",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 22,
+        "end": 24,
+        "text": "漏气",
+        "type": "Fault"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00009",
+    "source": "llm_annotation",
+    "text": "节气门体积碳堵塞导致混合气过浓，引发发动机怠速不稳。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "节气门体",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 8,
+        "text": "积碳堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 18,
+        "end": 21,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 21,
+        "end": 25,
+        "text": "怠速不稳",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00010",
+    "source": "llm_annotation",
+    "text": "活塞环磨损故障表现为发动机冒蓝烟，机油消耗量明显增加。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "活塞环",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 10,
+        "end": 13,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 13,
+        "end": 16,
+        "text": "冒蓝烟",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 17,
+        "end": 26,
+        "text": "机油消耗量明显增加",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00011",
+    "source": "llm_annotation",
+    "text": "气门烧蚀后压缩压力下降，发动机表现出功率不足的症状。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 2,
+        "text": "气门",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 2,
+        "end": 4,
+        "text": "烧蚀",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 12,
+        "end": 15,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 18,
+        "end": 22,
+        "text": "功率不足",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00012",
+    "source": "llm_annotation",
+    "text": "制动盘变形后车辆出现刹车跑偏和方向盘抖动。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "制动盘",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "变形",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 10,
+        "end": 14,
+        "text": "刹车跑偏",
+        "type": "Symptom"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 20,
+        "text": "方向盘抖动",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00013",
+    "source": "llm_annotation",
+    "text": "发动机漏油故障会伴随有异味和机油消耗过快的现象。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "漏油",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 11,
+        "end": 13,
+        "text": "异味",
+        "type": "Symptom"
+      },
+      {
+        "id": "E3",
+        "start": 14,
+        "end": 20,
+        "text": "机油消耗过快",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00014",
+    "source": "llm_annotation",
+    "text": "散热器泄漏导致冷却液渗漏，发动机水温升高报警。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "散热器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "泄漏",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 12,
+        "text": "冷却液渗漏",
+        "type": "Symptom"
+      },
+      {
+        "id": "E3",
+        "start": 13,
+        "end": 16,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 16,
+        "end": 20,
+        "text": "水温升高",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00015",
+    "source": "llm_annotation",
+    "text": "蓄电池亏电表现为发动机启动困难和仪表盘指示灯异常。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "蓄电池",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "亏电",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 8,
+        "end": 11,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 11,
+        "end": 15,
+        "text": "启动困难",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 16,
+        "end": 19,
+        "text": "仪表盘",
+        "type": "Component"
+      },
+      {
+        "id": "E5",
+        "start": 19,
+        "end": 24,
+        "text": "指示灯异常",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00016",
+    "source": "llm_annotation",
+    "text": "发动机异响通常指示曲轴轴承磨损故障，需立即停车检查。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "异响",
+        "type": "Symptom"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 13,
+        "text": "曲轴轴承",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 13,
+        "end": 15,
+        "text": "磨损",
+        "type": "Fault"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "INDICATES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00017",
+    "source": "llm_annotation",
+    "text": "冒蓝烟说明发动机存在烧机油故障，应检查活塞环和气门油封。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "冒蓝烟",
+        "type": "Symptom"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 8,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 10,
+        "end": 13,
+        "text": "烧机油",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 19,
+        "end": 22,
+        "text": "活塞环",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 23,
+        "end": 27,
+        "text": "气门油封",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00018",
+    "source": "llm_annotation",
+    "text": "排气管冒白烟通常指示气缸盖垫片损坏，冷却液进入气缸燃烧。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "排气管",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 6,
+        "text": "冒白烟",
+        "type": "Symptom"
+      },
+      {
+        "id": "E2",
+        "start": 10,
+        "end": 13,
+        "text": "气缸盖",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 13,
+        "end": 17,
+        "text": "垫片损坏",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 23,
+        "end": 25,
+        "text": "气缸",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "INDICATES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00019",
+    "source": "llm_annotation",
+    "text": "怠速不稳指示节气门堵塞或燃油压力不足，可用诊断仪扫描故障码。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "怠速不稳",
+        "type": "Symptom"
+      },
+      {
+        "id": "E1",
+        "start": 6,
+        "end": 9,
+        "text": "节气门",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 11,
+        "text": "堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 12,
+        "end": 18,
+        "text": "燃油压力不足",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 21,
+        "end": 24,
+        "text": "诊断仪",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00020",
+    "source": "llm_annotation",
+    "text": "刹车片异响指示制动片磨损过度，需要立即更换刹车片。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "刹车片",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "异响",
+        "type": "Symptom"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 10,
+        "text": "制动片",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 10,
+        "end": 14,
+        "text": "磨损过度",
+        "type": "Fault"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "INDICATES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00021",
+    "source": "llm_annotation",
+    "text": "活塞环磨损后需要拆卸气缸盖，然后更换活塞环。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "活塞环",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 8,
+        "end": 13,
+        "text": "拆卸气缸盖",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 16,
+        "end": 21,
+        "text": "更换活塞环",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E3"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00022",
+    "source": "llm_annotation",
+    "text": "气门漏气的维修方法是研磨气门和气门座，恢复密封性。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 2,
+        "text": "气门",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 2,
+        "end": 4,
+        "text": "漏气",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 10,
+        "end": 14,
+        "text": "研磨气门",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 18,
+        "text": "气门座",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00023",
+    "source": "llm_annotation",
+    "text": "节气门堵塞需要拆卸节气门体进行清洗，并用清洗剂彻底清洁通道。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "节气门",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 13,
+        "text": "拆卸节气门体",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 17,
+        "text": "清洗",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E3"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00024",
+    "source": "llm_annotation",
+    "text": "正时链条磨损需要更换正时链条，同时应更换张紧器和导链板。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "正时链条",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 8,
+        "end": 14,
+        "text": "更换正时链条",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 20,
+        "end": 23,
+        "text": "张紧器",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00025",
+    "source": "llm_annotation",
+    "text": "火花塞间隙不正确需要调整火花塞间隙，若已积碳严重则应更换火花塞。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "火花塞",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 20,
+        "end": 22,
+        "text": "积碳",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 10,
+        "end": 17,
+        "text": "调整火花塞间隙",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 26,
+        "end": 31,
+        "text": "更换火花塞",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E3"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00026",
+    "source": "llm_annotation",
+    "text": "机油泄漏应先检查油封和密封圈，若损坏则进行更换。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "机油泄漏",
+        "type": "Fault"
+      },
+      {
+        "id": "E1",
+        "start": 8,
+        "end": 10,
+        "text": "油封",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 11,
+        "end": 14,
+        "text": "密封圈",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 21,
+        "end": 23,
+        "text": "更换",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "REPAIRED_BY",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00027",
+    "source": "llm_annotation",
+    "text": "制动液泄漏需要检查制动管路，更换损坏的制动软管并补充制动液。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "制动液",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "泄漏",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 13,
+        "text": "检查制动管路",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 14,
+        "end": 23,
+        "text": "更换损坏的制动软管",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E3"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00028",
+    "source": "llm_annotation",
+    "text": "散热器堵塞需要清洗散热器，必要时更换散热器总成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "散热器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 12,
+        "text": "清洗散热器",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 16,
+        "end": 23,
+        "text": "更换散热器总成",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00029",
+    "source": "llm_annotation",
+    "text": "蓄电池亏电可通过充电恢复，若充电后仍无法启动则需更换蓄电池。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "蓄电池",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "亏电",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 8,
+        "end": 10,
+        "text": "充电",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 24,
+        "end": 29,
+        "text": "更换蓄电池",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00030",
+    "source": "llm_annotation",
+    "text": "气缸盖翘曲变形应先测量平面度，超出规范则需研磨修复或更换气缸盖。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "气缸盖",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 7,
+        "text": "翘曲变形",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 14,
+        "text": "测量平面度",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 21,
+        "end": 25,
+        "text": "研磨修复",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E4",
+        "start": 26,
+        "end": 31,
+        "text": "更换气缸盖",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E3"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "PRECEDES",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00031",
+    "source": "llm_annotation",
+    "text": "拆卸气缸盖螺栓需要使用扭矩扳手按规定力矩操作。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 7,
+        "text": "拆卸气缸盖螺栓",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 11,
+        "end": 15,
+        "text": "扭矩扳手",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00032",
+    "source": "llm_annotation",
+    "text": "测量活塞环间隙需要用游标卡尺和塞尺进行精确测量。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 7,
+        "text": "测量活塞环间隙",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 10,
+        "end": 14,
+        "text": "游标卡尺",
+        "type": "Tool"
+      },
+      {
+        "id": "E2",
+        "start": 15,
+        "end": 17,
+        "text": "塞尺",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00033",
+    "source": "llm_annotation",
+    "text": "检查气缸压缩压力需要使用气缸压力表。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 8,
+        "text": "检查气缸压缩压力",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 12,
+        "end": 17,
+        "text": "气缸压力表",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00034",
+    "source": "llm_annotation",
+    "text": "诊断发动机故障时需要使用OBD扫描仪读取故障码。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 7,
+        "text": "诊断发动机故障",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 12,
+        "end": 18,
+        "text": "OBD扫描仪",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00035",
+    "source": "llm_annotation",
+    "text": "拆卸轮毂轴承时需要使用轴承拉马，安装时借助铜锤敲击。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 6,
+        "text": "拆卸轮毂轴承",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 11,
+        "end": 15,
+        "text": "轴承拉马",
+        "type": "Tool"
+      },
+      {
+        "id": "E2",
+        "start": 16,
+        "end": 18,
+        "text": "安装",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 21,
+        "end": 23,
+        "text": "铜锤",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00036",
+    "source": "llm_annotation",
+    "text": "测量发动机机油压力需要使用燃油压力表连接机油压力口。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 9,
+        "text": "测量发动机机油压力",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 13,
+        "end": 18,
+        "text": "燃油压力表",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00037",
+    "source": "llm_annotation",
+    "text": "检测电气系统故障需要使用万用表测量电压和电阻。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 8,
+        "text": "检测电气系统故障",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 12,
+        "end": 15,
+        "text": "万用表",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00038",
+    "source": "llm_annotation",
+    "text": "安装气缸套时需要使用活塞环压缩工具将活塞环压入气缸。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "安装气缸套",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 10,
+        "end": 17,
+        "text": "活塞环压缩工具",
+        "type": "Tool"
+      },
+      {
+        "id": "E2",
+        "start": 18,
+        "end": 21,
+        "text": "活塞环",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 23,
+        "end": 25,
+        "text": "气缸",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00039",
+    "source": "llm_annotation",
+    "text": "研磨气门需要使用气门研磨工具和研磨砂，确保气门与气门座密封良好。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "研磨气门",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 8,
+        "end": 14,
+        "text": "气门研磨工具",
+        "type": "Tool"
+      },
+      {
+        "id": "E2",
+        "start": 21,
+        "end": 23,
+        "text": "气门",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 24,
+        "end": 27,
+        "text": "气门座",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00040",
+    "source": "llm_annotation",
+    "text": "举升车辆进行底盘检查时需要使用举升机，并放置支撑架确保安全。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "举升车辆",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 15,
+        "end": 18,
+        "text": "举升机",
+        "type": "Tool"
+      },
+      {
+        "id": "E2",
+        "start": 22,
+        "end": 25,
+        "text": "支撑架",
+        "type": "Tool"
+      },
+      {
+        "id": "E3",
+        "start": 6,
+        "end": 10,
+        "text": "底盘检查",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00041",
+    "source": "llm_annotation",
+    "text": "更换气门油封前需要先拆卸气缸盖，完成后再按规定力矩重新安装。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 6,
+        "text": "更换气门油封",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 10,
+        "end": 15,
+        "text": "拆卸气缸盖",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E2",
+        "start": 27,
+        "end": 29,
+        "text": "安装",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "PRECEDES",
+        "obj": "E0"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "PRECEDES",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00042",
+    "source": "llm_annotation",
+    "text": "安装活塞环之前，需先测量活塞环间隙，确认符合规范后方可装配。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "安装活塞环",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 10,
+        "end": 17,
+        "text": "测量活塞环间隙",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "PRECEDES",
+        "obj": "E0"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00043",
+    "source": "llm_annotation",
+    "text": "更换机油滤清器前，应先排放旧机油，再拆下旧滤清器，最后安装新滤清器。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 11,
+        "end": 16,
+        "text": "排放旧机油",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 18,
+        "end": 24,
+        "text": "拆下旧滤清器",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E2",
+        "start": 27,
+        "end": 33,
+        "text": "安装新滤清器",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 2,
+        "end": 7,
+        "text": "机油滤清器",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "PRECEDES",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "PRECEDES",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00044",
+    "source": "llm_annotation",
+    "text": "调整气门间隙前，先将发动机转至压缩上止点，再用塞尺测量间隙。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 6,
+        "text": "调整气门间隙",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 10,
+        "end": 13,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 25,
+        "end": 29,
+        "text": "测量间隙",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 23,
+        "end": 25,
+        "text": "塞尺",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E0"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00045",
+    "source": "llm_annotation",
+    "text": "检查完制动片厚度后，若不足规定值则进行更换刹车片操作。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 8,
+        "text": "检查完制动片厚度",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 19,
+        "end": 24,
+        "text": "更换刹车片",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "PRECEDES",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00046",
+    "source": "llm_annotation",
+    "text": "发动机系统主要由气缸体、曲轴、活塞和凸轮轴组成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "发动机系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 8,
+        "end": 11,
+        "text": "气缸体",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 12,
+        "end": 14,
+        "text": "曲轴",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 17,
+        "text": "活塞",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 18,
+        "end": 21,
+        "text": "凸轮轴",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00047",
+    "source": "llm_annotation",
+    "text": "制动系统由制动钳、制动盘、制动主缸和制动管路构成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "制动系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 8,
+        "text": "制动钳",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 12,
+        "text": "制动盘",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 13,
+        "end": 17,
+        "text": "制动主缸",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 18,
+        "end": 22,
+        "text": "制动管路",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00048",
+    "source": "llm_annotation",
+    "text": "冷却系统包含散热器、水泵、节温器和膨胀水箱。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "冷却系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 6,
+        "end": 9,
+        "text": "散热器",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 10,
+        "end": 12,
+        "text": "水泵",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 13,
+        "end": 16,
+        "text": "节温器",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 17,
+        "end": 21,
+        "text": "膨胀水箱",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00049",
+    "source": "llm_annotation",
+    "text": "润滑系统由机油泵、机油滤清器、油底壳和机油冷却器组成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "润滑系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 8,
+        "text": "机油泵",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 14,
+        "text": "机油滤清器",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 18,
+        "text": "油底壳",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 19,
+        "end": 24,
+        "text": "机油冷却器",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00050",
+    "source": "llm_annotation",
+    "text": "点火系统包括点火线圈、火花塞、分电器和高压导线。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "点火系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 6,
+        "end": 10,
+        "text": "点火线圈",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 11,
+        "end": 14,
+        "text": "火花塞",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 18,
+        "text": "分电器",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 19,
+        "end": 23,
+        "text": "高压导线",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00051",
+    "source": "llm_annotation",
+    "text": "燃油系统由燃油泵、燃油滤清器、喷油嘴和燃油压力调节器组成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "燃油系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 8,
+        "text": "燃油泵",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 14,
+        "text": "燃油滤清器",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 18,
+        "text": "喷油嘴",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00052",
+    "source": "llm_annotation",
+    "text": "本田摩托车传动系统由离合器、变速箱、传动皮带和驱动轮组成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "本田摩托车",
+        "type": "Vehicle"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 9,
+        "text": "传动系统",
+        "type": "System"
+      },
+      {
+        "id": "E2",
+        "start": 10,
+        "end": 13,
+        "text": "离合器",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 14,
+        "end": 17,
+        "text": "变速箱",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 18,
+        "end": 22,
+        "text": "传动皮带",
+        "type": "Component"
+      },
+      {
+        "id": "E5",
+        "start": 23,
+        "end": 26,
+        "text": "驱动轮",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "HAS_COMPONENT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00053",
+    "source": "llm_annotation",
+    "text": "凸轮轴属于发动机系统的配气机构，负责控制气门的开闭时序。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "凸轮轴",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 10,
+        "text": "发动机系统",
+        "type": "System"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "BELONGS_TO_SYSTEM",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00054",
+    "source": "llm_annotation",
+    "text": "刹车片是制动系统的核心摩擦元件，直接决定制动效果。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "刹车片",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 8,
+        "text": "制动系统",
+        "type": "System"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "BELONGS_TO_SYSTEM",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00055",
+    "source": "llm_annotation",
+    "text": "喷油嘴属于燃油系统，负责将燃油雾化喷入进气歧管或气缸。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "喷油嘴",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 9,
+        "text": "燃油系统",
+        "type": "System"
+      },
+      {
+        "id": "E2",
+        "start": 19,
+        "end": 23,
+        "text": "进气歧管",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 24,
+        "end": 26,
+        "text": "气缸",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "BELONGS_TO_SYSTEM",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00056",
+    "source": "llm_annotation",
+    "text": "活塞是发动机气缸体的核心运动部件，与连杆相连传递动力。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 2,
+        "text": "活塞",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 6,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 6,
+        "end": 9,
+        "text": "气缸体",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 18,
+        "end": 20,
+        "text": "连杆",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "PART_OF",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00057",
+    "source": "llm_annotation",
+    "text": "水泵属于冷却系统，驱动冷却液在发动机和散热器之间循环。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 2,
+        "text": "水泵",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 8,
+        "text": "冷却系统",
+        "type": "System"
+      },
+      {
+        "id": "E2",
+        "start": 15,
+        "end": 18,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 19,
+        "end": 22,
+        "text": "散热器",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "BELONGS_TO_SYSTEM",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00058",
+    "source": "llm_annotation",
+    "text": "正时链条松动会影响凸轮轴的相位精度，进而影响气门开闭时序。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "正时链条",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "松动",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 12,
+        "text": "凸轮轴",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 22,
+        "end": 24,
+        "text": "气门",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00059",
+    "source": "llm_annotation",
+    "text": "气门弹簧疲劳会影响气门的关闭密封性，导致气缸压缩比下降。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "气门弹簧",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "疲劳",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 11,
+        "text": "气门",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 20,
+        "end": 22,
+        "text": "气缸",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00060",
+    "source": "llm_annotation",
+    "text": "机油滤清器堵塞会影响机油泵的工作效率，降低润滑效果。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "机油滤清器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 7,
+        "text": "堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 10,
+        "end": 13,
+        "text": "机油泵",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00061",
+    "source": "llm_annotation",
+    "text": "曲轴磨损会影响连杆轴承的正常工作，引起发动机异响。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 2,
+        "text": "曲轴",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 2,
+        "end": 4,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 11,
+        "text": "连杆轴承",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 19,
+        "end": 22,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 22,
+        "end": 24,
+        "text": "异响",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00062",
+    "source": "llm_annotation",
+    "text": "发动机故障可通过OBD诊断仪读取故障码进行初步判断。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "发动机故障",
+        "type": "Fault"
+      },
+      {
+        "id": "E1",
+        "start": 8,
+        "end": 14,
+        "text": "OBD诊断仪",
+        "type": "Tool"
+      },
+      {
+        "id": "E2",
+        "start": 14,
+        "end": 19,
+        "text": "读取故障码",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00063",
+    "source": "llm_annotation",
+    "text": "气缸压力不足可通过气缸压力测试进行诊断，使用气缸压力表进行检测。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 6,
+        "text": "气缸压力不足",
+        "type": "Fault"
+      },
+      {
+        "id": "E1",
+        "start": 9,
+        "end": 15,
+        "text": "气缸压力测试",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E2",
+        "start": 22,
+        "end": 27,
+        "text": "气缸压力表",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00064",
+    "source": "llm_annotation",
+    "text": "制动系统漏液故障可通过检查各制动管接头进行排查诊断。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 6,
+        "text": "制动系统漏液",
+        "type": "Fault"
+      },
+      {
+        "id": "E1",
+        "start": 11,
+        "end": 19,
+        "text": "检查各制动管接头",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00065",
+    "source": "llm_annotation",
+    "text": "本田SDH125T摩托车发动机系统采用单缸四冲程结构，排量125cc。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 12,
+        "text": "本田SDH125T摩托车",
+        "type": "Vehicle"
+      },
+      {
+        "id": "E1",
+        "start": 12,
+        "end": 17,
+        "text": "发动机系统",
+        "type": "System"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00066",
+    "source": "llm_annotation",
+    "text": "装甲车辆的制动系统采用液压鼓式制动器，具有较高的制动可靠性。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "装甲车辆",
+        "type": "Vehicle"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 9,
+        "text": "制动系统",
+        "type": "System"
+      },
+      {
+        "id": "E2",
+        "start": 15,
+        "end": 18,
+        "text": "制动器",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00067",
+    "source": "llm_annotation",
+    "text": "摩托车离合器打滑时，车辆表现为加速无力，发动机转速升高但车速不增。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "摩托车",
+        "type": "Vehicle"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 6,
+        "text": "离合器",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 6,
+        "end": 8,
+        "text": "打滑",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 19,
+        "text": "加速无力",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00068",
+    "source": "llm_annotation",
+    "text": "汽车发动机出现爆震时，应检查点火正时和燃油牌号是否符合要求。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 2,
+        "text": "汽车",
+        "type": "Vehicle"
+      },
+      {
+        "id": "E1",
+        "start": 2,
+        "end": 5,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 9,
+        "text": "爆震",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 12,
+        "end": 18,
+        "text": "检查点火正时",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "REPAIRED_BY",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00069",
+    "source": "llm_annotation",
+    "text": "更换活塞环时，应先使用游标卡尺测量气缸直径，确认磨损量是否超限。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "更换活塞环",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 11,
+        "end": 15,
+        "text": "游标卡尺",
+        "type": "Tool"
+      },
+      {
+        "id": "E2",
+        "start": 15,
+        "end": 21,
+        "text": "测量气缸直径",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 24,
+        "end": 26,
+        "text": "磨损",
+        "type": "Fault"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E2",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E0"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00070",
+    "source": "llm_annotation",
+    "text": "凸轮轴磨损后，气门间隙增大，导致发动机出现气门异响和功率下降。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "凸轮轴",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 9,
+        "text": "气门",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 16,
+        "end": 19,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 21,
+        "end": 25,
+        "text": "气门异响",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 26,
+        "end": 30,
+        "text": "功率下降",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00071",
+    "source": "llm_annotation",
+    "text": "检修制动系统时，首先使用举升机举升车辆，然后拆卸车轮，再检查制动片磨损情况。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 2,
+        "end": 6,
+        "text": "制动系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 12,
+        "end": 15,
+        "text": "举升机",
+        "type": "Tool"
+      },
+      {
+        "id": "E2",
+        "start": 15,
+        "end": 19,
+        "text": "举升车辆",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 22,
+        "end": 26,
+        "text": "拆卸车轮",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E4",
+        "start": 28,
+        "end": 37,
+        "text": "检查制动片磨损情况",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E2",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "PRECEDES",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00072",
+    "source": "llm_annotation",
+    "text": "气缸盖螺栓拧紧时，须使用扭矩扳手按从中间向外的顺序分三次紧固到规定力矩。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 7,
+        "text": "气缸盖螺栓拧紧",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 12,
+        "end": 16,
+        "text": "扭矩扳手",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00073",
+    "source": "llm_annotation",
+    "text": "散热器堵塞导致冷却液循环不畅，发动机水温过高，出现冷却液沸腾现象。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "散热器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 10,
+        "text": "冷却液",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 18,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 18,
+        "end": 22,
+        "text": "水温过高",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 25,
+        "end": 30,
+        "text": "冷却液沸腾",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00074",
+    "source": "llm_annotation",
+    "text": "变速箱同步器磨损后换档困难，维修时需拆解变速箱并更换同步器总成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "变速箱",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 6,
+        "text": "同步器",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 6,
+        "end": 8,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 9,
+        "end": 13,
+        "text": "换档困难",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 18,
+        "end": 23,
+        "text": "拆解变速箱",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E5",
+        "start": 24,
+        "end": 31,
+        "text": "更换同步器总成",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "REPAIRED_BY",
+        "obj": "E5"
+      },
+      {
+        "id": "R3",
+        "subj": "E4",
+        "pred": "PRECEDES",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00075",
+    "source": "llm_annotation",
+    "text": "差速器轴承损坏会引起转弯时异响，需拆解后桥并更换轴承。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "差速器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "轴承",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 5,
+        "end": 7,
+        "text": "损坏",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 13,
+        "end": 15,
+        "text": "异响",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 17,
+        "end": 21,
+        "text": "拆解后桥",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E5",
+        "start": 22,
+        "end": 26,
+        "text": "更换轴承",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "REPAIRED_BY",
+        "obj": "E5"
+      },
+      {
+        "id": "R3",
+        "subj": "E4",
+        "pred": "PRECEDES",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00076",
+    "source": "llm_annotation",
+    "text": "空气滤清器堵塞会导致混合气过浓、油耗增加，应及时更换空气滤清器。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "空气滤清器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 7,
+        "text": "堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 16,
+        "end": 20,
+        "text": "油耗增加",
+        "type": "Symptom"
+      },
+      {
+        "id": "E3",
+        "start": 24,
+        "end": 31,
+        "text": "更换空气滤清器",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00077",
+    "source": "llm_annotation",
+    "text": "氧传感器失效导致ECU无法正确控制混合气浓度，引起油耗升高和排放超标。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "氧传感器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "失效",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 8,
+        "end": 11,
+        "text": "ECU",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 25,
+        "end": 29,
+        "text": "油耗升高",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 30,
+        "end": 34,
+        "text": "排放超标",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00078",
+    "source": "llm_annotation",
+    "text": "减震器漏油后缓冲效果下降，车辆行驶中出现明显振动，应更换减震器。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "减震器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "漏油",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 22,
+        "end": 24,
+        "text": "振动",
+        "type": "Symptom"
+      },
+      {
+        "id": "E3",
+        "start": 26,
+        "end": 31,
+        "text": "更换减震器",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00079",
+    "source": "llm_annotation",
+    "text": "涡轮增压器轴承磨损导致漏油，发动机冒蓝烟和功率下降，应更换涡轮增压器。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "涡轮增压器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 7,
+        "text": "轴承",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 9,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 11,
+        "end": 13,
+        "text": "漏油",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 14,
+        "end": 17,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E5",
+        "start": 17,
+        "end": 20,
+        "text": "冒蓝烟",
+        "type": "Symptom"
+      },
+      {
+        "id": "E6",
+        "start": 21,
+        "end": 25,
+        "text": "功率下降",
+        "type": "Symptom"
+      },
+      {
+        "id": "E7",
+        "start": 27,
+        "end": 34,
+        "text": "更换涡轮增压器",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "CAUSES_FAULT",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "AFFECTS",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E3",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      },
+      {
+        "id": "R4",
+        "subj": "E3",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E6"
+      },
+      {
+        "id": "R5",
+        "subj": "E3",
+        "pred": "REPAIRED_BY",
+        "obj": "E7"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00080",
+    "source": "llm_annotation",
+    "text": "中冷器堵塞导致进气温度升高，发动机出现爆震和功率不足，需清洗中冷器。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "中冷器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 13,
+        "text": "进气温度升高",
+        "type": "Symptom"
+      },
+      {
+        "id": "E3",
+        "start": 14,
+        "end": 17,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 19,
+        "end": 21,
+        "text": "爆震",
+        "type": "Fault"
+      },
+      {
+        "id": "E5",
+        "start": 22,
+        "end": 26,
+        "text": "功率不足",
+        "type": "Symptom"
+      },
+      {
+        "id": "E6",
+        "start": 28,
+        "end": 33,
+        "text": "清洗中冷器",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E4",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      },
+      {
+        "id": "R4",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E6"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00081",
+    "source": "llm_annotation",
+    "text": "涡轮增压系统由涡轮增压器、中冷器、进气管和泄压阀组成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 6,
+        "text": "涡轮增压系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 7,
+        "end": 12,
+        "text": "涡轮增压器",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 13,
+        "end": 16,
+        "text": "中冷器",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 17,
+        "end": 20,
+        "text": "进气管",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 21,
+        "end": 24,
+        "text": "泄压阀",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00082",
+    "source": "llm_annotation",
+    "text": "节温器卡死在关闭位置导致冷却液无法循环，发动机过热冒水汽，应更换节温器。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "节温器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "卡死",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 12,
+        "end": 15,
+        "text": "冷却液",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 20,
+        "end": 23,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 23,
+        "end": 25,
+        "text": "过热",
+        "type": "Fault"
+      },
+      {
+        "id": "E5",
+        "start": 25,
+        "end": 28,
+        "text": "冒水汽",
+        "type": "Symptom"
+      },
+      {
+        "id": "E6",
+        "start": 30,
+        "end": 35,
+        "text": "更换节温器",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E4",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      },
+      {
+        "id": "R4",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E6"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00083",
+    "source": "llm_annotation",
+    "text": "水泵叶轮损坏导致冷却液循环不足，发动机水温过高，需拆卸水泵并更换水泵总成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 2,
+        "text": "水泵",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 2,
+        "end": 4,
+        "text": "叶轮",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 4,
+        "end": 6,
+        "text": "损坏",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 8,
+        "end": 11,
+        "text": "冷却液",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 16,
+        "end": 19,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E5",
+        "start": 19,
+        "end": 23,
+        "text": "水温过高",
+        "type": "Symptom"
+      },
+      {
+        "id": "E6",
+        "start": 25,
+        "end": 29,
+        "text": "拆卸水泵",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E7",
+        "start": 30,
+        "end": 36,
+        "text": "更换水泵总成",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "AFFECTS",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      },
+      {
+        "id": "R3",
+        "subj": "E2",
+        "pred": "REPAIRED_BY",
+        "obj": "E7"
+      },
+      {
+        "id": "R4",
+        "subj": "E6",
+        "pred": "PRECEDES",
+        "obj": "E7"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00084",
+    "source": "llm_annotation",
+    "text": "进气歧管漏气导致混合气稀薄，发动机怠速不稳和加速无力，需更换进气歧管密封圈。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "进气歧管",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "漏气",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 14,
+        "end": 17,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 17,
+        "end": 21,
+        "text": "怠速不稳",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 22,
+        "end": 26,
+        "text": "加速无力",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 28,
+        "end": 37,
+        "text": "更换进气歧管密封圈",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00085",
+    "source": "llm_annotation",
+    "text": "喷油嘴堵塞导致燃油雾化不良，发动机启动困难、油耗增加和排放超标，应清洗喷油嘴。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "喷油嘴",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 14,
+        "end": 17,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 17,
+        "end": 21,
+        "text": "启动困难",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 22,
+        "end": 26,
+        "text": "油耗增加",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 27,
+        "end": 31,
+        "text": "排放超标",
+        "type": "Symptom"
+      },
+      {
+        "id": "E6",
+        "start": 33,
+        "end": 38,
+        "text": "清洗喷油嘴",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      },
+      {
+        "id": "R4",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E6"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00086",
+    "source": "llm_annotation",
+    "text": "节气门位置传感器失效导致ECU无法正确控制节气门开度，发动机怠速不稳和加速迟滞。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 8,
+        "text": "节气门位置传感器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 8,
+        "end": 10,
+        "text": "失效",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 12,
+        "end": 15,
+        "text": "ECU",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 21,
+        "end": 24,
+        "text": "节气门",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 27,
+        "end": 30,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E5",
+        "start": 30,
+        "end": 34,
+        "text": "怠速不稳",
+        "type": "Symptom"
+      },
+      {
+        "id": "E6",
+        "start": 35,
+        "end": 39,
+        "text": "加速迟滞",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      },
+      {
+        "id": "R4",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E6"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00087",
+    "source": "llm_annotation",
+    "text": "曲轴位置传感器故障导致发动机无法确定点火正时，车辆表现为发动机无法启动。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 7,
+        "text": "曲轴位置传感器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 7,
+        "end": 9,
+        "text": "故障",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 11,
+        "end": 14,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 18,
+        "end": 22,
+        "text": "点火正时",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 31,
+        "end": 35,
+        "text": "无法启动",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00088",
+    "source": "llm_annotation",
+    "text": "空气流量计故障导致混合气比例失调，发动机油耗升高和排放超标，应更换空气流量计。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "空气流量计",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 7,
+        "text": "故障",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 17,
+        "end": 20,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 20,
+        "end": 24,
+        "text": "油耗升高",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 25,
+        "end": 29,
+        "text": "排放超标",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 31,
+        "end": 38,
+        "text": "更换空气流量计",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00089",
+    "source": "llm_annotation",
+    "text": "水温传感器失效导致ECU发送错误的冷却指令，发动机出现过热和油耗增加现象。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "水温传感器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 7,
+        "text": "失效",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 12,
+        "text": "ECU",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 22,
+        "end": 25,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 27,
+        "end": 29,
+        "text": "过热",
+        "type": "Fault"
+      },
+      {
+        "id": "E5",
+        "start": 30,
+        "end": 34,
+        "text": "油耗增加",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E4",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00090",
+    "source": "llm_annotation",
+    "text": "凸轮轴位置传感器损坏导致发动机配气正时错误，引起发动机抖动和加速无力。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 8,
+        "text": "凸轮轴位置传感器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 8,
+        "end": 10,
+        "text": "损坏",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 12,
+        "end": 15,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 19,
+        "text": "配气正时",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 24,
+        "end": 29,
+        "text": "发动机抖动",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 30,
+        "end": 34,
+        "text": "加速无力",
+        "type": "Symptom"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00091",
+    "source": "llm_annotation",
+    "text": "变速箱油泵磨损导致油压不足，变速箱出现打滑和换挡困难，需更换变速箱油泵。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "变速箱",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "油泵",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 5,
+        "end": 7,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 9,
+        "end": 13,
+        "text": "油压不足",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 19,
+        "end": 21,
+        "text": "打滑",
+        "type": "Fault"
+      },
+      {
+        "id": "E5",
+        "start": 22,
+        "end": 26,
+        "text": "换挡困难",
+        "type": "Symptom"
+      },
+      {
+        "id": "E6",
+        "start": 28,
+        "end": 35,
+        "text": "更换变速箱油泵",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "CAUSES_FAULT",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "CAUSES_FAULT",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E4",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      },
+      {
+        "id": "R4",
+        "subj": "E2",
+        "pred": "REPAIRED_BY",
+        "obj": "E6"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00092",
+    "source": "llm_annotation",
+    "text": "传动轴万向节磨损引起车辆在转弯时异响和振动，需更换万向节或传动轴总成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "传动轴",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 6,
+        "text": "万向节",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 6,
+        "end": 8,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 16,
+        "end": 18,
+        "text": "异响",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 19,
+        "end": 21,
+        "text": "振动",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 23,
+        "end": 28,
+        "text": "更换万向节",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E6",
+        "start": 29,
+        "end": 34,
+        "text": "传动轴总成",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E2",
+        "pred": "REPAIRED_BY",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00093",
+    "source": "llm_annotation",
+    "text": "半轴断裂导致车辆无法行驶，需用举升机抬起车辆后更换半轴。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 2,
+        "text": "半轴",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 2,
+        "end": 4,
+        "text": "断裂",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 15,
+        "end": 18,
+        "text": "举升机",
+        "type": "Tool"
+      },
+      {
+        "id": "E3",
+        "start": 23,
+        "end": 27,
+        "text": "更换半轴",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E3",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00094",
+    "source": "llm_annotation",
+    "text": "自动变速箱由液力变矩器、行星齿轮组、离合器片和液压控制系统组成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "自动变速箱",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 6,
+        "end": 11,
+        "text": "液力变矩器",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 12,
+        "end": 17,
+        "text": "行星齿轮组",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 18,
+        "end": 22,
+        "text": "离合器片",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 23,
+        "end": 29,
+        "text": "液压控制系统",
+        "type": "System"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00095",
+    "source": "llm_annotation",
+    "text": "减震弹簧断裂后车身下沉，行驶中有异响和车身倾斜，需更换减震弹簧。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "减震弹簧",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "断裂",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 11,
+        "text": "车身下沉",
+        "type": "Symptom"
+      },
+      {
+        "id": "E3",
+        "start": 16,
+        "end": 18,
+        "text": "异响",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 19,
+        "end": 23,
+        "text": "车身倾斜",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 25,
+        "end": 31,
+        "text": "更换减震弹簧",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R4",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00096",
+    "source": "llm_annotation",
+    "text": "前桥球头磨损导致方向盘抖动和转向不稳，需用举升机举升车辆更换球头。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 2,
+        "text": "前桥",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 2,
+        "end": 4,
+        "text": "球头",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 4,
+        "end": 6,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 8,
+        "end": 13,
+        "text": "方向盘抖动",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 14,
+        "end": 18,
+        "text": "转向不稳",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 21,
+        "end": 24,
+        "text": "举升机",
+        "type": "Tool"
+      },
+      {
+        "id": "E6",
+        "start": 28,
+        "end": 32,
+        "text": "更换球头",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E2",
+        "pred": "REPAIRED_BY",
+        "obj": "E6"
+      },
+      {
+        "id": "R4",
+        "subj": "E6",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00097",
+    "source": "llm_annotation",
+    "text": "轮毂轴承磨损后转弯时有嗡嗡异响，需先用听诊器定位，再更换轮毂轴承。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "轮毂轴承",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 11,
+        "end": 15,
+        "text": "嗡嗡异响",
+        "type": "Symptom"
+      },
+      {
+        "id": "E3",
+        "start": 19,
+        "end": 22,
+        "text": "听诊器",
+        "type": "Tool"
+      },
+      {
+        "id": "E4",
+        "start": 22,
+        "end": 24,
+        "text": "定位",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E5",
+        "start": 26,
+        "end": 32,
+        "text": "更换轮毂轴承",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E4",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E3"
+      },
+      {
+        "id": "R4",
+        "subj": "E4",
+        "pred": "PRECEDES",
+        "obj": "E5"
+      },
+      {
+        "id": "R5",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00098",
+    "source": "llm_annotation",
+    "text": "转向助力泵泄漏导致助力不足，方向盘沉重，需更换转向助力泵密封件。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "转向助力泵",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 7,
+        "text": "泄漏",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 13,
+        "text": "助力不足",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 14,
+        "end": 19,
+        "text": "方向盘沉重",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 21,
+        "end": 31,
+        "text": "更换转向助力泵密封件",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00099",
+    "source": "llm_annotation",
+    "text": "转向系统由方向盘、转向柱、转向机和转向拉杆组成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "转向系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 8,
+        "text": "方向盘",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 12,
+        "text": "转向柱",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 13,
+        "end": 16,
+        "text": "转向机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 17,
+        "end": 21,
+        "text": "转向拉杆",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00100",
+    "source": "llm_annotation",
+    "text": "制动卡钳卡滞导致制动片单边磨损，车辆出现跑偏，需拆卸卡钳清洗并润滑滑道。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "制动卡钳",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "卡滞",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 8,
+        "end": 11,
+        "text": "制动片",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 11,
+        "end": 15,
+        "text": "单边磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 20,
+        "end": 22,
+        "text": "跑偏",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 24,
+        "end": 28,
+        "text": "拆卸卡钳",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E6",
+        "start": 28,
+        "end": 35,
+        "text": "清洗并润滑滑道",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E6"
+      },
+      {
+        "id": "R4",
+        "subj": "E5",
+        "pred": "PRECEDES",
+        "obj": "E6"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00101",
+    "source": "llm_annotation",
+    "text": "ABS传感器故障导致ABS系统失效，制动时车轮抱死，需更换ABS传感器。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 6,
+        "text": "ABS传感器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 6,
+        "end": 8,
+        "text": "故障",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 10,
+        "end": 15,
+        "text": "ABS系统",
+        "type": "System"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 17,
+        "text": "失效",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 21,
+        "end": 25,
+        "text": "车轮抱死",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 27,
+        "end": 35,
+        "text": "更换ABS传感器",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00102",
+    "source": "llm_annotation",
+    "text": "制动液更换时，先排放旧制动液，再注入新制动液，最后进行制动系统放气。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "制动液",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 8,
+        "end": 14,
+        "text": "排放旧制动液",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E2",
+        "start": 16,
+        "end": 22,
+        "text": "注入新制动液",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 27,
+        "end": 33,
+        "text": "制动系统放气",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "PRECEDES",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00103",
+    "source": "llm_annotation",
+    "text": "发电机故障导致蓄电池无法充电，车辆行驶中仪表灯报警，需更换发电机。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "发电机",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "故障",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 10,
+        "text": "蓄电池",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 20,
+        "end": 25,
+        "text": "仪表灯报警",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 27,
+        "end": 32,
+        "text": "更换发电机",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00104",
+    "source": "llm_annotation",
+    "text": "起动机线圈烧损后发动机无法启动，需用万用表检测线圈电阻，确认后更换起动机。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "起动机",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "线圈",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 5,
+        "end": 7,
+        "text": "烧损",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 8,
+        "end": 11,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 11,
+        "end": 15,
+        "text": "无法启动",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 18,
+        "end": 21,
+        "text": "万用表",
+        "type": "Tool"
+      },
+      {
+        "id": "E6",
+        "start": 21,
+        "end": 27,
+        "text": "检测线圈电阻",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E7",
+        "start": 31,
+        "end": 36,
+        "text": "更换起动机",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E6"
+      },
+      {
+        "id": "R3",
+        "subj": "E6",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E5"
+      },
+      {
+        "id": "R4",
+        "subj": "E6",
+        "pred": "PRECEDES",
+        "obj": "E7"
+      },
+      {
+        "id": "R5",
+        "subj": "E2",
+        "pred": "REPAIRED_BY",
+        "obj": "E7"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00105",
+    "source": "llm_annotation",
+    "text": "点火线圈击穿导致火花塞无法正常点火，发动机缺缸抖动，需更换点火线圈。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "点火线圈",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "击穿",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 8,
+        "end": 11,
+        "text": "火花塞",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 18,
+        "end": 21,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 21,
+        "end": 25,
+        "text": "缺缸抖动",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 27,
+        "end": 33,
+        "text": "更换点火线圈",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00106",
+    "source": "llm_annotation",
+    "text": "电气系统由蓄电池、发电机、起动机和点火系统组成，相互协作保证车辆正常运行。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "电气系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 8,
+        "text": "蓄电池",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 12,
+        "text": "发电机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 13,
+        "end": 16,
+        "text": "起动机",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 17,
+        "end": 21,
+        "text": "点火系统",
+        "type": "System"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00107",
+    "source": "llm_annotation",
+    "text": "EGR阀积碳堵塞导致废气无法再循环，发动机排放超标和怠速不稳，应清洗EGR阀。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "EGR阀",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 8,
+        "text": "积碳堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 18,
+        "end": 21,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 21,
+        "end": 25,
+        "text": "排放超标",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 26,
+        "end": 30,
+        "text": "怠速不稳",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 32,
+        "end": 38,
+        "text": "清洗EGR阀",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00108",
+    "source": "llm_annotation",
+    "text": "三元催化器损坏导致尾气排放超标，OBD报催化器效率低故障码，应更换三元催化器。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "三元催化器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 7,
+        "text": "损坏",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 15,
+        "text": "尾气排放超标",
+        "type": "Symptom"
+      },
+      {
+        "id": "E3",
+        "start": 16,
+        "end": 19,
+        "text": "OBD",
+        "type": "Tool"
+      },
+      {
+        "id": "E4",
+        "start": 31,
+        "end": 38,
+        "text": "更换三元催化器",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00109",
+    "source": "llm_annotation",
+    "text": "排气歧管裂纹导致废气外泄，排气声音异常，发动机舱有烧焦味，需更换排气歧管。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "排气歧管",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "裂纹",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 8,
+        "end": 12,
+        "text": "废气外泄",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 13,
+        "end": 19,
+        "text": "排气声音异常",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 25,
+        "end": 28,
+        "text": "烧焦味",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 30,
+        "end": 36,
+        "text": "更换排气歧管",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R4",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00110",
+    "source": "llm_annotation",
+    "text": "空调压缩机故障导致空调不制冷，车内温度升高，需用空调检测仪诊断后更换压缩机。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "空调压缩机",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 7,
+        "text": "故障",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 11,
+        "text": "空调",
+        "type": "System"
+      },
+      {
+        "id": "E3",
+        "start": 11,
+        "end": 14,
+        "text": "不制冷",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 15,
+        "end": 21,
+        "text": "车内温度升高",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 24,
+        "end": 29,
+        "text": "空调检测仪",
+        "type": "Tool"
+      },
+      {
+        "id": "E6",
+        "start": 32,
+        "end": 37,
+        "text": "更换压缩机",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E5"
+      },
+      {
+        "id": "R4",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E6"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00111",
+    "source": "llm_annotation",
+    "text": "空调系统由空调压缩机、冷凝器、膨胀阀和蒸发器组成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "空调系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 10,
+        "text": "空调压缩机",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 11,
+        "end": 14,
+        "text": "冷凝器",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 15,
+        "end": 18,
+        "text": "膨胀阀",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 19,
+        "end": 22,
+        "text": "蒸发器",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00113",
+    "source": "llm_annotation",
+    "text": "更换正时皮带时，先拆除旧皮带，检查皮带轮，再安装新皮带，最后校正正时标记。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 2,
+        "end": 6,
+        "text": "正时皮带",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 9,
+        "end": 14,
+        "text": "拆除旧皮带",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E2",
+        "start": 15,
+        "end": 20,
+        "text": "检查皮带轮",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 22,
+        "end": 27,
+        "text": "安装新皮带",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E4",
+        "start": 30,
+        "end": 36,
+        "text": "校正正时标记",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "PRECEDES",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "PRECEDES",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00114",
+    "source": "llm_annotation",
+    "text": "更换发动机缸垫时，需使用扭矩扳手按规定顺序和力矩拧紧气缸盖螺栓。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 7,
+        "text": "更换发动机缸垫",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 12,
+        "end": 16,
+        "text": "扭矩扳手",
+        "type": "Tool"
+      },
+      {
+        "id": "E2",
+        "start": 24,
+        "end": 31,
+        "text": "拧紧气缸盖螺栓",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "PRECEDES",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00116",
+    "source": "llm_annotation",
+    "text": "燃油系统清洗时，先用燃油系统清洗剂清洗喷油嘴，再清洗节气门，最后更换燃油滤清器。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "燃油系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 10,
+        "end": 17,
+        "text": "燃油系统清洗剂",
+        "type": "Tool"
+      },
+      {
+        "id": "E2",
+        "start": 17,
+        "end": 22,
+        "text": "清洗喷油嘴",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 24,
+        "end": 29,
+        "text": "清洗节气门",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E4",
+        "start": 32,
+        "end": 39,
+        "text": "更换燃油滤清器",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E2",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "PRECEDES",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00117",
+    "source": "llm_annotation",
+    "text": "更换制动片时，先用举升机举起车辆，再拆卸车轮，然后拆除旧制动片，安装新制动片后试踩制动。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 9,
+        "end": 12,
+        "text": "举升机",
+        "type": "Tool"
+      },
+      {
+        "id": "E1",
+        "start": 12,
+        "end": 16,
+        "text": "举起车辆",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E2",
+        "start": 18,
+        "end": 22,
+        "text": "拆卸车轮",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 25,
+        "end": 31,
+        "text": "拆除旧制动片",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E4",
+        "start": 32,
+        "end": 38,
+        "text": "安装新制动片",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E5",
+        "start": 39,
+        "end": 43,
+        "text": "试踩制动",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E0"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "PRECEDES",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E3",
+        "pred": "PRECEDES",
+        "obj": "E4"
+      },
+      {
+        "id": "R4",
+        "subj": "E4",
+        "pred": "PRECEDES",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00118",
+    "source": "llm_annotation",
+    "text": "制动跑偏可通过检测制动力分配来诊断，使用制动测试台测量各轮制动力。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "制动跑偏",
+        "type": "Symptom"
+      },
+      {
+        "id": "E1",
+        "start": 7,
+        "end": 14,
+        "text": "检测制动力分配",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E2",
+        "start": 20,
+        "end": 25,
+        "text": "制动测试台",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00119",
+    "source": "llm_annotation",
+    "text": "发动机冒黑烟通常指示混合气过浓，可能由空气滤清器堵塞或喷油嘴故障引起。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 6,
+        "text": "冒黑烟",
+        "type": "Symptom"
+      },
+      {
+        "id": "E2",
+        "start": 10,
+        "end": 15,
+        "text": "混合气过浓",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 19,
+        "end": 24,
+        "text": "空气滤清器",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 24,
+        "end": 26,
+        "text": "堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E5",
+        "start": 27,
+        "end": 30,
+        "text": "喷油嘴",
+        "type": "Component"
+      },
+      {
+        "id": "E6",
+        "start": 30,
+        "end": 32,
+        "text": "故障",
+        "type": "Fault"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "INDICATES",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E3",
+        "pred": "CAUSES_FAULT",
+        "obj": "E4"
+      },
+      {
+        "id": "R2",
+        "subj": "E4",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R3",
+        "subj": "E5",
+        "pred": "CAUSES_FAULT",
+        "obj": "E6"
+      },
+      {
+        "id": "R4",
+        "subj": "E6",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00120",
+    "source": "llm_annotation",
+    "text": "变速箱打滑指示离合器片磨损或油泵故障，需用变速箱诊断仪检测油压。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "变速箱打滑",
+        "type": "Symptom"
+      },
+      {
+        "id": "E1",
+        "start": 7,
+        "end": 11,
+        "text": "离合器片",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 11,
+        "end": 13,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 14,
+        "end": 18,
+        "text": "油泵故障",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 21,
+        "end": 27,
+        "text": "变速箱诊断仪",
+        "type": "Tool"
+      },
+      {
+        "id": "E5",
+        "start": 27,
+        "end": 31,
+        "text": "检测油压",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E5"
+      },
+      {
+        "id": "R3",
+        "subj": "E5",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00121",
+    "source": "llm_annotation",
+    "text": "车辆不规则振动指示轮胎动平衡失调或传动轴弯曲，需用动平衡机检测。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 2,
+        "end": 7,
+        "text": "不规则振动",
+        "type": "Symptom"
+      },
+      {
+        "id": "E1",
+        "start": 11,
+        "end": 16,
+        "text": "动平衡失调",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 17,
+        "end": 20,
+        "text": "传动轴",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 20,
+        "end": 22,
+        "text": "弯曲",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 25,
+        "end": 29,
+        "text": "动平衡机",
+        "type": "Tool"
+      },
+      {
+        "id": "E5",
+        "start": 29,
+        "end": 31,
+        "text": "检测",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E5"
+      },
+      {
+        "id": "R3",
+        "subj": "E5",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00122",
+    "source": "llm_annotation",
+    "text": "发动机漏水可通过压力测试诊断，使用冷却系统压力测试仪检测系统密封性。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "发动机漏水",
+        "type": "Fault"
+      },
+      {
+        "id": "E1",
+        "start": 8,
+        "end": 12,
+        "text": "压力测试",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E2",
+        "start": 17,
+        "end": 26,
+        "text": "冷却系统压力测试仪",
+        "type": "Tool"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00123",
+    "source": "llm_annotation",
+    "text": "PCV阀堵塞导致曲轴箱通风不畅，机油消耗过快和机油乳化，应更换PCV阀。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "PCV阀",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "堵塞",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 8,
+        "end": 11,
+        "text": "曲轴箱",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 11,
+        "end": 15,
+        "text": "通风不畅",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 16,
+        "end": 22,
+        "text": "机油消耗过快",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 23,
+        "end": 27,
+        "text": "机油乳化",
+        "type": "Symptom"
+      },
+      {
+        "id": "E6",
+        "start": 29,
+        "end": 35,
+        "text": "更换PCV阀",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E3",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      },
+      {
+        "id": "R4",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E6"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00124",
+    "source": "llm_annotation",
+    "text": "气缸体裂纹导致冷却液进入机油，机油变白浑浊，发动机过热，需更换气缸体。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "气缸体",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 5,
+        "text": "裂纹",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 7,
+        "end": 10,
+        "text": "冷却液",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 12,
+        "end": 14,
+        "text": "机油",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 15,
+        "end": 21,
+        "text": "机油变白浑浊",
+        "type": "Symptom"
+      },
+      {
+        "id": "E5",
+        "start": 22,
+        "end": 25,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E6",
+        "start": 25,
+        "end": 27,
+        "text": "过热",
+        "type": "Fault"
+      },
+      {
+        "id": "E7",
+        "start": 29,
+        "end": 34,
+        "text": "更换气缸体",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E6"
+      },
+      {
+        "id": "R4",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E7"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00125",
+    "source": "llm_annotation",
+    "text": "本田SDH125T摩托车润滑系统由机油泵、机油滤清器和机油冷却器组成，采用压力飞溅复合润滑。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 12,
+        "text": "本田SDH125T摩托车",
+        "type": "Vehicle"
+      },
+      {
+        "id": "E1",
+        "start": 12,
+        "end": 16,
+        "text": "润滑系统",
+        "type": "System"
+      },
+      {
+        "id": "E2",
+        "start": 17,
+        "end": 20,
+        "text": "机油泵",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 21,
+        "end": 26,
+        "text": "机油滤清器",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 27,
+        "end": 32,
+        "text": "机油冷却器",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E1",
+        "pred": "HAS_COMPONENT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00126",
+    "source": "llm_annotation",
+    "text": "悬架系统由减震器、螺旋弹簧、横向稳定杆和控制臂组成，负责吸收路面振动。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "悬架系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 8,
+        "text": "减震器",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 13,
+        "text": "螺旋弹簧",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 14,
+        "end": 19,
+        "text": "横向稳定杆",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 20,
+        "end": 23,
+        "text": "控制臂",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00127",
+    "source": "llm_annotation",
+    "text": "机油乳化指示气缸垫损坏或气缸体裂纹，冷却液混入机油，应立即停车检查。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "机油乳化",
+        "type": "Symptom"
+      },
+      {
+        "id": "E1",
+        "start": 6,
+        "end": 9,
+        "text": "气缸垫",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 11,
+        "text": "损坏",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 12,
+        "end": 15,
+        "text": "气缸体",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 15,
+        "end": 17,
+        "text": "裂纹",
+        "type": "Fault"
+      },
+      {
+        "id": "E5",
+        "start": 18,
+        "end": 21,
+        "text": "冷却液",
+        "type": "Component"
+      },
+      {
+        "id": "E6",
+        "start": 23,
+        "end": 25,
+        "text": "机油",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E4"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "AFFECTS",
+        "obj": "E5"
+      },
+      {
+        "id": "R3",
+        "subj": "E2",
+        "pred": "AFFECTS",
+        "obj": "E6"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00128",
+    "source": "llm_annotation",
+    "text": "变速箱换油时，先放出旧变速箱油，更换变速箱油滤，再加注新变速箱油至规定液位。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 8,
+        "end": 15,
+        "text": "放出旧变速箱油",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 16,
+        "end": 23,
+        "text": "更换变速箱油滤",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E2",
+        "start": 25,
+        "end": 32,
+        "text": "加注新变速箱油",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "PRECEDES",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "PRECEDES",
+        "obj": "E2"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00129",
+    "source": "llm_annotation",
+    "text": "差速器锥齿轮磨损后转弯时异响，需拆解后桥，检查齿面磨损量，超限则更换差速器总成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 3,
+        "text": "差速器",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 3,
+        "end": 6,
+        "text": "锥齿轮",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 6,
+        "end": 8,
+        "text": "磨损",
+        "type": "Fault"
+      },
+      {
+        "id": "E3",
+        "start": 12,
+        "end": 14,
+        "text": "异响",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 16,
+        "end": 20,
+        "text": "拆解后桥",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E5",
+        "start": 21,
+        "end": 28,
+        "text": "检查齿面磨损量",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E6",
+        "start": 32,
+        "end": 39,
+        "text": "更换差速器总成",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "REPAIRED_BY",
+        "obj": "E6"
+      },
+      {
+        "id": "R3",
+        "subj": "E4",
+        "pred": "PRECEDES",
+        "obj": "E5"
+      },
+      {
+        "id": "R4",
+        "subj": "E5",
+        "pred": "PRECEDES",
+        "obj": "E6"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00130",
+    "source": "llm_annotation",
+    "text": "机油更换时，先拆下放油螺栓排放旧机油，再更换机油滤清器，最后注入新机油。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 7,
+        "end": 13,
+        "text": "拆下放油螺栓",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 13,
+        "end": 18,
+        "text": "排放旧机油",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E2",
+        "start": 20,
+        "end": 27,
+        "text": "更换机油滤清器",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 30,
+        "end": 35,
+        "text": "注入新机油",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "PRECEDES",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "PRECEDES",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00131",
+    "source": "llm_annotation",
+    "text": "冷却液更换时，先排放旧冷却液，冲洗冷却系统，再加注新冷却液，最后排除气泡。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 8,
+        "end": 14,
+        "text": "排放旧冷却液",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E1",
+        "start": 15,
+        "end": 21,
+        "text": "冲洗冷却系统",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E2",
+        "start": 23,
+        "end": 29,
+        "text": "加注新冷却液",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 32,
+        "end": 36,
+        "text": "排除气泡",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "PRECEDES",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "PRECEDES",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E2",
+        "pred": "PRECEDES",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00132",
+    "source": "llm_annotation",
+    "text": "离合器踏板自由行程过大导致离合器打滑，应调整离合器踏板自由行程至规定值。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "离合器踏板",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 11,
+        "text": "自由行程过大",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 13,
+        "end": 16,
+        "text": "离合器",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 16,
+        "end": 18,
+        "text": "打滑",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 20,
+        "end": 31,
+        "text": "调整离合器踏板自由行程",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "REPAIRED_BY",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00133",
+    "source": "llm_annotation",
+    "text": "轮胎爆裂导致车辆失控，应立即减速停车，换上备胎后驾车至修理厂更换新轮胎。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 2,
+        "text": "轮胎",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 2,
+        "end": 4,
+        "text": "爆裂",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 8,
+        "end": 10,
+        "text": "失控",
+        "type": "Symptom"
+      },
+      {
+        "id": "E3",
+        "start": 19,
+        "end": 23,
+        "text": "换上备胎",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E4",
+        "start": 30,
+        "end": 35,
+        "text": "更换新轮胎",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E3",
+        "pred": "PRECEDES",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00134",
+    "source": "llm_annotation",
+    "text": "燃油压力过低导致发动机启动困难和熄火，可能由燃油泵或燃油压力调节器损坏引起。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 6,
+        "text": "燃油压力过低",
+        "type": "Fault"
+      },
+      {
+        "id": "E1",
+        "start": 8,
+        "end": 11,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 11,
+        "end": 15,
+        "text": "启动困难",
+        "type": "Symptom"
+      },
+      {
+        "id": "E3",
+        "start": 16,
+        "end": 18,
+        "text": "熄火",
+        "type": "Symptom"
+      },
+      {
+        "id": "E4",
+        "start": 22,
+        "end": 25,
+        "text": "燃油泵",
+        "type": "Component"
+      },
+      {
+        "id": "E5",
+        "start": 26,
+        "end": 33,
+        "text": "燃油压力调节器",
+        "type": "Component"
+      },
+      {
+        "id": "E6",
+        "start": 33,
+        "end": 35,
+        "text": "损坏",
+        "type": "Fault"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E2"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E4",
+        "pred": "CAUSES_FAULT",
+        "obj": "E6"
+      },
+      {
+        "id": "R3",
+        "subj": "E6",
+        "pred": "CAUSES_FAULT",
+        "obj": "E0"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00135",
+    "source": "llm_annotation",
+    "text": "方向盘抖动可能指示轮胎动平衡失调、转向拉杆松动或前轮轴承磨损等故障。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "方向盘抖动",
+        "type": "Symptom"
+      },
+      {
+        "id": "E1",
+        "start": 11,
+        "end": 16,
+        "text": "动平衡失调",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 17,
+        "end": 21,
+        "text": "转向拉杆",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 21,
+        "end": 23,
+        "text": "松动",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 24,
+        "end": 28,
+        "text": "前轮轴承",
+        "type": "Component"
+      },
+      {
+        "id": "E5",
+        "start": 28,
+        "end": 30,
+        "text": "磨损",
+        "type": "Fault"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00136",
+    "source": "llm_annotation",
+    "text": "发动机抖动指示缺缸，可能由火花塞损坏、点火线圈故障或喷油嘴堵塞引起。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "发动机抖动",
+        "type": "Symptom"
+      },
+      {
+        "id": "E1",
+        "start": 7,
+        "end": 9,
+        "text": "缺缸",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 13,
+        "end": 16,
+        "text": "火花塞",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 16,
+        "end": 18,
+        "text": "损坏",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 19,
+        "end": 23,
+        "text": "点火线圈",
+        "type": "Component"
+      },
+      {
+        "id": "E5",
+        "start": 23,
+        "end": 25,
+        "text": "故障",
+        "type": "Fault"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E2",
+        "pred": "CAUSES_FAULT",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R3",
+        "subj": "E4",
+        "pred": "CAUSES_FAULT",
+        "obj": "E5"
+      },
+      {
+        "id": "R4",
+        "subj": "E5",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00137",
+    "source": "llm_annotation",
+    "text": "车辆排气冒黑烟可通过检查空气滤清器和喷油嘴来诊断，使用OBD仪读取故障码辅助判断。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 4,
+        "end": 7,
+        "text": "冒黑烟",
+        "type": "Symptom"
+      },
+      {
+        "id": "E1",
+        "start": 12,
+        "end": 17,
+        "text": "空气滤清器",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 18,
+        "end": 21,
+        "text": "喷油嘴",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 27,
+        "end": 31,
+        "text": "OBD仪",
+        "type": "Tool"
+      },
+      {
+        "id": "E4",
+        "start": 31,
+        "end": 36,
+        "text": "读取故障码",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "INDICATES",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E4"
+      },
+      {
+        "id": "R3",
+        "subj": "E4",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E3"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00138",
+    "source": "llm_annotation",
+    "text": "变速箱异响故障通过路试和变速箱专用诊断仪检测油压来诊断。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 5,
+        "text": "变速箱异响",
+        "type": "Symptom"
+      },
+      {
+        "id": "E1",
+        "start": 12,
+        "end": 20,
+        "text": "变速箱专用诊断仪",
+        "type": "Tool"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 11,
+        "text": "路试",
+        "type": "RepairStep"
+      },
+      {
+        "id": "E3",
+        "start": 20,
+        "end": 24,
+        "text": "检测油压",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "DIAGNOSED_BY",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E3",
+        "pred": "REQUIRES_TOOL",
+        "obj": "E1"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00139",
+    "source": "llm_annotation",
+    "text": "制动系统由制动液、制动主缸、制动软管、制动钳和制动盘组成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "制动系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 5,
+        "end": 8,
+        "text": "制动液",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 9,
+        "end": 13,
+        "text": "制动主缸",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 14,
+        "end": 18,
+        "text": "制动软管",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 19,
+        "end": 22,
+        "text": "制动钳",
+        "type": "Component"
+      },
+      {
+        "id": "E5",
+        "start": 23,
+        "end": 26,
+        "text": "制动盘",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E4"
+      },
+      {
+        "id": "R4",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E5"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00140",
+    "source": "llm_annotation",
+    "text": "曲轴箱通风系统属于发动机，由PCV阀、通风管和油气分离器组成。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 7,
+        "text": "曲轴箱通风系统",
+        "type": "System"
+      },
+      {
+        "id": "E1",
+        "start": 9,
+        "end": 12,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E2",
+        "start": 14,
+        "end": 18,
+        "text": "PCV阀",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 19,
+        "end": 22,
+        "text": "通风管",
+        "type": "Component"
+      },
+      {
+        "id": "E4",
+        "start": 23,
+        "end": 28,
+        "text": "油气分离器",
+        "type": "Component"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "BELONGS_TO_SYSTEM",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E2"
+      },
+      {
+        "id": "R2",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E3"
+      },
+      {
+        "id": "R3",
+        "subj": "E0",
+        "pred": "HAS_COMPONENT",
+        "obj": "E4"
+      }
+    ]
+  },
+  {
+    "doc_id": "sample_00141",
+    "source": "llm_annotation",
+    "text": "高压油泵损坏导致燃油轨压力不足，发动机出现抖动和加速无力，需更换高压油泵。",
+    "entities": [
+      {
+        "id": "E0",
+        "start": 0,
+        "end": 4,
+        "text": "高压油泵",
+        "type": "Component"
+      },
+      {
+        "id": "E1",
+        "start": 4,
+        "end": 6,
+        "text": "损坏",
+        "type": "Fault"
+      },
+      {
+        "id": "E2",
+        "start": 8,
+        "end": 11,
+        "text": "燃油轨",
+        "type": "Component"
+      },
+      {
+        "id": "E3",
+        "start": 11,
+        "end": 15,
+        "text": "压力不足",
+        "type": "Fault"
+      },
+      {
+        "id": "E4",
+        "start": 16,
+        "end": 19,
+        "text": "发动机",
+        "type": "Component"
+      },
+      {
+        "id": "E5",
+        "start": 21,
+        "end": 23,
+        "text": "抖动",
+        "type": "Symptom"
+      },
+      {
+        "id": "E6",
+        "start": 24,
+        "end": 28,
+        "text": "加速无力",
+        "type": "Symptom"
+      },
+      {
+        "id": "E7",
+        "start": 30,
+        "end": 36,
+        "text": "更换高压油泵",
+        "type": "RepairStep"
+      }
+    ],
+    "relations": [
+      {
+        "id": "R0",
+        "subj": "E0",
+        "pred": "CAUSES_FAULT",
+        "obj": "E1"
+      },
+      {
+        "id": "R1",
+        "subj": "E1",
+        "pred": "CAUSES_FAULT",
+        "obj": "E3"
+      },
+      {
+        "id": "R2",
+        "subj": "E3",
+        "pred": "AFFECTS",
+        "obj": "E2"
+      },
+      {
+        "id": "R3",
+        "subj": "E3",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E5"
+      },
+      {
+        "id": "R4",
+        "subj": "E3",
+        "pred": "HAS_SYMPTOM",
+        "obj": "E6"
+      },
+      {
+        "id": "R5",
+        "subj": "E1",
+        "pred": "REPAIRED_BY",
+        "obj": "E7"
+      }
+    ]
+  }
+]

@@ -1,5 +1,5 @@
 """
-stats.py — 图谱统计信息路由
+图谱统计信息路由
 """
 from fastapi import APIRouter, Request
 

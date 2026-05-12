@@ -1,6 +1,5 @@
 """
-run_extraction.py — 一键运行完整知识抚取并写入 Neo4j
-用法：python scripts/run_extraction.py [--config config.yaml] [--max-pages 50]
+运行完整知识抚取并写入 Neo4j
 """
 import argparse
 import json
@@ -37,7 +36,6 @@ def parse_args():
 
 
 def _save_output(result, output_dir: str):
-    """\u5c06\u629a\u53d6\u7ed3\u679c\u4fdd\u5b58\u5230 output/ \u76ee\u5f55\u4e0b\uff08entities.json / triples.json / summary.json\uff09\u3002"""
     os.makedirs(output_dir, exist_ok=True)
 
     # 从三元组拆解去重实体
@@ -49,7 +47,7 @@ def _save_output(result, output_dir: str):
             entity_map[sk] = {"label": t.subj_label.value, "name": t.subj_name, **t.subj_props}
         if ok not in entity_map:
             entity_map[ok] = {"label": t.obj_label.value,  "name": t.obj_name,  **t.obj_props}
-    # 包含表格直写节点（故障码表行、规格参数等）
+    # 包含表格直写节点
     for label, nodes in getattr(result, "extra_nodes", {}).items():
         for node in nodes:
             ek = (label, node.get("name", ""))
@@ -93,13 +91,11 @@ def _save_output(result, output_dir: str):
 def main():
     args = parse_args()
 
-    # 临时覆盖 max_pages（调试时使用）
     import yaml
     with open(args.config, encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
     if args.max_pages > 0:
         cfg["extraction"]["max_pages"] = args.max_pages
-        # 写回临时配置
         tmp_cfg = "config_tmp.yaml"
         with open(tmp_cfg, "w", encoding="utf-8") as f:
             yaml.dump(cfg, f, allow_unicode=True)
@@ -107,8 +103,8 @@ def main():
     else:
         config_path = args.config
 
-    # ── Step 1: 抽取 ──────────────────────────────────────────────
-    logger.info(">>> Step 1: 启动知识抽取管线")
+    # Step1  抽取
+    logger.info(">>> Step 1: 启动知识抽取")
     pipeline = ExtractionPipeline(config_path=config_path)
     result = pipeline.run()
 
@@ -131,16 +127,15 @@ def main():
         logger.warning("未抽取到任何三元组或节点，检查 PDF 路径或分词配置")
         return
 
-    # ── Step 2: 输出文件 ────────────────────────────────────────────
+    # Step2  输出文件
     output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "output")
     _save_output(result, output_dir)
 
-    # ── Step 3: 写入 Neo4j ─────────────────────────────────────────
+    # Step3  写入 Neo4j
     logger.info(">>> Step 3: 写入 Neo4j")
     connector = Neo4jConnector.from_config(config_path)
     builder   = GraphBuilder(connector)
 
-    # 将所有 NER 识别到的实体也加入 extra_nodes，确保无三元组的独立实体也写入 Neo4j
     for ent in result.entities:
         name = ent.text.strip()
         if name and len(name) >= 2:
@@ -148,7 +143,7 @@ def main():
 
     builder.ingest_all(result.triples, extra_nodes=result.extra_nodes)
 
-    # ── Step 4: 统计汇报 ───────────────────────────────────────────
+    # Step4  统计
     stats = connector.get_stats()
     logger.info(
         ">>> 图谱构建完成：节点=%d | 关系=%d",
@@ -156,7 +151,6 @@ def main():
     )
     connector.close()
 
-    # 清理临时配置
     if args.max_pages > 0 and os.path.exists("config_tmp.yaml"):
         os.remove("config_tmp.yaml")
 

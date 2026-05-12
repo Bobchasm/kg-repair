@@ -1,6 +1,5 @@
 """
-pdf_extractor.py — PDF 文本抽取模块
-使用 PyMuPDF (fitz) 抽取中文 PDF，处理页眉页脚、分栏、图表标题等噪声。
+PDF 文本抽取
 """
 import logging
 import re
@@ -55,9 +54,7 @@ _PARA_END = re.compile(r"[。！？…]+\s*$")
 
 class PDFExtractor:
     """
-    PDF 文本抽取器。
-    职责：PDF → List[PageText] → List[TextChunk]
-    设计：无状态，可并行调用多个文件。
+    PDF 文本抽取器
     """
 
     def __init__(self, max_pages: int = -1):
@@ -67,7 +64,6 @@ class PDFExtractor:
         """
         self._max_pages = max_pages
 
-    # ── 公开接口 ──────────────────────────────────────────────────
     def extract_file(self, pdf_path: str) -> List[TextChunk]:
         """抽取单个 PDF，返回文本块列表。"""
         path = Path(pdf_path)
@@ -107,7 +103,7 @@ class PDFExtractor:
                     continue
                 for tab in finder:
                     try:
-                        data = tab.extract()  # list of list of str
+                        data = tab.extract()
                     except Exception:
                         continue
                     if not data or len(data) < 2:
@@ -138,7 +134,6 @@ class PDFExtractor:
             all_records.extend(self.extract_file_tables(p))
         return all_records
 
-    # ── 内部方法 ──────────────────────────────────────────────────
     def _iter_pages(self, pdf_path: str) -> Iterator[PageText]:
         """逐页读取 PDF，过滤噪声。"""
         try:
@@ -151,17 +146,11 @@ class PDFExtractor:
         limit = total if self._max_pages < 0 else min(self._max_pages, total)
         source_name = Path(pdf_path).stem
 
-        # 检测是否为扫描图像 PDF（前5页均无可提取文字）
         sample_pages = min(5, total)
         sample_text = "".join(
             doc[i].get_text("text") for i in range(sample_pages)
         ).strip()
         if len(sample_text) < 50:
-            logger.warning(
-                "[%s] 疑似扫描图像PDF，无法提取文字（前%d页文字量=%d字）。"
-                "如需处理请使用 OCR 工具（如 PaddleOCR）预先转换为文字版PDF。",
-                Path(pdf_path).name, sample_pages, len(sample_text),
-            )
             doc.close()
             return
 
@@ -182,10 +171,8 @@ class PDFExtractor:
             stripped = line.strip()
             if not stripped:
                 continue
-            # 过滤噪声行
             if any(p.match(stripped) for p in _NOISE_PATTERNS):
                 continue
-            # 过滤过短行（不足 4 字，可能是图注编号等）
             if len(stripped) < 4:
                 continue
             kept.append(stripped)
@@ -194,9 +181,6 @@ class PDFExtractor:
     def _pages_to_chunks(self, pages: List[PageText]) -> List[TextChunk]:
         """
         将多页文本合并为语义段落块。
-        策略：
-          - 以句号/问号/感叹号结尾的行视为段落结束
-          - 段落长度超过 512 字时强制截断
         """
         chunks: List[TextChunk] = []
         buffer: List[str] = []
@@ -225,9 +209,8 @@ class PDFExtractor:
                     continue
                 buffer.append(line)
                 buf_page = page.page_no
-                # 段落结束或超长则刷新
                 if _PARA_END.search(line) or len("".join(buffer)) > 512:
                     flush()
 
-        flush()  # 处理尾部残余
+        flush()
         return chunks

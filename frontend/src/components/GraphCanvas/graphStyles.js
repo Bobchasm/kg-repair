@@ -1,21 +1,16 @@
-/**
- * graphStyles.js — 图谱颜色常量（G6 版，Material Accent 配色）
- */
 
-// 节点颜色：Material Design Accent，深色背景下最炫
 export const NODE_COLORS = {
-  Vehicle:     '#2979FF',  // 亮蓝
-  Component:   '#00E676',  // 亮绿
-  Fault:       '#FF1744',  // 亮红
-  Symptom:     '#FF6D00',  // 亮橙
-  RepairStep:  '#D500F9',  // 亮紫
-  Tool:        '#FFD600',  // 亮黄
-  System:      '#1DE9B6',  // 亮青
-  Parameter:   '#90A4AE',  // 蓝灰
+  Vehicle:     '#2979FF',
+  Component:   '#00E676',
+  Fault:       '#FF1744',
+  Symptom:     '#FF6D00',
+  RepairStep:  '#D500F9',
+  Tool:        '#FFD600',
+  System:      '#1DE9B6',
+  Parameter:   '#90A4AE',
   Unknown:     '#546E7A',
 }
 
-// 边颜色（半透明）
 export const REL_COLORS = {
   HAS_COMPONENT:     '#00E676bb',
   PART_OF:           '#2979FFbb',

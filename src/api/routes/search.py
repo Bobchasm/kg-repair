@@ -1,6 +1,5 @@
 """
-search.py — 实体搜索路由
-支持：模糊搜索、自动补全
+实体搜索路由
 """
 from fastapi import APIRouter, Request, Query
 

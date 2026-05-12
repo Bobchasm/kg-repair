@@ -1,7 +1,5 @@
 """
-re_extractor.py — 关系抽取模块（双路融合）
-路径A：触发词模板匹配（高精度）
-路径B：依存句法模式（覆盖更多结构）
+关系抽取模块
 """
 import logging
 import re
@@ -15,10 +13,8 @@ from src.extraction.ner_extractor import Entity
 from src.graph.schema import NodeLabel, RelationType, Triple
 
 
-# ──────────────────────────────────────────────────────────────────
 # 关系触发词词典
-# 格式：关系类型 → [触发词列表]
-# ──────────────────────────────────────────────────────────────────
+# 关系类型 → [触发词列表]
 _TRIGGER_DICT: Dict[str, List[str]] = {
     RelationType.HAS_COMPONENT.value: [
         "由", "包含", "包括", "含有", "组成", "构成", "主要部件",
@@ -73,8 +69,6 @@ _TRIGGER_DICT: Dict[str, List[str]] = {
     ],
 }
 
-# 主语-谓语-宾语型模式的实体类型约束
-# (subj_allowed_labels, relation, obj_allowed_labels)
 _TYPE_CONSTRAINTS: List[Tuple] = [
     ({"Vehicle", "System"}, RelationType.HAS_COMPONENT, {"Component"}),
     ({"Component"}, RelationType.PART_OF, {"System", "Vehicle"}),
@@ -95,16 +89,13 @@ def _check_type_constraint(
     obj_label: str,
     relation: RelationType,
 ) -> bool:
-    """检查三元组是否满足类型约束。"""
     for sl, rel, ol in _TYPE_CONSTRAINTS:
         if rel == relation and subj_label in sl and obj_label in ol:
             return True
     return False
 
 
-# ──────────────────────────────────────────────────────────────────
 # 触发词模式匹配
-# ──────────────────────────────────────────────────────────────────
 class TriggerRE:
     """基于触发词的关系抽取器。"""
 
@@ -114,13 +105,6 @@ class TriggerRE:
         entities: List[Entity],
         source_doc: str = "",
     ) -> List[Triple]:
-        """
-        对句子中的所有实体对枚举可能关系。
-        策略：
-          1. 遍历触发词词典
-          2. 若触发词在句子中出现，且触发词两侧有对应类型实体
-          3. 按类型约束过滤，生成三元组
-        """
         triples: List[Triple] = []
         if len(entities) < 2:
             return triples
@@ -128,23 +112,20 @@ class TriggerRE:
         for rel_str, triggers in _TRIGGER_DICT.items():
             rel = RelationType(rel_str)
             for trigger in triggers:
-                # 支持简单正则
                 if re.search(trigger, sentence):
-                    # 找触发词在句子中的位置
                     m = re.search(trigger, sentence)
                     if not m:
                         continue
                     trig_start, trig_end = m.start(), m.end()
 
-                    # 触发词左侧实体作主语，右侧实体作宾语
                     left_ents  = [e for e in entities if e.end <= trig_start]
                     right_ents = [e for e in entities if e.start >= trig_end]
 
                     if not left_ents or not right_ents:
                         continue
 
-                    subj = left_ents[-1]    # 最近左侧实体
-                    obj  = right_ents[0]    # 最近右侧实体
+                    subj = left_ents[-1]
+                    obj  = right_ents[0]
 
                     if subj.text == obj.text:
                         continue
@@ -166,9 +147,7 @@ class TriggerRE:
         return triples
 
 
-# ──────────────────────────────────────────────────────────────────
 # 共现 + 距离启发式关系抽取
-# ──────────────────────────────────────────────────────────────────
 class CooccurrenceRE:
     """
     基于共现距离的启发式关系抽取。
@@ -176,7 +155,6 @@ class CooccurrenceRE:
     根据类型组合推断关系。
     """
 
-    # (subj_type, obj_type) → 推断关系
     _CO_RULES: Dict[Tuple[str, str], RelationType] = {
         ("Vehicle",    "Component"):  RelationType.HAS_COMPONENT,
         ("Component",  "System"):     RelationType.BELONGS_TO_SYSTEM,
@@ -190,7 +168,7 @@ class CooccurrenceRE:
         ("Vehicle",    "Fault"):      RelationType.CAUSES_FAULT,
         ("Fault",      "Fault"):      RelationType.CAUSES_FAULT,
         ("Vehicle",    "System"):     RelationType.HAS_COMPONENT,
-        # 新增：更多节点对廻建关系
+
         ("Vehicle",    "Symptom"):    RelationType.HAS_SYMPTOM,
         ("System",     "Fault"):      RelationType.CAUSES_FAULT,
         ("System",     "Symptom"):    RelationType.HAS_SYMPTOM,
@@ -204,7 +182,7 @@ class CooccurrenceRE:
         ("Fault",      "Tool"):       RelationType.DIAGNOSED_BY,
         ("RepairStep", "RepairStep"): RelationType.PRECEDES,
     }
-    _MAX_DIST = 45  # 字符距离阈值（45字符内共现即产生关系）
+    _MAX_DIST = 45
 
     def extract(
         self,
@@ -223,9 +201,8 @@ class CooccurrenceRE:
                     key = (e2.label, e1.label)
                     if key not in self._CO_RULES:
                         continue
-                    e1, e2 = e2, e1  # 调换主宾
+                    e1, e2 = e2, e1
                 rel = self._CO_RULES[key]
-                # 距离越近，置信度越高
                 conf = max(0.4, 0.7 - dist / 200)
                 triples.append(Triple(
                     subj_label=NodeLabel(e1.label),
@@ -242,14 +219,10 @@ class CooccurrenceRE:
         return triples
 
 
-# ──────────────────────────────────────────────────────────────────
 # 融合关系抽取器
-# ──────────────────────────────────────────────────────────────────
 class REExtractor:
     """
-    双路融合关系抽取：
-      触发词 RE（高精度）+ 共现 RE（高召回）
-    置信度阈值过滤：低于 0.4 的三元组丢弃。
+    双路融合关系抽取
     """
 
     MIN_CONFIDENCE = 0.4
@@ -264,11 +237,9 @@ class REExtractor:
         entities: List[Entity],
         source_doc: str = "",
     ) -> List[Triple]:
-        # 双路抽取
         t_triples = self._trigger_re.extract(sentence, entities, source_doc)
         c_triples = self._cooccurrence_re.extract(sentence, entities, source_doc)
 
-        # 合并去重（按 subj+rel+obj 去重，保留置信度高的）
         seen: Dict[Tuple, Triple] = {}
         for t in t_triples + c_triples:
             key = (t.subj_name, t.relation.value, t.obj_name)

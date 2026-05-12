@@ -5,13 +5,11 @@ neo4j:
   database: "neo4j"
 
 extraction:
-  # PDF 文件列表（相对于项目根目录）
+  # PDF 文件列表
   pdf_files:
     - "data/SDH125T-31本田裂行维修手册.pdf"
     - "data/看图自学汽车维修_发动机分册.pdf"
-    - "data/装甲车辆故障诊断技术 -- 郑长松,冯辅周,张丽霞,江鹏程编著.pdf"
-    - "data/装甲车辆构造与原理.pdf"
-  # 每次处理的最大页数（调试用，-1 表示全部）
+  # 每次处理的最大页数 (-1 表示全部)
   max_pages: -1
   # 分句最小长度
   min_sentence_len: 10

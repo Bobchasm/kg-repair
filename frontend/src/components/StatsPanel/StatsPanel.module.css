@@ -4,11 +4,17 @@
   max-height: calc(100vh - 80px);
 }
 
+/* 全局加载占位 */
 .loading {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 200px;
+}
+
+/* Tabs 内容区域上边距 */
+:global(.ant-tabs-content-holder) {
+  padding-top: 4px;
 }
 
 .totals {
@@ -35,6 +41,7 @@
   margin: 8px 0 4px;
 }
 
+/* 关系类型条形列表 */
 .relList {
   display: flex;
   flex-direction: column;
@@ -72,4 +79,64 @@
   font-size: 11px;
   min-width: 28px;
   text-align: right;
+}
+
+/* ──────────── 评估 Tab 样式 ──────────── */
+.evalSamples {
+  font-size: 11px;
+  color: #8b9199;
+  margin-bottom: 6px;
+}
+.evalSamples strong {
+  color: #e6edf3;
+}
+
+/* P/R/F1 指标卡片组 */
+.metricsCards {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.metricCard {
+  flex: 1;
+  min-width: 60px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 8px 6px;
+  text-align: center;
+}
+
+.metricLabel {
+  font-size: 9px;
+  color: #8b9199;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 4px;
+}
+
+.metricValue {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.metricValueSm {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8b9199;
+  line-height: 1.4;
+}
+
+.cardP  .metricValue { color: #3fb950; }
+.cardR  .metricValue { color: #d29922; }
+.cardF1 .metricValue { color: #58a6ff; }
+
+.noData {
+  color: #484f58;
+  font-size: 12px;
+  text-align: center;
+  padding: 16px 0;
 }

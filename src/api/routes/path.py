@@ -1,5 +1,5 @@
 """
-path.py — 最短路径查询路由
+最短路径查询路由
 """
 from fastapi import APIRouter, Request, Query, HTTPException
 

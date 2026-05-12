@@ -1,5 +1,5 @@
 /**
- * SearchBar.jsx — 实体搜索 + 最短路径查询
+ * 实体搜索 + 最短路径查询
  */
 import React, { useState, useRef } from 'react'
 import { Input, AutoComplete, Button, Space, Tooltip, Divider, message } from 'antd'
@@ -9,18 +9,15 @@ import { NODE_COLORS } from '../GraphCanvas/graphStyles'
 import styles from './SearchBar.module.css'
 
 export default function SearchBar({ onNodeFocus, onPathFound }) {
-  // ── 搜索状态 ───────────────────────────────────────────────────
   const [searchVal, setSearchVal]   = useState('')
   const [options, setOptions]       = useState([])
   const [searching, setSearching]   = useState(false)
 
-  // ── 路径查询状态 ───────────────────────────────────────────────
   const [pathMode, setPathMode]     = useState(false)
   const [fromNode, setFromNode]     = useState('')
   const [toNode, setToNode]         = useState('')
   const [pathLoading, setPathLoad]  = useState(false)
 
-  // ── 搜索自动补全 ──────────────────────────────────────────────
   const handleSearch = async (val) => {
     setSearchVal(val)
     if (!val.trim() || val.length < 1) {
@@ -64,7 +61,6 @@ export default function SearchBar({ onNodeFocus, onPathFound }) {
     setOptions([])
   }
 
-  // ── 最短路径查询 ──────────────────────────────────────────────
   const handleFindPath = async () => {
     if (!fromNode.trim() || !toNode.trim()) {
       message.warning('请输入起点和终点节点名称')

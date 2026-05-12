@@ -1,0 +1,171 @@
+{
+  "ner": {
+    "overall": {
+      "precision": 0.7883,
+      "recall": 0.8006,
+      "f1": 0.7944,
+      "tp": 257,
+      "fp": 69,
+      "fn": 64
+    },
+    "by_type": {
+      "Component": {
+        "precision": 0.6755,
+        "recall": 0.7669,
+        "f1": 0.7183,
+        "tp": 102,
+        "fp": 49,
+        "fn": 31
+      },
+      "Fault": {
+        "precision": 0.9545,
+        "recall": 0.7241,
+        "f1": 0.8235,
+        "tp": 42,
+        "fp": 2,
+        "fn": 16
+      },
+      "Symptom": {
+        "precision": 1.0,
+        "recall": 0.7188,
+        "f1": 0.8364,
+        "tp": 23,
+        "fp": 0,
+        "fn": 9
+      },
+      "RepairStep": {
+        "precision": 0.7612,
+        "recall": 0.8793,
+        "f1": 0.816,
+        "tp": 51,
+        "fp": 16,
+        "fn": 7
+      },
+      "System": {
+        "precision": 0.875,
+        "recall": 0.9333,
+        "f1": 0.9032,
+        "tp": 14,
+        "fp": 2,
+        "fn": 1
+      },
+      "Tool": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 20,
+        "fp": 0,
+        "fn": 0
+      },
+      "Vehicle": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  },
+  "re": {
+    "overall": {
+      "precision": 0.7575,
+      "recall": 0.875,
+      "f1": 0.812,
+      "tp": 378,
+      "fp": 121,
+      "fn": 54
+    },
+    "by_rel": {
+      "CAUSES_FAULT": {
+        "precision": 0.9286,
+        "recall": 0.8,
+        "f1": 0.8595,
+        "tp": 52,
+        "fp": 4,
+        "fn": 13
+      },
+      "AFFECTS": {
+        "precision": 0.7044,
+        "recall": 0.9931,
+        "f1": 0.8242,
+        "tp": 143,
+        "fp": 60,
+        "fn": 1
+      },
+      "HAS_SYMPTOM": {
+        "precision": 1.0,
+        "recall": 0.7963,
+        "f1": 0.8866,
+        "tp": 43,
+        "fp": 0,
+        "fn": 11
+      },
+      "REPAIRED_BY": {
+        "precision": 0.5368,
+        "recall": 0.9107,
+        "f1": 0.6755,
+        "tp": 51,
+        "fp": 44,
+        "fn": 5
+      },
+      "INDICATES": {
+        "precision": 1.0,
+        "recall": 0.3333,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 0,
+        "fn": 4
+      },
+      "DIAGNOSED_BY": {
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3
+      },
+      "PRECEDES": {
+        "precision": 0.7742,
+        "recall": 0.75,
+        "f1": 0.7619,
+        "tp": 24,
+        "fp": 7,
+        "fn": 8
+      },
+      "REQUIRES_TOOL": {
+        "precision": 0.8636,
+        "recall": 0.7308,
+        "f1": 0.7917,
+        "tp": 19,
+        "fp": 3,
+        "fn": 7
+      },
+      "HAS_COMPONENT": {
+        "precision": 0.9231,
+        "recall": 0.973,
+        "f1": 0.9474,
+        "tp": 36,
+        "fp": 3,
+        "fn": 1
+      },
+      "PART_OF": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571,
+        "tp": 3,
+        "fp": 0,
+        "fn": 1
+      },
+      "BELONGS_TO_SYSTEM": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      }
+    }
+  },
+  "total_samples": 79
+}

@@ -1,6 +1,5 @@
 /**
- * DetailPanel.jsx — 节点/边属性详情面板
- * 点击节点或边后在右侧展示完整属性
+ * 节点/边属性详情面板
  */
 import React from 'react'
 import { Drawer, Tag, Descriptions, Button, Typography } from 'antd'

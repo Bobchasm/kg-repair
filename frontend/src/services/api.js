@@ -1,6 +1,5 @@
 /**
- * api.js — 所有后端接口封装
- * 统一 baseURL、错误处理、响应拦截。
+ * 后端接口封装
  */
 import axios from 'axios'
 
@@ -9,7 +8,7 @@ const http = axios.create({
   timeout: 30000,
 })
 
-// 响应拦截：统一错误提示
+// 统一错误提示
 http.interceptors.response.use(
   (res) => res.data,
   (err) => {
@@ -19,7 +18,6 @@ http.interceptors.response.use(
   }
 )
 
-// ── 图谱接口 ──────────────────────────────────────────────────────
 export const graphApi = {
   /** 获取概览图（首屏展示） */
   getOverview: (limit = 200) => http.get('/graph/overview', { params: { limit } }),
@@ -35,18 +33,19 @@ export const graphApi = {
     http.get('/graph/nodes', { params: { label, skip, limit } }),
 }
 
-// ── 搜索接口 ──────────────────────────────────────────────────────
 export const searchApi = {
   search: (q, limit = 30) => http.get('/search/', { params: { q, limit } }),
 }
 
-// ── 路径接口 ──────────────────────────────────────────────────────
 export const pathApi = {
   shortestPath: (fromNode, toNode) =>
     http.get('/path/shortest', { params: { from_node: fromNode, to_node: toNode } }),
 }
 
-// ── 统计接口 ──────────────────────────────────────────────────────
 export const statsApi = {
   getStats: () => http.get('/stats/'),
+}
+
+export const evalApi = {
+  getMetrics: () => http.get('/eval/metrics'),
 }

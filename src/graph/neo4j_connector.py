@@ -1,6 +1,5 @@
 """
-neo4j_connector.py — Neo4j 数据库连接与操作封装
-使用连接池，支持事务批量写入，统一异常处理。
+Neo4j 数据库连接与操作封装
 """
 import logging
 import time
@@ -21,8 +20,7 @@ def _load_config(config_path: str = "config.yaml") -> Dict:
 
 class Neo4jConnector:
     """
-    Neo4j 连接器，封装驱动生命周期和常用 Cypher 操作。
-    使用单例模式：整个应用共享一个实例。
+    Neo4j 连接器
     """
 
     _instance: Optional["Neo4jConnector"] = None
@@ -35,7 +33,6 @@ class Neo4jConnector:
         self._driver = None
         self._connect()
 
-    # ── 单例工厂 ──────────────────────────────────────────────────
     @classmethod
     def from_config(cls, config_path: str = "config.yaml") -> "Neo4jConnector":
         if cls._instance is None:
@@ -48,7 +45,6 @@ class Neo4jConnector:
             )
         return cls._instance
 
-    # ── 连接管理 ──────────────────────────────────────────────────
     def _connect(self):
         try:
             if self._driver:
@@ -112,7 +108,7 @@ class Neo4jConnector:
                     raise
                 self._reconnect()
 
-    # ── 索引/约束初始化 ───────────────────────────────────────────
+    # 索引/约束初始化
     def create_constraints(self):
         """在首次运行时创建唯一约束与索引，保证幂等性。"""
         labels = [
@@ -121,23 +117,20 @@ class Neo4jConnector:
         ]
         with self.session() as s:
             for label in labels:
-                # 唯一约束（name 作为业务主键）
                 s.run(
                     f"CREATE CONSTRAINT IF NOT EXISTS FOR (n:{label}) REQUIRE n.name IS UNIQUE"
                 )
-                # 全文索引（用于搜索）
                 try:
                     s.run(
                         f"CREATE FULLTEXT INDEX {label.lower()}_ft IF NOT EXISTS "
                         f"FOR (n:{label}) ON EACH [n.name, n.description]"
                     )
                 except Exception:
-                    pass  # CE 版不支持全文索引时静默跳过
+                    pass
         logger.info("约束和索引初始化完成")
 
-    # ── 节点操作 ──────────────────────────────────────────────────
+    # 节点操作
     def merge_node(self, label: str, props: Dict[str, Any]) -> Dict:
-        """MERGE 节点（name 作为主键），存在则更新属性。"""
         cypher = (
             f"MERGE (n:{label} {{name: $name}}) "
             f"SET n += $props "
@@ -149,7 +142,6 @@ class Neo4jConnector:
             return dict(record["n"]) if record else {}
 
     def batch_merge_nodes(self, label: str, nodes: List[Dict[str, Any]]):
-        """批量 MERGE 节点，利用 UNWIND 提升性能。"""
         cypher = (
             f"UNWIND $nodes AS props "
             f"MERGE (n:{label} {{name: props.name}}) "
@@ -159,7 +151,7 @@ class Neo4jConnector:
             s.run(cypher, nodes=nodes)
         logger.debug("批量写入 %d 个 %s 节点", len(nodes), label)
 
-    # ── 关系操作 ──────────────────────────────────────────────────
+    # 关系操作
     def merge_relation(
         self,
         subj_label: str,
@@ -169,7 +161,6 @@ class Neo4jConnector:
         obj_name: str,
         rel_props: Optional[Dict] = None,
     ):
-        """MERGE 一条关系，不重复创建。"""
         rel_props = rel_props or {}
         cypher = (
             f"MATCH (a:{subj_label} {{name: $sn}}), (b:{obj_label} {{name: $on}}) "
@@ -202,7 +193,7 @@ class Neo4jConnector:
                 f"    r.source_doc  = t.source_doc, "
                 f"    r.source_sent = t.source_sent"
             )
-            # 每个分组独立 session，超时后重试
+
             for attempt in range(1, 4):
                 try:
                     with self._driver.session(database=self._database) as s:
@@ -219,7 +210,7 @@ class Neo4jConnector:
                         self._reconnect()
         logger.debug("批量写入 %d 条关系", total)
 
-    # ── 查询操作 ──────────────────────────────────────────────────
+    # 查询操作
     def get_stats(self) -> Dict[str, Any]:
         """返回图谱统计信息。"""
         with self.session() as s:
@@ -333,7 +324,7 @@ class Neo4jConnector:
             return s.run(cypher, skip=skip, lim=limit).data()
 
     def get_overview_graph(self, limit: int = 5000) -> Dict[str, List]:
-        """获取图谱概览（返回全部有关联节点和关系）。"""
+        """获取图谱概览（返回全部有关联节点和关系）"""
         cypher = (
             "MATCH (n)-[r]->(m) "
             "RETURN n, r, m LIMIT $lim"

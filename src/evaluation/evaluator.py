@@ -1,6 +1,5 @@
 """
-evaluator.py — NER 和 RE 评估模块
-计算 Precision / Recall / F1，支持按实体类型分类报告。
+NER 和 RE 评估模块
 """
 import logging
 from collections import defaultdict
@@ -24,8 +23,7 @@ def _prf(tp: int, fp: int, fn: int) -> MetricDict:
 
 class NERMetrics:
     """
-    NER 评估：精确匹配（span + type 均一致才算正确）
-    支持：整体指标 + 分类型指标
+    NER 评估
     """
 
     def evaluate(
@@ -74,8 +72,7 @@ class NERMetrics:
 
 class REMetrics:
     """
-    RE 评估：(subj_text, pred_type, obj_text) 三元组精确匹配
-    支持：整体指标 + 分关系类型指标
+    RE 评估
     """
 
     def evaluate(
@@ -119,7 +116,6 @@ class REMetrics:
 
 
 def print_metrics_table(title: str, metrics: Dict[str, Any]):
-    """将评估结果格式化打印为表格。"""
     print(f"\n{'='*60}")
     print(f"  {title}")
     print(f"{'='*60}")

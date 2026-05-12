@@ -1,6 +1,5 @@
 """
-annotator.py — 标注数据加载与格式转换
-支持：从 JSON 标注文件加载，转换为 CRF 训练格式（BIO）
+标注数据加载与格式转换
 """
 import json
 import logging
@@ -10,9 +9,7 @@ from typing import Any, Dict, List, Tuple
 logger = logging.getLogger(__name__)
 
 
-# ──────────────────────────────────────────────────────────────────
 # 标注文件格式（schema）
-# ──────────────────────────────────────────────────────────────────
 # {
 #   "doc_id": "sample_00001",
 #   "source": "xxx.pdf",
@@ -33,7 +30,7 @@ VALID_ENTITY_TYPES = {
     "RepairStep", "Tool", "System", "Parameter",
 }
 
-# CRF 标签映射（实体类型 → BIO前缀）
+# CRF 标签映射（实体类型 -> BIO前缀）
 _TYPE_ABBR = {
     "Vehicle":    "VEH",
     "Component":  "COM",
@@ -48,17 +45,13 @@ _TYPE_ABBR = {
 
 class AnnotationLoader:
     """
-    标注文件加载器。
-    职责：读取 annotations/ 目录下的 JSON 文件，校验格式，
-    转换为评估器和 CRF 训练所需的格式。
+    标注文件加载器
     """
 
     def __init__(self, annotation_dir: str = "annotations"):
         self._dir = Path(annotation_dir)
 
-    # ── 读取 ──────────────────────────────────────────────────────
     def load_all(self) -> List[Dict[str, Any]]:
-        """读取目录下所有 .json 标注文件。"""
         if not self._dir.exists():
             logger.warning("标注目录不存在：%s", self._dir)
             return []
@@ -76,7 +69,6 @@ class AnnotationLoader:
         return records
 
     def validate(self, records: List[Dict]) -> Tuple[List[Dict], List[str]]:
-        """校验标注记录，返回 (合法记录, 错误列表)。"""
         valid, errors = [], []
         for r in records:
             errs = self._validate_record(r)
@@ -101,15 +93,9 @@ class AnnotationLoader:
                 )
         return errs
 
-    # ── 转为 CRF 训练格式 ─────────────────────────────────────────
     def to_crf_format(
         self, records: List[Dict]
     ) -> List[Tuple[List[str], List[str], List[str]]]:
-        """
-        转为 CRF 训练格式。
-        返回：[(words, pos_tags, bio_labels), ...]
-        需要先分词，这里对字符级 BIO 转换。
-        """
         import jieba.posseg as pseg
         results = []
         for r in records:
@@ -138,12 +124,7 @@ class AnnotationLoader:
             results.append((words, pos_tags, bio_labels))
         return results
 
-    # ── 转为评估格式 ──────────────────────────────────────────────
     def to_eval_format(self, records: List[Dict]) -> List[Dict]:
-        """
-        转为评估器输入格式。
-        每条返回：{text, gold_entities: [(start,end,type)], gold_relations: [(subj,pred,obj)]}
-        """
         result = []
         for r in records:
             ent_map = {e["id"]: e for e in r.get("entities", [])}

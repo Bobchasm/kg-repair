@@ -18,7 +18,6 @@ body {
   height: 100vh;
 }
 
-/* 滚动条 — 仿 docs/index.html 青色滚动条 */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); }
 ::-webkit-scrollbar-thumb { background: #00d2ff; border-radius: 3px; }

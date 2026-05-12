@@ -1,5 +1,5 @@
 /**
- * App.jsx — 主布局（仿 docs/index.html 风格）
+ * 主布局
  * 固定顶栏 + 左侧边栏（搜索/详情/统计）+ 右侧 ECharts 图谱
  */
 import React, { useState, useEffect, useRef, useCallback } from 'react'
@@ -7,7 +7,6 @@ import GraphCanvas, { NODE_COLORS, NODE_LABELS } from './components/GraphCanvas/
 import { graphApi, searchApi, statsApi, pathApi } from './services/api'
 import s from './App.module.css'
 
-// 去掉 Parameter（已折叠为实体属性，不再是独立节点）
 const ALL_TYPES = ['Vehicle', 'Component', 'Fault', 'Symptom', 'RepairStep', 'Tool', 'System']
 const TYPE_ICONS = {
   Vehicle: '🚗', Component: '🔧', Fault: '⚠️', Symptom: '🩺',
@@ -37,7 +36,6 @@ export default function App() {
   const [pathTo,        setPathTo]         = useState('')
   const [pathResult,    setPathResult]     = useState(null)
 
-  // ── 初始化：加载全景图 + 统计 ─────────────────────────────────────
   useEffect(() => {
     loadOverview()
     fetchStats()
@@ -66,14 +64,12 @@ export default function App() {
     } catch {}
   }
 
-  // ── 搜索 ──────────────────────────────────────────────────────────
   const handleSearch = useCallback(async () => {
     const q = searchQ.trim()
     if (!q) { setSearchResults([]); return }
     setLoading(true)
     try {
       const raw = await searchApi.search(q, 30)
-      // 兼容 array 或 {nodes:[...]} 两种响应格式
       const list = Array.isArray(raw) ? raw : (raw?.nodes ?? raw?.results ?? [])
       const filtered = searchType === 'all' ? list : list.filter(n => n.label === searchType)
       setSearchResults(filtered)
@@ -84,14 +80,12 @@ export default function App() {
     }
   }, [searchQ, searchType])
 
-  // ── 聚焦展开节点 ──────────────────────────────────────────────────
   const focusNode = useCallback(async (nodeName) => {
     setLoading(true)
     try {
       const data = await graphApi.getSubgraph(nodeName, 2, 100)
       graphRef.current?.loadData(data, true)
       setGraphStats(`聚焦: ${nodeName} | 节点: ${data.nodes?.length ?? 0} | 关系: ${data.edges?.length ?? 0}`)
-      // 找到中心节点设为 detail
       const center = data.nodes?.find(n => n.name === nodeName)
       if (center) {
         const rels = data.edges?.filter(e => e.source === center.id || e.target === center.id) ?? []
@@ -102,7 +96,6 @@ export default function App() {
     setLoading(false)
   }, [])
 
-  // ── 图谱节点单击 → 显示详情（不展开子图） ─────────────────────────
   const handleNodeClick = useCallback((name, echartsData) => {
     setDetail({
       id:    echartsData.id,
@@ -113,12 +106,10 @@ export default function App() {
     setRelations([])
   }, [])
 
-  // ── 图谱节点双击 → 展开子图 ───────────────────────────────────────
   const handleNodeDblClick = useCallback((name) => {
     focusNode(name)
   }, [focusNode])
 
-  // ── 最短路径查询 ────────────────────────────────────────────────
   const handlePathSearch = useCallback(async () => {
     const from = pathFrom.trim()
     const to   = pathTo.trim()
@@ -128,7 +119,6 @@ export default function App() {
     try {
       const data = await pathApi.shortestPath(from, to)
       setPathResult(data)
-      // 把路径子图渲染到画布
       const pNodes = (data.path || []).filter(p => p.type === 'node')
       const pEdges = (data.path || []).filter(p => p.type === 'relation')
       graphRef.current?.loadData({
@@ -142,10 +132,9 @@ export default function App() {
     setLoading(false)
   }, [pathFrom, pathTo])
 
-  // ── 渲染 ──────────────────────────────────────────────────────────
   return (
     <div className={s.app}>
-      {/* ── 顶部导航栏 ────────────────────────────────────────────── */}
+      {/* 顶部导航栏 */}
       <nav className={s.navbar}>
         <div className={s.logo}>
           <span className={s.logoIcon}>⚙️</span>
@@ -158,10 +147,10 @@ export default function App() {
         </div>
       </nav>
 
-      {/* ── 主体：侧边栏 + 图谱区 ─────────────────────────────────── */}
+      {/* 主体：侧边栏 + 图谱区 */}
       <div className={s.container}>
 
-        {/* ── 左侧边栏 ──────────────────────────────────────────── */}
+        {/* 左侧边栏 */}
         <aside className={s.sidebar}>
 
           {/* 实体搜索 */}
@@ -330,7 +319,7 @@ export default function App() {
           </div>
         </aside>
 
-        {/* ── 右侧图谱区域 ──────────────────────────────────────── */}
+        {/* 右侧图谱区域 */}
         <main className={s.main}>
           <GraphCanvas
             ref={graphRef}
@@ -342,7 +331,7 @@ export default function App() {
         </main>
       </div>
 
-      {/* ── 统计信息模态弹窗 ─────────────────────────────────────── */}
+      {/* 统计信息模态弹窗 */}
       {showStats && (
         <div className={s.modalOverlay} onClick={() => setShowStats(false)}>
           <div className={s.statsModal} onClick={e => e.stopPropagation()}>

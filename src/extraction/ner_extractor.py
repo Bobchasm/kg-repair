@@ -1,8 +1,8 @@
 """
-ner_extractor.py — 命名实体识别模块（双路融合）
+命名实体识别模块（双路融合）
 路径A：规则NER（正则 + 领域词典精确匹配）
 路径B：CRF-NER（sklearn-crfsuite，BIO序列标注）
-最终结果取并集，CRF 置信度低时以规则结果覆盖。
+最终结果取并集，CRF 置信度低时以规则结果覆盖
 """
 import logging
 import pickle
@@ -18,7 +18,6 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class Entity:
-    """识别出的实体"""
     text: str
     label: str           # 与 NodeLabel 值对齐
     start: int           # 在原句中的字符起始位置
@@ -28,14 +27,11 @@ class Entity:
     props: Dict = field(default_factory=dict)  # 实体属性
 
 
-# ──────────────────────────────────────────────────────────────────
 # 规则 NER：正则 + 词典
-# ──────────────────────────────────────────────────────────────────
 # 格式：(pattern, label, confidence, props_fn)
 # props_fn(match) 返回额外属性字典
 
 def _param_props(m: re.Match) -> Dict:
-    """Parameter 实体：解析数值和单位"""
     raw = m.group().strip()
     mv = re.match(r"(\d+(?:\.\d+)?)\s*(.*)", raw)
     if mv:
@@ -60,9 +56,9 @@ _RULE_PATTERNS: List[Tuple] = [
     (re.compile(r"\b\d{4,6}-[A-Z]{2,4}-\d{3,5}\b"), "Component", 0.92, _part_no_props),
 ]
 
-# 领域词典分类（词 → 实体类型）
+# 领域词典分类（词 -> 实体类型）
 _DICT_ENTITIES: Dict[str, str] = {
-    # ── 车辆系统 ──────────────────────────────────────────────────
+    # 车辆系统
     "发动机系统": "System", "制动系统": "System", "冷却系统": "System",
     "润滑系统": "System", "燃油系统": "System", "点火系统": "System",
     "传动系统": "System", "悬挂系统": "System", "转向系统": "System",
@@ -70,13 +66,13 @@ _DICT_ENTITIES: Dict[str, str] = {
     "进气系统": "System", "供油系统": "System", "充电系统": "System",
     "启动系统": "System", "操纵系统": "System", "悬架系统": "System",
     "制冷系统": "System", "空调系统": "System", "油料系统": "System",
-    # ── 车辆 ──────────────────────────────────────────────────────
+    # 车辆
     "摩托车": "Vehicle", "轿车": "Vehicle", "越野车": "Vehicle", "SUV": "Vehicle",
     "货车": "Vehicle", "卡车": "Vehicle", "面包车": "Vehicle", "客车": "Vehicle",
     "装甲车": "Vehicle", "坦克": "Vehicle", "履带车辆": "Vehicle",
     "轮式装甲车": "Vehicle", "步兵战车": "Vehicle", "装甲输送车": "Vehicle",
     "自行车": "Vehicle", "电动车": "Vehicle", "汽车": "Vehicle",
-    # ── 发动机零部件 ──────────────────────────────────────────────
+    # 发动机零部件
     "活塞": "Component", "活塞环": "Component", "活塞销": "Component",
     "气缸": "Component", "气缸盖": "Component", "气缸体": "Component",
     "曲轴": "Component", "曲轴箱": "Component", "凸轮轴": "Component",
@@ -87,11 +83,11 @@ _DICT_ENTITIES: Dict[str, str] = {
     "推杆": "Component", "挺柱": "Component", "凸轮": "Component",
     "飞轮盖": "Component", "正时盖": "Component", "油底壳": "Component",
     "缸盖垫": "Component", "缸套": "Component",
-    # ── 点火系统 ────────────────────────────────────────────────
+    # 点火系统
     "火花塞": "Component", "点火线圈": "Component", "分电器": "Component",
     "点火提前器": "Component", "点火器": "Component",
     "高压包": "Component", "配电器": "Component",
-    # ── 燃油系统 ────────────────────────────────────────────────
+    # 燃油系统
     "节气门": "Component", "节气门体": "Component", "喷油嘴": "Component",
     "燃油泵": "Component", "燃油滤清器": "Component", "空气滤清器": "Component",
     "化油器": "Component", "浮子室": "Component", "主量孔": "Component",
@@ -100,13 +96,13 @@ _DICT_ENTITIES: Dict[str, str] = {
     "排气管": "Component", "消声器": "Component",
     "燃油箱": "Component", "油箱": "Component", "油管": "Component",
     "节气门位置传感器": "Component",
-    # ── 冷却润滑系统 ─────────────────────────────────────────────
+    # 冷却润滑系统
     "机油滤清器": "Component", "机油泵": "Component", "水泵": "Component",
     "散热器": "Component", "节温器": "Component", "风扇": "Component",
     "冷却液": "Component", "机油": "Component", "润滑油": "Component",
     "油冷器": "Component", "水温传感器": "Component", "水箱": "Component",
     "机油墨": "Component", "油压传感器": "Component",
-    # ── 传动系统 ─────────────────────────────────────────────────
+    # 传动系统
     "变速箱": "Component", "离合器": "Component", "飞轮": "Component",
     "传动轴": "Component", "半轴": "Component", "差速器": "Component",
     "万向节": "Component", "传动皮带": "Component", "链条": "Component",
@@ -114,21 +110,21 @@ _DICT_ENTITIES: Dict[str, str] = {
     "CVT变速器": "Component", "无级变速器": "Component",
     "换档叉": "Component", "拨叉": "Component", "同步器": "Component",
     "传动装置": "Component", "超越离合器": "Component",
-    # ── 制动系统 ─────────────────────────────────────────────────
+    # 制动系统
     "刹车片": "Component", "制动盘": "Component", "制动鼓": "Component",
     "制动钳": "Component", "主缸": "Component", "轮缸": "Component",
     "制动软管": "Component", "制动拉线": "Component", "刹车总泵": "Component",
     "刹车分泵": "Component", "ABS": "Component",
-    # ── 悬挂转向系统 ─────────────────────────────────────────────
+    # 悬挂转向系统
     "减震器": "Component", "弹簧": "Component", "稳定杆": "Component",
     "方向机": "Component", "转向拉杆": "Component", "球头": "Component",
     "前叉": "Component", "后减震": "Component", "前减震器": "Component",
     "后减震器": "Component", "减振器": "Component",
-    # ── 车轮系统 ─────────────────────────────────────────────────
+    # 车轮系统
     "前轮": "Component", "后轮": "Component", "轮毂": "Component",
     "轮胎": "Component", "轮辋": "Component", "轮圈": "Component",
     "气门嘴": "Component", "车轮轴承": "Component",
-    # ── 电气系统 ─────────────────────────────────────────────────
+    # 电气系统
     "蓄电池": "Component", "发电机": "Component", "起动机": "Component",
     "保险丝": "Component", "继电器": "Component", "传感器": "Component",
     "氧传感器": "Component", "曲轴位置传感器": "Component",
@@ -136,15 +132,15 @@ _DICT_ENTITIES: Dict[str, str] = {
     "整流器": "Component", "调节器": "Component", "充电器": "Component",
     "点火开关": "Component", "保险盒": "Component", "线束": "Component",
     "电瓶": "Component", "电皮": "Component",
-    # ── 照明仪表 ─────────────────────────────────────────────────
+    # 照明仪表
     "前照灯": "Component", "尾灯": "Component", "转向灯": "Component",
     "刹车灯": "Component", "大灯": "Component",
     "仪表盘": "Component", "转速表": "Component", "油量表": "Component",
     "水温表": "Component", "时速表": "Component",
-    # ── 其他密封件 ───────────────────────────────────────────────
+    # 其他密封件
     "油封": "Component", "密封圈": "Component", "轴承": "Component",
     "发动机仓": "Component", "空滤": "Component", "气滤": "Component",
-    # ── 故障 ──────────────────────────────────────────────────────
+    # 故障
     "磨损": "Fault", "烧蚀": "Fault", "漏油": "Fault", "漏水": "Fault",
     "漏气": "Fault", "断裂": "Fault", "变形": "Fault", "腐蚀": "Fault",
     "堵塞": "Fault", "卡滞": "Fault", "松动": "Fault", "失效": "Fault",
@@ -160,7 +156,7 @@ _DICT_ENTITIES: Dict[str, str] = {
     "弹簧断裂": "Fault", "皮带断裂": "Fault", "链条断裂": "Fault",
     "点火失败": "Fault", "供油不足": "Fault", "油压不足": "Fault",
     "水温过高": "Fault", "机油压力不足": "Fault",
-    # ── 症状 ──────────────────────────────────────────────────────
+    # 症状
     "异响": "Symptom", "抖动": "Symptom", "冒烟": "Symptom", "冒白烟": "Symptom",
     "冒黑烟": "Symptom", "冒蓝烟": "Symptom", "油耗增加": "Symptom",
     "启动困难": "Symptom", "怠速不稳": "Symptom", "加速无力": "Symptom",
@@ -173,7 +169,7 @@ _DICT_ENTITIES: Dict[str, str] = {
     "方向沉重": "Symptom", "刹车跑偏": "Symptom", "刹车异响": "Symptom",
     "冷却液渗漏": "Symptom", "机油消耗": "Symptom",
     "不起火": "Symptom", "怠速不稳": "Symptom",
-    # ── 工具 ──────────────────────────────────────────────────────
+    # 工具
     "扭矩扳手": "Tool", "力矩扳手": "Tool", "活塞环压缩工具": "Tool",
     "气门研磨工具": "Tool", "拉马": "Tool", "压力表": "Tool",
     "万用表": "Tool", "示波器": "Tool", "诊断仪": "Tool", "OBD扫描仪": "Tool",
@@ -186,7 +182,7 @@ _DICT_ENTITIES: Dict[str, str] = {
     "活动扳手": "Tool", "套筒扳手": "Tool",
     "橡皮锤": "Tool", "铜锤": "Tool",
     "磁性吸盘": "Tool", "轴承拉马": "Tool",
-    # ── 维修步骤 ────────────────────────────────────────────────
+    # 维修步骤
     "拆卸": "RepairStep", "安装": "RepairStep", "更换": "RepairStep",
     "检查": "RepairStep", "调整": "RepairStep", "清洗": "RepairStep",
     "研磨": "RepairStep", "测量": "RepairStep", "校准": "RepairStep",
@@ -207,7 +203,7 @@ class RuleNER:
     def recognize(self, sentence: str) -> List[Entity]:
         entities: List[Entity] = []
 
-        # 1. 正则匹配（含属性抽取）
+        # 1.正则匹配
         for pattern, label, conf, props_fn in _RULE_PATTERNS:
             for m in pattern.finditer(sentence):
                 entities.append(Entity(
@@ -217,14 +213,13 @@ class RuleNER:
                     props=props_fn(m),
                 ))
 
-        # 2. 词典匹配（最长优先）
+        # 2.词典匹配（最长优先）
         for term, label in sorted(_DICT_ENTITIES.items(), key=lambda x: -len(x[0])):
             start = 0
             while True:
                 idx = sentence.find(term, start)
                 if idx == -1:
                     break
-                # 避免重叠
                 overlap = any(e.start <= idx < e.end or e.start < idx + len(term) <= e.end
                               for e in entities)
                 if not overlap:
@@ -238,11 +233,8 @@ class RuleNER:
         return sorted(entities, key=lambda e: e.start)
 
 
-# ──────────────────────────────────────────────────────────────────
 # CRF NER：特征工程 + sklearn-crfsuite
-# ──────────────────────────────────────────────────────────────────
 def _word_features(words: List[str], pos_tags: List[str], i: int) -> Dict:
-    """为位置 i 的词生成 CRF 特征向量。"""
     word = words[i]
     pos  = pos_tags[i] if pos_tags else "x"
 
@@ -283,7 +275,6 @@ def sentence_to_features(words: List[str], pos_tags: List[str]) -> List[Dict]:
 class CRFNer:
     """
     CRF 序列标注 NER。
-    训练时使用标注数据，推理时对任意句子打 BIO 标签。
     """
 
     _LABEL_MAP = {
@@ -360,9 +351,7 @@ class CRFNer:
         return entities
 
 
-# ──────────────────────────────────────────────────────────────────
 # 融合 NER：规则优先，CRF 填补空白
-# ──────────────────────────────────────────────────────────────────
 class NERExtractor:
     """
     双路融合 NER：
@@ -386,7 +375,7 @@ class NERExtractor:
         if self._crf_ner.is_available() and words:
             crf_entities = self._crf_ner.recognize(words, pos_tags or [])
 
-        # 合并：CRF 实体若与规则实体无重叠则纳入
+        # CRF 实体若与规则实体无重叠则纳入
         merged = list(rule_entities)
         for ce in crf_entities:
             overlap = any(
@@ -396,25 +385,19 @@ class NERExtractor:
             if not overlap and len(ce.text) >= 2:
                 merged.append(ce)
 
-        # 噪音过滤：去掉无意义短实体和低质量实体
+        # 去掉无意义短实体和低质量实体
         def _is_noise(e: Entity) -> bool:
             txt = e.text.strip()
-            # Parameter 类型全部过滤
             if e.label == "Parameter":
                 return True
-            # 长度小于2个字符
             if len(txt) < 2:
                 return True
-            # Fault 类型：全小写假故障码（如 p032）
             if e.label == "Fault" and re.search(r"^[a-z][0-9]+$", txt):
                 return True
-            # Fault 类型：原始故障码格式（如 P0231），由表格处理负责
             if e.label == "Fault" and re.match(r"^[A-Z]\d{3,5}$", txt):
                 return True
-            # 单纯数字
             if txt.isdigit():
                 return True
-            # 单个汉字且非预设词汇
             if len(txt) == 1 and e.method == "crf":
                 return True
             return False

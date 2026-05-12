@@ -1,6 +1,5 @@
 """
-graph.py — 图谱核心查询路由
-提供：概览图、子图、节点列表接口
+图谱核心查询路由
 """
 from typing import Optional
 from fastapi import APIRouter, Request, Query, HTTPException
@@ -17,7 +16,7 @@ async def get_overview(
     request: Request,
     limit: int = Query(5000, ge=10, le=10000, description="返回最大节点数"),
 ):
-    """获取图谱概览（随机采样，用于首屏展示）。"""
+    """获取图谱概览"""
     db = _get_db(request)
     return db.get_overview_graph(limit=limit)
 

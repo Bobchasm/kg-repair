@@ -1,6 +1,5 @@
 """
-main.py — FastAPI 应用入口
-集成 CORS、路由注册、生命周期管理。
+FastAPI 应用入口
 """
 import logging
 from contextlib import asynccontextmanager
@@ -10,7 +9,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.graph.neo4j_connector import Neo4jConnector
-from src.api.routes import graph, search, path, stats
+from src.api.routes import graph, search, path, stats, eval as eval_route
 
 logging.basicConfig(
     level=logging.INFO,
@@ -26,7 +25,7 @@ def _load_config(path: str = "config.yaml"):
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """FastAPI 生命周期：启动时连接 Neo4j，关闭时断开。"""
+    """启动时连接 Neo4j，关闭时断开。"""
     cfg = _load_config()
     connector = Neo4jConnector.from_config()
     app.state.db = connector
@@ -43,7 +42,7 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# ── CORS ──────────────────────────────────────────────────────────
+# CORS
 cfg = _load_config()
 app.add_middleware(
     CORSMiddleware,
@@ -53,11 +52,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ── 路由注册 ──────────────────────────────────────────────────────
-app.include_router(graph.router,  prefix="/api/graph",  tags=["graph"])
-app.include_router(search.router, prefix="/api/search", tags=["search"])
-app.include_router(path.router,   prefix="/api/path",   tags=["path"])
-app.include_router(stats.router,  prefix="/api/stats",  tags=["stats"])
+# 路由注册
+app.include_router(graph.router,        prefix="/api/graph",  tags=["graph"])
+app.include_router(search.router,       prefix="/api/search", tags=["search"])
+app.include_router(path.router,         prefix="/api/path",   tags=["path"])
+app.include_router(stats.router,        prefix="/api/stats",  tags=["stats"])
+app.include_router(eval_route.router,   prefix="/api/eval",   tags=["eval"])
 
 
 @app.get("/", tags=["health"])
