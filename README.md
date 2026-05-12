@@ -7,39 +7,32 @@
 ```
 kg-repair/
 ├── src/
-│   ├── extraction/          # 抽取模块
+│   ├── extraction/              # 抽取模块
 │   │   ├── pdf_extractor.py     # PyMuPDF PDF 解析
 │   │   ├── text_preprocessor.py # jieba 分词 + 词性标注
 │   │   ├── ner_extractor.py     # 双路 NER（规则词典 + CRF）
 │   │   ├── re_extractor.py      # 双路 RE（触发词模板 + 共现启发式）
 │   │   └── pipeline.py          # 抽取全流程协调
-│   ├── graph/               # 图谱存储
+│   ├── graph/                   # 图谱存储
 │   │   ├── neo4j_connector.py   # Neo4j 驱动封装
 │   │   ├── graph_builder.py     # 节点/关系写入
 │   │   └── schema.py            # 实体类型与关系类型定义
-│   └── api/                 # FastAPI 后端
+│   └── api/                     # FastAPI 后端
 │       ├── main.py              # 应用入口 + 路由注册
 │       └── routes/              # graph / search / path / stats / eval
-├── frontend/                # React + Vite 前端
-│   └── src/
-│       ├── App.jsx              # 主布局（侧边栏 + 图谱区）
-│       ├── components/          # GraphCanvas / SearchBar / DetailPanel ...
-│       └── services/api.js      # 后端接口封装
+├── frontend/                    # 前端
 ├── scripts/
 │   ├── run_extraction.py        # 运行 PDF 抽取并写入 Neo4j
 │   ├── train_crf.py             # 训练 CRF-NER 模型
-│   ├── write_llm_annotations.py # 生成金标评估数据集
-│   ├── evaluate.py              # NER / RE 评估（含图谱对齐）
-│   └── generate_figures.py      # 生成评估图表
+│   └── evaluate.py              # NER / RE 评估（含图谱对齐）
 ├── annotations/
-│   └── samples.json             # 140 条金标标注（AnnotationLoader 格式）
-├── output/                  # 所有输出文件（实体 JSON、评估指标、图表）
+│   └── samples.json             # 标注数据
+├── output/
 ├── models/
-│   └── crf_ner.pkl              # 训练好的 CRF 模型
 ├── dicts/
-│   └── auto_repair_dict.txt     # 领域词典
-├── docs/                    # 技术报告
-└── config.yaml              # 全局配置
+│   └── auto_repair_dict.txt
+├── docs/
+└── config.yaml                  # 全局配置
 ```
 
 ## 环境要求
@@ -82,17 +75,17 @@ neo4j:
 python scripts/train_crf.py
 ```
 
-使用 `annotations/samples.json` 中的 140 条金标数据训练，模型保存至 `models/crf_ner.pkl`。
+使用 `/annotations` 中的数据训练，模型保存至 `models/crf_ner.pkl`。
 
 ### 3. 抽取知识图谱
 
-将维修手册 PDF 放入 `data/` 目录，在 `config.yaml` 中配置文件路径后运行：
+将维修手册 PDF 放入 `/data` 目录，在 `config.yaml` 中配置文件路径后运行：
 
 ```bash
 python scripts/run_extraction.py
 ```
 
-抽取结果（实体、关系）自动写入 Neo4j，同时输出 `output/entities.json`。
+抽取结果（实体、关系）自动写入 Neo4j，同时输出 `/output/entities.json`。
 
 ### 4. 启动后端
 
@@ -112,21 +105,11 @@ npm run dev
 ## 评估
 
 ```bash
-# 生成金标数据
-python scripts/write_llm_annotations.py
-
 # 运行评估
 python scripts/evaluate.py
 ```
 
-评估结果输出至 `output/eval_metrics.json`，可在前端"统计信息"中查看，或直接打开 `output/eval_report.html`。
-
-**当前评估指标（140 条金标，672 实体，415 关系）：**
-
-| 指标 | 对齐前 | 对齐后 |
-|------|--------|--------|
-| NER 整体 F1 | 0.472 | **0.716** |
-| RE 整体 F1  | 0.146 | **0.744** |
+评估结果输出至 `/output/eval_metrics.json`，可在前端"统计信息"中查看，或直接打开 `/output/eval_report.html`。
 
 ## 核心技术
 
